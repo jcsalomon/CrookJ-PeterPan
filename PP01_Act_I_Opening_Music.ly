@@ -95,6 +95,13 @@ upperSeventeenToTwentyFour = \relative c' {
 	a4		<a a,>8	q4		q8	|
 }
 
+deleteArpeggios =
+#(define-music-function (parser location mus)
+	(ly:music?)
+	(music-filter
+		(lambda (x) (not (music-is-of-type? x 'arpeggio-event)))
+		mus))
+
 upper = {
 	\upperOneToFour
 	\upperFiveToEight
@@ -104,7 +111,7 @@ upper = {
 	\upperSeventeenToTwentyFour
 
 	\upperOneToFour
-	\upperFiveToEight
+	\deleteArpeggios\upperFiveToEight
 	\upperNineToTwelve
 	\upperThirteenToSixteen
 }
