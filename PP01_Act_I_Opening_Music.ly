@@ -65,11 +65,43 @@ upperThirteenToSixteen = \relative c'' {
 	<fs a d>4.~		q4		r8	|
 }
 
+upperSeventeenToTwentyFour = \relative c' {
+<< { \voiceOne
+	d'8	e	d	cs4		cs8	%|
+	b8	cs	b	%…
+} \new Voice { \voiceTwo
+	b4.			a4		a8	%|
+	gs4.			%…
+} >> \oneVoice			a4		a8	||
+<< { \voiceOne
+	fs8	gs	fs	%…
+} \new Voice { \voiceTwo
+	d4.			%…
+} >> \oneVoice			<cs e>4		<b d>8	|
+	cs4		<cs e>8	<e a>4		<a cs>8	|
+
+	<b d>8	<cs e>	<b d>	<a cs>4		q8	|
+<< { \voiceOne
+	b8	cs	b	%…
+} \new Voice { \voiceTwo
+	gs4.			%…
+} >> \oneVoice			a4		<cs, e>8|
+	<d fs>8	<e gs>	<fs a>	%…
+<< { \voiceOne
+				b4		cs8	%|
+} \new Voice { \voiceTwo
+				gs!4.			%|
+} >> \oneVoice						|
+	a4		<a a,>8	q4		q8	|
+}
+
 upper = {
 	\upperOneToFour
 	\upperFiveToEight
 	\upperNineToTwelve
 	\upperThirteenToSixteen
+
+	\upperSeventeenToTwentyFour
 }
 
 lowerOneToFour = \relative c {
@@ -109,11 +141,34 @@ lowerThirteenToSixteen = \relative c {
 	d4		a8	d,4		r8	|
 }
 
+lowerSeventeenToTwentyFour = \relative c' {
+	e4.			e,			|
+	<e d'>4.		<e cs'>4	r8	|
+<< { \voiceOne
+	a4.			a4		gs8	%|
+} \new Voice { \voiceTwo
+	d4.			e4		e8	%|
+} >> \oneVoice						|
+	a4		e8	cs4		a8	|
+
+<< { \voiceOne
+	gs'4.			a			%|
+	d4.(			cs4)		%…
+} \new Voice { \voiceTwo
+	e,2.						%|
+	e4.(			a4)		%…
+} >> \oneVoice					r8	||
+	<d, a'>4.		<e d'>			|
+	<a cs>4		g!8	fs4		e8	|
+}
+
 lower = {
 	\lowerOneToFour
 	\lowerFiveToEight
 	\lowerNineToTwelve
 	\lowerThirteenToSixteen
+
+	\lowerSeventeenToTwentyFour
 }
 
 \score {
