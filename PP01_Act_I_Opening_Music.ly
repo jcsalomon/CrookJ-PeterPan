@@ -46,9 +46,12 @@ upperFiveToEight = \relative c' {
 	a8	a	gs	g	fs	e	|
 }
 
+upperNineToTwelve = \upperOneToFour
+
 upper = {
 	\upperOneToFour
 	\upperFiveToEight
+	\upperNineToTwelve
 }
 
 lowerOneToFour = \relative c {
@@ -77,9 +80,12 @@ lowerFiveToEight = \relative c' {
 \oneVoice
 }
 
+lowerNineToTwelve = \lowerOneToFour
+
 lower = {
 	\lowerOneToFour
 	\lowerFiveToEight
+	\lowerNineToTwelve
 }
 
 \score {
