@@ -102,6 +102,11 @@ upper = {
 	\upperThirteenToSixteen
 
 	\upperSeventeenToTwentyFour
+
+	\upperOneToFour
+	\upperFiveToEight
+	\upperNineToTwelve
+	\upperThirteenToSixteen
 }
 
 lowerOneToFour = \relative c {
@@ -169,6 +174,11 @@ lower = {
 	\lowerThirteenToSixteen
 
 	\lowerSeventeenToTwentyFour
+
+	\lowerOneToFour
+	\lowerFiveToEight
+	\lowerNineToTwelve
+	\lowerThirteenToSixteen
 }
 
 \score {
