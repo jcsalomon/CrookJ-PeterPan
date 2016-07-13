@@ -32,17 +32,23 @@ upperOneToFour = \relative c' {
 	e4		e8	e4		d!8	|
 }
 
-upperFiveToEight = \relative c' {
+upperFive = \relative c' {
 << { \voiceOne
 	cs8	e	b'	a	b	cs	%|
+} \new Voice { \voiceTwo
+	cs,4.			d4		g8	%|
+} >> \oneVoice						|
+}
+
+upperFiveToEight = \relative c'' {
+	\upperFive					|
+<< { \voiceOne
 	d8	cs	d	fs4->\arpeggio	e8	%|
 	d8	cs	b	cs4->		b8	%|
 } \new Voice { \voiceTwo
-	cs,4.			d4		g8	%|
 	fs8	g	fs	e4.\arpeggio		%|
 	fs4.			gs			%|
-} >>							|||
-\oneVoice
+} >> \oneVoice						|||
 	a8	a	gs	g	fs	e	|
 }
 
@@ -62,12 +68,15 @@ lowerOneToFour = \relative c {
 	b4		b8	b4		b8	%|
 } \new Voice { \voiceTwo
 	g8	e	fs	g4		g8	%|
-} >>							|
-\oneVoice
+} >> \oneVoice						|
+}
+
+lowerFive = \relative c' {
+	<g a>4		q8	<fs a>4		<e a>8	|
 }
 
 lowerFiveToEight = \relative c' {
-	<g a>4		q8	<fs a>4		<e a>8	|
+	\lowerFive					|
 << { \voiceOne
 	a4.			as			%|
 	b4.~			b8	e	d	%|
@@ -76,8 +85,7 @@ lowerFiveToEight = \relative c' {
 	d,8	e	d	cs4.			%|
 	b8	cs	d	e4.			%|
 	a8	a,	b	cs	d	e	%|
-} >>							|||
-\oneVoice
+} >> \oneVoice						|||
 }
 
 lowerNineToTwelve = \lowerOneToFour
