@@ -20,6 +20,9 @@ dynamics =  {
 
 	s8\f	s8*5					|
 	s2.*3
+
+	s2.*3
+	s8	s8\<	s8*2		s8\!	s8	|
 }
 
 upperOneToFour = \relative c' {
@@ -29,8 +32,23 @@ upperOneToFour = \relative c' {
 	e4		e8	e4		d!8	|
 }
 
+upperFiveToEight = \relative c' {
+<< { \voiceOne
+	cs8	e	b'	a	b	cs	%|
+	d8	cs	d	fs4->\arpeggio	e8	%|
+	d8	cs	b	cs4->		b8	%|
+} \new Voice { \voiceTwo
+	cs,4.			d4		g8	%|
+	fs8	g	fs	e4.\arpeggio		%|
+	fs4.			gs			%|
+} >>							|||
+\oneVoice
+	a8	a	gs	g	fs	e	|
+}
+
 upper = {
 	\upperOneToFour
+	\upperFiveToEight
 }
 
 lowerOneToFour = \relative c {
@@ -45,14 +63,30 @@ lowerOneToFour = \relative c {
 \oneVoice
 }
 
+lowerFiveToEight = \relative c' {
+	<g a>4		q8	<fs a>4		<e a>8	|
+<< { \voiceOne
+	a4.			as			%|
+	b4.~			b8	e	d	%|
+	cs8	s8*5					%|										|
+} \new Voice { \voiceTwo
+	d,8	e	d	cs4.			%|
+	b8	cs	d	e4.			%|
+	a8	a,	b	cs	d	e	%|
+} >>							|||
+\oneVoice
+}
+
 lower = {
 	\lowerOneToFour
+	\lowerFiveToEight
 }
 
 \score {
 	\new PianoStaff
 		\with {
 			instrumentName = #"Piano"
+			connectArpeggios = ##t
 		}
 	<<
 		\new Staff = "upper" { \clef treble \global \upper }
