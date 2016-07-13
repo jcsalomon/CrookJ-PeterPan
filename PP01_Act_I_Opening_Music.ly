@@ -23,6 +23,16 @@ dynamics =  {
 
 	s2.*3
 	s8	s8\<	s8*2		s8\!	s8	|
+
+	s2.*8
+	s2.*8
+
+	s2.*7
+	s8	s8\<	s8*2		s8\!	s8	|
+
+	s2.*8
+	\bar"|."
+	\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 
 upperOneToFour = \relative c' {
