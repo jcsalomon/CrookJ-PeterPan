@@ -54,10 +54,22 @@ upperFiveToEight = \relative c'' {
 
 upperNineToTwelve = \upperOneToFour
 
+upperThirteenToSixteen = \relative c'' {
+	\upperFive					|
+<< { \voiceOne
+	d8	fs	g	a	fs	d	%|
+} \new Voice { \voiceTwo
+	fs,4		g8	a4.			%|
+} >> \oneVoice						|
+	<d, g b>4	<g b e>8<fs a d>4	<g a cs>8|
+	<fs a d>4.~		q4		r8	|
+}
+
 upper = {
 	\upperOneToFour
 	\upperFiveToEight
 	\upperNineToTwelve
+	\upperThirteenToSixteen
 }
 
 lowerOneToFour = \relative c {
@@ -90,10 +102,18 @@ lowerFiveToEight = \relative c' {
 
 lowerNineToTwelve = \lowerOneToFour
 
+lowerThirteenToSixteen = \relative c {
+	\lowerFive					|
+	<d a' d>4	<e a cs>8<fs a d>4.		|
+	g4		e8	a4		a,8	|
+	d4		a8	d,4		r8	|
+}
+
 lower = {
 	\lowerOneToFour
 	\lowerFiveToEight
 	\lowerNineToTwelve
+	\lowerThirteenToSixteen
 }
 
 \score {
