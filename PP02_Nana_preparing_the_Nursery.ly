@@ -17,6 +17,12 @@ dynamicsZeroToEight = {
 	\bar "||"
 }
 
+dynamicsZeroToEightRedux = {
+	s8	|
+	s2*8
+	\bar "||"
+}
+
 pedalZeroToEight = {
 	s8	|
 	s2*8
@@ -269,32 +275,59 @@ lowerTwentyFiveToThirtyTwo = \relative c {
 
 dynamics =  {
 	\dynamicsZeroToEight
+
 	\dynamicsNineToTwentyFour
+
 	\dynamicsTwentyFiveToThirtyTwo
+
+	\dynamicsZeroToEightRedux
+
+	\dynamicsNineToSixteen
+	\bar "|."
 }
 
 pedal = {
 	\pedalZeroToEight
+
 	\pedalNineToTwentyFour
+
 	\pedalTwentyFiveToThirtyTwo
+
+	\pedalZeroToEight
+
+	\pedalNineToSixteen
 }
 
 upper = {
 	\clef treble
 	\global
+
 	\partial 8
 	\upperZeroToEight
+
 	\upperNineToTwentyFour
+
 	\upperTwentyFiveToThirtyTwo
+
+	\upperZeroToEight
+
+	\upperNineToSixteen
 }
 
 lower = {
 	\clef bass
 	\global
+
 	\partial 8
 	\lowerZeroToEight
+
 	\lowerNineToTwentyFour
+
 	\lowerTwentyFiveToThirtyTwo
+
+	\lowerZeroToEight
+
+	\lowerNineToSixteen
 }
 
 \score {
