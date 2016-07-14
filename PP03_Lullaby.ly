@@ -110,6 +110,16 @@ words = \lyricmode {
 upperOne = \relative c' {
 	<fs a>8(<e b'>	<g cs>	<fs d'>	<g b>	<fs a>	|
 	<d g>8	<cs e>4		<d a'>4.)		|
+
+	fs4.(			a			|
+	g			b)			|
+	a4.(			cs			|
+	b4		g8	e4.)			|
+
+	fs4.(			a			|
+	g			b)			|
+	a4(		g8	fs4)		\oneVoice r8	|
+	<cs e>4._(^(		d4))		r8	|
 }
 
 upperTwo = \relative c' {
