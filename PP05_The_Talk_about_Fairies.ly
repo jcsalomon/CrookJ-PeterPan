@@ -15,21 +15,46 @@ global = {
 dynamics =  {
 	\set Score.tempoHideNote = ##t
 	\tempo "Andante." 4 = 80
+
+	s8\p	s8*5					|
+	s4.			s4.\<			|
+	s8	s8\!	s2				|
+	s4\>		s8\!	s4.			|
+	s4.			s8	s4\<		|
+	s8	s8\!	s2				|
+	s2.*2
+	\bar "|."
 }
 
-upperOne = \relative c' {
-}
-
-upperTwo = \relative c' {
-}
-
-upper = {
+upper = \relative c'' {
 	\clef treble
 	\global
-<<
-	\upperOne
-	\new Voice \upperTwo
->>
+
+<< { \voiceOne
+	cs4.(			%…
+} \new Voice { \voiceTwo
+	<cs,e>8	<e a>	<cs e>	%…
+} >> \oneVoice			<d fs>8	<e gs>	<fs a>	|
+
+	<gs b>4		<gs e'>8<a e'>4.		|
+
+<< { \voiceOne
+	fs'4.			e8	d	fs,	%|
+} \new Voice { \voiceTwo
+	e4.			d			%|
+} >> \oneVoice \break					|
+
+	<e cs'>4	<d b'>8	<cs a'>	<d fs>	<cs e>	|
+
+<< { \voiceTwo
+	<cs e>8	<e a>	<cs e>	%…
+} \new Voice { \voiceOne
+	cs'4.			%…
+} >> \oneVoice			<d,fs>8	<e gs>	<fs a>	|
+
+	<gs b>4		<gs e'>8 <g e'>4.		|
+	<d fs>8) <fs d'>^( <f a> <e cs'>4	<d b'>8	|
+	<cs a'>4.~		q4)		 r8	|
 }
 
 lowerOne = \relative c {
