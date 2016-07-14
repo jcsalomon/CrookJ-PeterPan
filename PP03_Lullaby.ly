@@ -18,7 +18,8 @@ global = {
 dynamics =  {
 	\set Score.tempoHideNote = ##t
 
-\repeat unfold 2 {
+\repeat volta 2 {
+	\bar ".|:"
 	\tempo 4 = 60
 
 	s2.*2
@@ -34,8 +35,9 @@ dynamics =  {
 	\bar "||"
 
 	\tempo "Piu Lento" 4 = 40
-	s2.*4
-	\bar "||"
+	s2.*3
+} \alternative {
+	{ s2. } { s2. }
 }
 	\bar "|."
 }
@@ -44,7 +46,7 @@ melody = \relative c' {
 	\clef treble
 	\global
 
-\repeat unfold 2 {
+\repeat volta 2 {
 	R2.*2						||
 
 	fs4		fs8	a4		a8	|
@@ -74,12 +76,12 @@ melody = \relative c' {
 	{
 	d2.\fermata					|
 	} {
-	d2.						|
+	d2.\repeatTie					|
 	}
 }
 }
 
-words = \lyricmode {
+wordsOne = \lyricmode {
 	Gold -- en slum -- bers kiss your eyes,
 	Smiles a -- wake you when you rise,
 	Sleep, pret -- ty dar -- ling, do not cry,
@@ -92,7 +94,9 @@ words = \lyricmode {
 
 	Lul -- la -- by,
 	lul -- la -- by. __
+}
 
+wordsTwo = \lyricmode {
 	May your dreams be al -- ways bright,
 	An -- gels guard you through the night,
 	Sleep, pret -- ty dar -- ling, do not cry,
@@ -104,11 +108,11 @@ words = \lyricmode {
 	And I __ will sing a lul -- la -- by.
 
 	Lul -- la -- by,
-	lul -- la -- by. __
+	lul -- la -- by. __ _
 }
 
 upperOne = \relative c' {
-\repeat unfold 2 {
+\repeat volta 2 {
 	<fs a>8(<e b'>	<g cs>	<fs d'>	<g b>	<fs a>	|
 	<d g>8	<cs e>4		<d a'>4.)		|
 
@@ -148,7 +152,7 @@ upperOne = \relative c' {
 }
 
 upperTwo = \relative c' {
-\repeat unfold 2 {
+\repeat volta 2 {
 	s2.*2						||
 
 	d2.(						|
@@ -186,7 +190,7 @@ upper = {
 }
 
 lowerOne = \relative c' {
-\repeat unfold 2 {
+\repeat volta 2 {
 	a8	g	a	b	cs	d	|
 	b8	a	g	fs4.			|
 
@@ -227,7 +231,7 @@ lowerOne = \relative c' {
 }
 
 lowerTwo = \relative c {
-\repeat unfold 2 {
+\repeat volta 2 {
 	\voiceTwo
 	d2.~						|
 	d8	a4		d4.			|
@@ -290,9 +294,8 @@ lower = {
 				\melody
 			}
 		}
-		\new Lyrics {
-			\lyricsto "melody" \words
-		}
+		\new Lyrics \lyricsto "melody" \wordsOne
+		\new Lyrics \lyricsto "melody" \wordsTwo
 		\new PianoStaff
 		\with {
 		}
@@ -322,9 +325,8 @@ lower = {
 				\dynamics
 			>>
 		}
-		\new Lyrics {
-			\lyricsto "melody" \words
-		}
+		\new Lyrics \lyricsto "melody" \wordsOne
+		\new Lyrics \lyricsto "melody" \wordsTwo
 		\new PianoStaff
 		\with {
 			midiInstrument = #"acoustic grand"
