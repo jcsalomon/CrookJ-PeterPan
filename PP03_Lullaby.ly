@@ -38,11 +38,26 @@ melody = \relative c' {
 	g4		g8	b4		b8	|
 	a8[(	d])	b	a4		fs8	|
 	e4		a8	d,4		r8	|
+
+	fs4		cs'8	cs[(	b])	a8	|
+	gs4		a8	fs4.			|
+	fs4		cs'8	cs[(	b])	a8	|
+	cs4		b8	a4.			|
+
+	fs8	fs	fs	a4		a8	|
+	g4		g8	b4		b8	|
+	a8[(	d])	b	a4		fs8	|
+	b4		a8	d,4.			|
 }
 
 words = \lyricmode {
 	Gold -- en slum -- bers kiss your eyes,
 	Smiles a -- wake you when you rise,
+	Sleep, pret -- ty dar -- ling, do not cry,
+	And I __ will sing a lul -- la -- by.
+
+	Care you know not, there -- fore sleep,
+	While I o’er you watch do keep,
 	Sleep, pret -- ty dar -- ling, do not cry,
 	And I __ will sing a lul -- la -- by.
 }
