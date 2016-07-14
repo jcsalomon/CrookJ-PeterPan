@@ -17,6 +17,10 @@ global = {
 
 dynamics =  {
 	\set Score.tempoHideNote = ##t
+	\tempo 4 = 60
+
+	s2.*2
+	\bar "||"
 }
 
 melody = {
@@ -27,10 +31,13 @@ melody = {
 words = \lyricmode {
 }
 
-upperOne = {
+upperOne = \relative c' {
+	<fs a>8(<e b'>	<g cs>	<fs d'>	<g b>	<fs a>	|
+	<d g>8	<cs e>4		<d a'>4.)		|
 }
 
-upperTwo = {
+upperTwo = \relative c' {
+	s2.*2						||
 }
 
 upper = {
@@ -43,10 +50,14 @@ upper = {
 >>
 }
 
-lowerOne = {
+lowerOne = \relative c' {
+	a8	g	a	b	cs	d	|
+	b8	a	g	fs4.			|
 }
 
-lowerTwo = {
+lowerTwo = \relative c {
+	d2.~						|
+	d8	a4		d4.			|
 }
 
 lower = {
