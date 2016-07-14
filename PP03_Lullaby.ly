@@ -141,8 +141,7 @@ upperOne = \relative c' {
 } \alternative {
 	{
 	d2.\fermata					|
-	}
-	{
+	} {
 	d2.						|
 	}
 }
@@ -187,13 +186,87 @@ upper = {
 }
 
 lowerOne = \relative c' {
+\repeat unfold 2 {
 	a8	g	a	b	cs	d	|
 	b8	a	g	fs4.			|
+
+	a2.(						|
+	a)						|
+	a(						|
+	g)						|
+
+	a2.(						|
+	a)						|
+	s						|
+	s						|
+
+	\oneVoice
+	<fs fs,>4		r8	%…
+	\voiceOne		cs'8(	d	cs	|
+	\oneVoice
+	<b cs,>4.)		<a fs>			|
+	\voiceOne
+	<a cs>2.					|
+	q4(		<gs d'>8cs4.)			|
+
+	a2.(						|
+	a)						|
+	s						|
+	s						|
+
+	a,8	a	a	a	a	a	|
+	a	a	a	<fs' a>(<g b>	<fs a>	|
+	<g b>	<fs a>	<g b>	<fs a>	<g b>	<fs a>)	|
+} \alternative {
+	{
+	q2.\fermata					|
+	} {
+	q2.						|
+	}
+}
 }
 
 lowerTwo = \relative c {
+\repeat unfold 2 {
+	\voiceTwo
 	d2.~						|
 	d8	a4		d4.			|
+
+	d4.			fs			|
+	e			g			|
+	fs2.						|
+	e4.			a,			|
+
+	d4.(			fs			|
+	e			g)			|
+	\oneVoice
+	<fs a>4(	<g b>8	a4)		r8	|
+	<g a,>4.^(_(		<fs d>4))	r8	|
+
+
+	\voiceTwo
+	s4.			fs4.			|
+	s2.			|
+	fs4.(			f)			|
+	e4.(			a4.)			|
+
+	d,4.(			fs			|
+	e			g)			|
+	\oneVoice
+	<fs a>4(	<g b>8	a4)		r8	|
+	<g a,>4.^(_(		<fs d>4.))		|
+
+	\voiceTwo
+	d,2.(						|
+	d4.)			<d d'>~			|
+	q2.						|
+} \alternative {
+	{
+	q2.\fermata					|
+	} {
+	q2.						|
+	}
+}
 }
 
 lower = {
