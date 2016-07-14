@@ -31,7 +31,7 @@ dynamics =  {
 	s8	s8\<	s8*2		s8\!	s8	|
 
 	s2.*8
-	\bar"|."
+	\bar "|."
 	\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 

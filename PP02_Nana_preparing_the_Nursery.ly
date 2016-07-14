@@ -193,7 +193,7 @@ lowerSixteenToTwentyFour = \relative c {
 dynamicsNineToTwentyFour = {
 	\dynamicsNineToSixteen
 	\dynamicsSixteenToTwentyFour
-	\bar"||"
+	\bar "||"
 }
 
 pedalNineToTwentyFour = {
@@ -214,7 +214,7 @@ lowerNineToTwentyFour = {
 dynamicsTwentyFiveToThirtyTwo = {
 	s2*7
 	s8*3			%…
-	\bar"||"
+	\bar "||"
 }
 
 pedalTwentyFiveToThirtyTwo = \dynamicsTwentyFiveToThirtyTwo
