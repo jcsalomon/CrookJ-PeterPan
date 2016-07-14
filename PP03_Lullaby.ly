@@ -133,6 +133,11 @@ upperOne = \relative c' {
 	g			b)			|
 	a4(		g8	fs4)		\oneVoice r8	|
 	<cs e>4._(^(		d4.))			|
+
+	<g, a cs e>2.~					|
+	q4.			d'4.~			|
+	d2.						|
+	d2.\fermata					|
 }
 
 upperTwo = \relative c' {
@@ -157,6 +162,8 @@ upperTwo = \relative c' {
 	d4.)			s			|
 	d4.(			d4)		s8	|
 	s2.						|
+
+	s2.*4						||||
 }
 
 upper = {
