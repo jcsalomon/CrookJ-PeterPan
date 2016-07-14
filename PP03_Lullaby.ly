@@ -70,7 +70,12 @@ melody = \relative c' {
 	a'4		b8	a4.			|
 	a4		a8	d4.~			|
 	d2.~						|
+} \alternative {
+	{
 	d2.\fermata					|
+	} {
+	d2.						|
+	}
 }
 }
 
