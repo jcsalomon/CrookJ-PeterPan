@@ -211,14 +211,72 @@ lowerNineToTwentyFour = {
 	\lowerSixteenToTwentyFour
 }
 
+dynamicsTwentyFiveToThirtyTwo = {
+	s2*7
+	s8*3			%…
+	\bar"||"
+}
+
+pedalTwentyFiveToThirtyTwo = \dynamicsTwentyFiveToThirtyTwo
+
+upperTwentyFiveToThirtyTwo = \relative c'' {
+	\key d \major
+<< { \voiceOne
+	fs,8		a16	fs	e8		e		|
+	fs8		a16	fs	e4				|
+	fs8		e16	fs	g8		g		|
+	fs8		fs		e4				|
+
+	fs8		a16	fs	e8		e		|
+	fs8		a16	fs	e4				|
+	fs8		e16	fs	g8		g		|
+} \new Voice { \voiceTwo
+	d2								|
+	d2								|
+	d2								|
+	d4				cs				|
+
+	d2								|
+	d2								|
+	d2								|
+} >> \oneVoice
+	<d fs>8		<cs e>		d		% …
+}
+
+lowerTwentyFiveToThirtyTwo = \relative c {
+	\key d \major
+<< { \voiceOne
+	a'4				g				|
+	a4				bf				|
+	a8		g16	a	b!8		bf		|
+	a8		a		g4				|
+
+	a4				g				|
+	a4				bf				|
+	a8		g16	a	b!8		bf		|
+} \new Voice { \voiceTwo
+	d,2								|
+	d2								|
+	d2								|
+	d2								|
+
+	d2								|
+	d2								|
+	d2								|
+} >> \oneVoice
+	<d a'>8		<a g'>		<d fs>		%…
+}
+
 dynamics =  {
 	\dynamicsZeroToEight
 	\dynamicsNineToTwentyFour
+	\dynamicsTwentyFiveToThirtyTwo
 }
 
 pedal = {
 	\pedalZeroToEight
 	\pedalNineToTwentyFour
+	\pedalTwentyFiveToThirtyTwo
 }
 
 upper = {
@@ -227,6 +285,7 @@ upper = {
 	\partial 8
 	\upperZeroToEight
 	\upperNineToTwentyFour
+	\upperTwentyFiveToThirtyTwo
 }
 
 lower = {
@@ -235,6 +294,7 @@ lower = {
 	\partial 8
 	\lowerZeroToEight
 	\lowerNineToTwentyFour
+	\lowerTwentyFiveToThirtyTwo
 }
 
 \score {
