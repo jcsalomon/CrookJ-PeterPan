@@ -113,6 +113,9 @@ deleteArpeggios =
 		mus))
 
 upper = {
+	\clef treble
+	\global
+
 	\upperOneToFour
 	\upperFiveToEight
 	\upperNineToTwelve
@@ -185,6 +188,9 @@ lowerSeventeenToTwentyFour = \relative c' {
 }
 
 lower = {
+	\clef bass
+	\global
+
 	\lowerOneToFour
 	\lowerFiveToEight
 	\lowerNineToTwelve
@@ -205,9 +211,9 @@ lower = {
 			connectArpeggios = ##t
 		}
 	<<
-		\new Staff = "upper" { \clef treble \global \upper }
+		\new Staff = "upper" \upper
 		\new Dynamics = "dynamics" \dynamics
-		\new Staff = "lower" { \clef bass \global \lower }
+		\new Staff = "lower" \lower
 	>>
 	\layout {
 		\context {
@@ -216,6 +222,7 @@ lower = {
 		}
 	}
 }
+
 \score {
 	\new PianoStaff
 		\with {
@@ -223,11 +230,11 @@ lower = {
 		}
 	<<
 		\new Staff = "upper" <<
-			{ \global \upper }
+			\upper
 			\dynamics
 		>>
 		\new Staff = "lower" <<
-			{ \global \lower }
+			\lower
 			\dynamics
 		>>
 	>>
