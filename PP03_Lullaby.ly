@@ -113,6 +113,7 @@ wordsTwo = \lyricmode {
 
 upperOne = \relative c' {
 \repeat volta 2 {
+	\voiceOne
 	<fs a>8(<e b'>	<g cs>	<fs d'>	<g b>	<fs a>	|
 	<d g>8	<cs e>4		<d a'>4.)		|
 
@@ -153,6 +154,7 @@ upperOne = \relative c' {
 
 upperTwo = \relative c' {
 \repeat volta 2 {
+	\voiceTwo
 	s2.*2						||
 
 	d2.(						|
@@ -184,13 +186,13 @@ upper = {
 	\global
 <<
 	\upperOne
-	\\
-	\upperTwo
+	\new Voice \upperTwo
 >>
 }
 
 lowerOne = \relative c' {
 \repeat volta 2 {
+	\voiceOne
 	a8	g	a	b	cs	d	|
 	b8	a	g	fs4.			|
 
@@ -278,8 +280,7 @@ lower = {
 	\global
 <<
 	\lowerOne
-	\\
-	\lowerTwo
+	\new Voice \lowerTwo
 >>
 }
 
