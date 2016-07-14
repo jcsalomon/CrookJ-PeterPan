@@ -155,14 +155,51 @@ lowerNineToSixteen = \relative c {
 } >> \oneVoice
 }
 
+dynamicsSixteenToTwentyFour = {
+		s8	|
+	s2*8
+}
+
+pedalSixteenToTwentyFour = \dynamicsSixteenToTwentyFour
+
+upperSixteenToTwentyFour = \relative c'' {
+							d8		|
+
+	c8		g16	a	bf8		c16	bf	|
+	bf16(	a)	a(	g)	f(	e!)	f	g	|
+	a8		e16	f	g8		a16	g	|
+	g16(	f)	f(	e)	d8		d16	e	|
+
+	<gs, d' f>8->	q->		<a d f>->	d16	e	|
+	<gs, d' f>8	q		<a d f>		<d f>16	<e g>	|
+	<d f a>	<f a d>	q	<a d f>	q	<d f a>	q	<a d f>	|
+	<a cs e>q	<cs e a><e a cs><a cs e>8	r		|
+}
+
+lowerSixteenToTwentyFour = \relative c {
+							r8		|
+
+	e8		<bf' c>		c,		q		|
+	f8		<a c>		<f a c>		r		|
+	cs8		<g' a>		a,		q		|
+	d8		<f a>		<d f a>		r		|
+
+	<bf! f'>8	q		<a f'>		r		|
+	<bf! f'>8	q		<a f'>		r		|
+	<a a'>2								|
+	a'2								|
+}
+
 dynamics =  {
 	\dynamicsZeroToEight
 	\dynamicsNineToSixteen
+	\dynamicsSixteenToTwentyFour
 }
 
 pedal = {
 	\pedalZeroToEight
 	\pedalNineToSixteen
+	\pedalSixteenToTwentyFour
 }
 
 upper = {
@@ -171,6 +208,7 @@ upper = {
 	\partial 8
 	\upperZeroToEight
 	\upperNineToSixteen
+	\upperSixteenToTwentyFour
 }
 
 lower = {
@@ -179,6 +217,7 @@ lower = {
 	\partial 8
 	\lowerZeroToEight
 	\lowerNineToSixteen
+	\lowerSixteenToTwentyFour
 }
 
 \score {
