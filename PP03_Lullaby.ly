@@ -124,6 +124,16 @@ upperOne = \relative c' {
 
 upperTwo = \relative c' {
 	s2.*2						||
+
+	d2.(						|
+	d4.)			cs			|
+	d2.(						|
+	d4.)			cs			|
+
+	d2.(						|
+	d4.)			s			|
+	d4.(			d4)		s8	|
+	s2.						|
 }
 
 upper = {
