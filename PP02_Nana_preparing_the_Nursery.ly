@@ -78,12 +78,87 @@ lowerZeroToEight = \relative c {
 					d8		r8		||
 }
 
+dynamicsNineToSixteen = {
+	\grace s8
+	s2*4
+
+	s2*3
+	s8*3			%…
+}
+
+pedalNineToSixteen = {
+	\grace s8
+	\repeat unfold 3 {
+		s16\sustainOn	s8	s16\sustainOff
+	}
+			s4		||
+	s2*2
+
+	s2*3
+	s8*3			%…
+}
+
+upperNineToSixteen = \relative c''' {
+	\grace s8
+	c16	a	g	f	<e c'>	<d bf'>	<c a'>	<bf g'>	|
+	<a f'>	<c e>	<bf d>	<a c>	<d bf'>	<c a'>	<a fs'>	<fs d'>	|
+	<bf g'>	<a fs'>	<bf g'>	<c a'>	<d bf'>	<c a'>	<d bf'>	<bf g'>	|
+	<a f'>(	<c a'>)	q	q	<cs a'>(<e cs'>)q	q	|
+
+<< { \voiceOne
+	d'2								%|
+	c4~				c8		% …
+} \new Voice { \voiceTwo
+	c!16	bf	a	c	bf8		g16	a	%|
+	bf16	a	g	bf	a8		f,16	g	%|
+} >> \oneVoice								||
+	<cs, g' a>4(			<d f a>8)	r		|
+	\autoBeamOff
+	<cs g' a>8	<cs' g' a>->	<f, a d>->	%…
+	\autoBeamOn
+}
+
+lowerNineToSixteen = \relative c {
+	\acciaccatura f,8 a'4->		\acciaccatura g,8 bf'4->	|
+	\acciaccatura a,8 c'4->		%…
+<< { \voiceOne
+					a8		c		%
+} \new Voice { \voiceTwo
+					d,4				%
+} >> \oneVoice								|
+	\acciaccatura g,8 bf'8.	a16	%…
+<< { \voiceOne
+					bf8		g		%|
+} \new Voice { \voiceTwo
+					c,4				%|
+} >> \oneVoice								|
+<< { \voiceOne
+	bf'2\arpeggio							%|
+} \new Voice { \voiceTwo
+	f,4\arpeggio			e				%|
+} >> \oneVoice								|
+
+<< { \voiceOne
+	a'4->				bf->				|
+	c4->				a8		c		|
+	a16	g	f	e	d	e	f	g	|
+	a16	g	f	e	d8		%…
+} \new Voice { \voiceTwo
+	d4				g				|
+	c,4				f				|
+	a,4(				d8)		r8		|
+	a4(				d8)		%…
+} >> \oneVoice
+}
+
 dynamics =  {
 	\dynamicsZeroToEight
+	\dynamicsNineToSixteen
 }
 
 pedal = {
 	\pedalZeroToEight
+	\pedalNineToSixteen
 }
 
 upper = {
@@ -91,6 +166,7 @@ upper = {
 	\global
 	\partial 8
 	\upperZeroToEight
+	\upperNineToSixteen
 }
 
 lower = {
@@ -98,12 +174,14 @@ lower = {
 	\global
 	\partial 8
 	\lowerZeroToEight
+	\lowerNineToSixteen
 }
 
 \score {
 	\new PianoStaff
 		\with {
 			instrumentName = #"Piano"
+			connectArpeggios = ##t
 		}
 	<<
 		\new Staff = "upper" \upper
