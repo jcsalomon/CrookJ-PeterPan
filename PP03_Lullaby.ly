@@ -48,6 +48,11 @@ melody = \relative c' {
 	g4		g8	b4		b8	|
 	a8[(	d])	b	a4		fs8	|
 	b4		a8	d,4.			|
+
+	a'4		b8	a4.			|
+	a4		a8	d4.~			|
+	d2.~						|
+	d2.\fermata					|
 }
 
 words = \lyricmode {
@@ -60,6 +65,9 @@ words = \lyricmode {
 	While I o’er you watch do keep,
 	Sleep, pret -- ty dar -- ling, do not cry,
 	And I __ will sing a lul -- la -- by.
+
+	Lul -- la -- by,
+	lul -- la -- by. __
 }
 
 upperOne = \relative c' {
