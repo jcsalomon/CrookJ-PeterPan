@@ -108,6 +108,7 @@ words = \lyricmode {
 }
 
 upperOne = \relative c' {
+\repeat unfold 2 {
 	<fs a>8(<e b'>	<g cs>	<fs d'>	<g b>	<fs a>	|
 	<d g>8	<cs e>4		<d a'>4.)		|
 
@@ -137,10 +138,18 @@ upperOne = \relative c' {
 	<g, a cs e>2.~					|
 	q4.			d'4.~			|
 	d2.						|
+} \alternative {
+	{
 	d2.\fermata					|
+	}
+	{
+	d2.						|
+	}
+}
 }
 
 upperTwo = \relative c' {
+\repeat unfold 2 {
 	s2.*2						||
 
 	d2.(						|
@@ -164,6 +173,7 @@ upperTwo = \relative c' {
 	s2.						|
 
 	s2.*4						||||
+}
 }
 
 upper = {
