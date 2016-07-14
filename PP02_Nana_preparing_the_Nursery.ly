@@ -190,16 +190,35 @@ lowerSixteenToTwentyFour = \relative c {
 	a'2								|
 }
 
-dynamics =  {
-	\dynamicsZeroToEight
+dynamicsNineToTwentyFour = {
 	\dynamicsNineToSixteen
 	\dynamicsSixteenToTwentyFour
+	\bar"||"
+}
+
+pedalNineToTwentyFour = {
+	\pedalNineToSixteen
+	\pedalSixteenToTwentyFour
+}
+
+upperNineToTwentyFour = {
+	\upperNineToSixteen
+	\upperSixteenToTwentyFour
+}
+
+lowerNineToTwentyFour = {
+	\lowerNineToSixteen
+	\lowerSixteenToTwentyFour
+}
+
+dynamics =  {
+	\dynamicsZeroToEight
+	\dynamicsNineToTwentyFour
 }
 
 pedal = {
 	\pedalZeroToEight
-	\pedalNineToSixteen
-	\pedalSixteenToTwentyFour
+	\pedalNineToTwentyFour
 }
 
 upper = {
@@ -207,8 +226,7 @@ upper = {
 	\global
 	\partial 8
 	\upperZeroToEight
-	\upperNineToSixteen
-	\upperSixteenToTwentyFour
+	\upperNineToTwentyFour
 }
 
 lower = {
@@ -216,8 +234,7 @@ lower = {
 	\global
 	\partial 8
 	\lowerZeroToEight
-	\lowerNineToSixteen
-	\lowerSixteenToTwentyFour
+	\lowerNineToTwentyFour
 }
 
 \score {
