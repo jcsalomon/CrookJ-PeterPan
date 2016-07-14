@@ -21,6 +21,19 @@ dynamics =  {
 
 	s2.*2
 	\bar "||"
+
+	s2.*8
+	\bar "||"
+
+	s2.*2
+	s4		s8\<	s4		s8\!	|
+	s4\>		s8	s4.\!			|
+	s2.*4
+	\bar "||"
+
+	\tempo "Piu Lento" 4 = 40
+	s2.*4
+	\bar "||"
 }
 
 melody = \relative c' {
