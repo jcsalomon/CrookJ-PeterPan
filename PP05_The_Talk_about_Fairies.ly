@@ -57,10 +57,30 @@ upper = \relative c'' {
 	<cs a'>4.~		q4)		 r8	|
 }
 
-lowerOne = \relative c {
+lowerOne = \relative c' {
+	\voiceOne
+	a2.						|
+	d4.\arpeggio		cs			|
+	as4.\arpeggio		b			|
+	a!4		gs8	a4.			|
+
+	a2.						|
+	d4.\arpeggio		cs			|
+	a4.			a4		gs8	|
+	a4.~			a4		\oneVoice r8	|
 }
 
 lowerTwo = \relative c {
+	\voiceTwo
+	<a e'>2.					|
+	<a e'>2.\arpeggio				|
+	fs4.\arpeggio		b			|
+	e4.			a,			|
+
+	<a e'>2.					|
+	<a e'>2.\arpeggio				|
+	b4.			e			|
+	<b e>4.~		q4		s8	|
 }
 
 lower = {
@@ -76,6 +96,7 @@ lower = {
 	\new PianoStaff
 		\with {
 			instrumentName = #"Piano"
+			connectArpeggios = ##t
 		}
 	<<
 		\new Staff = "upper" \upper
