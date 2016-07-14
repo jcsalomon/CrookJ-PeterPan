@@ -17,6 +17,8 @@ global = {
 
 dynamics =  {
 	\set Score.tempoHideNote = ##t
+
+\repeat unfold 2 {
 	\tempo 4 = 60
 
 	s2.*2
@@ -35,11 +37,14 @@ dynamics =  {
 	s2.*4
 	\bar "||"
 }
+	\bar "|."
+}
 
 melody = \relative c' {
 	\clef treble
 	\global
 
+\repeat unfold 2 {
 	R2.*2						||
 
 	fs4		fs8	a4		a8	|
@@ -67,6 +72,7 @@ melody = \relative c' {
 	d2.~						|
 	d2.\fermata					|
 }
+}
 
 words = \lyricmode {
 	Gold -- en slum -- bers kiss your eyes,
@@ -76,6 +82,19 @@ words = \lyricmode {
 
 	Care you know not, there -- fore sleep,
 	While I o’er you watch do keep,
+	Sleep, pret -- ty dar -- ling, do not cry,
+	And I __ will sing a lul -- la -- by.
+
+	Lul -- la -- by,
+	lul -- la -- by. __
+
+	May your dreams be al -- ways bright,
+	An -- gels guard you through the night,
+	Sleep, pret -- ty dar -- ling, do not cry,
+	And I __ will sing a lul -- la -- by.
+
+	Nought can harm you, have no fear,
+	I will guard you, mo -- ther’s near.
 	Sleep, pret -- ty dar -- ling, do not cry,
 	And I __ will sing a lul -- la -- by.
 
