@@ -27,14 +27,36 @@ melody = {
 words = \lyricmode {
 }
 
+upperOne = {
+}
+
+upperTwo = {
+}
+
 upper = {
 	\clef treble
 	\global
+<<
+	\upperOne
+	\\
+	\upperTwo
+>>
+}
+
+lowerOne = {
+}
+
+lowerTwo = {
 }
 
 lower = {
 	\clef bass
 	\global
+<<
+	\lowerOne
+	\\
+	\lowerTwo
+>>
 }
 
 \score {
