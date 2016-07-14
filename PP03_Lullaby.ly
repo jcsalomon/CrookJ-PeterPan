@@ -120,6 +120,19 @@ upperOne = \relative c' {
 	g			b)			|
 	a4(		g8	fs4)		\oneVoice r8	|
 	<cs e>4._(^(		d4))		r8	|
+
+	\voiceOne
+	<a cs fs>4	<a' cs>8q(	<gs b>	<fs a>	|
+	gs4		a8	fs4.)			|
+	\oneVoice
+	fs4		cs'8	cs(	b	a)	|
+	cs4(		b8	a4.)			|
+
+	\voiceOne
+	fs4.(			a			|
+	g			b)			|
+	a4(		g8	fs4)		\oneVoice r8	|
+	<cs e>4._(^(		d4.))			|
 }
 
 upperTwo = \relative c' {
@@ -129,6 +142,16 @@ upperTwo = \relative c' {
 	d4.)			cs			|
 	d2.(						|
 	d4.)			cs			|
+
+	d2.(						|
+	d4.)			s			|
+	d4.(			d4)		s8	|
+	s2.						|
+
+	s2.						|
+	es4.			fs			|
+	s2.						|
+	s2.						|
 
 	d2.(						|
 	d4.)			s			|
