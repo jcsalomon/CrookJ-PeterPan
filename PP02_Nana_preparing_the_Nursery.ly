@@ -132,11 +132,15 @@ lowerNineToSixteen = \relative c {
 } \new Voice { \voiceTwo
 					c,4				%|
 } >> \oneVoice								|
+\once \override PianoStaff.Arpeggio.stencil = #ly:arpeggio::brew-chord-slur
+\once \override PianoStaff.Arpeggio.X-extent = #ly:grob::stencil-width
+% \arpeggioParenthesis
 << { \voiceOne
 	bf'2\arpeggio							%|
 } \new Voice { \voiceTwo
 	f,4\arpeggio			e				%|
 } >> \oneVoice								|
+% \arpeggioNormal
 
 << { \voiceOne
 	a'4->				bf->				|
