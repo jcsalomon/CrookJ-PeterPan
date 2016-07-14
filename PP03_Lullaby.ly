@@ -23,12 +23,28 @@ dynamics =  {
 	\bar "||"
 }
 
-melody = {
+melody = \relative c' {
 	\clef treble
 	\global
+
+	R2.*2						||
+
+	fs4		fs8	a4		a8	|
+	g4		g8	b4.			|
+	a4		a8	cs4		cs8	|
+	b4		g8	e4.			|
+
+	fs8	fs	fs	a4		a8	|
+	g4		g8	b4		b8	|
+	a8[(	d])	b	a4		fs8	|
+	e4		a8	d,4		r8	|
 }
 
 words = \lyricmode {
+	Gold -- en slum -- bers kiss your eyes,
+	Smiles a -- wake you when you rise,
+	Sleep, pret -- ty dar -- ling, do not cry,
+	And I __ will sing a lul -- la -- by.
 }
 
 upperOne = \relative c' {
