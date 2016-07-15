@@ -107,9 +107,29 @@ upper = {
 >>
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\global
+
+	<d a'>4				q8		q		|
+	q4				q8		q		|
+	<d b'>4				q8		q		|
+	<d cs'>4			q8		r		|
+
+	<fs a>8		r		r		<a, g'>		|
+	<d fs>		r		<a' d>4				|
+	<a cs>				<gs b>				|
+	<fs a>				<e a>8		q		|
+
+	<d a'>4				q8		q		|
+	q4				q8		q		|
+	<d b'>4				q8		q		|
+	<d cs'>4			q8		r		|
+
+	g,8		<g' b>		<d fs a>	<a e' g>	|
+	<b d fs>16 cs	d	e	fs8		g		|
+	a4				<a, a'>8	q		|
+	<d a'>8[	a		d,]		r		|
 }
 
 \score {
