@@ -71,10 +71,26 @@ upperOne = \relative c'' {
 }
 }
 
+upperTwo = \relative c' {
+	\voiceTwo
+	fs4				fs8		fs		|
+	g4				g8		g		|
+	fs4				fs8		fs		|
+	e4				e8		s		|
+
+	s8*3						cs8		|
+	s2								|
+	e4				es				|
+	fs4				g8		g		|
+}
+
 upper = {
 	\clef treble
 	\global
+<<
 	\upperOne
+	\new Voice \upperTwo
+>>
 }
 
 lower = {
