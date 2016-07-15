@@ -78,9 +78,14 @@ upper = \relative c' {
 	d2)								|
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\global
+
+	\repeat unfold 3 {
+		\repeat unfold 4 { <d fs a>8	<a fs' a> }		%|
+		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }%|
+	}								||||||
 }
 
 \score {
