@@ -86,6 +86,15 @@ lower = \relative c {
 		\repeat unfold 4 { <d fs a>8	<a fs' a> }		%|
 		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }%|
 	}								||||||
+	\repeat unfold 4 { <d fs a>	<a fs' a> }			|
+	<cs g' a>	<a g' a>	<e' g a>	<a, g' a>	%\
+	<d fs a>	<a fs' a>	<d fs a>4			|
+
+	\repeat unfold 2 { b8	<e gs d'>	e,	q }		|
+	\repeat unfold 2 { a8	<e' a cs>	e,	q }		|
+	b'8		<e b' d>	e,		q		%\
+	b'		<e b' d>	e,		<e' gs d'>	|
+	\repeat unfold 2 { a,8	<e' a cs>	e,	q }		|
 }
 
 \score {
