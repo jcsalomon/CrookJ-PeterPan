@@ -13,6 +13,10 @@ global = {
 }
 
 dynamics =  {
+	s16\p	s16*15	|
+	s1*23
+	\bar "|."
+	\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 
 upper = {
