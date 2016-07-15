@@ -72,6 +72,7 @@ upperOne = \relative c'' {
 }
 
 upperTwo = \relative c' {
+\repeat volta 2 {
 	\voiceTwo
 	fs4				fs8		fs		|
 	g4				g8		g		|
@@ -82,6 +83,20 @@ upperTwo = \relative c' {
 	s2								|
 	e4				es				|
 	fs4				g8		g		|
+
+	fs4				fs8		fs		|
+	g4				g8		g		|
+	fs4				fs8		fs		|
+	e4				e8		s		|
+
+	s8*3						cs8		|
+	s8*3						cs8		|
+	s8*3						g'8		|
+	s2								|
+} \alternative {
+	{ s2*8 }
+	{ }
+}
 }
 
 upper = {
