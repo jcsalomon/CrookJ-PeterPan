@@ -58,7 +58,12 @@ upper = \relative c' {
 	fs	e	gs	fs	e	d	cs	b)	|
 
 	a16(	a'	g!	fs	e	d	cs	b)	%\
-	a16(	b	g	a	fs	g	e	a)	|
+<< { \voiceOne
+	a16(	b	g	a	fs	g	e	a)	%|
+} \new Voice { \voiceTwo
+	<cs, e>8	<b d e>		d		cs		%|
+} >> \oneVoice								|
+
 	d16(	cs	d	e	fs	g	gs	a	%\
 	a2)								|
 	e16(	d	cs	d	e	fs	g	gs	%\
@@ -95,6 +100,16 @@ lower = \relative c {
 	b'8		<e b' d>	e,		q		%\
 	b'		<e b' d>	e,		<e' gs d'>	|
 	\repeat unfold 2 { a,8	<e' a cs>	e,	q }		|
+
+	\repeat unfold 2 { b'8	<e gs d'>	e,	q }		|
+	\repeat unfold 2 { a8	<e' a cs>	e,	q }		|
+	b'8		<e b' d>	e,		q		%\
+	b'		<e b' d>	e,		<e' gs d'>	|
+<< { \voiceOne
+	a1								%|
+} \new Voice { \voiceTwo
+	a,8	r8	r4		r2				%|
+} >> \oneVoice								|
 }
 
 \score {
