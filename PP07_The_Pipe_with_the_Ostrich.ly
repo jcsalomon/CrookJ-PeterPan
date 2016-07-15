@@ -13,6 +13,22 @@ global = {
 }
 
 dynamics =  {
+	\set Score.tempoHideNote = ##t
+	\tempo "Allegro non troppo." 4 = 120
+
+\repeat volta 2 {
+	\bar ".|:"
+
+	s4\f	s4	|
+	s2*3
+
+	s2*4
+	s2*4
+	s2*4
+} \alternative {
+	{ s2*8 }
+	{ }
+}
 }
 
 upper = {
@@ -50,12 +66,12 @@ lower = {
 		}
 	<<
 		\new Staff = "upper" <<
-			\upper
-			\dynamics
+			\unfoldRepeats\upper
+			\unfoldRepeats\dynamics
 		>>
 		\new Staff = "lower" <<
-			\lower
-			\dynamics
+			\unfoldRepeats\lower
+			\unfoldRepeats\dynamics
 		>>
 	>>
 	\midi {
