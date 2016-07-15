@@ -56,16 +56,15 @@ upperOne = \relative c'' {
 	<fs d'>4			q8		r8		|
 } \alternative {
 	{
-<d fs b>16->	cs'	b	fs	q->	cs'	b	fs	|
-<cs fs a>16->	b'	a	fs	q->	b	a	fs	|
+	<d fs b>16-> cs' b	fs	q->	cs'	b	fs	|
+	<cs fs a>16-> b' a	fs	q->	b	a	fs	|
 	<d fs b>8-.[	cs'-.		d-.		e-.]		|
 	<a, cs fs>8-.[	g'-.		a-.		fs-.]		|
 
-<d, fs b>16->	cs'	b	fs	q->	cs'	b	fs	|
-<cs fs a>16->	b'	a	fs	q->	b	a	fs	|
-	<g cs>8-.	d'-.		e-.		fs-.		|
-	g8		a		b		cs		|
-
+	<d, fs b>16-> cs' b	fs	q->	cs'	b	fs	|
+	<cs fs a>16-> b' a	fs	q->	b	a	fs	|
+	<g cs>8-.[	d'-.		e-.		fs-.]		|
+	g8[		a		b		cs]		|
 	}
 	{ }
 }
