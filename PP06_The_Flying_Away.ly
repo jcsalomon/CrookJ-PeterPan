@@ -19,9 +19,63 @@ dynamics =  {
 	\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 
-upper = {
+upper = \relative c' {
 	\clef treble
 	\global
+
+	d16(	cs	d	e	fs	g	gs	a	%\
+	a2)								|
+	e16(	d	cs	d	e	fs	g	gs	%\
+	a2)								|
+	a16(	g	fs	g	a	b	cs	d	%\
+	e	d	cs	d	e	d	a	fs)	|
+	a16(	g	fs	g	b	g	e	d	%\
+	cs4				a')				|
+
+	d,16(	cs	d	e	fs	g	gs	a	%\
+	a2)								|
+	e16(	d	cs	d	e	fs	g	gs	%\
+	a2)								|
+	fs16(	a	fs'	e	d	a	fs	g	%\
+	a	b	cs	d	e	d	a	fs)	|
+	a16(	g	fs	g	b	g	e	cs	%\
+	d2)								|
+
+	e16(	fs	gs	a	as	b	cs	d	%\
+	d2)								|
+	e,16(	fs	gs	a	as	b	cs	d	%\
+	cs2)								|
+	gs16(	a	b	cs	d	ds	e	es	%\
+	fs	e	gs	fs	e	d	cs	b)	|
+	a16(	b	cs	d	ds	e	fs	gs	%\
+	a	gs	fs	e	d	cs	b	a)	|
+
+	e16(	fs	gs	a	as	b	cs	d	%\
+	d2)								|
+	e,16(	fs	gs	a	as	b	bs	cs	%\
+	cs2)								|
+	gs16(	a	b	cs	d	ds	e	es	%\
+	fs	e	gs	fs	e	d	cs	b)	|
+
+	a16(	a'	g!	fs	e	d	cs	b)	%\
+	a16(	b	g	a	fs	g	e	a)	|
+	d16(	cs	d	e	fs	g	gs	a	%\
+	a2)								|
+	e16(	d	cs	d	e	fs	g	gs	%\
+	a2)								|
+	a16(	g	fs	g	a	b	cs	d	%\
+	e	d	cs	d	e	d	a	fs)	|
+	a16(	g	fs	g	b	g	e	d	%\
+	cs4				a')				|
+
+	d,16(	cs	d	e	fs	g	gs	a	%\
+	a2)								|
+	e16(	d	cs	d	e	fs	g	gs	%\
+	a2)								|
+	fs16(	a	fs'	e	d	a	fs	g	%\
+	a	b	cs	d	e	d	a	fs)	|
+	a16(	g	fs	g	b	g	e	cs	%\
+	d2)								|
 }
 
 lower = {
