@@ -110,6 +110,14 @@ lower = \relative c {
 } \new Voice { \voiceTwo
 	a,8	r8	r4		r2				%|
 } >> \oneVoice								|
+
+	\repeat unfold 3 {
+		\repeat unfold 4 { <d fs a>8	<a fs' a> }		%|
+		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }%|
+	}								||||||
+	\repeat unfold 4 { <d fs a>8	<a fs' a> }			|
+	<cs g' a>	<a g' a>	<e' g a>	<a, g' a>	%\
+	<d fs a>	<a fs' a>	<d fs a>4			|
 }
 
 \score {
