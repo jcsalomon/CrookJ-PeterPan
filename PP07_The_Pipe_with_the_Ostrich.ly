@@ -111,6 +111,7 @@ lower = \relative c {
 	\clef bass
 	\global
 
+\repeat volta 2 {
 	<d a'>4				q8		q		|
 	q4				q8		q		|
 	<d b'>4				q8		q		|
@@ -130,6 +131,31 @@ lower = \relative c {
 	<b d fs>16 cs	d	e	fs8		g		|
 	a4				<a, a'>8	q		|
 	<d a'>8[	a		d,]		r		|
+} \alternative {
+	{
+	b'8-.[		cs-.		d-.		e-.]		|
+	fs8-.[		g-.		a-.		fs-.]		|
+<< { \voiceOne
+	b16	cs	b	fs	b	cs	b	fs	%|
+	a16	b	a	fs	a	b	a	fs	%|
+} \new Voice { \voiceTwo
+	b,8		s8*3						%|
+	fs'8		s8*3						%|
+} >> \oneVoice								||
+
+	b,8-.[		cs-.		d-.		e-.]		|
+	fs8-.[		g-.		a-.		fs-.]		|
+
+<< { \voiceOne
+	a16	b	a	e	a	b	a	e	%|
+	a16	b	a	e	a	b	a	e	%|
+} \new Voice { \voiceTwo
+	e8		s8*3						%|
+	a,8		s8*3						%|
+} >> \oneVoice								||
+	}
+	{ }
+}
 }
 
 \score {
