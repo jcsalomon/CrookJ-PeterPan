@@ -46,10 +46,10 @@ words = \lyricmode {
 	Yo ho! Yo ho! the Pi -- rate life,
 	The flag, the skull and bones,
 	A mer -- ry hour, a hem -- pen rope,
-	And hey for Da -- vy Jones.
+	and hey for Da -- vy Jones.
 
 	A -- vast! Be -- lay! Yo Ho! Heave Ho!
-	A -- pir -- at -- ing we go,
+	A -- pir -- at -- ing we go, __
 	And if we’re par -- ted by a shot,
 	We’re sure to meet be -- low.
 
@@ -73,6 +73,32 @@ melody = \relative c'' {
 	<a, e' a>8	cs'		<d, fs b>	d'		|
 	<e, a cs>8	b'16[	a]	<d, gs b>8	<d e>		|
 	<cs a'>4.					%…
+
+						a'8	|
+	<d, d'>4	<cs a'>8 <d d'>4	<cs a'>8|
+	<d d'>4		<cs a'>8 <d d'>4	cs'8	|
+	<d, b'>4	<d a'>8	<cs g'>4	<d fs>8	|
+	e4.~			e4		%…
+
+						fs8	|
+	g4		b8	e,4		b'8	|
+	a4		fs8	d'4		d8	|
+	<e, a cs>4	a8	<e gs b>4	e8	|
+	<cs a'>4.~		q8 \oneVoice r8	%…
+
+	\voiceOne				a'8	|
+	<d, fs a d>4	<cs a'>8 <d d'>4	<cs a'>8|
+	<d d'>4		<cs a'>8 <d d'>4	cs'8	|
+	<d, b'>4	<d a'>8	<cs g'>4	<d fs>8	|
+	e4.~			e4		%…
+
+						fs8	|
+	<cs g'>4	b'8	<cs,e>4		b'8	|
+	<d, a'>4	fs8	<d fs d'>4	fs8	|
+	<fs a>4		<e g>8	<d fs>4		<cs e>8	|
+	d4.			<d fs a d>4->	%…
+
+	\oneVoice 				r8	|
 }
 
 upper = {
