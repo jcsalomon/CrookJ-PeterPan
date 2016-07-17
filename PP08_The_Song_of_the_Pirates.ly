@@ -149,9 +149,49 @@ upper = \relative c' {
 >>
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\global
+
+	d8[		a'		d]		%…
+
+							<a, a'>		|
+	<d a'>8		<e a>		<fs a>		<g b>		|
+	<cs,a'>8	q		<d a'>		fs		|
+	g8		fs		e		d		|
+	a8		cs16	b	a8		%…
+
+							r		|
+	d8		r		b		r		|
+	cs8		r		d		r		|
+	<e a>8		d'16	cs	<e, a>8		<e gs>		|
+	<a, a'>8	a'16	a	a8		%…
+
+						a8	|
+	<d, fs a>4	<a g'>8	<d fs>4		<fs a>8	|
+	<b, fs' b>4	<a g'>8	<d fs>4		r8	|
+	g4		fs8	e4		d8	|
+	a4    \voiceTwo	cs16 b	a4		%…
+
+\oneVoice					r8	|
+	<a e' a>4	r8	<a e' g>4	r8	|
+	<d fs>4		r8	<b b'>4		r8	|
+	<e a>4		r8	<e b'>4		<e gs>8	|
+	<a, a'>4	<g!g'!>8 <fs fs'>4	%…
+
+						<e e'>8	|
+	<d d'>4		<a' g'>8 <d fs>4	<fs a>8	|
+	<b, fs' b>4	<a g'>8	<d fs>4		r8	|
+	g4		fs8	e4		d8	|
+	a4    \voiceTwo	cs16 b	a4		%…
+
+\oneVoice					r8	|
+	<a e' a>4	r8	<a e' g>4	r8	|
+	<d fs>4		r8	<b fs' b>4	r8	|
+	<g g'>4.		a4.			|
+	<d fs>4		a8	<d, d'>4	%…
+
+						r8	|
 }
 
 \score {
