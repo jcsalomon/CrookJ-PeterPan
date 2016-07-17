@@ -104,7 +104,8 @@ melody = \relative c'' {
 upper = \relative c' {
 	\clef treble
 	\global
-<< {
+<< \new Voice = "melody" \melody
+{
 	d8[		a'		d]		%…
 
 \voiceTwo
@@ -144,7 +145,7 @@ upper = \relative c' {
 	s8*5					%…
 
 						s8	|
-} \new Voice = "melody" \melody
+}
 >>
 }
 
