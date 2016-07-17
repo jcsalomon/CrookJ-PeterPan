@@ -98,7 +98,7 @@ melody = \relative c'' {
 	<fs a>4		<e g>8	<d fs>4		<cs e>8	|
 	d4.			<d fs a d>4->	%…
 
-	\oneVoice 				r8	|
+\oneVoice 					r8	|
 }
 
 upper = \relative c' {
@@ -108,8 +108,7 @@ upper = \relative c' {
 {
 	d8[		a'		d]		%…
 
-\voiceTwo
-							g,		|
+\voiceTwo						g,		|
 	fs8		g		d		d		|
 	e8		e		d		<a d>		|
 	<b d>8		<a d>		<a cs>		<a d>		|
@@ -126,8 +125,7 @@ upper = \relative c' {
 \voiceOne		cs16 b	a4		%…
 
 \change Staff = "upper"
-\voiceTwo
-						s8	|
+\voiceTwo					s8	|
 	cs4		r8	cs4		r8	|
 	d4		r8	<d fs>4		r8	|
 	s2.						|
@@ -145,8 +143,7 @@ upper = \relative c' {
 	s8*5					%…
 
 						s8	|
-}
->>
+} >>
 }
 
 lower = \relative c {
