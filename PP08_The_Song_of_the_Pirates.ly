@@ -84,7 +84,7 @@ melody = \relative c'' {
 	g4		b8	e,4		b'8	|
 	a4		fs8	d'4		d8	|
 	<e, a cs>4	a8	<e gs b>4	e8	|
-	<cs a'>4.~		q8 \oneVoice r8	%…
+\oneVoice <cs a'>4.~		q8	r8	%…
 
 	\voiceOne				a'8	|
 	<d, fs a d>4	<cs a'>8 <d d'>4	<cs a'>8|
