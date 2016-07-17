@@ -24,6 +24,22 @@ dynamics =  {
 	s2*7
 	s4.			%…
 	\bar "||"
+
+	% Switch from 2/4 time with one eighth-note left in the measure
+	% to 6/8 time, still with one eighth-note left in the measure:
+
+	% Print the new time signature
+	\time 6/8
+
+	% Fake `\partial 8`
+	\set Timing.measureLength = #(ly:make-moment 1 8)
+						s8	|
+
+	% Actually set the new time signature
+	\set Timing.measureLength = #(ly:make-moment 6 8)
+
+	s2.*16
+	\bar "|."
 }
 
 words = \lyricmode {
