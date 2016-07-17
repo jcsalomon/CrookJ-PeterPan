@@ -17,7 +17,7 @@ dynamics =  {
 	\set Score.tempoHideNote = ##t
 	\tempo "Moderato." 4 = 110
 
-	s8*3			%…
+	s8\f	s4		%…
 	\bar "||"
 
 				s8	|
