@@ -101,10 +101,49 @@ melody = \relative c'' {
 	\oneVoice 				r8	|
 }
 
-upper = {
+upper = \relative c' {
 	\clef treble
 	\global
 << {
+	d8[		a'		d]		%…
+
+\voiceTwo
+							g,		|
+	fs8		g		d		d		|
+	e8		e		d		<a d>		|
+	<b d>8		<a d>		<a cs>		<a d>		|
+	<a cs>8		cs16	b	a8		%…
+
+							r8		|
+	s2*3								|||
+	s4.						%…
+
+						s8	|
+	s2.*3						|||
+	<a cs>8	s	%…
+\change Staff = "lower"
+\voiceOne		cs16 b	a4		%…
+
+\change Staff = "upper"
+\voiceTwo
+						s8	|
+	cs4		r8	cs4		r8	|
+	d4		r8	<d fs>4		r8	|
+	s2.						|
+	s8*5					%…
+
+						s8	|
+	s2.*3						|||
+	<a cs>8	s	%…
+\change Staff = "lower"
+\voiceOne		cs16 b	a4		%…
+
+\change Staff = "upper"
+\voiceTwo					s8	|
+	s2.*3						|||
+	s8*5					%…
+
+						s8	|
 } \new Voice = "melody" \melody
 >>
 }
