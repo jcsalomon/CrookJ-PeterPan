@@ -19,6 +19,20 @@ dynamics =  {
 }
 
 words = \lyricmode {
+	Yo ho! Yo ho! the Pi -- rate life,
+	The flag, the skull and bones,
+	A mer -- ry hour, a hem -- pen rope,
+	And hey for Da -- vy Jones.
+
+	A -- vast! Be -- lay! Yo Ho! Heave Ho!
+	A -- pir -- at -- ing we go,
+	And if we’re par -- ted by a shot,
+	We’re sure to meet be -- low.
+
+	A -- vast! Be -- lay! Yo Ho! Heave Ho!
+	A -- pir -- at -- ing we go,
+	And if we’re par -- ted by a shot,
+	We’re sure to meet be -- low.
 }
 
 melody = {
