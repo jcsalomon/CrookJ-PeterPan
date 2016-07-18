@@ -18,16 +18,16 @@ kluge = {
 	\set Timing.measureLength = #(ly:make-moment 4 4)
 }
 
-dynamics = {
-	\set Score.tempoHideNote = ##t
+dynamicsIntro = {
 	\tempo "Allegro." 4 = 160
 
 	s16\ff	s16*15	| \kluge |
 	s1		| \kluge |
 	s1		| \kluge |
 	s1		| \kluge |
-	\bar "||"
+}
 
+dynamicsMelody = {
 	\tempo "Andante." 4 = 96
 	s4\p	s4*3	|
 	s1*3		|||
@@ -35,15 +35,26 @@ dynamics = {
 \repeat unfold 3 {
 	s1*4		||||
 }
+}
+
+dynamics = {
+	\set Score.tempoHideNote = ##t
+
+	\dynamicsIntro
+	\bar "||"
+
+	\dynamicsMelody
 	\bar "|."
 }
 
-pedal = {
+pedalIntro = {
 	s16*16					| \kluge |
 	s16\sustainOn	s16*15			| \kluge |
 	s16*15			s16\sustainOff	| \kluge |
 	s16\sustainOn	s16*14	s16\sustainOff	| \kluge |
+}
 
+pedalMelody = {
 \repeat unfold 2 {
 \repeat unfold 4 {
 	s4\sustainOn	s8*5	s8\sustainOff	||||
@@ -51,10 +62,13 @@ pedal = {
 }
 }
 
-upper = \relative c''' {
-	\clef treble
+pedal = {
+	\pedalIntro
+	\pedalMelody
+}
+
+upperIntro = \relative c''' {
 	\key d \minor
-	\global
 
 	% TODO: Insert proper slurs
 	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
@@ -65,10 +79,20 @@ upper = \relative c''' {
 \oneVoice
 }
 
-lower = \relative c' {
-	\clef bass
-	\key d \minor
+upperMelody = {
+	\key a \major
+}
+
+upper = {
+	\clef treble
 	\global
+
+	\upperIntro
+	\upperMelody
+}
+
+lowerIntro = \relative c' {
+	\key d \minor
 
 	% TODO: Insert proper slurs
 	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
@@ -77,10 +101,12 @@ lower = \relative c' {
 	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
 	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
 \change Staff = "lower" \oneVoice
+}
 
+lowerMelody = \relative c' {
 	\key a \major
 
-	<a, cs e>1							|
+	<a cs e>1							|
 	<fs cs' fs>							|
 	<a cs e>							|
 	<a b d>4	q		q2				|
@@ -107,6 +133,14 @@ lower = \relative c' {
 } \new Voice { \voiceTwo
 	e				<a, e'>				%
 } >> \oneVoice								|
+}
+
+lower = {
+	\clef bass
+	\global
+
+	\lowerIntro
+	\lowerMelody
 }
 
 \score {
