@@ -12,20 +12,29 @@ global = {
 	\time 4/4
 }
 
+kluge = {
+	\bar ""
+	\set Timing.measureLength = #(ly:make-moment 1 32)
+	s32
+	\set Timing.measureLength = #(ly:make-moment 4 4)
+}
+
 dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Allegro." 4 = 160
 
-	s16\ff	s16*15	|
-	s1*3		|||
+	s16\ff	s16*15	| \kluge |
+	s1		| \kluge |
+	s1		| \kluge |
+	s1		| \kluge |
 	\bar "||"
 }
 
 pedal = {
-	s16*16					|
-	s16\sustainOn	s16*15			|
-	s16*15			s16\sustainOff	|
-	s16\sustainOn	s16*14	s16\sustainOff	|
+	s16*16					| \kluge |
+	s16\sustainOn	s16*15			| \kluge |
+	s16*15			s16\sustainOff	| \kluge |
+	s16\sustainOn	s16*14	s16\sustainOff	| \kluge |
 }
 
 upper = \relative c''' {
@@ -33,11 +42,11 @@ upper = \relative c''' {
 	\global
 
 	% TODO: Insert proper slurs
-	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	|
+	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
 \voiceOne
-	\repeat tremolo 4 { f d }	\repeat tremolo 4 { f d }	|
-	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	|
-	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	|
+	\repeat tremolo 4 { f d }	\repeat tremolo 4 { f d }	| \kluge |
+	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	| \kluge |
+	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	| \kluge |
 \oneVoice
 }
 
@@ -46,11 +55,11 @@ lower = \relative c' {
 	\global
 
 	% TODO: Insert proper slurs
-	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	|
+	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
 \change Staff = "upper" \voiceTwo
-	\repeat tremolo 4 { gs' b }	\repeat tremolo 4 { gs b }	|
-	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	|
-	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	|
+	\repeat tremolo 4 { gs' b }	\repeat tremolo 4 { gs b }	| \kluge |
+	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
+	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
 \change Staff = "lower" \oneVoice
 }
 
