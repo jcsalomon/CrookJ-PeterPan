@@ -56,8 +56,9 @@ pedalIntro = {
 
 pedalMelody = {
 \repeat unfold 2 {
-\repeat unfold 4 {
-	s4\sustainOn	s8*5	s8\sustainOff	||||
+\repeat unfold 2 {
+	s4\sustainOn	s8*5	s8\sustainOff	||
+	s4\sustainOn	s4	s2\sustainOff	||
 }	s1*4					||||
 }
 }
