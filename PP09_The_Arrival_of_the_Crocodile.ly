@@ -55,7 +55,7 @@ upper = \relative c' {
 } \new Voice { \voiceTwo \crossStaff { \autoBeamOff
 	<d, f>		q		q		q		%|
 	q		q		%…
-} } >> \autoBeamOn			gs		f]		||
+} } >> \oneVoice \autoBeamOn		gs		f]		||
 	e[		d		c		b]		|
 	a		b		gs4\fermata			|
 }
