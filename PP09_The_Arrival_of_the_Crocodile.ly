@@ -32,6 +32,7 @@ dynamics =  {
 upper = \relative c' {
 	\clef treble
 	\global
+	\voiceOne
 
 							d16(	e	|
 
@@ -40,9 +41,14 @@ upper = \relative c' {
 	af	g	af	g	f	g	f	g	|
 	af	g	af	g	f8)		d'16[	e]	|
 
-	f8		e		d		c		|
-	b		a		gs		f		|
-	e		d		c		b		|
+<< {
+	f8[		e		d		c]		%|
+	b[		a		%…
+} \new Voice { \voiceTwo \crossStaff { \autoBeamOff
+	<d, f>		q		q		q		%|
+	q		q		%…
+} } >> \autoBeamOn			gs		f]		||
+	e[		d		c		b]		|
 	a		b		gs4\fermata			|
 }
 
@@ -57,8 +63,8 @@ lower = \relative c' {
 	<b d>[		q		q		q]		|
 	q[		q]		q		r		|
 
-	<b d f>[	q		q		q]		|
-	q[		q		<b d>		q]		|
+	b[		b		b		b]		|
+	b[		b		<b d>		q]		|
 	<b, d f>[	q		q		q]		|
 	<e, b' d>	q	q4\fermata_\markup{\italic Segue.}	|
 }
@@ -77,6 +83,7 @@ lower = \relative c' {
 		\context {
 			\PianoStaff
 			\accepts Dynamics
+			\consists #Span_stem_engraver
 		}
 	}
 }
