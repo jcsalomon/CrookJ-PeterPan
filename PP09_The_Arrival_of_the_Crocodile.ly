@@ -93,6 +93,28 @@ lower = \relative c' {
 	b[		b		<b d>		q]		|
 	<b, d f>[	q		q		q]		|
 	<e, b' d>	q	q4\fermata_\markup{\italic Segue.}	|
+
+\repeat unfold 2 {
+	\change Staff = "upper" \voiceTwo
+	\acciaccatura{gs''8}
+	<d f a>		r		%…
+	\change Staff = "lower" \oneVoice
+				<g, cs e>		r		|
+}									|
+	<f a d>-.	<g bf d>-.	<f a d>-.	<e g d'>-.	|
+	<d f a d>	r		\acciaccatura{\slurUp ds'}
+					<a cs e>	r		|
+
+\repeat unfold 2 {
+	\change Staff = "upper" \voiceTwo
+	\acciaccatura{gs'8}
+	<d f a>		r		%…
+	\change Staff = "lower" \oneVoice
+					\acciaccatura{\slurUp ds}
+					<g, bf cs e>-.	r		|
+}									|
+	<f a d>8	<g bf d>16 q	<a d f>8	<bf d>16 q	|
+	<g bf d>8	<a e'>		<d, a' d>	r		|
 }
 
 \score {
