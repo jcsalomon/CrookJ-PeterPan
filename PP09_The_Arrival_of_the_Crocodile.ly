@@ -46,9 +46,21 @@ upper = \relative c' {
 	a		b		gs4\fermata			|
 }
 
-lower = {
+lower = \relative c' {
 	\clef bass
 	\global
+
+							r8		|
+
+	<gs b>[		q		q		q]		|
+	q[		q		q]		r		|
+	<b d>[		q		q		q]		|
+	q[		q]		q		r		|
+
+	<b d f>[	q		q		q]		|
+	q[		q		<b d>		q]		|
+	<b, d f>[	q		q		q]		|
+	<e, b' d>	q	q4\fermata_\markup{\italic Segue.}	|
 }
 
 \score {
