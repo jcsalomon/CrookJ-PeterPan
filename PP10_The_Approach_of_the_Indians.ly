@@ -80,8 +80,38 @@ upperIntro = \relative c''' {
 \oneVoice
 }
 
-upperMelody = {
+upperMelody = \relative c'' {
 	\key a \major
+\voiceOne
+	cs4(		a8	cs	e4		cs8	e)	|
+	<a, cs fs>4--	q--		q2--				|
+	cs4(		a8	cs	e4		cs8	e)	|
+	<b d fs>4--	q--		q2--				|
+
+	fs'4(		e8	d	b4		cs8	d	|
+	cs4		b8	a	%…
+<< {					fs4		gs8	a	%
+} \new Voice { \voiceTwo		cs,2				%
+} >> \voiceOne								|
+	<e gs>4)	q8(	<cs fs>	<e gs>4		<d fs a>	|
+	<d fs>2				<d e>)				|
+
+	cs'4(		a8	cs	e4		cs8	e)	|
+	<a, cs fs>4--	q--		q2--				|
+	cs4(		a8	cs	e4		cs8	e)	|
+	<b d fs>4--	q--		q2--				|
+
+	fs'4(		e8	d	b4		cs8	d	|
+	cs4		b8	a	%…
+<< {					fs4		gs8	a	%
+} \new Voice { \voiceTwo		cs,2				%
+} >> \voiceOne								|
+	<e gs>4)	q8(	<cs fs>	<e gs>4		<d fs a>)	|
+<< { \voiceOne
+	fs4\(		e		a2\)				%
+} \new Voice { \voiceTwo
+	d,2				cs				%
+} >>									|
 }
 
 upper = {
