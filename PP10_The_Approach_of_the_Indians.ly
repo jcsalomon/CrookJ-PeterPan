@@ -114,8 +114,9 @@ lowerMelody = \relative c' {
 
 	<gs b d>1							|
 	<a cs>2				<a, fs'>			|
+\voiceOne
 	<cs gs'>4(	q8	<fs a>	<cs gs'>4	<b a'>		|
-<< { \voiceOne
+<< {
 	a'4		b8	a	gs2)				%
 } \new Voice { \voiceTwo
 	e				e				%
@@ -128,8 +129,9 @@ lowerMelody = \relative c' {
 
 	<gs b d>1							|
 	<a cs>2				<a, fs'>			|
-	<cs gs'>4	q8(	<fs a>	<cs gs'>4	<b a'>)		|
-<< { \voiceOne
+\voiceOne
+	<cs gs'>4	q8_(	<fs a>	<cs gs'>4	<b a'>)		|
+<< {
 	a'4(		gs)		a2				%
 } \new Voice { \voiceTwo
 	e				<a, e'>				%
