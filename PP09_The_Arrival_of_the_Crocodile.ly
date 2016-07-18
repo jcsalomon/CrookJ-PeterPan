@@ -29,9 +29,21 @@ dynamics =  {
 	\bar "||"
 }
 
-upper = {
+upper = \relative c' {
 	\clef treble
 	\global
+
+							d16(	e	|
+
+	f	e	f	e	d	e	d	e	|
+	f	e	f	e)	d8(		f16	g	|
+	af	g	af	g	f	g	f	g	|
+	af	g	af	g	f8)		d'16[	e]	|
+
+	f8		e		d		c		|
+	b		a		gs		f		|
+	e		d		c		b		|
+	a		b		gs4\fermata			|
 }
 
 lower = {
