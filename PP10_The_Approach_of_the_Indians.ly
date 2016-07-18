@@ -28,6 +28,15 @@ dynamics = {
 	s1		| \kluge |
 	s1		| \kluge |
 	\bar "||"
+
+	\tempo "Andante." 4 = 96
+	s4\p	s4*3	|
+	s1*3		|||
+
+\repeat unfold 3 {
+	s1*4		||||
+}
+	\bar "|."
 }
 
 pedal = {
@@ -35,6 +44,12 @@ pedal = {
 	s16\sustainOn	s16*15			| \kluge |
 	s16*15			s16\sustainOff	| \kluge |
 	s16\sustainOn	s16*14	s16\sustainOff	| \kluge |
+
+\repeat unfold 2 {
+\repeat unfold 4 {
+	s4\sustainOn	s8*5	s8\sustainOff	||||
+}	s1*4					||||
+}
 }
 
 upper = \relative c''' {
