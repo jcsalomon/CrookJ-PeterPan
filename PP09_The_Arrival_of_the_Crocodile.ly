@@ -16,6 +16,17 @@ dynamics =  {
 	\set Score.tempoHideNote = ##t
 	\tempo "Agitato." 4 = 110
 
+	\override DynamicTextSpanner.style = #'none
+
+	\partial 8					s16\p	s	|
+
+	s2								|
+	s4				s8\cresc	s8		|
+	s2								|
+	s4.						s16\f	s	|
+
+	s2*4								||||
+	\bar "||"
 }
 
 upper = {
