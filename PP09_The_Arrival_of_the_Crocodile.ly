@@ -40,16 +40,14 @@ dynamics =  {
 upper = \relative c' {
 	\clef treble
 	\global
-	\voiceOne
-
-							d16(	e	|
+	\stemUp \slurUp					d16(	e	|
 
 	f	e	f	e	d	e	d	e	|
 	f	e	f	e)	d8(		f16	g	|
 	af	g	af	g	f	g	f	g	|
 	af	g	af	g	f8)		d'16[	e]	|
 
-<< {
+<< { \voiceOne
 	f8[		e		d		c]		%|
 	b[		a		%…
 } \new Voice { \voiceTwo \crossStaff { \autoBeamOff
@@ -58,6 +56,26 @@ upper = \relative c' {
 } } >> \oneVoice \autoBeamOn		gs		f]		||
 	e[		d		c		b]		|
 	a		b		gs4\fermata			|
+
+\repeat unfold 2 {
+	\voiceOne
+	\acciaccatura{gs''8}
+	<d f a>		r		%…
+\oneVoice \stemUp			<gs, cs e>	r		|
+}									|
+	<a d a'>^.[	<g d' g>^.	<a d a'>^.	<g bf bf'>^.]	|
+	<a d a'>	r		\acciaccatura{\slurUp ds}
+					<a cs e>	r		|
+
+\repeat unfold 2 {
+	\voiceOne
+	\acciaccatura{gs'8}
+	<d f a>			r	%…
+\oneVoice \stemUp			\acciaccatura{\slurUp cs}
+					<gs bf cs e>	r		|
+}									|
+	<a d a'>8	<bf d g>16 q	<a d f>8	<f bf d>16 q	|
+	<e bf' d>8	<g a cs>	<f a d>		r		|
 }
 
 lower = \relative c' {
