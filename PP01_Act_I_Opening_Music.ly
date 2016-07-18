@@ -14,7 +14,7 @@ global = {
 	\time 6/8
 }
 
-dynamics =  {
+dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Allegro vivo." 4 = 120
 

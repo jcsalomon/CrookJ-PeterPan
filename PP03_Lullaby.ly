@@ -15,7 +15,7 @@ global = {
 	\time 6/8
 }
 
-dynamics =  {
+dynamics = {
 	\set Score.tempoHideNote = ##t
 
 \repeat volta 2 {

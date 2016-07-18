@@ -12,7 +12,7 @@ global = {
 	\time 6/8
 }
 
-dynamics =  {
+dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Andante." 4 = 80
 
@@ -54,7 +54,7 @@ upper = \relative c'' {
 
 	<gs b>4		<gs e'>8 <g e'>4.		|
 	<d fs>8) <fs d'>^( <f a> <e cs'>4	<d b'>8	|
-	<cs a'>4.~		q4)		 r8	|
+	<cs a'>4.~		q4)		r8	|
 }
 
 lowerOne = \relative c' {

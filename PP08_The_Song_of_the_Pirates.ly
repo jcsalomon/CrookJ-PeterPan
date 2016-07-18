@@ -11,7 +11,7 @@ global = {
 	\key d \major
 }
 
-dynamics =  {
+dynamics = {
 	\time 2/4
 
 	\set Score.tempoHideNote = ##t
@@ -98,7 +98,7 @@ melody = \relative c'' {
 	<fs a>4		<e g>8	<d fs>4		<cs e>8	|
 	d4.			<d fs a d>4->	%…
 
-\oneVoice 					r8	|
+\oneVoice					r8	|
 }
 
 upper = \relative c' {

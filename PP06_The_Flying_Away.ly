@@ -12,7 +12,7 @@ global = {
 	\time 4/4
 }
 
-dynamics =  {
+dynamics = {
 	s16\p	s16*15	|
 	s1*23
 	\bar "|."

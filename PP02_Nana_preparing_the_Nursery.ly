@@ -273,7 +273,7 @@ lowerTwentyFiveToThirtyTwo = \relative c {
 	<d a'>8		<a g'>		<d fs>		%…
 }
 
-dynamics =  {
+dynamics = {
 	\dynamicsZeroToEight
 
 	\dynamicsNineToTwentyFour
