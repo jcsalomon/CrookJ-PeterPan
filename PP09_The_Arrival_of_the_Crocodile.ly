@@ -27,6 +27,14 @@ dynamics =  {
 
 	s2*4								||||
 	\bar "||"
+
+	\tempo "Moderato, and very Marked." 4 = 80
+
+	\grace s8\f	s2						|
+	s2*3								|||
+
+	s2*4								||||
+	\bar "|."
 }
 
 upper = \relative c' {
