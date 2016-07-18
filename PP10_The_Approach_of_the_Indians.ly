@@ -8,7 +8,6 @@
 }
 
 global = {
-	\key d \minor
 	\time 4/4
 }
 
@@ -54,6 +53,7 @@ pedal = {
 
 upper = \relative c''' {
 	\clef treble
+	\key d \minor
 	\global
 
 	% TODO: Insert proper slurs
@@ -67,6 +67,7 @@ upper = \relative c''' {
 
 lower = \relative c' {
 	\clef bass
+	\key d \minor
 	\global
 
 	% TODO: Insert proper slurs
@@ -76,6 +77,36 @@ lower = \relative c' {
 	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
 	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
 \change Staff = "lower" \oneVoice
+
+	\key a \major
+
+	<a, cs e>1							|
+	<fs cs' fs>							|
+	<a cs e>							|
+	<a b d>4	q		q2				|
+
+	<gs b d>1							|
+	<a cs>2				<a, fs'>			|
+	<cs gs'>4(	q8	<fs a>	<cs gs'>4	<b a'>		|
+<< { \voiceOne
+	a'4		b8	a	gs2)				%
+} \new Voice { \voiceTwo
+	e				e				%
+} >> \oneVoice								|
+
+	<a cs e>1							|
+	<fs cs' fs>							|
+	<a cs e>							|
+	<a b d>4	q		q2				|
+
+	<gs b d>1							|
+	<a cs>2				<a, fs'>			|
+	<cs gs'>4	q8(	<fs a>	<cs gs'>4	<b a'>)		|
+<< { \voiceOne
+	a'4(		gs)		a2				%
+} \new Voice { \voiceTwo
+	e				<a, e'>				%
+} >> \oneVoice								|
 }
 
 \score {
