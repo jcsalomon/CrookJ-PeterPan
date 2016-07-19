@@ -106,7 +106,13 @@ lower = \relative c {
 	b'8		<e b' d>	e,		q		%\
 	b'		<e b' d>	e,		<e' gs d'>	|
 << { \voiceOne
-	a1								%|
+	% This should perhaps be the following
+	% (using ‹http://lsr.di.unimi.it/LSR/Snippet?id=715›)
+	% 	\extendLV #40
+	% 	a1\laissezVibrer
+	% but that would clash with the beams in the treble staff.
+	#(define afterGraceFraction (cons 1 1))
+	\afterGrace a1( {s32)}						|
 } \new Voice { \voiceTwo
 	a,8	r8	r4		r2				%|
 } >> \oneVoice								|
