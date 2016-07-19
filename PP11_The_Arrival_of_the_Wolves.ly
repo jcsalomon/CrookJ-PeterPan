@@ -46,6 +46,8 @@ upper = \relative c {
 	\clef treble
 	\global
 
+\repeat unfold 2 {
+
 	\trebleToBass
 \repeat unfold 2 {
 	e4.						g8		|
@@ -84,11 +86,17 @@ upper = \relative c {
 } >> \oneVoice								||
 	<ef fs! a c>^>	r		q^>		r		|
 	<ds fs a b>^>	r		q^>		r		|
+
+}
+
+	<e e'>2\fermata							|
 }
 
 lower = \relative c {
 	\clef bass
 	\global
+
+\repeat unfold 2 {
 
 \repeat unfold 2 {
 << { \voiceOne
@@ -126,6 +134,15 @@ lower = \relative c {
 	a,		r		a		r		|%=
 	b		r		b		r		|%=
 } >> \oneVoice								||
+
+}
+
+<< {
+	\repeat tremolo 4 { e,16 e' }					|
+} \\ {
+	\once \override MultiMeasureRest #'transparent = ##t
+	R2_\fermataMarkup
+} >>
 }
 
 \score {
@@ -158,7 +175,7 @@ lower = \relative c {
 			\dynamics
 		>>
 		\new Staff = "lower" <<
-			\lower
+			\unfoldRepeats\lower
 			\dynamics
 		>>
 	>>
