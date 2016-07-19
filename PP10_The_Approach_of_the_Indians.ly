@@ -18,6 +18,16 @@ kluge = {
 	\set Timing.measureLength = #(ly:make-moment 4 4)
 }
 
+% Thanks to Simon Albrecht on lilypond-user for this
+after =
+#(define-music-function (t e m) (ly:duration? ly:music? ly:music?)
+   #{
+     \context Bottom <<
+       #m
+       { \skip $t <> -\tweak extra-spacing-width #empty-interval $e }
+     >>
+   #})
+
 dynamicsIntro = {
 	\tempo "Allegro." 4 = 160
 
@@ -71,12 +81,15 @@ pedal = {
 upperIntro = \relative c''' {
 	\key d \minor
 
-	% TODO: Insert proper slurs
-	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
+	<>( \repeat unfold 4 { a16 gs }
+			\after 4.. )	\repeat tremolo 4 { a gs }	| \kluge |
 \voiceOne
-	\repeat tremolo 4 { f d }	\repeat tremolo 4 { f d }	| \kluge |
-	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	| \kluge |
-	\repeat tremolo 4 { d b }	\repeat tremolo 4 { d b }	| \kluge |
+	<>( \repeat tremolo 4 { f d }
+			\after 4.. )	\repeat tremolo 4 { f d }	| \kluge |
+	<>( \repeat tremolo 4 { d b }
+			\after 4.. )	\repeat tremolo 4 { d b }	| \kluge |
+	<>( \repeat tremolo 4 { d b }
+			\after 4.. )	\repeat tremolo 4 { d b }	| \kluge |
 \oneVoice
 }
 
@@ -125,12 +138,15 @@ upper = {
 lowerIntro = \relative c' {
 	\key d \minor
 
-	% TODO: Insert proper slurs
-	\repeat unfold 4 { a16 gs }	\repeat tremolo 4 { a gs }	| \kluge |
+	<>( \repeat unfold 4 { a16 gs }
+			\after 4.. )	\repeat tremolo 4 { a gs }	| \kluge |
 \change Staff = "upper" \voiceTwo
-	\repeat tremolo 4 { gs' b }	\repeat tremolo 4 { gs b }	| \kluge |
-	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
-	\repeat tremolo 4 { f gs }	\repeat tremolo 4 { f gs }	| \kluge |
+	<>( \repeat tremolo 4 { gs' b }
+			\after 4.. )	\repeat tremolo 4 { gs b }	| \kluge |
+	<>( \repeat tremolo 4 { f gs }
+			\after 4.. )	\repeat tremolo 4 { f gs }	| \kluge |
+	<>( \repeat tremolo 4 { f gs }
+			\after 4.. )	\repeat tremolo 4 { f gs }	| \kluge |
 \change Staff = "lower" \oneVoice
 }
 
