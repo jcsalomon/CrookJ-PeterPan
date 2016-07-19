@@ -72,6 +72,18 @@ upper = \relative c {
 	b				e				|%=
 	fs				a				|%=
 } >> \oneVoice								||||
+
+<< { \voiceOne
+	b8[		e		d		c]		|%=
+	b[		as		b		c]		|%=
+} \new Voice { \voiceTwo
+\autoBeamOff \crossStaff {
+	<e, g>		q		q		q		|%=
+	q		q		q		q		|%=
+} \autoBeamOn
+} >> \oneVoice								||
+	<ef fs! a c>^>	r		q^>		r		|
+	<ds fs a b>^>	r		q^>		r		|
 }
 
 lower = \relative c {
