@@ -115,6 +115,10 @@ lower = \relative c {
 	g	|%=
 	a	|%=
 } >> \oneVoice								||||
+
+	\acciaccatura as8
+	b[		b		b		b]		|
+	b[		b		b		b]		|
 }
 
 \score {
@@ -131,6 +135,7 @@ lower = \relative c {
 		\context {
 			\PianoStaff
 			\accepts Dynamics
+			\consists #Span_stem_engraver
 		}
 	}
 }
