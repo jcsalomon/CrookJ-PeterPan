@@ -37,8 +37,14 @@ global = {
 }
 
 dynamics = {
+<< {
 	s4.\f			s8	|
-	s2*32
+} {
+	\repeat volta 2 {
+	s2*16
+	}
+} >>
+	s2
 	\bar "|."
 }
 
@@ -46,7 +52,7 @@ upper = \relative c {
 	\clef treble
 	\global
 
-\repeat unfold 2 {
+\repeat volta 2 {
 
 	\trebleToBass
 \repeat unfold 2 {
@@ -96,7 +102,7 @@ lower = \relative c {
 	\clef bass
 	\global
 
-\repeat unfold 2 {
+\repeat volta 2 {
 
 \repeat unfold 2 {
 << { \voiceOne
@@ -171,12 +177,12 @@ lower = \relative c {
 		}
 	<<
 		\new Staff = "upper" <<
-			\upper
-			\dynamics
+			\unfoldRepeats\upper
+			\unfoldRepeats\dynamics
 		>>
 		\new Staff = "lower" <<
 			\unfoldRepeats\lower
-			\dynamics
+			\unfoldRepeats\dynamics
 		>>
 	>>
 	\midi {
