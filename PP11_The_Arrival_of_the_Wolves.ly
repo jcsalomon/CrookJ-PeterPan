@@ -37,6 +37,9 @@ global = {
 }
 
 dynamics = {
+	s4.\f			s8	|
+	s2*32
+	\bar "|."
 }
 
 upper = {
