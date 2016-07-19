@@ -58,7 +58,7 @@ upper = \relative c {
 	fs4				fs				|%=
 	fs4				fs8		fs		|%=
 } >> \oneVoice								|||
-}
+}									||||
 
 	\clef treble
 << { \voiceOne
@@ -102,7 +102,19 @@ lower = \relative c {
 	e4				e				|%=
 	e				e				|%=
 } >> \oneVoice								||||
-}
+}									||||
+
+<< { \voiceOne
+	g'16->(	fs	e8)		g4				|%=
+	a16->(	g	fs8)		a4				|%=
+	b16->(	a	g8)		b4				|%=
+	c16->(	b	a8)		c4				|%=
+} \new Voice { \voiceTwo
+	e,2	|%=
+	fs	|%=
+	g	|%=
+	a	|%=
+} >> \oneVoice								||||
 }
 
 \score {
