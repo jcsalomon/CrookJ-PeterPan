@@ -62,9 +62,23 @@ upper = \relative c {
 }
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\global
+
+\repeat unfold 2 {
+<< { \voiceOne
+	g4.						b8		|%=
+	g2								|%=
+	a16->(	b	c8)		a16->(	b	c8)		|%=
+	a16->(	b	c8)		a		c		|%=
+} \new Voice { \voiceTwo
+	e,2(								|%=
+	e)								|%=
+	e4				e				|%=
+	e				e				|%=
+} >> \oneVoice								||||
+}
 }
 
 \score {
