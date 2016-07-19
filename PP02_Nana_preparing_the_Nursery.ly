@@ -33,10 +33,10 @@ upperZeroToEight = \relative c'' {
 							a8		|
 
 << { \voiceOne
-	d8		d16	d	d8		c16	bf	%|
+	d8		d16	d	d8		c16	bf	|%=
 	a16	bf	a	g	%…
 } \new Voice { \voiceTwo
-	f8		g		a		a16	g	%|
+	f8		g		a		a16	g	|%=
 	e8		e		%…
 } >> \oneVoice				f16	e	d	e	||
 	<f a>8		q		<f bf>		<f bs>		|
@@ -44,12 +44,12 @@ upperZeroToEight = \relative c'' {
 
 	<d d'>8		q		q		%…
 << { \voiceOne
-							d'16(	c)	%|
-	c16(	bf)	bf(	a)	a(	gs)	d'(	gs,)	%|
+							d'16(	c)	|%=
+	c16(	bf)	bf(	a)	a(	gs)	d'(	gs,)	|%=
 	<a a'>16 f'	e16	d	%…
 } \new Voice { \voiceTwo
-							d,8		%|
-	d4				f!8		f		%|
+							d,8		|%=
+	d4				f!8		f		|%=
 	\crossStaff{f8}	%…
 } >> \oneVoice
 					a16	f	e	d	|||
@@ -67,18 +67,18 @@ lowerZeroToEight = \relative c {
 
 	<d a'>8		q		<bf bf'>	q		|
 << { \voiceOne
-	a'4				a16	g	f	e	%|
+	a'4				a16	g	f	e	|%=
 } \new Voice { \voiceTwo
-	a,4				a				%|
+	a,4				a				|%=
 } >> \oneVoice								|
 
 	<d f>8		<e g>		<f a>		<fs a>		|
 	<g bf>8		<a c>		<bf d>		<b d>		|
 << { \voiceOne
-	a2~								%|
+	a2~								|%=
 	a16	g	f	e	%…
 } \new Voice { \voiceTwo
-	<a d>8		r8		r4				%|
+	<a d>8		r8		r4				|%=
 	a8		a,		%…
 } >> \oneVoice
 					d8		r8		||
@@ -112,11 +112,11 @@ upperNineToSixteen = \relative c''' {
 	<a f'>(	<c a'>)	q	q	<cs a'>(<e cs'>)q	q	|
 
 << { \voiceOne
-	d'2								%|
+	d'2								|%=
 	c4~				c8		% …
 } \new Voice { \voiceTwo
-	c!16	bf	a	c	bf8		g16	a	%|
-	bf16	a	g	bf	a8		f,16	g	%|
+	c!16	bf	a	c	bf8		g16	a	|%=
+	bf16	a	g	bf	a8		f,16	g	|%=
 } >> \oneVoice								||
 	<cs, g' a>4(			<d f a>8)	r		|
 	\autoBeamOff
@@ -134,17 +134,17 @@ lowerNineToSixteen = \relative c {
 } >> \oneVoice								|
 	\acciaccatura g,8 bf'8.	a16	%…
 << { \voiceOne
-					bf8		g		%|
+					bf8		g		|%=
 } \new Voice { \voiceTwo
-					c,4				%|
+					c,4				|%=
 } >> \oneVoice								|
 \once \override PianoStaff.Arpeggio.stencil = #ly:arpeggio::brew-chord-slur
 \once \override PianoStaff.Arpeggio.X-extent = #ly:grob::stencil-width
 % \arpeggioParenthesis
 << { \voiceOne
-	bf'2\arpeggio							%|
+	bf'2\arpeggio							|%=
 } \new Voice { \voiceTwo
-	f,4\arpeggio			e				%|
+	f,4\arpeggio			e				|%=
 } >> \oneVoice								|
 % \arpeggioNormal
 

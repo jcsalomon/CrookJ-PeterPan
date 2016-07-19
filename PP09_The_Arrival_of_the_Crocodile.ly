@@ -48,10 +48,10 @@ upper = \relative c' {
 	af	g	af	g	f8)		d'16[	e]	|
 
 << { \voiceOne
-	f8[		e		d		c]		%|
+	f8[		e		d		c]		|%=
 	b[		a		%…
 } \new Voice { \voiceTwo \crossStaff { \autoBeamOff
-	<d, f>		q		q		q		%|
+	<d, f>		q		q		q		|%=
 	q		q		%…
 } } >> \oneVoice \autoBeamOn		gs		f]		||
 	e[		d		c		b]		|

@@ -39,9 +39,9 @@ upper = \relative c'' {
 	<gs b>4		<gs e'>8<a e'>4.		|
 
 << { \voiceOne
-	fs'4.			e8	d	fs,	%|
+	fs'4.			e8	d	fs,	|%=
 } \new Voice { \voiceTwo
-	e4.			d			%|
+	e4.			d			|%=
 } >> \oneVoice \break					|
 
 	<e cs'>4	<d b'>8	<cs a'>	<d fs>	<cs e>	|

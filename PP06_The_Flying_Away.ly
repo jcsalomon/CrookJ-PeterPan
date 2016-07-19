@@ -59,9 +59,9 @@ upper = \relative c' {
 
 	a16(	a'	g!	fs	e	d	cs	b)	%\
 << { \voiceOne
-	a16(	b	g	a	fs	g	e	a)	%|
+	a16(	b	g	a	fs	g	e	a)	|%=
 } \new Voice { \voiceTwo
-	<cs, e>8	<b d e>		d		cs		%|
+	<cs, e>8	<b d e>		d		cs		|%=
 } >> \oneVoice								|
 
 	d16(	cs	d	e	fs	g	gs	a	%\
@@ -88,8 +88,8 @@ lower = \relative c {
 	\global
 
 	\repeat unfold 3 {
-		\repeat unfold 4 { <d fs a>8	<a fs' a> }		%|
-		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }%|
+		\repeat unfold 4 { <d fs a>8	<a fs' a> }		|%=
+		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }|%=
 	}								||||||
 	\repeat unfold 4 { <d fs a>	<a fs' a> }			|
 	<cs g' a>	<a g' a>	<e' g a>	<a, g' a>	%\
@@ -112,14 +112,14 @@ lower = \relative c {
 	% 	a1\laissezVibrer
 	% but that would clash with the beams in the treble staff.
 	#(define afterGraceFraction (cons 1 1))
-	\afterGrace a1( {s32)}						|
+	\afterGrace a1( {s32)}						|%=
 } \new Voice { \voiceTwo
-	a,8	r8	r4		r2				%|
+	a,8	r8	r4		r2				|%=
 } >> \oneVoice								|
 
 	\repeat unfold 3 {
-		\repeat unfold 4 { <d fs a>8	<a fs' a> }		%|
-		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }%|
+		\repeat unfold 4 { <d fs a>8	<a fs' a> }		|%=
+		\repeat unfold 2 { <e' g a> <a, g'a> <cs g' a> <a g' a> }|%=
 	}								||||||
 	\repeat unfold 4 { <d fs a>8	<a fs' a> }			|
 	<cs g' a>	<a g' a>	<e' g a>	<a, g' a>	%\

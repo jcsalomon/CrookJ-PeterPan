@@ -136,22 +136,22 @@ lower = \relative c {
 	b'8-.[		cs-.		d-.		e-.]		|
 	fs8-.[		g-.		a-.		fs-.]		|
 << { \voiceOne
-	b16	cs	b	fs	b	cs	b	fs	%|
-	a16	b	a	fs	a	b	a	fs	%|
+	b16	cs	b	fs	b	cs	b	fs	|%=
+	a16	b	a	fs	a	b	a	fs	|%=
 } \new Voice { \voiceTwo
-	b,8		s8*3						%|
-	fs'8		s8*3						%|
+	b,8		s8*3						|%=
+	fs'8		s8*3						|%=
 } >> \oneVoice								||
 
 	b,8-.[		cs-.		d-.		e-.]		|
 	fs8-.[		g-.		a-.		fs-.]		|
 
 << { \voiceOne
-	a16	b	a	e	a	b	a	e	%|
-	a16	b	a	e	a	b	a	e	%|
+	a16	b	a	e	a	b	a	e	|%=
+	a16	b	a	e	a	b	a	e	|%=
 } \new Voice { \voiceTwo
-	e8		s8*3						%|
-	a,8		s8*3						%|
+	e8		s8*3						|%=
+	a,8		s8*3						|%=
 } >> \oneVoice								||
 	}
 	{ }

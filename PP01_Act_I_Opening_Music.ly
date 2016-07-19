@@ -44,21 +44,21 @@ upperOneToFour = \relative c' {
 
 upperFive = \relative c' {
 << { \voiceOne
-	cs8	e	b'	a	b	cs	%|
+	cs8	e	b'	a	b	cs	|%=
 } \new Voice { \voiceTwo
-	cs,4.			d4		g8	%|
+	cs,4.			d4		g8	|%=
 } >> \oneVoice						|
 }
 
 upperFiveToEight = \relative c'' {
 	\upperFive					|
 << { \voiceOne
-	d8	cs	d	fs4->\arpeggio	e8	%|
-	d8	cs	b	cs4->		b8	%|
+	d8	cs	d	fs4->\arpeggio	e8	|%=
+	d8	cs	b	cs4->		b8	|%=
 } \new Voice { \voiceTwo
-	fs8	g	fs	e4.\arpeggio		%|
-	fs4.			gs			%|
-} >> \oneVoice						|||
+	fs8	g	fs	e4.\arpeggio		|%=
+	fs4.			gs			|%=
+} >> \oneVoice						||
 	a8	a	gs	g	fs	e	|
 }
 
@@ -67,9 +67,9 @@ upperNineToTwelve = \upperOneToFour
 upperThirteenToSixteen = \relative c'' {
 	\upperFive					|
 << { \voiceOne
-	d8	fs	g	a	fs	d	%|
+	d8	fs	g	a	fs	d	|%=
 } \new Voice { \voiceTwo
-	fs,4		g8	a4.			%|
+	fs,4		g8	a4.			|%=
 } >> \oneVoice						|
 	<d, g b>4	<g b e>8<fs a d>4	<g a cs>8|
 	<fs a d>4.~		q4		r8	|
@@ -77,10 +77,10 @@ upperThirteenToSixteen = \relative c'' {
 
 upperSeventeenToTwentyFour = \relative c' {
 << { \voiceOne
-	d'8	e	d	cs4		cs8	%|
+	d'8	e	d	cs4		cs8	|%=
 	b8	cs	b	%…
 } \new Voice { \voiceTwo
-	b4.			a4		a8	%|
+	b4.			a4		a8	|%=
 	gs4.			%…
 } >> \oneVoice			a4		a8	||
 << { \voiceOne
@@ -98,9 +98,9 @@ upperSeventeenToTwentyFour = \relative c' {
 } >> \oneVoice			a4		<cs, e>8|
 	<d fs>8	<e gs>	<fs a>	%…
 << { \voiceOne
-				b4		cs8	%|
+				b4		cs8	|%=
 } \new Voice { \voiceTwo
-				gs!4.			%|
+				gs!4.			|%=
 } >> \oneVoice						|
 	a4		<a a,>8	q4		q8	|
 }
@@ -134,9 +134,9 @@ lowerOneToFour = \relative c {
 	<d b'>4		q8	<ds b'>4	q8	|
 	<e b'>8[r	q]	<fs b>4		q8	|
 << { \voiceOne
-	b4		b8	b4		b8	%|
+	b4		b8	b4		b8	|%=
 } \new Voice { \voiceTwo
-	g8	e	fs	g4		g8	%|
+	g8	e	fs	g4		g8	|%=
 } >> \oneVoice						|
 }
 
@@ -147,13 +147,13 @@ lowerFive = \relative c' {
 lowerFiveToEight = \relative c' {
 	\lowerFive					|
 << { \voiceOne
-	a4.			as			%|
-	b4.~			b8	e	d	%|
-	cs8	s8*5					%|										|
+	a4.			as			|%=
+	b4.~			b8	e	d	|%=
+	cs8	s8*5					|%=
 } \new Voice { \voiceTwo
-	d,8	e	d	cs4.			%|
-	b8	cs	d	e4.			%|
-	a8	a,	b	cs	d	e	%|
+	d,8	e	d	cs4.			|%=
+	b8	cs	d	e4.			|%=
+	a8	a,	b	cs	d	e	|%=
 } >> \oneVoice						|||
 }
 
@@ -170,17 +170,17 @@ lowerSeventeenToTwentyFour = \relative c' {
 	e4.			e,			|
 	<e d'>4.		<e cs'>4	r8	|
 << { \voiceOne
-	a4.			a4		gs8	%|
+	a4.			a4		gs8	|%=
 } \new Voice { \voiceTwo
-	d4.			e4		e8	%|
+	d4.			e4		e8	|%=
 } >> \oneVoice						|
 	a4		e8	cs4		a8	|
 
 << { \voiceOne
-	gs'4.			a			%|
+	gs'4.			a			|%=
 	d4.(			cs4)		%…
 } \new Voice { \voiceTwo
-	e,2.						%|
+	e,2.						|%=
 	e4.(			a4)		%…
 } >> \oneVoice					r8	||
 	<d, a'>4.		<e d'>			|

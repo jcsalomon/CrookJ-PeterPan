@@ -186,9 +186,9 @@ lower = \relative c {
 	<a e' a>4	r8	<a e' g>4	r8	|
 	<d fs>4		r8	<b fs' b>4	r8	|
 << { \voiceTwo
-	<g g'>4.		a4.			%|
+	<g g'>4.		a4.			|%=
 } \new Voice { \voiceOne
-	s4.			a'4		g8	%|
+	s4.			a'4		g8	|%=
 } >> \oneVoice						|
 	<d fs>4		a8	<d, d'>4->	%…
 
