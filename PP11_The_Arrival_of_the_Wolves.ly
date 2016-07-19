@@ -47,7 +47,6 @@ upper = \relative c {
 	\global
 
 	\trebleToBass
-
 \repeat unfold 2 {
 	e4.						g8		|
 << { \voiceOne
@@ -60,6 +59,19 @@ upper = \relative c {
 	fs4				fs8		fs		|%=
 } >> \oneVoice								|||
 }
+
+	\clef treble
+<< { \voiceOne
+	e'4				g16->(	fs	e8)		|%=
+	ds4				a'16->(	g	fs8)		|%=
+	e4				g16->(	fs	e8)		|%=
+	fs4				c'16->(	b	a8)		|%=
+} \new Voice { \voiceTwo
+	b,4				b				|%=
+	b				ds				|%=
+	b				e				|%=
+	fs				a				|%=
+} >> \oneVoice								||||
 }
 
 lower = \relative c {
