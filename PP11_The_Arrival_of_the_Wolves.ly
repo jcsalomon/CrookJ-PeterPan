@@ -110,10 +110,10 @@ lower = \relative c {
 	b16->(	a	g8)		b4				|%=
 	c16->(	b	a8)		c4				|%=
 } \new Voice { \voiceTwo
-	e,2	|%=
-	fs	|%=
-	g	|%=
-	a	|%=
+	e,2								|%=
+	fs								|%=
+	g								|%=
+	a								|%=
 } >> \oneVoice								||||
 
 	\acciaccatura as8
