@@ -42,10 +42,24 @@ dynamics = {
 	\bar "|."
 }
 
-upper = {
+upper = \relative c {
 	\clef treble
 	\global
+
 	\trebleToBass
+
+\repeat unfold 2 {
+	e4.						g8		|
+<< { \voiceOne
+	b2								|%=
+	c16->(	b	a8)		c16->(	b	a8)		|%=
+	c16->(	b	a8)		c		a		|%=
+} \new Voice { \voiceTwo
+	e2								|%=
+	fs4				fs				|%=
+	fs4				fs8		fs		|%=
+} >> \oneVoice								|||
+}
 }
 
 lower = {
