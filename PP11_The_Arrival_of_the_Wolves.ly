@@ -119,6 +119,13 @@ lower = \relative c {
 	\acciaccatura as8
 	b[		b		b		b]		|
 	b[		b		b		b]		|
+<< { \voiceOne
+	c16->(	b	a8)		c16->(	b	a8)		|%=
+	b16->(	a	fs8)		b16->(	a	fs8)		|%=
+} \new Voice { \voiceTwo
+	a,		r		a		r		|%=
+	b		r		b		r		|%=
+} >> \oneVoice								||
 }
 
 \score {
