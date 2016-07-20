@@ -73,6 +73,16 @@ upper = \relative c' {
 } \new Voice { \voiceTwo
 						g!4.			|%=
 } >> \oneVoice								|
+
+	a4(		fs8	a	d4		fs		|
+	a8	fs	d	a	<a c>4		<g b>)		|
+<< { \voiceOne
+	g8	b,	cs	d	fs4		e		|%=
+	d8	a'	e	fs	d2\fermata			|%=
+} \new Voice { \voiceTwo
+	g,4.			a8	b2				|%=
+	a4		<a cs>		a2				|%=
+} >> \oneVoice								||
 }
 
 lower = \relative c {
