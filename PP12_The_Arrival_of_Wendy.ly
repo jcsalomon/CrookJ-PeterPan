@@ -64,6 +64,15 @@ upper = \relative c' {
 	a4		cs		a2				|%=
 } >>									|||
 
+	a'4(		fs8	a	d4		d)		|
+	d8(	cs	b	cs	a4		a)		|
+	d4(		a8	fs	e	d	fs	d')	|
+	cs(	b	fs'	e	e	%…
+<< {
+						cs	b	a)	|%=
+} \new Voice { \voiceTwo
+						g!4.			|%=
+} >> \oneVoice								|
 }
 
 lower = \relative c {
