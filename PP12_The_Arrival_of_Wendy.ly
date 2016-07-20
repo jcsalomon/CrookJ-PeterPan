@@ -17,7 +17,9 @@ dynamics = {
 	\tempo "Andante con espressione." 4 = 90
 
 	s8\p	s8*7	|
-	s1*7
+	s1*4
+	s8\<	s8*5	s4\!	|
+	s1*2
 	\bar "||"
 
 	s8\mf	s8*7	|
