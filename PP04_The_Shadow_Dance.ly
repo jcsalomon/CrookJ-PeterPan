@@ -49,6 +49,17 @@ lower = \relative c' {
 	<b d d,>2~			q8	r	r4		|
 	<b d>8[	r	<as cs>]r	<b d>[	r	<a d>]	r	|
 	<gs d' e>2~			q8	r	r4		|
+
+\change Staff = "upper" \voiceTwo
+	<a cs e>8[r	q]	r	% …
+\change Staff = "lower" \oneVoice
+					<fs as>[r	q]	r	|
+	b,8	r8	<a'! b ds>r8	% …
+\change Staff = "upper" \voiceTwo
+					<b ds fs a>r	r4		|
+\change Staff = "lower" \oneVoice
+	e,,8[	r	<e' gs d'!>]r	q	r	r4		|
+	gs,4		<e' a cs>	<a cs e>	r		|
 }
 
 \score {
