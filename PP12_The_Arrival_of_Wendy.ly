@@ -28,11 +28,15 @@ pedal = {
 upper = {
 	\clef treble
 	\global
+<< { s1*8 } {	% temp
+} >>		% temp
 }
 
 lower = {
 	\clef bass
 	\global
+<< { s1*8 } {	% temp
+} >>		% temp
 }
 
 \score {
