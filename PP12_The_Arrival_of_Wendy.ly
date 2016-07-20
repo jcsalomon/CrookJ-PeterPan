@@ -48,12 +48,23 @@ lower = \relative c {
 	e,8	r	s4		a8	r	s4		|
 	d8	r	s4		b8	r	s4		|
 	<e,e'>8	r	r4		a8	a'	b	cs	|
+
+	d,8	r	r4		b8	r	<d fs b> r	|
 } \new Voice { \change Staff = "upper" \oneVoice
-	s4		<fs a d>8^\LH r	s4		<fs b d>8 r	|
+	s4		<fs'a d>8^\LH r	s4		<fs b d>8 r	|
 	s4		<e g b d>8 r	s4		<g a cs>8 r	|
 	s4		<fs a d>8 r	s4		<fs b d>8 r	|
 	s4		<e gs d'>8 r	s2				|
+
+	s4		<fs a d>8^\LH r	s2				|
 } >> \oneVoice
+	<fs,,d'>2_(^(			<g d'>))			|
+	<e e'>4.		<fs fs'>8 <g g'>2			|
+<< { \voiceOne
+	fs'4		g		<d fs>2				|%=
+} \new Voice { \voiceTwo
+	a2				r8	b(	a	fs)	|%=
+} >> \oneVoice								|
 
 } >>		% temp
 }
