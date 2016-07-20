@@ -70,6 +70,11 @@ upper = \relative c' {
 	fs,2(				f8)	%…
 } >> \oneVoice					r8	r4		|
 
+	e'8	a	e	cs	b	fs'	d	b	|
+	e	a	e	cs	b	fs'	ds	b	|
+	e,16(fs gs  a   b   cs  d!  ds  e   fs  gs  a	%…
+				\tuplet 6/4{ b16 cs  d!  e   fs  gs }	|
+	a8)	r8	r4		r2				|
 }
 
 lower = \relative c' {
