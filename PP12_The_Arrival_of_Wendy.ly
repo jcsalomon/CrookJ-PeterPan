@@ -28,6 +28,9 @@ dynamics = {
 pedal = {
 }
 
+LH = \markup {\italic L.H.}
+RH = \markup {\italic R.H.}
+
 upper = {
 	\clef treble
 	\global
@@ -35,10 +38,23 @@ upper = {
 } >>		% temp
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\global
 << { s1*8 } {	% temp
+
+<< { \voiceTwo
+	d8	r	s4		b8	r	s4		|
+	e,8	r	s4		a8	r	s4		|
+	d8	r	s4		b8	r	s4		|
+	<e,e'>8	r	r4		a8	a'	b	cs	|
+} \new Voice { \change Staff = "upper" \oneVoice
+	s4		<fs a d>8^\LH r	s4		<fs b d>8 r	|
+	s4		<e g b d>8 r	s4		<g a cs>8 r	|
+	s4		<fs a d>8 r	s4		<fs b d>8 r	|
+	s4		<e gs d'>8 r	s2				|
+} >> \oneVoice
+
 } >>		% temp
 }
 
