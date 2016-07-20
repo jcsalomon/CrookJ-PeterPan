@@ -53,6 +53,23 @@ upper = \relative c' {
 	<b d>-.		<as cs>-.	<b d>-.		<bs ds>-.	|
 	<d! fs>-.	<cs e>-.	<cs e>-.	<e, a>-.	%
 	<a cs>4				r				|
+
+	\appoggiatura { e16 fs gs }
+	<e a>8[	r	<e b'>]	r	<e cs'>[r	q]	r	|
+<< { \voiceOne
+	cs'4->(		b8.	    f!16f'8\fermata)%…
+} \new Voice { \voiceTwo
+	f,2(				f8)	%…
+} >> \oneVoice					r8	r4		|
+
+	\appoggiatura { e16 fs gs }
+	<e a>8[	r	<e b'>]	r	<e cs'>[r	q]	r	|
+<< { \voiceOne
+	cs'4->(		b8.	    f!16f'8\fermata)%…
+} \new Voice { \voiceTwo
+	fs,2(				f8)	%…
+} >> \oneVoice					r8	r4		|
+
 }
 
 lower = \relative c' {
