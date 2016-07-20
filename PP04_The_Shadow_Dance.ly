@@ -65,6 +65,11 @@ lower = \relative c' {
 	<a cs>8[r	q]	r	q[	r	q]	r	|
 	<d, a' d>2~			q4\fermata	r		|
 }									||
+
+	<cs e a>8  q	q	q	q	q	q	q	|
+	<e a cs>   q	q	q	<fs a b ds> q	q	q	|
+	<e a cs e> q	q	q	<e gs b e>  q	q	q	|
+	<a e'>8	r	r4		r2				|
 }
 
 \score {
