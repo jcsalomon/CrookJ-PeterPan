@@ -45,6 +45,8 @@ dynamics = {
 }
 
 pedal = {
+	s1*7
+	s4\sustainOn s2 s4\sustainOff
 }
 
 upper = \relative c' {
