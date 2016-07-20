@@ -13,6 +13,9 @@ global = {
 }
 
 dynamics = {
+	\set Score.tempoHideNote = ##t
+	\tempo "Andante con espressione." 4 = 90
+
 	s8\p	s8*7	|
 	s1*7
 	\bar "||"
