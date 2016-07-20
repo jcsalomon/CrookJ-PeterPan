@@ -40,7 +40,16 @@ upper = \relative c' {
 	a4^\RH(		fs8	a	d4)		d		|
 	d8(	cs	b	cs)	a4		a		|
 	d4(		a8	fs	e	d	fs	d'	|
-	cs	b	fs'	e	e2)				|
+	cs	b	fs'	e	%…
+<< { \voiceOne
+					e2)				|%=
+} \new Voice {
+\change Staff = "upper" \voiceOne
+					s8	cs'^\RH	b	a	|%=
+} \new Voice {
+\change Staff = "upper" \voiceTwo
+					s8	g4.			|%=
+} >>									|
 
 } >>		% temp
 }
