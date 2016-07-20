@@ -48,6 +48,11 @@ upper = \relative c' {
 	}
 } >> 									|
 	cs'4->(		b8.	   fs'16fs8)	r8	r	<fs a>	|
+\oneVoice
+	<fs a>8-.	<e gs>-.	<fs a>-.	<b, d>-.	%
+	<b d>-.		<as cs>-.	<b d>-.		<bs ds>-.	|
+	<d! fs>-.	<cs e>-.	<cs e>-.	<e, a>-.	%
+	<a cs>4				r				|
 }
 
 lower = \relative c' {
