@@ -51,6 +51,18 @@ upper = \relative c' {
 					s8	g4.			|%=
 } >>									|
 
+	a,4^\RH		fs8	a	d4	%…
+\change Staff = "upper" \voiceOne		fs^\RH			|
+<< {
+	a8(	fs	d	a	<a! cs>4	<g b>)		|%=
+	g'8(	b,	cs	d	fs4		e		|%=
+	d8	a'	e	fs	d2)				|%=
+} \new Voice { \voiceTwo
+	a2				s				|%=
+	g4.			a8	b2				|%=
+	a4		cs		a2				|%=
+} >>									|||
+
 } >>		% temp
 }
 
