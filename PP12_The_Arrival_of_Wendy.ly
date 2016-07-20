@@ -13,6 +13,13 @@ global = {
 }
 
 dynamics = {
+	s8\p	s8*7	|
+	s1*7
+	\bar "||"
+
+	s8\mf	s8*7	|
+	s1*7
+	\bar "|."
 }
 
 pedal = {
