@@ -34,7 +34,6 @@ RH = \markup {\italic R.H.}
 upper = \relative c' {
 	\clef treble
 	\global
-<< { s1*8 } {	% temp
 
 \change Staff = "lower" \voiceOne
 	a4^\RH(		fs8	a	d4)		d		|
@@ -63,13 +62,11 @@ upper = \relative c' {
 	a4		cs		a2				|%=
 } >>									|||
 
-} >>		% temp
 }
 
 lower = \relative c {
 	\clef bass
 	\global
-<< { s1*8 } {	% temp
 
 << { \voiceTwo
 	d8	r	s4		b8	r	s4		|
@@ -94,7 +91,6 @@ lower = \relative c {
 	a2				r8	b(	a	fs)	|%=
 } >> \oneVoice								|
 
-} >>		% temp
 }
 
 \score {
