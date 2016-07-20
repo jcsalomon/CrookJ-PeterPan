@@ -83,11 +83,15 @@ upper = \relative c {
 
 << { \voiceOne
 	b8[		e		d		c]		|%=
-	b[		as		b		c]		|%=
+	b[		%…
+	\once \override NoteColumn.force-hshift = -1
+			as		b		c]		|%=
 } \new Voice { \voiceTwo
 \autoBeamOff \crossStaff {
 	<e, g>		q		q		q		|%=
-	q		q		q		q		|%=
+	q		%…
+	\once \override NoteColumn.force-hshift = 0
+			q		q		q		|%=
 } \autoBeamOn
 } >> \oneVoice								||
 	<ef fs! a c>^>	r		q^>		r		|
