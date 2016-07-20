@@ -25,9 +25,14 @@ upper = {
 	\global
 }
 
-lower = {
+lower = \relative c' {
 	\clef bass
 	\global
+
+	<a cs>8[r	q]	r	q[	r	q]	r	|
+	<b d d,>2~			q8	r	r4		|
+	<b d>8[	r	<as cs>]r	<b d>[	r	<a d>]	r	|
+	<gs d' e>2~			q8	r	r4		|
 }
 
 \score {
