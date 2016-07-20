@@ -15,6 +15,33 @@ global = {
 dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Moderato." 4 = 120
+
+	\grace { s16\mf s s }
+	s1*6
+
+	\tempo 4 = 140
+	s8-\markup {\bold "piu accel."} s8*7
+
+	\tempo 4 = 130
+	s8-\markup {\bold "rit. e dim."}\> s8*5
+
+	\tempo \markup {\italic "a tempo."} 4 = 120
+	s4
+
+	s8\p s8*7
+
+	\tempo \markup {\italic Grazioso.}
+	s1
+
+	\tempo 4 = 110
+	\grace { s16-\markup {\bold "poco meno."} s s }
+	s1*2
+
+	\tempo 4 = 130
+	s8\f s8 s8-\markup {\bold "poco accel."} s8*5
+
+	s1*3
+	\bar "|."
 }
 
 pedal = {
