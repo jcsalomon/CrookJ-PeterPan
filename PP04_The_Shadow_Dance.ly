@@ -60,6 +60,11 @@ lower = \relative c' {
 \change Staff = "lower" \oneVoice
 	e,,8[	r	<e' gs d'!>]r	q	r	r4		|
 	gs,4		<e' a cs>	<a cs e>	r		|
+
+\repeat unfold 2 {
+	<a cs>8[r	q]	r	q[	r	q]	r	|
+	<d, a' d>2~			q4\fermata	r		|
+}									||
 }
 
 \score {
