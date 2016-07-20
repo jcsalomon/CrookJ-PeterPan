@@ -103,6 +103,19 @@ lower = \relative c {
 						e4.			|%=
 } >> \oneVoice								|
 
+	d,,8	r	<fs'a d> r	b,,	r	<fs''b d> r	|
+	<fs,,fs'> r	<fs''a d> r	%…
+<< { \voiceOne
+					d'2				|%=
+} \new Voice { \voiceTwo
+					fs,4		g		|%=
+} >> \oneVoice								|
+	<e,e'>4.		<fs fs'>8 <g g'>2			|
+<< { \voiceOne
+	fs'4(		g)		fs2\fermata			|%=
+} \new Voice { \voiceTwo
+	a,2				d				|%=
+} >> \oneVoice								|
 }
 
 \score {
