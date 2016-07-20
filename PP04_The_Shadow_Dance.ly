@@ -38,6 +38,16 @@ upper = \relative c' {
 } \new Voice { \voiceTwo
 	b2(				b8)	% …
 } >> \oneVoice					r8	r4		|
+
+<< { \voiceOne
+	\appoggiatura { e16 fs gs }
+	a8[	r	e]	r	d[	r	cs]	r	|%=
+} \new Voice { \voiceTwo
+	\crossStaff {
+	s2				e,8	s	e	s	|%=
+	}
+} >> 									|
+	cs'4->(		b8.	   fs'16fs8)	r8	r	<fs a>	|
 }
 
 lower = \relative c' {
@@ -87,6 +97,7 @@ lower = \relative c' {
 		\context {
 			\PianoStaff
 			\accepts Dynamics
+			\consists #Span_stem_engraver
 		}
 	}
 }
