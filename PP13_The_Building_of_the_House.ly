@@ -74,10 +74,31 @@ upper = \relative c' {
 }
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\key g \major
 	\time 2/4
+							r8		|
+
+	g8		<d'g b>[	q		q]		|
+	a		<d fs c'>[	q		q]		|
+<< { \voiceOne
+	a'4				as				|%=
+	b8[		<g b>		<g b d>]	%…
+} \new Voice { \voiceTwo
+	d2~								|%=
+	<g, d'>4					%…
+} >> \oneVoice						r8		||
+
+	e8		<e'g b>4			q8		|
+	a,8		<fs'a d>4			q8		|
+	e8		<g b d>		a,		<g'a cs>	|
+	<d fs a d>	<a a'>[		<d, d'>]	r		|
+
+	ds'8		<a' b>		b,		q		|
+	e		<g b>		cs,		as'		|
+	d,[		q		d		<fs c'>]	|
+	<g b>[		d		g,]		%…
 }
 
 \score {
