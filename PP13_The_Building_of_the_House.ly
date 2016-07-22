@@ -22,9 +22,15 @@ dynamics = {
 				s8\mf	|
 	s2*35
 	\bar "||"
+
+	\tempo "Allegretto." 4 = 120
+	s8*5					s8\p	|
+	s2.*7
+	s8*5
+	\bar "||"
 }
 
-words = \lyricmode {
+wordsOne = \lyricmode {
 	I wish I had a darl -- ing house,
 	The litt -- ’lest ev -- er seen,
 	With fun -- ny lit -- tle red walls,
@@ -34,6 +40,13 @@ words = \lyricmode {
 	And roof of mos -- sy green.
 }
 
+wordsTwo = \lyricmode {
+	We’ve built the lit -- tle walls, and roof,
+	And made a love -- ly door, __
+	So tell us mo -- ther Wen -- dy,
+	What are you want -- ing more? __
+}
+
 upper = \relative c' {
 	\clef treble
 	\key g \major
@@ -41,7 +54,7 @@ upper = \relative c' {
 
 \mergeDifferentlyDottedOn
 
-\new Voice = "melody" {
+\new Voice = "melodyOne" {
 \autoBeamOff
 \voiceOne
 							d8		|
@@ -142,7 +155,35 @@ upper = \relative c' {
 
 	\key c \major
 	\time 6/8
-	<g g'>2.
+
+\new Voice = "melodyTwo" {
+\autoBeamOn
+\voiceOne
+<< \new Voice { \voiceTwo
+	<g g'>2.					|%=
+} {
+	s8*5					g'8	|%=
+} >>							|
+
+	<c, e>4		<c f>8	<c g'>4		<c gs'>8|
+	<c a'>4		<c gs'>8<c a'>4		<cs g'>8|
+	<d f>4		<d g>8	<d a'>4		<d a'c>8|
+	<d g b>4.~		q4		g8	|
+
+<< {
+	b4		b8	a4		b8	|%=
+	c4.\(			a4\)		%…
+} \new Voice { \voiceTwo
+	d,2.						|%=
+	c4.~			c4		%…
+} >>						<c ef a>8||
+	<c e! g>4	c'8	<d, f c'>4	b'8	|
+<< {
+	c4.~			c4		%…
+} \new Voice { \voiceTwo
+	<c, e g>4.~		q4		%…
+} >>
+}
 }
 
 lower = \relative c {
@@ -236,7 +277,8 @@ lower = \relative c {
 		\new Dynamics = "dynamics" \dynamics
 		\new Staff = "lower" \lower
 		\context Lyrics = "words" {
-			\lyricsto "melody" \words
+			\lyricsto "melodyOne" \wordsOne
+			\lyricsto "melodyTwo" \wordsTwo
 		}
 	>>
 	\layout {
@@ -263,7 +305,8 @@ lower = \relative c {
 			\dynamics
 		>>
 		\context Lyrics = "words" {
-			\lyricsto "melody" \words
+			\lyricsto "melodyOne" \wordsOne
+			\lyricsto "melodyTwo" \wordsTwo
 		}
 	>>
 	\midi {
