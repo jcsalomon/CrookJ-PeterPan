@@ -170,6 +170,59 @@ lower = \relative c {
 	e		<g b>		cs,		as'		|
 	d,[		q		d		<fs c'>]	|
 	<g b>[		d		g,]		r		|
+
+	g		<g' b d>	d,		q		|
+	g		q		<e' e'>->	<d d'>->	|
+	g,		<g' b d>	d,		q		|
+	g		<fs' c' d>	<e e'>->	<d d'>->	|
+
+	g,		<fs' c' d>	d,		q		|
+	g		q		<fs' fs'>->	<e e'>->	|
+	d,[		d'		d'		d,]		|
+	g,		<g' b d>	<e e'>->	<d d'>->	|
+
+	g,		<g' b d>	d,		q		|
+	g		<fs' c' d>	<e e'>->	<d d'>->	|
+	g,		<g' b d>	d,		<gs' b e>	|
+	a,		<a' c e>	<fs fs'>->	<e e'>->	|
+
+	c,[		c'		<a' c>		c,]		|
+	d,[		d'		<b' d>		d,]		|
+	d,		<g' a cs>	d,		<ds' fs c'>	|
+	g,		<g' b>		<a, a'>->	<g g'>->	|
+
+	g[		<f' g b>	<g b d>		<f g b>]	|
+	c,		<e' g c>	<d d'>->	<c c'>->	|
+	e,[		<e' gs b>	<gs b d>	<e gs b>]	|
+	a,		<e' a>		<b b'>->	<a a'>->	|
+
+	c		<e a c>		c		<ef a c>	|
+	d		<g b>		<c, c'>->	<b b'>->	|
+	<d d,>		<d a' c>[	q		q]		|
+	<g cs>		<g d'>		<as, as'>->	<b b'>->	|
+
+	g[		<f' g b>	<g b d>		<f g b>]	|
+	c,		<e' g c>	<d d'>->	<c c'>->	|
+	e,		<e' gs b>	<gs b d>	<e gs b>	|
+	a,		<e' a>		<b b'>->	<a a'>->	|
+
+	c		<e a c>		c		<ef a c>	|
+	d		<g b>		<c, c'>->	<b b'>->	|
+	<d, d'>		<fs' c' d>	d,		<d' fs a c>	|
+	<g, g'>		%…
+\change Staff = "upper" \voiceTwo
+			<b'' d>[	<a c>		<g b>]		|
+
+	<fs a>[		<e g>		<d g>		<c d e>]	|
+	<b d>		%…
+\change Staff = "lower" \oneVoice
+			<bf df>[	<a c>		<g b>]		|
+	<fs a>		<e g>		<d g>		<d fs>		|
+
+
+	\key c \major
+	\time 6/8
+	g,	r	r	r4		r8	|
 }
 
 \score {
