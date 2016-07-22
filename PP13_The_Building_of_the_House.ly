@@ -18,6 +18,10 @@ dynamics = {
 	s2*3
 	s4.			%…
 	\bar "||"
+
+				s8\mf	|
+	s2*35
+	\bar "||"
 }
 
 words = \lyricmode {
@@ -70,8 +74,75 @@ upper = \relative c' {
 	g4.						%…
 } \new Voice { \voiceOne
 	g8[		<b d>		<b d g>]	%…
-} >> \voiceOne						%…
+} >> 							%…
 }
+\oneVoice
+							<b d>8		|
+
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<g b d>[	q		q		q]		|
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<a c>[		q		q		q]		|
+
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<c e>[		q		q		q]		|
+	<d fs>[		<c e>		<b d>		<as cs>]	|
+	<b e>[		<b d>		q		q]		|
+
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<b d>[		q		q		q]		|
+	<g b>[		<b d>		<b e>		<gs b>]		|
+	<a c>[		q		q		q]		|
+
+	<d fs>[		<c e>		<b d>		<a c>]		|
+	<fs as>[	<g b>		<b g'>		<g b>]		|
+	<g e'>[		<g a>		<fs d'>		<d fs>]		|
+	<d a'>[		<d g>		q		q]		|
+
+	<b' d g>[	q		<g b d>		<g b>]		|
+	<e g d'>[	<e g c>		q		q]		|
+	<gs b e>[	q		<e gs b>	<e gs>]		|
+	<c e b'>[	<c e a>		q		q]		|
+
+<< { \voiceOne
+	<a' d>[		<a c>		<a d>		<a c>]		|%=
+	<g c>[		<g b>		q		q]		|%=
+} \new Voice { \voiceTwo
+	e4				ef				|%=
+	d4				%…
+} >> \oneVoice								||
+	<fs b>8[	<fs a>		<fs d'>		<fs b>]		|
+	<g as>[		<g b>		<g e'>		<g d'>]		|
+
+	<b d g>[	q		<g b d>		<g b>]		|
+	<e g d'>[	<e g c>		q		q]		|
+	<gs b e>[	q		<e gs b>	<e gs>]		|
+	<c e b'>[	<c e a>		q		q]		|
+
+<< { \voiceOne
+	<a' d>[		<a c>		<a d>		<a c>]		|%=
+	<g c>[		<g b>		q		q]		|%=
+} \new Voice { \voiceTwo
+	e4				ef				|%=
+	d4				%…
+} >> \oneVoice								||
+	<fs b>8[	<fs a>		<fs d'>		<fs b>]		|
+	<b, g'>		%
+\voiceOne
+\tuplet 3/2 8 {		g''16([ a g]	fs[ g fs]	e[ fs e]	|
+}
+
+\tuplet 3/2 8 {
+	d[ e d]		c[ d c]		b[ c b]		a[ b a]		|
+}	g8		%…
+\oneVoice
+\tuplet 3/2 8 {		g16[ a g]	fs[ g fs]	e[ fs e]	|
+	d[ e d]		c[ d c)]	%…
+}					b8		<c d>		|
+
+	\key c \major
+	\time 6/8
+	<g g'>2.
 }
 
 lower = \relative c {
@@ -98,7 +169,7 @@ lower = \relative c {
 	ds'8		<a' b>		b,		q		|
 	e		<g b>		cs,		as'		|
 	d,[		q		d		<fs c'>]	|
-	<g b>[		d		g,]		%…
+	<g b>[		d		g,]		r		|
 }
 
 \score {
