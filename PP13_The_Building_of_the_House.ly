@@ -325,7 +325,52 @@ lower = \relative c {
 
 	\key c \major
 	\time 6/8
-	g,	r	r	r4		r8	|
+	g,	r	r	r4		%…
+
+						r8	|
+	c4		d8	e4		e8	|
+	f4		e8	f4		e8	|
+	d4		e8	f4		fs8	|
+	g4		d8	<g, g'>4.		|
+
+	<f' g>4		q8	q4		q8	|
+	<e g>4.~		q4		fs8	|
+	a4		r8	<g, g'>4	r8	|
+	<c, c'>4	<g g'>8^><c c'>4^>	%…
+
+	\key  g \major
+						r8	|
+
+<< { \voiceOne
+	r4		d''8	d4		d8	|%=
+	c8	d	c	b4.			|%=
+	a4		b8	c4		b8	|%=
+	g4.~			g4		r8	|%=
+
+	b4		b8	b4		b8	|%=
+	c8	d	c	b4.			|%=
+	a4		b8	c4		cs8	|%=
+	d4		a8->	d4		r8	|%=
+} \new Voice { \voiceTwo
+	d,2.~						|%=
+	d2.						|%=
+	d2.~						|%=
+	d4		d8	d4		d8	|%=
+
+	d2.~						|%=
+	d2.						|%=
+	d2.~						|%=
+	d2.						|%=
+} >> \oneVoice						|||| ||||
+
+	<b g'>2.					|
+	<c g'>2.					|
+	<cs a'>2.					|
+	<d a'>2.					|
+
+	<ds b'>2.					|
+	<e b'>4.		<c a'>\fermata		|
+	<d b'>4.		<d c'>			|
 }
 
 \score {
