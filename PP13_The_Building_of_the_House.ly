@@ -12,9 +12,11 @@ dynamics = {
 	\tempo "Allegretto." 4 = 120
 
 	\partial 8		s8\p	|
-	s2*8
+	s2*7
+	s4.			%…
 	\bar "||"
 
+				s8	|
 	s2*3
 	s4.			%…
 	\bar "||"
