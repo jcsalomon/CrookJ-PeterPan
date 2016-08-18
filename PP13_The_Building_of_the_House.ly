@@ -247,6 +247,48 @@ upper = \relative c' {
 	\time 2/4
 	<g b,>8		r		%…
 }
+
+					<b d>4->			|
+	<g b>8[		<b d>		<b e>		<g b>]		|
+	<g b d>		q4				q8		|
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<a c>		q4				q8		|
+
+	<g b>[		<b d>		<b e>		<g b>]		|
+	<c e>		q4				q8		|
+	<d fs>[		<c e>		d		cs]		|
+	<b e>		<b d>4				q8		|
+
+	<b d g>[	q		<g b d>		<g b>]		|
+	<e g d'>[	<e g c>		q		q]		|
+	<gs b e>[	q		<e gs b>	<e gs>]		|
+	<c e b'>[	<c e a>		q		q]		|
+
+<< { \voiceOne
+	<a' d>[		<a c>		<a d>		<a c>]		|%=
+	<g c>[		<g b>		q		q]		|%=
+} \new Voice { \voiceTwo
+	e4				ef				|%=
+	d4				s8		s8		|%=
+} >> \oneVoice								||
+	<fs b>[		<fs a>		<fs d'>		<fs b>]		|
+
+	<b, d g>	%…
+\tuplet 3/2 8 {		g''16\([ a g]	fs[ g fs]	e[ fs e] }	|
+	d8\)		%…
+
+\tuplet 3/2 8 {		d16\([ cs d]	e[ ds e]	fs[ e fs] }	|
+	g8\)		%…
+
+\tuplet 3/2 8 {		g16\([ a g]	fs[ g fs]	e[ fs e] }	|
+	d8\)		%…
+
+\tuplet 3/2 8 {		d16\([ cs d]	e[ ds e]	fs[ e fs]	|
+	g[ fs e]	d[ e fs]	g[ fs e]	d[ e fs]	|
+	g[ fs e]	d[ e fs]	g[ fs e]	d[ e fs]	|
+}
+	<g, b d g>8\)	r		<b d g b>->	r		|
+	<g g,>2								|
 }
 
 lower = \relative c {
