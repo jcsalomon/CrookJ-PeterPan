@@ -56,7 +56,7 @@ dynamics = {
 
 	s2				|
 	s4		s8\f	s8	|
-	s2\ff				|
+	s16\ff	s4..			|
 	\bar "|."
 }
 
