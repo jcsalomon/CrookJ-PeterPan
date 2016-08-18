@@ -429,6 +429,42 @@ lower = \relative c {
 	<ds b'>2.					|
 	<e b'>4.		<c a'>\fermata		|
 	<d b'>4.		<d c'>			|
+
+	g,8		<d' g b>	d,		<g' b d>	|
+
+	g,		q		d		q		|
+	g		<d' g b>	<e e'>->	<d d'>->	|
+	g,		<g' b d>	d,		q		|
+	a'		<fs' c' d>	<e e'>->	<d d'>->	|
+
+	a		<fs' c' d>	d,		q		|
+	a'		q		d,		q		|
+	<d' fs a>[	q		<d fs as>	q]		|
+	g,		<g' b d>	d,		q		|
+
+	g		<f' g b>[	q		q]		|
+	c,		<e' g c>	<d d'>->	<c c'>->	|
+	e,[		<e' gs>		<gs b>		<e gs b>]	|
+	a,		<e' a>		<b b'>->	<a a'>->	|
+
+	c		<e a c>		c		<ef a c>	|
+	d4				<c c'>8->	<b b'>->	|
+	d[		<d a' c>	q		q]		|
+	<g g,>		<d g b>[	<cs g' as>	q]		|
+
+	<d d,>		<d fs c'>[	<d g c>		<d a' c>]	|
+	g,		<d' g b>	<cs gs' a>	q		|
+	d,		<d' fs c'>[	<d g c>		<d a' c>]	|
+	<g b>[		<d fs a>	<g b>		<d fs a>]	|
+
+	<g b>[		<d fs a>	<g b>		<d fs a>]	|
+	<g, g'>		r		q->		r		|
+<< {
+	\repeat tremolo 4 {	g,16	g'16	}			|
+} {
+	\once \override MultiMeasureRest #'transparent = ##t
+	R2_\fermataMarkup
+} >>
 }
 
 \score {
@@ -466,7 +502,7 @@ lower = \relative c {
 			\dynamics
 		>>
 		\new Staff = "lower" <<
-			\lower
+			\unfoldRepeats \lower
 			\dynamics
 		>>
 		\context Lyrics = "words" {

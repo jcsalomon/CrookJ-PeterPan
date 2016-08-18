@@ -149,7 +149,7 @@ lower = \relative c {
 
 << {
 	\repeat tremolo 4 { e,16 e' }					|
-} \\ {
+} {
 	\once \override MultiMeasureRest #'transparent = ##t
 	R2_\fermataMarkup
 } >>
