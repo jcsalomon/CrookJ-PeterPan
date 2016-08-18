@@ -35,6 +35,13 @@ dynamics = {
 	s2.*7
 	s8*5
 %	\bar "||"
+
+						s8	|
+	s2.*7
+	\bar "||"
+
+	s2*9
+	\bar "||"
 }
 
 wordsOne = \lyricmode {
@@ -57,6 +64,11 @@ wordsTwo = \lyricmode {
 	Gay win -- dows all a -- bout, __
 	With ro -- _ ses peep -- ing in _ you know,
 	And ba -- bies peep -- ing out. __
+
+	We’ve made the ro -- ses peep -- ing in,
+	The babes are at the door, __
+	We can -- not make our -- selves you know,
+	’Cos we’ve been made be -- fore.
 }
 
 upper = \relative c' {
@@ -216,7 +228,24 @@ upper = \relative c' {
 	fs			g			|%=
 } >> \oneVoice						||
 	<d fs>4		<e g>8	<fs a>4		<g b>8	|
-	<fs a>4.~		q4		%…
+	<fs a>4.~		q4		d8	|
+
+	d4		g8	d4		ds8	|
+	fs4		e8	e4		e8	|
+	e4		a8	e4		es8	|
+	fs4.~			fs4		fs8	|
+
+	fs4		fs8	b4		a8	|
+	a4		g8	%…
+<< { \voiceOne
+				d'4\fermata	c8	|%=
+	b4		d,8	b'4		%…
+} \new Voice { \voiceTwo
+				e,4.\fermata		|%=
+	d4.			fs4		%…
+} >> \oneVoice					a8	||
+	\time 2/4
+	<g b,>8		r		%…
 }
 }
 
@@ -293,7 +322,6 @@ lower = \relative c {
 \change Staff = "lower" \oneVoice
 			<bf df>[	<a c>		<g b>]		|
 	<fs a>		<e g>		<d g>		<d fs>		|
-
 
 	\key c \major
 	\time 6/8
