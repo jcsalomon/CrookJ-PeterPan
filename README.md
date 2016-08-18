@@ -29,7 +29,8 @@ any information on the subject would be much appreciated.
 There have been very few recordings of this music.
 
 In 1929 the J.H. Squire Celeste Octet recorded “selections”,
-released by Columbia Gramophone as a two-disc set, catalog number 9768.
+released by Columbia Gramophone as a two-sided 12″ 78 RPM disk,
+catalog number 9768.
 In 1940,
 in the second year of the London Blitz preventing performances of the play,
 there was something of a cast recording made,
@@ -40,15 +41,17 @@ the orchestra was conducted by Clifford Greenwood.
 This was released as His Master’s Voice #9119.
 Sepia Records [#1037](http://sepiarecords.com/sepia1037.html)
 includes both those recordings.
+
+There is also His Master’s Voice #2693,
+another set of “selections”
+performed by the London Palladium Orchestra
+under the direction of Richard Crean,
+also released as a two-sided 12″ 78 RPM disk,
+but which was not included on the Sepia Records CD.
+
 (Thank you to Bruce Hanson,
 author of _Peter Pan on Stage and Screen, 1904–2010_,
 for the above information.)
-
-<!---
-There is also His Master’s Voice #2693,
-performed by the London Palladium Orchestra
-under the direction of Richard Crean.
--->
 
 ## A Note on Copyright
 
