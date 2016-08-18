@@ -30,6 +30,11 @@ dynamics = {
 	s2.*7
 	s8*5
 	\bar "||"
+
+						s8	|
+	s2.*7
+	s8*5
+%	\bar "||"
 }
 
 wordsOne = \lyricmode {
@@ -47,6 +52,11 @@ wordsTwo = \lyricmode {
 	And made a love -- ly door, __
 	So tell us mo -- ther Wen -- dy,
 	What are you want -- ing more? __
+
+	Oh! real -- _ ly next I think _ I’d have
+	Gay win -- dows all a -- bout, __
+	With ro -- _ ses peep -- ing in _ you know,
+	And ba -- bies peep -- ing out. __
 }
 
 upper = \relative c' {
@@ -185,6 +195,28 @@ upper = \relative c' {
 } \new Voice { \voiceTwo
 	<c, e g>4.~		q4		%…
 } >>
+	\key g \major
+						d8	|
+
+<< {
+	c'8	d	c	b4		b8	|%=
+	a8	b	a	%…
+} \new Voice { \voiceTwo
+	a4.			g			|%=
+	fs			%…
+} >> \oneVoice			g4		g8	||
+	<d fs>4		<e g>8	<fs a>4		<g b>8	|
+	<fs a>4.~		q4		<g b>8	|
+
+<< { \voiceOne
+	c8	d	c	b4		b8	|%=
+	a8	b	a	g4		g8	|%=
+} \new Voice { \voiceTwo
+	a4.			g			|%=
+	fs			g			|%=
+} >> \oneVoice						||
+	<d fs>4		<e g>8	<fs a>4		<g b>8	|
+	<fs a>4.~		q4		%…
 }
 }
 
