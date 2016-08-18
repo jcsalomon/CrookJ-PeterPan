@@ -40,8 +40,24 @@ dynamics = {
 	s2.*7
 	\bar "||"
 
-	s2*9
+	\tempo "Allegro vivo." 4 = 160
+	s4		s8\f	s8	|
+	s2*8
 	\bar "||"
+
+	s8\ff	s4.			|
+	s2*6
+	s8	s8\f	s4		|
+
+	s8	\tuplet 3/2 { s16\< s16*7 s16\!	}|
+	s2				|
+	s8\<	\tuplet 3/2 { s16*8 s16\! }	|
+	\tuplet 3/2 { s16\< s16*10 s16\! }	|
+
+	s2				|
+	s4		s8\f	s8	|
+	s2\ff				|
+	\bar "|."
 }
 
 wordsOne = \lyricmode {
