@@ -16,11 +16,21 @@ global = {
 dynamics = {
 }
 
+elizaUpper = \relative c'' {
+	\key e \minor
+	r8	<d g b>	q	q	q4		<c fs a>	|
+	\voiceOne
+	r8	<b e g>	q	q	q4		<b ds fs>	|
+	\oneVoice
+	r8	<g c e>	q	q	q4		<f b d!>	|
+	<b d>8	<a c>	<gs b>	<a c>	<c,e a>4	r		|
+}
+
 upper = {
 	\clef treble
 	\global
 
-	\key e \minor
+	\elizaUpper
 }
 
 lower = {
