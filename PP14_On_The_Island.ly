@@ -55,6 +55,13 @@ elizaUpper = \relative c' {
 } >> \oneVoice								|
 
 	\elizaUpperOneToFour
+
+	<fs a>8	<fs a fs'> q	<fs a e'> <d g d'>4	<d g>		|
+	<c fs>8	<fs d'>	q	<e c'>	<d e b'>4	<gs, d' e>	|
+	<g!c e>8<c e b'><c e b'><g c e>	<g c e>	<c e b'><c e b'><g c e>	|
+	<g c e>8<c e a>	<c e a>	<g c e>	<fs!c'd><c'd a'>q	<fs,c'd>|
+
+	<b d g>2~			q8	r	r4\fermata	|
 }
 
 elizaLowerOneToFour = \relative c {
