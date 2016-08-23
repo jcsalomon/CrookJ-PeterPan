@@ -14,6 +14,9 @@ global = {
 }
 
 dynamics = {
+	\set Score.tempoHideNote = ##t
+	\tempo "Allegretto espressione. “Eliza on the Prowl.”" 4 = 120
+
 	\grace s8
 	s8 \dynamic "p ben marcato"	s8*7	|
 	s1*16
