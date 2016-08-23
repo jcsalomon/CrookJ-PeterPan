@@ -35,13 +35,18 @@ elizaUpper = \relative c'' {
 	<b d>8	<a c>	<gs b>	<a c>	<c,e a>4	r		|
 }
 
-elizaLower = \relative c {
-	\key e \minor
+elizaLowerOneToFour = \relative c {
 	\acciaccatura g8 d''2		b4	\acciaccatura d,8 d'4	|
 	\acciaccatura e,8 \change Staff = "upper" \voiceTwo g'2
 	\change Staff = "lower" \oneVoice \acciaccatura b,,8 b'2	|
 	\acciaccatura c,8 e'2		c4	\acciaccatura gs,8 b'4	|
 	<a, a'>2.					q4		|
+}
+
+elizaLower = \relative c {
+	\key e \minor
+
+	\elizaLowerOneToFour
 
 	<c, c'>4	r		<c' d fs a>	r		|
 	<b, b'>		r		<e' g b>	r		|
@@ -51,6 +56,8 @@ elizaLower = \relative c {
 } \new Voice { \voiceOne
 	d4		e		fs2				|%=
 } >> \oneVoice								|
+
+	\elizaLowerOneToFour
 }
 
 upper = {
