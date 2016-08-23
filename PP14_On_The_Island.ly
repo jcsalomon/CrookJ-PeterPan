@@ -25,7 +25,7 @@ dynamics = {
 }
 
 elizaUpper = \relative c'' {
-	\key e \minor
+	\key g \major
 	\grace s8
 	r8	<d g b>	q	q	q4		<c fs a>	|
 	\voiceOne
@@ -44,7 +44,7 @@ elizaLowerOneToFour = \relative c {
 }
 
 elizaLower = \relative c {
-	\key e \minor
+	\key g \major
 
 	\elizaLowerOneToFour
 
