@@ -36,6 +36,8 @@ global = {
 	\time 2/4
 }
 
+\tagGroup #'(midi-only score-only)
+
 dynamics = {
 << {
 	s4.\f			s8	|
@@ -99,7 +101,12 @@ upper = \relative c {
 
 }
 
+	\tag #'score-only {
 	<e e'>2\fermata							|
+	}
+	\tag #'midi-only {
+	<e e'>1
+	}
 }
 
 lower = \relative c {
@@ -153,6 +160,9 @@ lower = \relative c {
 	\once \override MultiMeasureRest #'transparent = ##t
 	R2_\fermataMarkup
 } >>
+	\tag #'midi-only {
+	\repeat tremolo 4 { e,16 e' }
+	}
 }
 
 \score {
@@ -160,6 +170,7 @@ lower = \relative c {
 		\with {
 			instrumentName = #"Piano"
 		}
+	\keepWithTag #'score-only
 	<<
 		\new Staff = "upper" \upper
 		\new Dynamics = "dynamics" \dynamics
@@ -179,6 +190,7 @@ lower = \relative c {
 		\with {
 			midiInstrument = #"acoustic grand"
 		}
+	\keepWithTag #'midi-only
 	<<
 		\new Staff = "upper" <<
 			\unfoldRepeats\upper
