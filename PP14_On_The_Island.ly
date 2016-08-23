@@ -37,7 +37,7 @@ elizaUpper = \relative c'' {
 
 elizaLower = \relative c {
 	\key e \minor
-	\acciaccatura g8 d''2		a4	\acciaccatura d,8 d'4	|
+	\acciaccatura g8 d''2		b4	\acciaccatura d,8 d'4	|
 	\acciaccatura e,8 \change Staff = "upper" \voiceTwo g'2
 	\change Staff = "lower" \oneVoice \acciaccatura b,,8 b'2	|
 	\acciaccatura c,8 e'2		c4	\acciaccatura gs,8 b'4	|
