@@ -33,7 +33,11 @@ elizaUpperOneToFour = \relative c'' {
 	r8	<b e g>	q	q	q4		<b ds fs>	|
 	\oneVoice
 	r8	<g c e>	q	q	q4		<f b d!>	|
-	<b d>8	<a c>	<gs b>	<a c>	<c,e a>4	r		|
+<< { \voiceOne
+	<b d>8	<a c>	<gs b>	<a c>	%…
+} \new Voice { \voiceTwo
+	e2				%…
+} >> \oneVoice				<c e a>4	r		|
 }
 
 elizaUpper = \relative c' {
