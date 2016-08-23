@@ -26,8 +26,7 @@ dynamics = {
 	\break
 }
 
-elizaUpper = \relative c'' {
-	\key g \major
+elizaUpperOneToFour = \relative c'' {
 	\grace s8
 	r8	<d g b>	q	q	q4		<c fs a>	|
 	\voiceOne
@@ -35,6 +34,12 @@ elizaUpper = \relative c'' {
 	\oneVoice
 	r8	<g c e>	q	q	q4		<f b d!>	|
 	<b d>8	<a c>	<gs b>	<a c>	<c,e a>4	r		|
+}
+
+elizaUpper = \relative c' {
+	\key g \major
+
+	\elizaUpperOneToFour
 
 	r8	<d fs a>-.<d fs b>-.<d fs c'>-.	<d fs d'>4-.	q-.	|
 	r8	<g b d>-. <g b e>-. <g b fs'>-.	<g b g'>4-.	q-.	|
