@@ -14,6 +14,10 @@ global = {
 }
 
 dynamics = {
+	s8 \dynamic "p ben marcato"	s8*7	|
+	s1*16
+	\bar "|."
+	\break
 }
 
 elizaUpper = \relative c'' {
