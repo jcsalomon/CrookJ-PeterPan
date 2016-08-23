@@ -13,8 +13,7 @@ global = {
 	\time 4/4
 }
 
-dynamics = {
-	\set Score.tempoHideNote = ##t
+elizaDynamics = {
 	\tempo "Allegretto espressione. “Eliza on the Prowl.”" 4 = 120
 
 	\grace s8
@@ -94,6 +93,12 @@ elizaLower = \relative c {
 	<a,, a'> r	<e'' g>	r	<d, d'>	r	<d' fs!> r	|
 
 	<g,, g'> r	<g' g'>	r	<g, g'>	r	r4\fermata	|
+}
+
+dynamics = {
+	\set Score.tempoHideNote = ##t
+
+	\elizaDynamics
 }
 
 upper = {
