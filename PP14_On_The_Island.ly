@@ -19,7 +19,9 @@ dynamics = {
 
 	\grace s8
 	s8 \dynamic "p ben marcato"	s8*7	|
-	s1*16
+	s1*15
+
+	s2.		s4-\markup "Fine."	|
 	\bar "|."
 	\break
 }
@@ -58,6 +60,13 @@ elizaLower = \relative c {
 } >> \oneVoice								|
 
 	\elizaLowerOneToFour
+
+	c4		<d fs a>	b		<b e>		|
+	a,		<d' a' c>	<e gs>		<e, e'>		|
+	<a, a'>8 r	<e'' g>	r	<a,, a'> r	<e'' g>	r	|
+	<a,, a'> r	<e'' g>	r	<d, d'>	r	<d' fs!> r	|
+
+	<g,, g'> r	<g' g'>	r	<g, g'>	r	r4\fermata	|
 }
 
 upper = {
