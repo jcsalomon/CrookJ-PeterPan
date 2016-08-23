@@ -54,6 +54,7 @@ elizaUpper = \relative c' {
 	c,2.						c4		|%=
 } >> \oneVoice								|
 
+	\elizaUpperOneToFour
 }
 
 elizaLowerOneToFour = \relative c {
