@@ -42,6 +42,15 @@ elizaLower = \relative c {
 	\change Staff = "lower" \oneVoice \acciaccatura b,,8 b'2	|
 	\acciaccatura c,8 e'2		c4	\acciaccatura gs,8 b'4	|
 	<a, a'>2.					q4		|
+
+	<c, c'>4	r		<c' d fs a>	r		|
+	<b, b'>		r		<e' g b>	r		|
+	<a,, a'>	r		<e'' g c>	r		|
+<< { \voiceTwo
+	\acciaccatura d,8 d'2.				d4		|%=
+} \new Voice { \voiceOne
+	d4		e		fs2				|%=
+} >> \oneVoice								|
 }
 
 upper = {
