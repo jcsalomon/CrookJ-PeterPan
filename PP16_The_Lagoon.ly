@@ -10,6 +10,7 @@
 dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Moderato e tranquillo." 4 = 108
+	\time 6/4
 
 	\partial 4				s4\mf	|
 	s1.*2	||
@@ -24,7 +25,7 @@ dynamics = {
 	s1.*7
 	s2.			s4\p	s2		|
 	s2.			s2		s8\f s	|
-	\bar"||"
+	\bar "||"
 }
 
 note =
@@ -38,8 +39,7 @@ melody = \relative c' {
 	\autoBeamOff
 	\clef treble
 	\key a \minor
-	\time 6/4
-	\partial 4				s4	|
+						s4	|
 	s1.*9
 
 	r2		r4	r2		e8^\note "mermaid sings." %…
@@ -71,9 +71,8 @@ words = \lyricmode {
 upper = \relative c' {
 	\clef treble
 	\key a \minor
-	\time 6/4
 
-	\partial 4				e4\(	|
+						e4\(	|
 	e2.			d2\trill	c8  d	|
 	c2.			b2\trill\)	a8( b)	|
 
@@ -131,9 +130,8 @@ upper = \relative c' {
 lower = \relative c {
 	\clef bass
 	\key a \minor
-	\time 6/4
 
-	\partial 4				r4	|
+						r4	|
 
 	a4	<a' c>	q	<f a b>2.		|
 	a,4	<e' a>	q	<f a>2		r4	|
@@ -181,7 +179,7 @@ lower = \relative c {
 }
 
 pedal = {
-	\partial 4				s4	|
+						s4	|
 	s1.*8	|||| ||||
 	s8\sustainOn	s8*10			s8\sustainOff	|
 	s8\sustainOn	s8*10			s8\sustainOff	|
