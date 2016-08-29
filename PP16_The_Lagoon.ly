@@ -70,10 +70,10 @@ dynamics = {
 	s8\f\>	s8	s8	s8	|
 	s8	s8	s8	s8\p	|
 	s2*7
-	s4		%…
+	s4.			%…
 	\bar "||"
 
-			s8\mf	s8	|
+				s8\mf	|
 	s2*3
 	s8	s8\mf	s8	s8\p	|
 	s2*4
@@ -195,6 +195,86 @@ melody = \relative c' {
 	d4		g,		r		g8	d'	|
 	g,4		r		r2				|
 	\xNotesOff
+
+	R2				|
+	r4		r8	%…
+
+	<>^\note "PETER."	g8	|
+	c8	g	e	f16 g	|
+	a8	f	d'	d16 c	|
+	b8	a	g	f	|
+	e4		r8	%…
+
+				g8	|
+	c8	g	e	f16[(g)]|
+	a8	f	d'	c	|
+	b8	a16 g	f8	d	|
+	c4.			%…
+
+	<>^\note "BOYS."	e16 fs	|
+	g8	d16 d	a'8	g16[(a)]|
+	b8	a16 g	d'8	g,16fs	|
+	e16 fs	e8	c'	e,	|
+	d4		r8	%…
+
+	<>^\note "BABY."	d8	|
+	g8	g16 b	a8	%…
+	<>^\note "PETER."	a	|
+	b8	b	c	b16 c	|
+	d8	g,16b	a8	fs	|
+	g4		r8	%…
+
+	<>^\note "BABY."	g8	|
+	g8	e	c'8.	    b16	|
+	a8	f	d8.	    e16	|
+	f8	b	b	a	|
+	g4		r8	%…
+
+	<>^\note "BOYS."	g8	|
+	g8	e16 d	c   c	g'8	|
+	a8	f16 e	d   d	a'  a	|
+	g8	gs	a	b	|
+	c4		r4		|
+
+	R2*3
+	r4		r8	%…
+
+	<>^\note "PETER."	g8	|
+	c8	g	e	f16[(g)]|
+	a8	f	d'	d16[(c)]|
+	b8	a	g	f	|
+	e4		r8	%…
+
+				g8	|
+	c8	g	e	f16[(g)]|
+	a8	f	d'	c	|
+	b8	a16[(g)]f8	d	|
+	c4		r8	%…
+
+	<>^\note "BOYS."	e16[(fs)]|
+	g8	d	a'	g16[(a)]|
+	b8	a16[(g)]d'8	g,16[(fs)]|
+	e[(fs)]	e8	d'	e,	|
+	d4		r8	%…
+
+	<>^\note "MERMAID."	d8	|
+	g8	b	a	a	|
+	b8	b	c	%…
+	<>^\note "BABY."	b16[(c)]|
+	d8	g,16[(b)]a8	fs	|
+	g4		r8	%…
+
+	<>^\note "MERMAID."	g8	|
+	g8	e	c'8.	    b16	|
+	a8	f	d8.	    e16	|
+	f8	b	b	a	|
+	g4		r8	%…
+
+	<>^\note "BOYS."	g8	|
+	g8	e16[(d)]c8	g'	|
+	a8	f16[(e)]d8	a'	|
+	g8	gs	a	b	|
+	c4		r4		|
 }
 
 words = \lyricmode {
