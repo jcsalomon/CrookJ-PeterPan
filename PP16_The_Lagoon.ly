@@ -225,6 +225,53 @@ words = \lyricmode {
 	If mor -- tals I must go!
 	Tum an -- swer!
 	Legs, or tails?
+
+	A mer -- man I,
+	with my tail on high,
+	In a way that most al -- lures,
+
+	I hum -- bly wish,
+	O __ fam -- ous fish,
+	to pay my re -- spects to yours.
+
+	We ac -- com -- pan -- y him and __ all of us swim,
+	with our beau -- ti -- ful tails as lures.
+
+	You’re aw -- ful -- ly cool
+	I’m ra -- ther cool,
+	With your tail I so want to play.
+
+	Then please to write
+	Ma -- ma to -- night,
+	and ask her if I may.
+
+	Yes, that would be bet -- ter,
+	He’s writ -- ing the let -- ter,
+	How we won -- der what he’ll say!
+
+	Dear mer -- maid may
+	your daugh -- ter play
+	At __ tails to -- night with me?
+
+	I wish she would
+	and __ now con -- clude,
+	With kind -- est __ wish -- es, P.
+
+	That __ can -- not fail
+	to __ pull her __ tail,
+	What __ will __ the ans -- wer be?
+
+	Dear sir, who wrote?
+	Re -- ceived your note,
+	Oh __ say that he may tum
+
+	My leave you’ve got,
+	Don’t make her hot,
+	Yours faith -- ful -- ly, her mum.
+
+	Oh luck -- y __ we,
+	her tail to __ see,
+	The mer -- maid bids us come.
 }
 
 upper = \relative c' {
