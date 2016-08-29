@@ -59,6 +59,11 @@ dynamics = {
 	s4\<	s4	s4\f	|
 	s2.*8
 	\bar "||"
+
+	\time 4/4
+	<>\p
+	s1*5
+	\bar "||"
 }
 
 note =
@@ -135,13 +140,22 @@ melody = \relative c' {
 	c4.~			c8	r8	r8	|
 
 	R2.*16
+
+	<>^\markup \left-align \column {\italic "RECITATIVE." "BABY MERMAID."}
+	\xNotesOn
+	r2				r8	g	g	g	|
+	a4		r8	a	a	a	a	a	|
+	b4		r		r		r8	b	|
+	d4		g,		r		g8	d'	|
+	g,4		r		r2				|
+	\xNotesOff
 }
 
 words = \lyricmode {
 	When the wa -- ters of the nev -- er -- land
 		are __ na -- ked to the moon, __
 	Then wakes the fair mer -- maid -- en
-		from her slepp in the La -- goo -- oon,
+		from her sleep in the La -- goo -- oon,
 	And I raise my cor -- al mir -- ror
 		my __ droop -- ing locks to tend,
 	But the part of me I’m proud -- est of,
@@ -160,6 +174,11 @@ words = \lyricmode {
 
 	No la -- dy e’er would dress in skirts
 	if she could show a tail. __
+
+	Who tums this way?
+	If mor -- tals I must go!
+	Tum an -- swer!
+	Legs, or tails?
 }
 
 upper = \relative c' {
@@ -281,6 +300,11 @@ upper = \relative c' {
 	b	a	g	fs	f	e	|
 	d	c	b	a	g	a	|
 	g	a	g	a	g	a	|
+
+	<b d g>1							|
+	<a c ef fs>							|
+	<g b d f! g>4	r4		r2				|
+	R1*2								||
 }
 
 lower = \relative c {
@@ -402,7 +426,12 @@ lower = \relative c {
 	<af c d>	q		q		|
 
 	<g b d>		r		r		|
-	R2.*3
+	R2.*3						|||
+
+	<g, g'>1							|
+	q								|
+	<g, g'>4	r		r2				|
+	R1*2								||
 }
 
 pedal = {
