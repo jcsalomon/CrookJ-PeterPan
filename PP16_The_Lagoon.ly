@@ -19,6 +19,12 @@ dynamics = {
 	s1.*4	||||
 
 	s8\<	s8*3	s8\!	s8*2	s8\>	s8*3	s8\!	|
+
+	s8\p	s8*11					|
+	s1.*7
+	s2.			s4\p	s2		|
+	s2.			s2		s8\f s	|
+	\bar"||"
 }
 
 melody = {
@@ -95,12 +101,40 @@ lower = \relative c {
 } >>			\stemUp	<a e' a>8( e' c b c b)	|| \stemNeutral
 
 	a(  e'  a   c   e   d   c   b   a   e   c   b)	|
+	a(  e'  a   c   e   d   c   b   a   e   c   b)	|
+	a(  e'  a   c   e   d   c   b   a   e   c   b)	|
+	a(  e'  a   c   e   d   c   b   a   e   c   a)	|
+
+	\acciaccatura { \slurUp e }
+	e'( gs  b   d   b   gs) e(  a   c   e   gs,! a)	|
+<< {
+	c2\arpeggio	b8  a	b2.			|%=
+	a2.			b2\fermata	r4	|%=
+} \\ {
+	f,2\arpeggio	s4	e'2.~			|%=
+	e1.						|%=
+} >>							||
+
+	a,8(e'  a   c   e   d   c   b   a   e   c   b)	|
+	<a a'>4	<a' c>	<f a>	%…
+<< {				g2\fermata	gs4	|%=
+} \\ {				c,2.			|%=
+} >>							|
+	<f a>4	r	r	<e g>	r	r	|
+	<d a'>	r	r	<g, g'>	r	r	|
 }
 
 pedal = {
 	\partial 4				s4	|
 	s1.*8	|||| ||||
 	s8\sustainOn	s8*10			s8\sustainOff	|
+	s8\sustainOn	s8*10			s8\sustainOff	|
+	s8\sustainOn	s8*10			s8\sustainOff	|
+	s8\sustainOn	s8*10			s8\sustainOff	|
+
+	s1.*3	|||
+	s8\sustainOn	s8*10			s8\sustainOff	|
+	s1.*3	|||
 }
 
 \score {
@@ -118,6 +152,7 @@ pedal = {
 		\new PianoStaff
 		\with {
 			instrumentName = #"Piano"
+			connectArpeggios = ##t
 		}
 		<<
 			\new Staff = "upper" \upper
