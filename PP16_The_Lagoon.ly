@@ -462,16 +462,18 @@ upper = \relative c' {
 	<c e g>4	r8	<b f' g>4	r8	|
 	<e g c>4	c32([b	c   b]	c8) r8	g'16(a)	|
 
+<<
+\repeat unfold 2 {
 	b8	c	d	e	f	g	|
 	f	e	d	c	b	a	|
 	g4		g		g		|
 	a2\trill			g8	a	|
-
+}
+{
+	s2.*4
 	<>^\note "THE BOYS SWIM ON."
-	b8	c	d	e	f	g	|
-	f	e	d	c	b	a	|
-	g4		g		g		|
-	a2\trill			g8	a	|
+}
+>>
 
 \repeat unfold 2 {
 	g8(	g')	d-.	b-.	g(	g')	|
