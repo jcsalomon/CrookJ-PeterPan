@@ -126,6 +126,13 @@ dynamics = {
 	s4\<	s4\>	|
 	s4	s4\!	|
 	\bar "||"
+
+	\tempo "Andante." 4 = 96
+	\time 6/8
+	s2.		|
+	s4.\>	s4.\!	|
+	s2.*14
+	\bar "||"
 }
 
 note =
@@ -608,6 +615,8 @@ upper = \relative c' {
 	<fs b>4\(			<g c>				|
 	b2\)								|
 \change Staff = "upper" \oneVoice
+
+	<>^\note "THE LEGEND “MAROONER’S ROCK.”"
 }
 
 lower = \relative c {
