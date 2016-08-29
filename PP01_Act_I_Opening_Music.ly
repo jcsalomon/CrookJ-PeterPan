@@ -106,11 +106,16 @@ upperSeventeenToTwentyFour = \relative c' {
 }
 
 deleteArpeggios =
-#(define-music-function (parser location mus)
+#(define-music-function (parser location music)
 	(ly:music?)
 	(music-filter
-		(lambda (x) (not (music-is-of-type? x 'arpeggio-event)))
-		mus))
+		(lambda (event)
+			(not
+			  (music-is-of-type? event 'arpeggio-event)
+			)
+		)
+		music)
+	)
 
 upper = {
 	\clef treble

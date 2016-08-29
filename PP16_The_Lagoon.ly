@@ -1666,17 +1666,44 @@ pedalFightInWater = {
 	s2.*47	|
 }
 
+deleteStuff =
+#(define-music-function (parser location music)
+	(ly:music?)
+	(music-filter
+		(lambda (event)
+			(not (or
+			  (music-is-of-type? event 'absolute-dynamic-event)
+			  (music-is-of-type? event 'crescendo-event)
+			  (music-is-of-type? event 'text-script-event)
+			))
+		)
+		music)
+	)
 
 dynamicsPeterAndHook = {
+	\deleteStuff\dynamicsTigerLilyEscapes
+
+	\deleteStuff\dynamicsHookSwims
 }
 
-upperPeterAndHook = \relative c' {
+upperPeterAndHook = {
+	<>^\note "“THE WRESTLE BETWEEN PETER AND HOOK.”"
+
+	\deleteStuff\upperTigerLilyEscapes
+
+	\deleteStuff\upperHookSwims
 }
 
-lowerPeterAndHook = \relative c {
+lowerPeterAndHook = {
+	\deleteStuff\lowerTigerLilyEscapes
+
+	\deleteStuff\lowerHookSwims
 }
 
 pedalPeterAndHook = {
+	\deleteStuff\pedalTigerLilyEscapes
+
+	\deleteStuff\pedalHookSwims
 }
 
 
