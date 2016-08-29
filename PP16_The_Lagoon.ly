@@ -29,12 +29,12 @@ dynamicsMermaidLagoon = {
 	s8\<	s8*3	s8\!	s8*2	s8\>	s8*3	s8\!	|
 
 	<>\p
-	s1.*5
+	s1.*5	|
 	% Extending 1- & 2-beat notes + 2-beat fermata:
 	% temporary tempo = current × time÷(time + fermata)
 	% = 108 × 1÷(1 + 2) = 108÷3 = 36
 	s1	\tempo 4 = 36	s4	\tempo 4 = 108	s4	|
-	s1.
+	s1.	|
 	% = 108 × 2÷(2 + 2) = 108÷2 = 54
 	s2.	\tempo 4 = 54	s2	\tempo 4 = 108	s4	|
 	s2.			s4\p	s2		|
@@ -45,7 +45,7 @@ dynamicsMermaidLagoon = {
 melodyMermaidLagoon = \relative c' {
 	\key a \minor
 						R4	|
-	R1.*9
+	R1.*9	|
 
 	r2		r4	r2		<>^\note "MERMAID SINGS."
 						e8    e	|
@@ -197,9 +197,9 @@ dynamicsMermaidsTail = {
 	\tempo "Allegretto." 4 = 116
 	\time 3/4
 
-	s2.*3
+	s2.*3	|
 	\set Timing.measureLength = #(ly:make-moment 2 4)
-	s2 |
+	s2	|
 	\bar "||"
 
 	\time 6/8
@@ -209,21 +209,21 @@ dynamicsMermaidsTail = {
 						s8\p	|
 	\set Timing.measureLength = #(ly:make-moment 6 8)
 	<>-\markup "legato."
-	s2.*3
+	s2.*3	|
 	s4		s8\f	s4		s8\p	|
-	s2.*3
+	s2.*3	|
 	s4		s8\f	s4		s8\p	|
 	<>-\markup "un poco animato."
-	s2.*6
+	s2.*6	|
 	s8\<	s8	s8\!	s8\>	s8	s8\!	|
-	s2.*4
+	s2.*4	|
 	s4		s8\f	s4		s8\p	|
 	\bar "||"
 }
 
 melodyMermaidsTail = \relative c'' {
-	R2.*3
-	R2 |
+	R2.*3	|
+	R2	|
 
 					s8	% kluge
 
@@ -400,20 +400,20 @@ dynamicsBoysSwim = {
 	\time 3/4
 
 	<>\mf
-	s2.*7
+	s2.*7	|
 	s4\<	s4	s4\f	|
-	s2.*8
+	s2.*8	|
 	\bar "||"
 
 	\time 4/4
 
 	<>\p
-	s1*5
+	s1*5	|
 	\bar "||"
 }
 
 melodyBoysSwim = \relative c'' {
-	R2.*16
+	R2.*16	|
 
 	<>^\markup \left-align \column {\italic "RECITATIVE." "BABY MERMAID."}
 	\xNotesOn
@@ -441,7 +441,7 @@ upperBoysSwim = \relative c'' {
 	a2\trill			g8	a	|
 }
 {
-	s2.*4
+	s2.*4	|
 	<>^\note "THE BOYS SWIM ON."
 }
 >>
@@ -491,35 +491,35 @@ dynamicsPeterAndMers = {
 
 	s8\f\>	s8	s8	s8	|
 	s8	s8	s8	s8\p	|
-	s2*7
+	s2*7	|
 	s4.			%…
 	\bar "||"
 
 				s8\mf	|
-	s2*3
+	s2*3	|
 	s8	s8\mf	s8	s8\p	|
-	s2*3
+	s2*3	|
 	s4.			%…
 	\bar "||"
 
 				s8	|
-	s2*4
+	s2*4	|
 	<>\mf
-	s2*4
+	s2*4	|
 	\bar "||"
 
 	<>\ff
-	s2*3
+	s2*3	|
 	s4.			%…
 	\bar "||"
 
 				s8	|
-	s2*7
+	s2*7	|
 	s4.			%…
 	\bar "||"
 
 	<>\mf			s8	|
-	s2*3
+	s2*3	|
 	\tempo 4 = 116
 	<>-\markup "rit."
 	s4.			s8\p	|
@@ -533,7 +533,7 @@ dynamicsPeterAndMers = {
 	\bar "||"
 
 				s8	|
-	s2*8
+	s2*8	|
 	\bar "||"
 }
 
@@ -578,7 +578,7 @@ melodyPeterAndMers = \relative c'' {
 	g8	gs	a	b	|
 	c4		r4		|
 
-	R2*3
+	R2*3	|
 	r4		r8	%…
 
 	<>^\note "PETER."	g8	|
@@ -851,12 +851,12 @@ dynamicsSwimmingLake = {
 	\time 3/4
 
 	<>\pp
-	s2.*6
+	s2.*6	|
 	\bar "||"
 
 	\time 2/4
 
-	s2*2
+	s2*2	|
 
 	\tempo "Lento." 4 = 48
 
@@ -931,8 +931,8 @@ dynamicsMaroonersRock = {
 
 	s2.		|
 	s4.\>	s4.\!	|
-	s2.*13
-	\tempo 4 = 72	s2.	% \tempo 4 = 96
+	s2.*13	|
+	\tempo 4 = 72	s2.	|	% \tempo 4 = 96
 	\bar "||"
 }
 
@@ -1031,7 +1031,7 @@ dynamicsHighlandFling = {
 	\time 2/4
 	<>\f
 	\grace s8
-	s2*8
+	s2*8	|
 	\bar "||"
 }
 
@@ -1068,7 +1068,7 @@ dynamicsKingOfTheCastle = {
 	\time 6/8
 
 	<>\f
-	s2.*7
+	s2.*7	|
 	s8*5		%…
 	\bar "||"
 }
@@ -1113,14 +1113,14 @@ dynamicsPiratesApproach = {
 	\tempo "Moderato." 4 = 112
 			s8	|
 \repeat volta 2 {
-	s2.*3
+	s2.*3	|
 	s4	s2\f		|
-	s2.*2
+	s2.*2	|
 } \alternative {
 	{
-	s2.*2
+	s2.*2	|
 	} {
-	s2.*2
+	s2.*2	|
 	}
 }
 	\bar "||"
@@ -1198,7 +1198,7 @@ pedalPiratesApproach = {
 	s2.*6	|
 } \alternative {
 	{
-	s2.*2	%…
+	s2.*2	|
 	} {
 	s2.*2	|
 	}
@@ -1279,13 +1279,12 @@ dynamicsTigerLilyEscapes = {
 	\tempo "Allegro." 4 = 132
 	\time 2/4
 
-	\bar ".|:"
 	<>\p-\markup "tremolo"
 \repeat volta 2 {
-	s2*7
+	s2*7	|
 } \alternative {
-	{ s2 }
-	{ s2 }
+	{ s2	| }
+	{ s2	| }
 }
 	\bar "||"
 }
@@ -1330,10 +1329,10 @@ lowerTigerLilyEscapes = \relative c {
 
 pedalTigerLilyEscapes = {
 \repeat volta 2 {
-	s2*7
+	s2*7	|
 } \alternative {
-	{ s2 }
-	{ s2 }
+	{ s2	| }
+	{ s2	| }
 }
 }
 
@@ -1421,7 +1420,7 @@ lowerHookClimbs = \relative c {
 }
 
 pedalHookClimbs = {
-	s1*4
+	s1*4	|
 }
 
 
@@ -1435,7 +1434,7 @@ dynamicsBirdAndNest = {
 	s2.*2	|
 	% Current tempo  = 132bpm; extending 3-beat note + 2-beat fermata:
 	% temporary tempo = 132 × 3÷(3 + 2) = 132×3/5 = 79.2 ≈ 79
-	\tempo 4 = 79	s2.\ff		|	\tempo 4 = 132
+	\tempo 4 = 79	s2.\ff		|	% \tempo 4 = 132
 	\bar "||"
 }
 
@@ -1503,14 +1502,14 @@ dynamicsFightInWater = {
 	\time 6/8
 
 	<>\ff
-	s2.*16
+	s2.*16	|
 	\bar "||"
 
 	<>\ff
-	s2.*30
+	s2.*30	|
 	% Current tempo  = 144bpm; extending 3-crotchet note + 3-crotchet fermata:
 	% temporary tempo = 144 × 3÷(3 + 3) = 144×3/6 = 72
-	\tempo 4 = 72	s2.	|	%\tempo 4 = 144
+	\tempo 4 = 72	s2.	|	% \tempo 4 = 144
 }
 
 upperFightInWater = \relative c'' {
@@ -1876,7 +1875,7 @@ dynamicsKiteArrives = {
 	s2*24	|
 	% Current tempo  = 56bpm; extending 2-beat note + 2-beat fermata:
 	% temporary tempo = 56 × 2÷(2 + 2) = 56×2/4 = 28
-	\tempo 4 = 28	s2	|	%\tempo 4 = 56
+	\tempo 4 = 28	s2	|	% \tempo 4 = 56
 	\bar "||"
 
 	\tempo "Più Lento." 4 = 44
