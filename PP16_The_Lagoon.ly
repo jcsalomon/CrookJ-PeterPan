@@ -7,6 +7,12 @@
 %	style = "Incidental"
 }
 
+\tagGroup #'(MermaidLagoon MermaidsTail BoysSwim PeterAndMers SwimmingLake
+	MaroonersRock HighlandFling KingOfTheCastle PiratesApproach AbandonTigerLily
+	TigerLilyEscapes HookSwims HookClimbs BirdAndNest FightInWater
+	PeterAndHook Crocodile BoysDepart PeterAndWendy KiteArrives
+	WendyFlies PeterDespair BigAdventure BirdHelps PeterSails)
+
 note =
 #(define-scheme-function
   	(text)
@@ -15,7 +21,7 @@ note =
    #:left-align text))
 
 
-dynamicsMermaidLagoon = {
+dynamicsMermaidLagoon = \tag MermaidLagoon {
 	\tempo "Moderato e tranquillo." 4 = 108
 	\time 6/4
 
@@ -42,7 +48,7 @@ dynamicsMermaidLagoon = {
 	\bar "||"
 }
 
-melodyMermaidLagoon = \relative c' {
+melodyMermaidLagoon = \tag MermaidLagoon \relative c' {
 	\key a \minor
 						R4	|
 	R1.*9	|
@@ -62,7 +68,7 @@ melodyMermaidLagoon = \relative c' {
 	fs4	r8  fs	g   a	g4	r4	r4	|
 }
 
-wordsMermaidLagoon = \lyricmode {
+wordsMermaidLagoon = \tag MermaidLagoon \lyricmode {
 	When the wa -- ters of the nev -- er -- land
 		are __ na -- ked to the moon, __
 	Then wakes the fair mer -- maid -- en
@@ -73,7 +79,7 @@ wordsMermaidLagoon = \lyricmode {
 		is at the o -- ther end.
 }
 
-upperMermaidLagoon = \relative c' {
+upperMermaidLagoon = \tag MermaidLagoon \relative c' {
 	\key a \minor
 						e4\(	|
 	e2.			d2\trill	c8  d	|
@@ -130,7 +136,7 @@ upperMermaidLagoon = \relative c' {
 	<c fs>	r	r	<b g'>	r	<b' d g>8 q	|
 }
 
-lowerMermaidLagoon = \relative c {
+lowerMermaidLagoon = \tag MermaidLagoon \relative c {
 	\key a \minor
 						r4	|
 
@@ -179,7 +185,7 @@ lowerMermaidLagoon = \relative c {
 	<d a'>	r	r	<g, g'>	r	r	|
 }
 
-pedalMermaidLagoon = {
+pedalMermaidLagoon = \tag MermaidLagoon {
 						s4	|
 	s1.*8	|
 	s8\sustainOn	s8*10			s8\sustainOff	|
@@ -193,7 +199,7 @@ pedalMermaidLagoon = {
 }
 
 
-dynamicsMermaidsTail = {
+dynamicsMermaidsTail = \tag MermaidsTail {
 	\tempo "Allegretto." 4 = 116
 	\time 3/4
 
@@ -221,7 +227,7 @@ dynamicsMermaidsTail = {
 	\bar "||"
 }
 
-melodyMermaidsTail = \relative c'' {
+melodyMermaidsTail = \tag MermaidsTail \relative c'' {
 	R2.*3	|
 	R2	|
 
@@ -268,7 +274,7 @@ melodyMermaidsTail = \relative c'' {
 	c4.~			c8	r8	r8	|
 }
 
-wordsMermaidsTail = \lyricmode {
+wordsMermaidsTail = \tag MermaidsTail \lyricmode {
 	The mer -- maid’s tail,
 	The mer -- maid’s tail,
 	It fans us when we’re hot, __
@@ -284,7 +290,7 @@ wordsMermaidsTail = \lyricmode {
 	if she could show a tail. __
 }
 
-upperMermaidsTail = \relative c'' {
+upperMermaidsTail = \tag MermaidsTail \relative c'' {
 	<>^\note"SHE WAGGLES HER TAIL."
 	<a c f>8-.<f a c>-. <c f a>-. <f a c>-. <a c f>-. <f a c>-.	|
 	<g c e>-. <e g c>-. <c e g>-. <e g c>-. <g c e>-. <e g c>-.	|
@@ -328,7 +334,7 @@ upperMermaidsTail = \relative c'' {
 	<e g c>4	c32([b	c   b]	c8) r8	g'16(a)	|
 }
 
-lowerMermaidsTail = \relative c {
+lowerMermaidsTail = \tag MermaidsTail \relative c {
 << \repeat unfold 3 {
 	r4		g		g		|%=
 } \\ \repeat unfold 3 {
@@ -386,7 +392,7 @@ lowerMermaidsTail = \relative c {
 	<c,c'>4	c'32[(b	c   b]	c8)	r	r	|
 }
 
-pedalMermaidsTail = {
+pedalMermaidsTail = \tag MermaidsTail {
 	s2.*3	|
 	s2	%…
 		s8	% kluge
@@ -395,7 +401,7 @@ pedalMermaidsTail = {
 }
 
 
-dynamicsBoysSwim = {
+dynamicsBoysSwim = \tag BoysSwim {
 	\tempo "Piu vivo." 4 = 118
 	\time 3/4
 
@@ -412,7 +418,7 @@ dynamicsBoysSwim = {
 	\bar "||"
 }
 
-melodyBoysSwim = \relative c'' {
+melodyBoysSwim = \tag BoysSwim \relative c'' {
 	R2.*16	|
 
 	<>^\markup \left-align \column {\italic "RECITATIVE." "BABY MERMAID."}
@@ -425,14 +431,14 @@ melodyBoysSwim = \relative c'' {
 	\xNotesOff
 }
 
-wordsBoysSwim = \lyricmode {
+wordsBoysSwim = \tag BoysSwim \lyricmode {
 	Who tums this way?
 	If mor -- tals I must go!
 	Tum an -- swer!
 	Legs, or tails?
 }
 
-upperBoysSwim = \relative c'' {
+upperBoysSwim = \tag BoysSwim \relative c'' {
 <<
 \repeat unfold 2 {
 	b8	c	d	e	f	g	|
@@ -461,7 +467,7 @@ upperBoysSwim = \relative c'' {
 	R1*2								||
 }
 
-lowerBoysSwim = \relative c {
+lowerBoysSwim = \tag BoysSwim \relative c {
 \repeat unfold 2 {
 	<g' b f'>4	q		q		|
 	<a c f>		q		q		|
@@ -478,14 +484,14 @@ lowerBoysSwim = \relative c {
 	R2.*3						|||
 }
 
-pedalBoysSwim = {
+pedalBoysSwim = \tag BoysSwim {
 	s2.*16	|
 
 	s1*5	|
 }
 
 
-dynamicsPeterAndMers = {
+dynamicsPeterAndMers = \tag PeterAndMers {
 	\tempo "Allegro moderato." 4 = 120
 	\time 2/4
 
@@ -537,7 +543,7 @@ dynamicsPeterAndMers = {
 	\bar "||"
 }
 
-melodyPeterAndMers = \relative c'' {
+melodyPeterAndMers = \tag PeterAndMers \relative c'' {
 	R2				|
 	r4		r8	%…
 
@@ -619,7 +625,7 @@ melodyPeterAndMers = \relative c'' {
 	c4		r4		|
 }
 
-wordsPeterAndMers = \lyricmode {
+wordsPeterAndMers = \tag PeterAndMers \lyricmode {
 	A mer -- man I,
 	with my tail on high,
 	In a way that most al -- lures,
@@ -668,7 +674,7 @@ wordsPeterAndMers = \lyricmode {
 	The mer -- maid bids us come.
 }
 
-upperPeterAndMers = \relative c' {
+upperPeterAndMers = \tag PeterAndMers \relative c' {
 	r8		<g c e>[		r		q]	|
 	r		q[			r	<g c e g>]	|
 
@@ -754,7 +760,7 @@ upperPeterAndMers = \relative c' {
 	<e g c>		r		<c' e g c>->	r		|
 }
 
-lowerPeterAndMers = \relative c {
+lowerPeterAndMers = \tag PeterAndMers \relative c {
 	<g g'>1								|
 	q								|
 	<g, g'>4	r		r2				|
@@ -841,12 +847,12 @@ lowerPeterAndMers = \relative c {
 	<c c'>		r		<c, c'>^>	r		|
 }
 
-pedalPeterAndMers = {
+pedalPeterAndMers = \tag PeterAndMers {
 	s2*54	|
 }
 
 
-dynamicsSwimmingLake = {
+dynamicsSwimmingLake = \tag SwimmingLake {
 	\tempo "Piu moderato." 4 = 116
 	\time 3/4
 
@@ -865,7 +871,7 @@ dynamicsSwimmingLake = {
 	\bar "||"
 }
 
-upperSwimmingLake = \relative c'' {
+upperSwimmingLake = \tag SwimmingLake \relative c'' {
 	\key e \minor
 	<>^\note "SWIMMING THE LAKE."
 
@@ -891,7 +897,7 @@ upperSwimmingLake = \relative c'' {
 \change Staff = "upper" \oneVoice
 }
 
-lowerSwimmingLake = \relative c' {
+lowerSwimmingLake = \tag SwimmingLake \relative c' {
 	\key e \minor
 
 	<a e'>8 r	r4		r		|
@@ -919,13 +925,13 @@ lowerSwimmingLake = \relative c' {
 \oneVoice
 }
 
-pedalSwimmingLake = {
+pedalSwimmingLake = \tag SwimmingLake {
 	s2.*6	|
 	s2*4	|
 }
 
 
-dynamicsMaroonersRock = {
+dynamicsMaroonersRock = \tag MaroonersRock {
 	\tempo "Andante." 4 = 96
 	\time 6/8
 
@@ -936,7 +942,7 @@ dynamicsMaroonersRock = {
 	\bar "||"
 }
 
-upperMaroonersRock = \relative c' {
+upperMaroonersRock = \tag MaroonersRock \relative c' {
 	<>^\note "THE LEGEND “MAROONER’S ROCK.”"
 
 	b8[(	cs	ds	e	fs	g)]	|
@@ -977,7 +983,7 @@ upperMaroonersRock = \relative c' {
 	e2.\fermata					|
 }
 
-lowerMaroonersRock = \relative c' {
+lowerMaroonersRock = \tag MaroonersRock \relative c' {
 << {
 	g8[(	a	fs	g	a	b)]	|%=
 	a2.						|%=
@@ -1021,12 +1027,12 @@ lowerMaroonersRock = \relative c' {
 } >>
 }
 
-pedalMaroonersRock = {
+pedalMaroonersRock = \tag MaroonersRock {
 	s2.*16	|
 }
 
 
-dynamicsHighlandFling = {
+dynamicsHighlandFling = \tag HighlandFling {
 	\tempo "Lively." 4 = 140
 	\time 2/4
 	<>\f
@@ -1035,7 +1041,7 @@ dynamicsHighlandFling = {
 	\bar "||"
 }
 
-upperHighlandFling = \relative c'' {
+upperHighlandFling = \tag HighlandFling \relative c'' {
 	\key b \minor
 	<>^\note "THE HIGHLAND FLING."
 
@@ -1051,7 +1057,7 @@ upperHighlandFling = \relative c'' {
 	e8.(			d16)	e(	fs8.)			|
 }
 
-lowerHighlandFling = \relative c' {
+lowerHighlandFling = \tag HighlandFling \relative c' {
 	\key b \minor
 
 \repeat unfold 8 {
@@ -1059,12 +1065,12 @@ lowerHighlandFling = \relative c' {
 }
 }
 
-pedalHighlandFling = {
+pedalHighlandFling = \tag HighlandFling {
 	s2*8	|
 }
 
 
-dynamicsKingOfTheCastle = {
+dynamicsKingOfTheCastle = \tag KingOfTheCastle {
 	\time 6/8
 
 	<>\f
@@ -1073,7 +1079,7 @@ dynamicsKingOfTheCastle = {
 	\bar "||"
 }
 
-upperKingOfTheCastle = \relative c' {
+upperKingOfTheCastle = \tag KingOfTheCastle \relative c' {
 	<>^\note "“THE KING OF THE CASTLE.”"
 
 	d4		a'8	g	a	b	|
@@ -1087,7 +1093,7 @@ upperKingOfTheCastle = \relative c' {
 	<cs e>4._(^(		d8))	r	%…
 }
 
-lowerKingOfTheCastle = \relative c {
+lowerKingOfTheCastle = \tag KingOfTheCastle \relative c {
 	<d fs a>4.		<d e g a>		|
 	<d fs a>		q			|
 	q			<d e g a>		|
@@ -1103,13 +1109,13 @@ lowerKingOfTheCastle = \relative c {
 	<a\=1_( g'\=2(>4.	<d\=1) fs\=2)>8	r8 %…
 }
 
-pedalKingOfTheCastle = {
+pedalKingOfTheCastle = \tag KingOfTheCastle {
 	s2.*7	|
 	s8*5	%…
 }
 
 
-dynamicsPiratesApproach = {
+dynamicsPiratesApproach = \tag PiratesApproach {
 	\tempo "Moderato." 4 = 112
 			s8	|
 \repeat volta 2 {
@@ -1126,7 +1132,7 @@ dynamicsPiratesApproach = {
 	\bar "||"
 }
 
-upperPiratesApproach = \relative c'' {
+upperPiratesApproach = \tag PiratesApproach \relative c'' {
 	<>^\note "“THE PIRATES APPROACH WITH TIGER LILY.”"
 
 						a8	|
@@ -1162,7 +1168,7 @@ upperPiratesApproach = \relative c'' {
 }
 }
 
-lowerPiratesApproach = \relative c' {
+lowerPiratesApproach = \tag PiratesApproach \relative c' {
 						a8	|
 \repeat volta 2 {
 	<d,, d'>4	<a'a'>8	<d fs>4		<fs a>8	|
@@ -1192,7 +1198,7 @@ lowerPiratesApproach = \relative c' {
 }
 }
 
-pedalPiratesApproach = {
+pedalPiratesApproach = \tag PiratesApproach {
 		s8	|
 \repeat volta 2 {
 	s2.*6	|
@@ -1206,7 +1212,7 @@ pedalPiratesApproach = {
 }
 
 
-dynamicsAbandonTigerLily = {
+dynamicsAbandonTigerLily = \tag AbandonTigerLily {
 	\time 4/4
 
 	<>\pp
@@ -1214,7 +1220,7 @@ dynamicsAbandonTigerLily = {
 	\bar "||"
 }
 
-upperAbandonTigerLilyRepeat =  \relative c' {
+upperAbandonTigerLilyRepeat = \relative c' {
 \repeat unfold 2 {
 	d16 d	d   d	d8	<cs e>	<d f>[	<d g>]	<d a'>	r	|
 } \alternative {
@@ -1228,7 +1234,7 @@ upperAbandonTigerLilyRepeat =  \relative c' {
 }
 }
 
-upperAbandonTigerLily = \relative c' {
+upperAbandonTigerLily = \tag AbandonTigerLily \relative c' {
 	\key d \minor
 	<>^\note "“THEY PREPARE TO ABANDON TIGER LILY.”"
 
@@ -1258,7 +1264,7 @@ lowerAbandonTigerLilyRepeat = \relative c' {
 }
 }
 
-lowerAbandonTigerLily = \relative c' {
+lowerAbandonTigerLily = \tag AbandonTigerLily \relative c' {
 	\key d \minor
 
 	\lowerAbandonTigerLilyRepeat
@@ -1270,12 +1276,12 @@ lowerAbandonTigerLily = \relative c' {
 	\lowerAbandonTigerLilyRepeat
 }
 
-pedalAbandonTigerLily = {
+pedalAbandonTigerLily = \tag AbandonTigerLily {
 	s1*10	|
 }
 
 
-dynamicsTigerLilyEscapes = {
+dynamicsTigerLilyEscapes = \tag TigerLilyEscapes {
 	\tempo "Allegro." 4 = 132
 	\time 2/4
 
@@ -1289,7 +1295,7 @@ dynamicsTigerLilyEscapes = {
 	\bar "||"
 }
 
-upperTigerLilyEscapes = \relative c' {
+upperTigerLilyEscapes = \tag TigerLilyEscapes \relative c' {
 	\key g \minor
 	<>^\note "“TIGER LILY ESCAPES.”"
 
@@ -1309,7 +1315,7 @@ upperTigerLilyEscapes = \relative c' {
 }
 }
 
-lowerTigerLilyEscapes = \relative c {
+lowerTigerLilyEscapes = \tag TigerLilyEscapes \relative c {
 	\key g \minor
 
 \repeat volta 2 {
@@ -1327,7 +1333,7 @@ lowerTigerLilyEscapes = \relative c {
 }
 }
 
-pedalTigerLilyEscapes = {
+pedalTigerLilyEscapes = \tag TigerLilyEscapes {
 \repeat volta 2 {
 	s2*7	|
 } \alternative {
@@ -1337,7 +1343,7 @@ pedalTigerLilyEscapes = {
 }
 
 
-dynamicsHookSwims = {
+dynamicsHookSwims = \tag HookSwims {
 	s2\cresc		|
 	s32\<	s32*14	s32\!	|
 	s2*5	|
@@ -1345,7 +1351,7 @@ dynamicsHookSwims = {
 	\bar "||"
 }
 
-upperHookSwims = \relative c' {
+upperHookSwims = \tag HookSwims \relative c' {
 	<>^\note "“HOOK SWIMS OUT TO THE BOAT.”"
 
 \repeat unfold 2 {
@@ -1362,7 +1368,7 @@ upperHookSwims = \relative c' {
 }
 }
 
-lowerHookSwims = \relative c {
+lowerHookSwims = \tag HookSwims \relative c {
 \repeat unfold 2 {
 	r8	<fs a>	<g bf>4		|
 	r8	<e g>	<f a>4		|
@@ -1376,12 +1382,12 @@ lowerHookSwims = \relative c {
 }
 }
 
-pedalHookSwims = {
+pedalHookSwims = \tag HookSwims {
 	s2*8	|
 }
 
 
-dynamicsHookClimbs = {
+dynamicsHookClimbs = \tag HookClimbs {
 	\time 4/4
 
 	s4\sf	s4\ff	s2		|
@@ -1394,7 +1400,7 @@ dynamicsHookClimbs = {
 	\bar "||"
 }
 
-upperHookClimbs = \relative c {
+upperHookClimbs = \tag HookClimbs \relative c {
 << \new Voice {
 	s1^\note "“HOOK CLIMBS INTO BOAT.”"
    } {
@@ -1411,7 +1417,7 @@ upperHookClimbs = \relative c {
    } >>
 }
 
-lowerHookClimbs = \relative c {
+lowerHookClimbs = \tag HookClimbs \relative c {
 \voiceTwo <b b,>8	r	<b d>8.	    q16	q8	<a d>	<gs d'>	<a d>	|
 	<b d>8	r	<d f>8.	    q16	q8	<c f>	<b f'>	<c f>	|
 	<d f>8	r	%…
@@ -1419,12 +1425,12 @@ lowerHookClimbs = \relative c {
 	<f af>8	r	r4		<g b>2\fermata			|
 }
 
-pedalHookClimbs = {
+pedalHookClimbs = \tag HookClimbs {
 	s1*4	|
 }
 
 
-dynamicsBirdAndNest = {
+dynamicsBirdAndNest = \tag BirdAndNest {
 	\time 3/4
 
 	<>\p
@@ -1438,7 +1444,7 @@ dynamicsBirdAndNest = {
 	\bar "||"
 }
 
-upperBirdAndNest = \relative c'' {
+upperBirdAndNest = \tag BirdAndNest \relative c'' {
 	\key a \minor
 	<>^\note "“THE BIRD AND THE NEST.”"
 
@@ -1469,7 +1475,7 @@ upperBirdAndNest = \relative c'' {
 	c2.\fermata					|
 }
 
-lowerBirdAndNest = \relative c {
+lowerBirdAndNest = \tag BirdAndNest \relative c {
 	\key a \minor
 
 	e2.\(	|	ef	|	d	|	c\)	|
@@ -1490,14 +1496,14 @@ lowerBirdAndNest = \relative c {
 	<c e>2.\fermata					|
 }
 
-pedalBirdAndNest = {
+pedalBirdAndNest = \tag BirdAndNest {
 	s2.*12	|
 	s4\sustainOn	s4	s4\sustainOff	|
 	s2.*3	|
 }
 
 
-dynamicsFightInWater = {
+dynamicsFightInWater = \tag FightInWater {
 	\tempo "Allegro furioso." 4 = 144
 	\time 6/8
 
@@ -1512,7 +1518,7 @@ dynamicsFightInWater = {
 	\tempo 4 = 72	s2.	|	% \tempo 4 = 144
 }
 
-upperFightInWater = \relative c'' {
+upperFightInWater = \tag FightInWater \relative c'' {
 	\key d \minor
 	<>^\note "“THE FIGHT IN THE WATER.”"
 
@@ -1592,7 +1598,7 @@ upperFightInWater = \relative c'' {
 	<bf d f bf>2.\fermata				|
 }
 
-lowerFightInWater = \relative c' {
+lowerFightInWater = \tag FightInWater \relative c' {
 	\key d \minor
 
 \repeat unfold 2 {
@@ -1661,7 +1667,7 @@ lowerFightInWater = \relative c' {
 	<bf bf'>2.\fermata				|
 }
 
-pedalFightInWater = {
+pedalFightInWater = \tag FightInWater {
 	s2.*47	|
 }
 
@@ -1679,13 +1685,13 @@ deleteStuff =
 		music)
 	)
 
-dynamicsPeterAndHook = {
+dynamicsPeterAndHook = \tag PeterAndHook {
 	\deleteStuff\dynamicsTigerLilyEscapes
 
 	\deleteStuff\dynamicsHookSwims
 }
 
-upperPeterAndHook = {
+upperPeterAndHook = \tag PeterAndHook {
 	<>^\note "“THE WRESTLE BETWEEN PETER AND HOOK.”"
 
 	\deleteStuff\upperTigerLilyEscapes
@@ -1693,20 +1699,20 @@ upperPeterAndHook = {
 	\deleteStuff\upperHookSwims
 }
 
-lowerPeterAndHook = {
+lowerPeterAndHook = \tag PeterAndHook {
 	\deleteStuff\lowerTigerLilyEscapes
 
 	\deleteStuff\lowerHookSwims
 }
 
-pedalPeterAndHook = {
+pedalPeterAndHook = \tag PeterAndHook {
 	\deleteStuff\pedalTigerLilyEscapes
 
 	\deleteStuff\pedalHookSwims
 }
 
 
-dynamicsCrocodile = {
+dynamicsCrocodile = \tag Crocodile {
 	\time 2/4
 
 	\grace s8
@@ -1715,7 +1721,7 @@ dynamicsCrocodile = {
 	\bar "||"
 }
 
-upperCrocodile = \relative c''' {
+upperCrocodile = \tag Crocodile \relative c''' {
 	\key d \minor
 	<>^\note "“THE CROCODILE MAKES FOR HOOK.”"
 
@@ -1733,7 +1739,7 @@ upperCrocodile = \relative c''' {
 	<e bf' d>8	<g a cs>	<f a d>		r		|
 }
 
-lowerCrocodile = \relative c {
+lowerCrocodile = \tag Crocodile \relative c {
 \repeat unfold 2 {
 	<d a' d>8	r		<g cs ef>	r		|
 }									|
@@ -1746,12 +1752,12 @@ lowerCrocodile = \relative c {
 	<g bf d>8	<a ef'>		<d, a' d>	r		|
 }
 
-pedalCrocodile = {
+pedalCrocodile = \tag Crocodile {
 	s2*7	|
 }
 
 
-dynamicsBoysDepart = {
+dynamicsBoysDepart = \tag BoysDepart {
 	\time 4/4
 
 	<>\pp
@@ -1759,7 +1765,7 @@ dynamicsBoysDepart = {
 	\bar "||"
 }
 
-upperBoysDepart = \relative c' {
+upperBoysDepart = \tag BoysDepart \relative c' {
 	\key a \minor
 	<>^\note "“THE BOYS DEPART HOME.”"
 
@@ -1776,7 +1782,7 @@ upperBoysDepart = \relative c' {
 	<c f a c>	<d g b d>	<c e g c>2			|
 }
 
-lowerBoysDepart = \relative c, {
+lowerBoysDepart = \tag BoysDepart \relative c, {
 	\key a \minor
 
 	<c c'>4.		<d d'>8	<e e'>4		<f f'>		|
@@ -1790,12 +1796,12 @@ lowerBoysDepart = \relative c, {
 	<d f>		<g, f'>		<c e>2				|
 }
 
-pedalBoysDepart = {
+pedalBoysDepart = \tag BoysDepart {
 	s1*8	|
 }
 
 
-dynamicsPeterAndWendy = {
+dynamicsPeterAndWendy = \tag PeterAndWendy {
 	% Current tempo  = 40bpm; extending 4-beat note + 4-beat fermata:
 	% temporary tempo = 40 × 4÷(4 + 4) = 40×4/8 = 20
 	\tempo 4 = 20
@@ -1816,7 +1822,7 @@ dynamicsPeterAndWendy = {
 	\bar "||"
 }
 
-upperPeterAndWendy = \relative c' {
+upperPeterAndWendy = \tag PeterAndWendy \relative c' {
 	\once \override Script.script-priority = 0
 	<>^\markup \small \italic "Silence."
 	d1_~\fermata							|
@@ -1846,7 +1852,7 @@ upperPeterAndWendy = \relative c' {
 	<c' e g c>1\)\fermata						|
 }
 
-lowerPeterAndWendy = \relative c {
+lowerPeterAndWendy = \tag PeterAndWendy \relative c {
 	<d d,>1_\fermata						|
 
 	r2				r4		c'\(		|
@@ -1862,12 +1868,12 @@ lowerPeterAndWendy = \relative c {
 	\acciaccatura	c,8	c'1\fermata				|
 }
 
-pedalPeterAndWendy = {
+pedalPeterAndWendy = \tag PeterAndWendy {
 	s1*10	|
 }
 
 
-dynamicsKiteArrives = {
+dynamicsKiteArrives = \tag KiteArrives {
 	\tempo "Agitato." 4 = 56
 	\time 2/4
 
@@ -1885,7 +1891,7 @@ dynamicsKiteArrives = {
 	\bar "||"
 }
 
-upperKiteArrives = \relative c''' {
+upperKiteArrives = \tag KiteArrives \relative c''' {
 	\key e \major
 	<>^\note "“THE KITE ARRIVES.”"
 
@@ -1915,7 +1921,7 @@ upperKiteArrives = \relative c''' {
 	\repeat tremolo 12 { <a b>32 ds, }				|
 }
 
-lowerKiteArrives = \relative c' {
+lowerKiteArrives = \tag KiteArrives \relative c' {
 	\key e \major
 
 	\change Staff = "upper"
@@ -1965,13 +1971,13 @@ lowerKiteArrives = \relative c' {
 	fs2.\)						|
 }
 
-pedalKiteArrives = {
+pedalKiteArrives = \tag KiteArrives {
 	s2*25	|
 	s2.*8	|
 }
 
 
-dynamicsWendyFlies = {
+dynamicsWendyFlies = \tag WendyFlies {
 	\tempo "Allegro furioso." 4 = 144
 
 	<>\ff
@@ -1979,7 +1985,7 @@ dynamicsWendyFlies = {
 	\bar "||"
 }
 
-upperWendyFlies = \relative c' {
+upperWendyFlies = \tag WendyFlies \relative c' {
 	<>^\note "“WENDY FLIES OFF WITH THE KITE.”"
 
 	<e gs>4.		<e a>			|
@@ -1988,19 +1994,19 @@ upperWendyFlies = \relative c' {
 	<fs, b ds fs>2.					|
 }
 
-lowerWendyFlies = \relative c {
+lowerWendyFlies = \tag WendyFlies \relative c {
 	<e b'>4.		<fs b>			|
 	<fss cs'>		<gs b>			|
 	<a cs>			<fs, cs' a'>\arpeggio	|
 	<b b'>8	<b b,>	<cs cs,><ds ds,><e e,>	<fs fs,>|
 }
 
-pedalWendyFlies = {
+pedalWendyFlies = \tag WendyFlies {
 	s2.*4	|
 }
 
 
-dynamicsPeterDespair = {
+dynamicsPeterDespair = \tag PeterDespair {
 	\tempo "Lento." 4 = 48
 
 	<>\ff
@@ -2012,7 +2018,7 @@ dynamicsPeterDespair = {
 	\bar "||"
 }
 
-upperPeterDespair = \relative c'' {
+upperPeterDespair = \tag PeterDespair \relative c'' {
 	<>^\note "“THE DESPAIR OF PETER.”"
 
 	<g b e g>4.->		%…
@@ -2047,7 +2053,7 @@ upperPeterDespair = \relative c'' {
 } >>							|
 }
 
-lowerPeterDespair = \relative c {
+lowerPeterDespair = \tag PeterDespair \relative c {
 	<e g b>8 q	q	q	q	q	|
 	<d fs b> q	q	q	q	q	|
 	<d f b>	q	q	q	q	q	|
@@ -2058,12 +2064,12 @@ lowerPeterDespair = \relative c {
 	<e gs>2.\fermata				|
 }
 
-pedalPeterDespair = {
+pedalPeterDespair = \tag PeterDespair {
 	s2.*7	|
 }
 
 
-dynamicsBigAdventure = {
+dynamicsBigAdventure = \tag BigAdventure {
 	<>\p
 	s2.*8	|
 	% Current tempo  = 48bpm; extending 6-beat note + 3-beat fermata:
@@ -2072,7 +2078,7 @@ dynamicsBigAdventure = {
 	\bar "||"
 }
 
-upperBigAdventure = \relative c'' {
+upperBigAdventure = \tag BigAdventure \relative c'' {
 	\key a \major
 	<>^\note "“TO DIE A BIG ADVENTURE.”"
 
@@ -2096,7 +2102,7 @@ upperBigAdventure = \relative c'' {
 	<e a cs e>2.\fermata				|
 }
 
-lowerBigAdventure = \relative c' {
+lowerBigAdventure = \tag BigAdventure \relative c' {
 	\key a \major
 << {
 	a2.\(						|%=
@@ -2116,34 +2122,34 @@ lowerBigAdventure = \relative c' {
 	<a a'>2.
 }
 
-pedalBigAdventure = {
+pedalBigAdventure = \tag BigAdventure {
 	s2.*9	|
 }
 
 
-dynamicsBirdHelps = {
+dynamicsBirdHelps = \tag BirdHelps {
 }
 
-upperBirdHelps = \relative c' {
+upperBirdHelps = \tag BirdHelps \relative c' {
 }
 
-lowerBirdHelps = \relative c {
+lowerBirdHelps = \tag BirdHelps \relative c {
 }
 
-pedalBirdHelps = {
+pedalBirdHelps = \tag BirdHelps {
 }
 
 
-dynamicsPeterSails = {
+dynamicsPeterSails = \tag PeterSails {
 }
 
-upperPeterSails = \relative c' {
+upperPeterSails = \tag PeterSails \relative c' {
 }
 
-lowerPeterSails = \relative c {
+lowerPeterSails = \tag PeterSails \relative c {
 }
 
-pedalPeterSails = {
+pedalPeterSails = \tag PeterSails {
 }
 
 
