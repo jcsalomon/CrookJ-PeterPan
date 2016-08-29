@@ -27,15 +27,45 @@ dynamics = {
 	\bar"||"
 }
 
-melody = {
+note =
+#(define-scheme-function
+  	(text)
+  	(string?)
+  (markup
+   #:left-align (#:larger (#:caps text))))
+
+melody = \relative c' {
+	\autoBeamOff
 	\clef treble
 	\key a \minor
 	\time 6/4
 	\partial 4				s4	|
 	s1.*9
+
+	r2		r4	r2		e8^\note "mermaid sings." %…
+						    e	|
+	a4	a	c8  b   a   gs	a4	a8[(b])	|
+	c4	c	e8  d	c[( b]	c4)	e	|
+
+	b8. b16	b4	b	d	c	b8  c	|
+	a4.	    c8	b   a	gs4(	e'	gs,	|
+	fs	e'	fs,	e)	e'\fermata e,8 e|
+
+	a4	a	c8  b	a[  gs]	a4	a8[ b]	|
+	c8  c	c4	d	e2\fermata	c8  b	|
+	b8  a	c4.	    a8	a   g	c4.	    g8	|
+	fs4	r8  fs	g   a	g4	r4	r4	|
 }
 
 words = \lyricmode {
+	When the wa -- ters of the nev -- er -- land
+		are __ na -- ked to the moon, __
+	Then wakes the fair mer -- maid -- en
+		from her slepp in the La -- goo -- oon,
+	And I raise my cor -- al mir --  ror
+		my __ droop -- ing locks to tend,
+	But the part of me I’m proud -- est of,
+		is at the o -- ther end.
 }
 
 upper = \relative c' {
