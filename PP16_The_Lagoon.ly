@@ -1499,15 +1499,171 @@ pedalBirdAndNest = {
 
 
 dynamicsFightInWater = {
+	\tempo "Allegro furioso." 4 = 144
+	\time 6/8
+
+	<>\ff
+	s2.*16
+	\bar "||"
+
+	<>\ff
+	s2.*30
+	% Current tempo  = 144bpm; extending 3-crotchet note + 3-crotchet fermata:
+	% temporary tempo = 144 × 3÷(3 + 3) = 144×3/6 = 72
+	\tempo 4 = 72	s2.	|	%\tempo 4 = 144
 }
 
-upperFightInWater = \relative c' {
+upperFightInWater = \relative c'' {
+	\key d \minor
+	<>^\note "“THE FIGHT IN THE WATER.”"
+
+\repeat unfold 2 {
+	e8	<a, cs>	<bf d>	<cs e>	<d f>	<e g>	|
+	<f a>4		<g bf>8	<f a>4		<e g>8	|
+	<d f>	e	d	%…
+<< {				f	e	d	|%=
+} \\ {				b4.			|%=
+} >>							|
+	<cs e>8	a	a	a	a	a	|
 }
 
-lowerFightInWater = \relative c {
+<< {
+	a4.	bf	|	b	c	|%=
+} \\ {
+	f,	f	|	f	f	|%=
+} >>							||
+	<f d'>8	d'	e	<bf d f> g'	a	|
+	<g, c e g>2.					|
+
+	a8	bf	b	c	a'	g	|
+	f	e	d	c	a	f	|
+	d	e'	d	c	bf	a	|
+<< {	g4		a8	g4.			|%=
+} \\ {	e2.						|%=
+} >>							|
+
+	\key g \minor
+
+	<d g bf>4.		%…
+<< {				a'8	fs	d	|%=
+} \\ {				<c d>4.			|%=
+} >>							|
+	<bf d g>4.		%…
+<< {				a'8	bf	c	|%=
+} \\ {				<c, fs>4.		|%=
+} >>							|
+	<d g bf d>8 q	q	<d fs a d> q	q	|
+	<d g bf d> q	q	%…
+<< {				a'8	bf	c	|%=
+} \\ {				<d, fs>4.		|%=
+} >>							|
+
+	<d f! bf d>4.		c'8	a	f	|
+	<f bf>4.		<f a c>8 d'	ef!	|
+	<f, bf d>4.		<f a c>8 a	f	|
+	<f bf>4.		<f a c>8 d'	ef!	|
+
+	<f, b f'>2.->					|
+	<g c ef!>4.		d'4		c8	|
+	<d, f bf>8 bf'	d	f	d	bf'	|
+	gf	e	gf	bf	gf	bf	|
+
+	<bf, d f>2.					|
+	<gf bf ef>4.		<gf d'>4	c8	|
+	<f, b>	d	f	af	f	b	|
+	<ef,c'>	ef	g	c	g	c	|
+
+	<d,f bf>8 <d f>	q	q	<d f bf>q	|
+	q	<f bf d>q	q	<bf d f>q	|
+	<bf c f>q	q	q	q	q	|
+	<a c f>	q	q	q	q	q	|
+
+	<bf d f>4.->		<f bf d>4^>	<bf d f>8|
+	<bf d f bf>4.->		q->			|
+	q->			<g bf ef g>->		|
+	<f bf d f>2.->					|
+
+	<g bf d>4.->		<d g bf>4^>	<g bf d>8|
+	<g bf d g>4.->		<bf d g bf>->		|
+	<d f bf d>2.->					|
+	<c f a c>2.->					|
+
+	<bf d f bf>2.->					|
+	\repeat tremolo 12 { <d f bf>32 bf }		|
+	<bf d f bf>2.\fermata				|
+}
+
+lowerFightInWater = \relative c' {
+	\key d \minor
+
+\repeat unfold 2 {
+	<g a cs e>2.					|
+	<f a d>4	r8	<e g a c>4	r8	|
+	<d e g d>4	r8	<gs d' f>4	r8	|
+	<a cs e>8   a	a	a	a	a	|
+}
+
+<< {
+	c4.	c	|	c	c	|%=
+} \\ {
+	f,	g	|	gs	a	|%=
+} >>							||
+
+	<bf d>4		r8	<bf, d g>4	r8	|
+	<c e g>	c	d	e	f	g	|
+
+	<f a c>4.		<g bf c>		|
+	<g b d>			<a c>			|
+	b			<f g bf d>		|
+	<c g' bf>2.					|
+
+	\key g \minor
+
+	<g bf d g>4.		<a d f a>		|
+	<bf d g>		<d fs a>		|
+	<g, d' bf'>->\arpeggio	%…
+<< {				a'8	fs	d	|%=
+	g4.			%…
+} \\ {				a,4.			|%=
+	bf			%…
+} >>				d			||
+
+	<bf f' bf>4.		<f' a c>		|
+<< {
+	d'4.			c8	a	f	|%=
+	bf4.			c8	d	ef	|%=
+	d4.			c8	a	f	|%=
+} \\ \repeat unfold 3 {
+	bf4.			f			|%=
+} >>							|||
+
+	<d af d>2.->	|	<ef g c>	|
+	<f b>4.			<f bf d>		|
+	<gf bf ef>2.	|	<f bf d>	|
+	<gf bf ef>4.		<ef gf c>		|
+	<d f af b>2.	|	<ef g! c>	|
+
+	<f bf>8	q	q	q	q	q	|
+	q	<f bf d> q	q	q	q	|
+	<f c' ef> q	q	q	q	q	|
+	q	q	q	q	q	q	|
+
+\repeat unfold 3 {
+	\repeat tremolo 12 { bf,,32 bf' }		|||
+}	<bf, bf'>4.		<a a'>			|
+
+	\repeat tremolo 12 { g32 g'}			|
+	\repeat tremolo 12 { g,32 g'}			|
+	\repeat tremolo 12 { f,32 f'}			|
+	\repeat tremolo 12 { f,32 f'}			|
+
+	<bf bf,>4.		<bf bf'>->		|
+	<f f'>^>		<d d'>^>		|
+	<bf bf'>2.\fermata				|
 }
 
 pedalFightInWater = {
+	s2.*47	|
 }
 
 
