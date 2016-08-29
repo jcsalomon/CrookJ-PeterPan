@@ -124,7 +124,7 @@ dynamics = {
 	s2*2
 	\tempo "Lento." 4 = 48
 	s4\<	s4\>	|
-	s2\!		|
+	s4	s4\!	|
 	\bar "||"
 }
 
@@ -587,6 +587,27 @@ upper = \relative c' {
 
 	\key e \minor
 	<>^\note "SWIMMING THE LAKE."
+
+	r8	<a c>16(<b d>)	%…
+			<c e>8[	<a c>]	<fs a>	r	|
+	r8	<e g>16(<fs a>)	%…
+			<g b>8[	<e g>]	<b e>	r	|
+\voiceOne r8	<c' e>16_(<d fs>)%…
+			<e g>8[	<c e>]	<e g>	r	|
+\oneVoice r8	<g, b>16_(<a c>	%…
+			<b d>8[	<g b>])	<b d>	r	|
+\voiceOne r8	b16_(<a ds>)	%…
+\oneVoice		<g e'>8[<g b>]	<g e'>	r	|
+\voiceOne r8	b16_(<a ds>)	%…
+\oneVoice		<g e'>8[<b fs'!>]<e g>	r	|
+
+\voiceOne fs8		b16	fs	g16	e	b	g	|
+\oneVoice fs8		b16	fs	g16	e	b	g	|
+
+\change Staff = "lower" \voiceOne
+	<fs b>4\(			<g c>				|
+	b2\)								|
+\change Staff = "upper" \oneVoice
 }
 
 lower = \relative c {
@@ -794,6 +815,32 @@ lower = \relative c {
 	<f f'>		r		r		q		|
 	<g g'>		q		q		q		|
 	<c c'>		r		<c, c'>^>	r		|
+
+	\key e \minor
+
+	<a'' e'>8 r	r4		r		|
+	<e b'>8	r	r4		r		|
+
+\change Staff = "upper" \voiceTwo
+	<c' g'>8 r	r4		r		|
+\change Staff = "lower" \oneVoice
+	<g c>8	r	r4		r		|
+
+\repeat unfold 2 {
+\change Staff = "upper" \voiceTwo
+	<b fs'>8 r	%…
+\change Staff = "lower" \oneVoice
+			<e,b'>8	r	r4		|
+}							|
+
+\change Staff = "upper" \voiceTwo
+	<b' fs'>8	r		<e g>		r		|
+\change Staff = "lower" \oneVoice
+	<b, fs'>	r		<e g>		r		|
+
+\voiceTwo <b ds>4			<a e'>				|
+	<b d fs>2							|
+\oneVoice
 }
 
 pedal = {
