@@ -135,7 +135,14 @@ dynamics = {
 	s2.		|
 	s4.\>	s4.\!	|
 	s2.*13
-	\tempo 4 = 72	s2.	\tempo 4 = 96
+	\tempo 4 = 72	s2.	% \tempo 4 = 96
+	\bar "||"
+
+	\tempo "Lively." 4 = 140
+	\time 2/4
+	<>\f
+	\grace s8
+	s2*8
 	\bar "||"
 }
 
@@ -654,6 +661,20 @@ upper = \relative c' {
 	b8	c4		e		ds8	|%=
 } >>							|||
 	e2.\fermata					|
+
+	\key b \minor
+	<>^\note "THE HIGHLAND FLING."
+
+	\grace s8
+	a16(	fs8.)			fs			e16	|
+	fs8.			e16	fs(	a8.)			|
+	a16(	fs8.)			fs			d16	|
+	e8.			d16	e(	fs8.)			|
+
+	a16(	fs8.)			fs			e16	|
+	d'8.(			e16)	fs	e8.			|
+	d16(	b8.)			a16(	fs8.)			|
+	e8.(			d16)	e(	fs8.)			|
 }
 
 lower = \relative c {
@@ -929,6 +950,12 @@ lower = \relative c {
 	g8	a4		b4.			|%=
 	e2.						|%=
 } >>	|||| |||| |||| ||||
+
+	\key b \minor
+
+\repeat unfold 8 {
+	\acciaccatura gs8 <d a'>2			|
+}							||| ||||
 }
 
 pedal = {
