@@ -990,6 +990,7 @@ lower = \relative c {
 	<a\=1_( g'\=2(>4.	<d\=1) fs\=2)>8	r8 %…
 }
 
+devmark = " "	% "·" for debugging
 pedal = {
 						s4	|
 	s1.*8	|||| ||||
@@ -1002,7 +1003,36 @@ pedal = {
 	s8\sustainOn	s8*10			s8\sustainOff	|
 	s1.*3	|||
 
-	s2.*4
+	\mark\devmark	% “She waggles her tail”
+	s2.*3	|||
+	s2	%…
+
+	\mark\devmark	% “The mermaid’s tail”
+		s4	|
+	s2.*20	|
+
+	\mark\devmark	% “The boys swim on”
+	s2.*16	|
+
+	\mark\devmark	% “Who tums this way?”
+	s1*5	|
+
+	\mark\devmark	% “Peter & the mermaid”
+	s2*54	|
+
+	\mark\devmark	% “Swimming the lake”
+	s2.*6	|
+	s2*4	|
+
+	\mark\devmark	% “Marooner’s rock”
+	s2.*16	|
+
+	\mark\devmark	% “Highland fling”
+	s2*8	|
+
+	\mark\devmark	% “King of the castle”
+	s2.*7	|
+	s8*5	%…
 }
 
 \score {
