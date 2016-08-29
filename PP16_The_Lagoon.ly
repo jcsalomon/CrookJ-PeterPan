@@ -1335,28 +1335,89 @@ pedalTigerLilyEscapes = {
 
 
 dynamicsHookSwims = {
+	s2\cresc		|
+	s32\<	s32*14	s32\!	|
+	s2*5	|
+	s32\<	s32*14	s32\!	|
+	\bar "||"
 }
 
 upperHookSwims = \relative c' {
+	<>^\note "“HOOK SWIMS OUT TO THE BOAT.”"
+
+\repeat unfold 2 {
+	\repeat tremolo 8 { d32 d' }	|
+	\repeat tremolo 8 { c, c' }	|
+	\repeat tremolo 8 { bf, bf' }	|
+} \alternative {
+	{
+	\repeat tremolo 8 { a, a' }	|
+	} {
+<< {	a8[	g	f	g]	|%=
+} \\ {	<c, ef>2			| } >>	|
+	}
+}
 }
 
 lowerHookSwims = \relative c {
+\repeat unfold 2 {
+	r8	<fs a>	<g bf>4		|
+	r8	<e g>	<f a>4		|
+	r8	<d f>	<ef! g>4	|
+} \alternative {
+	{
+	r8	<cs e>	<d fs>4		|
+	} {
+	<f f,>2				|
+	}
+}
 }
 
 pedalHookSwims = {
+	s2*8	|
 }
 
 
 dynamicsHookClimbs = {
+	\time 4/4
+
+	s4\sf	s4\ff	s2		|
+	s1*2	|
+	s2		%…
+	% Current tempo  = 132bpm; extending 2-beat note + 2-beat fermata:
+	% temporary tempo = current × time÷(time + fermata)
+	% = 132 × 2÷(2 + 2) = 132÷2 = 66
+	\tempo 4 = 66	s2\ff		|	\tempo 4 = 132
+	\bar "||"
 }
 
-upperHookClimbs = \relative c' {
+upperHookClimbs = \relative c {
+<< \new Voice {
+	s1^\note "“HOOK CLIMBS INTO BOAT.”"
+   } {
+	\change Staff = "lower"
+	\voiceOne
+	<f gs d'f>8-> r	<f gs>8.    q16	q8	<f a>	<f b>	<f a>	|
+	<f gs>8	r	<gs b!>8.   q16	q8	<gs c>	<gs d'>	<gs c>	|
+
+	<gs b>8	r	%…
+	\change Staff = "upper"
+	\oneVoice
+			<b d>8.	    q16	q8	<b e>	<b f'>	<b e>	|
+	<b d>8	r	r4		<d f b>2\fermata		|
+   } >>
 }
 
 lowerHookClimbs = \relative c {
+\voiceTwo <b b,>8	r	<b d>8.	    q16	q8	<a d>	<gs d'>	<a d>	|
+	<b d>8	r	<d f>8.	    q16	q8	<c f>	<b f'>	<c f>	|
+	<d f>8	r	%…
+\oneVoice		<f a>8.	    q16	q8	<e a>	<d a'>	<e a>	|
+	<f af>8	r	r4		<g b>2\fermata			|
 }
 
 pedalHookClimbs = {
+	s1*4
 }
 
 
