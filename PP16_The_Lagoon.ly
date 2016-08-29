@@ -40,6 +40,17 @@ dynamics = {
 	\tempo "Con gratia." 4 = 112
 						s8\p	|
 	\set Timing.measureLength = #(ly:make-moment 6 8)
+	<>-\markup "legato."
+	s2.*3
+	s4		s8\f	s4		s8\p	|
+	s2.*3
+	s4		s8\f	s4		s8\p	|
+	<>-\markup "un poco animato."
+	s2.*6
+	s8\<	s8	s8\!	s8\>	s8	s8\!	|
+	s2.*4
+	s4		s8\f	s4		s8\p	|
+	\bar "||"
 }
 
 note =
