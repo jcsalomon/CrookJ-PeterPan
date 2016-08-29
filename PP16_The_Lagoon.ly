@@ -133,6 +133,8 @@ melody = \relative c' {
 	a4		b8	c4		d8	|
 	c4		a8	b4		g8	|
 	c4.~			c8	r8	r8	|
+
+	R2.*16
 }
 
 words = \lyricmode {
@@ -366,6 +368,21 @@ lower = \relative c {
 	f4		gs8	<a, a'>4	<f f'>8	|
 	<g g'>4		r8	q4		r8	|
 	<c,c'>4	c'32[(b	c   b]	c8)	r	r	|
+
+\repeat unfold 2 {
+	<g' b f'>4	q		q		|
+	<a c f>		q		q		|
+	<b d f>		q		q		|
+	<a c f>		q		q		|
+}
+
+	<g b f'>	<g b d>		q		|
+	<af c d>	q		q		|
+	<g b d>		q		q		|
+	<af c d>	q		q		|
+
+	<g b d>		r		r		|
+	R2.*3
 }
 
 pedal = {
