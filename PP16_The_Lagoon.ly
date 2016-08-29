@@ -1671,9 +1671,13 @@ pedalFightInWater = \tag FightInWater {
 	s2.*47	|
 }
 
+% See ‹http://lsr.di.unimi.it/LSR/Item?id=372›
+
 deleteStuff =
-#(define-music-function (parser location music)
+#(define-music-function
+	(parser location music)
 	(ly:music?)
+	(_i "Delete various events from @var{music}")
 	(music-filter
 		(lambda (event)
 			(not (or
