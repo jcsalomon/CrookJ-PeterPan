@@ -76,9 +76,11 @@ dynamics = {
 				s8\mf	|
 	s2*3
 	s8	s8\mf	s8	s8\p	|
-	s2*4
+	s2*3
+	s4.			%…
 	\bar "||"
 
+				s8	|
 	s2*4
 	<>\mf
 	s2*4
@@ -104,9 +106,11 @@ dynamics = {
 	\tempo 4 = 120
 	<>-\markup "a tempo"
 				s8	|
-	s2*2
+	s2
+	s4.			%…
 	\bar "||"
 
+				s8	|
 	s2*8
 	\bar "||"
 
@@ -605,6 +609,86 @@ lower = \relative c {
 	q								|
 	<g, g'>4	r		r2				|
 	R1*2								||
+
+	c'8[		r		g]		r		|
+	c[		r		g]		r		|
+
+	c8[		<e g c>		q]		r		|
+	f,[		<f' a d>	q]		r		|
+	d		<f g b>		g,		q		|
+	c[		<e g c>		q]		%…
+
+							r		|
+	c8[		<e g c>		q]		r		|
+	f,[		<f' a d>	q]		r		|
+	g,[		<f' g b>	q]		r		|
+	c[		g16(	e]	c8)		%…
+
+							c''8		|
+	<b d>		r		a		r		|
+	g		r		<b, g'>		q		|
+	<c g'>		<b g'>[		<a g'>		<g g'>]		|
+	<fs fs'>	a'16[(	d,]	d'8)		%…
+
+							d,8\noBeam	|
+	<b g'>		r		<c g'>		r		|
+	<d g>		r		<e g>		r		|
+	b		e		a,		d		|
+	g		d16	b	g8		%…
+
+							r8		|
+	c8[		<e g c>		q]		r		|
+	f,[		<d' f a c>	q]		r		|
+	g,[		<f' g b>	q]		r		|
+	c[		<c' e>		q]		%…
+
+							r8		|
+	<e,, e'>	r		r		q		|
+	<f f'>		r		r		q		|
+	<g g'>		q		q		q		|
+	<c c'>		g'16	e	q8		%…
+
+							r8		|
+	<c' e>8		q		<b c e>4->			|
+	<a c e>8	q		<af c fs>4->			|
+	<g c e g>8	q		<g b d f!>	q		|
+	<c e>		r		<c, c'>		%…
+
+							r8		|
+	c[		<e g c>		q]		r		|
+	f,[		<f' a d>	q]		r		|
+	d		<f g b>		g,		q		|
+	c[		<e g c>		q]		%…
+
+							r8		|
+	c[		<e g c>		q]		r		|
+	f,[		<f' a d>	q]		r		|
+	g,[		<f' g b>	q]		r		|
+	c		g16	e	c8		%…
+
+							c''8		|
+	<b d>		r		a		r		|
+	g		r		<b, g'>		q		|
+	<c g'>		<b g'>[		<a g'>		<g g'>]		|
+	<fs fs'>\noBeam	a'16(	d,	d'8)		%…
+
+							d,8\noBeam	|
+	<b g'>		r		<c g'>		r		|
+	<d g>		r		<e g>		r		|
+	b		e		a,		d		|
+	g		d16	b	g8		%…
+
+							r8		|
+	c[		<e g c>		q]		r		|
+	f,[		<d' f a d>	q]		r		|
+	g,[		<f' g c>	q]		r		|
+	c8[		<c' e>		q]		%…
+
+							r8		|
+	<e,, e'>	r		r		q		|
+	<f f'>		r		r		q		|
+	<g g'>		q		q		q		|
+	<c c'>		r		<c, c'>->	r		|
 }
 
 pedal = {
