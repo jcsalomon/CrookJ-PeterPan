@@ -1753,15 +1753,46 @@ pedalCrocodile = {
 
 
 dynamicsBoysDepart = {
+	\time 4/4
+
+	<>\pp
+	s1*8	|
+	\bar "||"
 }
 
 upperBoysDepart = \relative c' {
+	\key a \minor
+	<>^\note "“THE BOYS DEPART HOME.”"
+
+	<g c e g>4.		<g b f'>8 <g c e>4	<a d>		|
+	<g c>4.			<a d>8	<g c>4		<g b>		|
+	<a d f a>4.		<a cs g'>8 <a d f>4	<g cs e>	|
+	<b d>		%…
+<< {			e8	c	d2				| }
+\\ {			c4		b2				| } >>
+
+	g'4.			c8	b	d	g4		|
+	e,4.			a8	g	d'	g4		|
+	<c,, e>4	<c f>		<c g'>		<c c'>		|
+	<c f a c>	<d g b d>	<c e g c>2			|
 }
 
-lowerBoysDepart = \relative c {
+lowerBoysDepart = \relative c, {
+	\key a \minor
+
+	<c c'>4.		<d d'>8	<e e'>4		<f f'>		|
+	<g e'>4.		<f f'>8	<g e'>4		<g d'>		|
+	<d d'>4.		<e e'>8	<f f'>4		g		|
+	<g f'>		<g e'>		<g d'>2				|
+
+	<e' g c>2			<d f b>				|
+	<c e a>				<b d g>				|
+	<c g'>4		<a f'>		<g e'>		<a a'>		|
+	<d f>		<g, f'>		<c e>2				|
 }
 
 pedalBoysDepart = {
+	s1*8	|
 }
 
 
