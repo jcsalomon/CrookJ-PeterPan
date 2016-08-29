@@ -72,11 +72,11 @@ melody = \relative c' {
 	\autoBeamOff
 	\clef treble
 	\key a \minor
-						s4	|
-	s1.*9
+						R4	|
+	R1.*9
 
-	r2		r4	r2		e8^\note "MERMAID SINGS." %…
-						    e	|
+	r2		r4	r2		<>^\note "MERMAID SINGS."
+						e8    e	|
 	a4	a	c8  b   a   gs	a4	a8[(b])	|
 	c4	c	e8  d	c[( b]	c4)	e	|
 
@@ -105,8 +105,8 @@ melody = \relative c' {
 	b4		g8	b4		b8	|
 	e,4.~			e8	r8	%…
 
-<< { \voiceOne
-						e8^\note "CHORUS OF MERMAIDS"	|%=
+<< { \voiceOne					<>^\note "CHORUS OF MERMAIDS"
+						e8	|%=
 	f4		g8	a4		d,8	|%=
 	e4		f8	g4		g8	|%=
 	g4		a8	bf4		e,8	|%=
@@ -140,7 +140,7 @@ words = \lyricmode {
 		are __ na -- ked to the moon, __
 	Then wakes the fair mer -- maid -- en
 		from her slepp in the La -- goo -- oon,
-	And I raise my cor -- al mir --  ror
+	And I raise my cor -- al mir -- ror
 		my __ droop -- ing locks to tend,
 	But the part of me I’m proud -- est of,
 		is at the o -- ther end.
@@ -211,15 +211,15 @@ upper = \relative c' {
 } \\ {			e2(		c4)	%…
 } >>						r4	|
 	<e c'>4	<e c'>	<d d'>	%…
-<< {				e'2		c8  b	|%=
+<< {				e'2\fermata	c8  b	|%=
 } \\ {				e,2.			|%=
 } >>							|
 
 	<f a>4	r	r	<c c'>	r	r	|
 	<c fs>	r	r	<b g'>	r	<b' d g>8 q	|
 
-	<a c f>8-.^\note"SHE WAGGLES HER TAIL."
-	          <f a c>-. <c f a>-. <f a c>-. <a c f>-. <f a c>-.	|
+	<>^\note"SHE WAGGLES HER TAIL."
+	<a c f>8-.<f a c>-. <c f a>-. <f a c>-. <a c f>-. <f a c>-.	|
 	<g c e>-. <e g c>-. <c e g>-. <e g c>-. <g c e>-. <e g c>-.	|
 	<g b d>-. <d g b>-. <b d g>-. <d g b>-. <g b d>-. <d g b>-.	|
 
