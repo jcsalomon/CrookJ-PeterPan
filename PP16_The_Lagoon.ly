@@ -144,6 +144,11 @@ dynamics = {
 	\grace s8
 	s2*8
 	\bar "||"
+
+	\time 6/8
+	<>\f
+	s2.*7
+	s8*5		%…
 }
 
 note =
@@ -675,6 +680,18 @@ upper = \relative c' {
 	d'8.(			e16)	fs	e8.			|
 	d16(	b8.)			a16(	fs8.)			|
 	e8.(			d16)	e(	fs8.)			|
+
+	<>^\note "“THE KING OF THE CASTLE.”"
+
+	d4		a'8	g	a	b	|
+	a4.			fs			|
+	d4		a'8	g	a	b	|
+	a4.~			a8	r	r	|
+
+	d8[	r	d](	a)[	r	a](	|
+	d)[	r	d](	b)[	r	b]	|
+	a	b	a	a	fs	d	|
+	<cs e>4._(^(		d8))	r	%…
 }
 
 lower = \relative c {
@@ -956,6 +973,21 @@ lower = \relative c {
 \repeat unfold 8 {
 	\acciaccatura gs8 <d a'>2			|
 }							||| ||||
+
+
+	<d fs a>4.		<d e g a>		|
+	<d fs a>		q			|
+	q			<d e g a>		|
+<< {
+	d'8	cs	b	a	fs	e	|%=
+} \\ {
+	<d fs g>4.		<d fs>4		%…
+} >>							|
+
+	<d fs g>4	r8	<fs a d>4	r8	|
+	<g b d>4	r8	<b d>4		r8	|
+	a8	b	a	a	fs	d	|
+	<a\=1_( g'\=2(>4.	<d\=1) fs\=2)>8	r8 %…
 }
 
 pedal = {
