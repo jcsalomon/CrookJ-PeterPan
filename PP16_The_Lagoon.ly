@@ -38,10 +38,35 @@ upper = {
 	\time 6/4
 }
 
-lower = {
+lower = \relative c {
 	\clef bass
 	\key a \minor
 	\time 6/4
+
+	\partial 4				r4	|
+
+	a4	<a' c>	q	<f a b>2.		|
+	a,4	<e' a>	q	<f a>2		r4	|
+<< {
+	a,4	e'	e	e	e	e	|%=
+	b	e	e	e	e	e	|%=
+} \\ {
+	a,2.			e			|%=
+	b'			e,			|%=
+} >>							||
+
+	a4	<e' a c e> q	<f a b d> q	q	|
+	a,	<e' a c e> q	<fs g d'> q	r	|
+
+<< {
+	a,4	e'	e	e,	e'	e	|%=
+	e	e	e	%…
+} \\ {
+	a,2.			e			|%=
+	e			%…
+} >>			\stemUp	<a e' a>8( e' c b c b)	|| \stemNeutral
+
+	a(  e'  a   c   e   d   c   b   a   e   c   b)	|
 }
 
 pedal = {
