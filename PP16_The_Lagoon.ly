@@ -36,7 +36,9 @@ dynamics = {
 
 	\time 6/8
 	\set Timing.measureLength = #(ly:make-moment 2 8)
-					s8	s8\p	|
+					s8	%…
+	\tempo "Con gratia." 4 = 112
+						s8\p	|
 	\set Timing.measureLength = #(ly:make-moment 6 8)
 }
 
@@ -72,6 +74,46 @@ melody = \relative c' {
 	R2 |
 
 	s8
+
+						g8	|
+	a4		b8	c4		g8	|
+	a4		b8	c4		e8	|
+	b4		c8	a4		b8	|
+	e,4.~			e8	r8	g8	|
+
+	a4		b8	c4		g8	|
+	a4		b8	c4		c8	|
+	b4		g8	b4		b8	|
+	e,4.~			e8	r8	%…
+
+<< { \voiceOne
+						e8^\note "chorus of mermaids."	|%=
+	f4		g8	a4		d,8	|%=
+	e4		f8	g4		g8	|%=
+	g4		a8	bf4		e,8	|%=
+	a4.~			a4		a8	|%=
+
+	a4		b8	c4		fs,8	|%=
+	g4(		a8)	b4		b8	|%=
+	b4		c8	d4		c8	|%=
+	b4.~			b8	%…
+} \new Voice { \voiceTwo
+						e,8	|%=
+	d4		e8	f4		b,8	|%=
+	c4		d8	e4		e8	|%=
+	e4		f8	g4		cs,8	|%=
+	f4.~			f4		f8	|%=
+
+	fs4		g8	a4		ds,8	|%=
+	e4(		fs8)	g4		g8	|%=
+	g4		f8	d4		f8	|%=
+	g4.~			g8	%…
+} >> \oneVoice				r8	g8	|||| ||||
+
+	a4		b8	c4		g8	|
+	a4		b8	c4		d8	|
+	c4		a8	b4		g8	|
+	c4.~			c8	r8	r8	|
 }
 
 words = \lyricmode {
@@ -83,6 +125,20 @@ words = \lyricmode {
 		my __ droop -- ing locks to tend,
 	But the part of me I’m proud -- est of,
 		is at the o -- ther end.
+
+	The mer -- maid’s tail,
+	The mer -- maid’s tail,
+	It fans us when we’re hot, __
+	We whisk it thus! if we are pleas’d,
+	and so! if we are not,
+
+	When swim -- ming thro’ the green la -- goon,
+	We hoist it as a sail,
+	And when we take to flirt -- __ ing,
+	It fas -- cin -- ates the male.
+
+	No la -- dy e’er would dress in skirts
+	if she could show a tail. __
 }
 
 upper = \relative c' {
