@@ -278,6 +278,53 @@ lower = \relative c {
 	<g g'>4		q		|
 
 	s8
+
+						e''8	|
+<< {
+	f4		d8	c	g'	e	|%=
+	f4		d8	c	%…
+} \\ {
+	f8	g,	d'	c4		e8	|%=
+	f8	g,	d'	c	%…
+} >>					<e g c>4	||
+
+	e,8	<gs' d' e>4	g,8	<a' c e>4	|
+\voiceOne e4(	e32[ds	e   ds]	e4)		e8	| \oneVoice
+
+<< {
+	f4		d8	c	g'	e	|%=
+	f	g,	d'	c	g'	a,	|%=
+	b	b'	b,	b	b'	b,	|%=
+} \\ {
+	f'8	g,	d'	c4		e8	|%=
+	f	g,	d'	c4		a8	|%=
+	b4		b8	b4		b8	|%=
+} >>							|||
+	e4	e32[(ds	e   ds]	e4)		r8	|
+
+	d8(	g4)		g,8(	g'4)		|
+	c,8	g'4		g,8	g'4		|
+	cs,8	a'4		a,8	a'4		|
+	d,8	a'4		a,8	a'4		|
+
+	ds,8	b'4		b,8	b'4		|
+	e,8	b'4		b,8	b'4		|
+
+<< {
+	g8	g	g	af	af	af	|%=
+} \\ {
+	g,4.			af			|%=
+} >>							|
+	<g g'>4	<< d'8 \\ d >>	<g, g'>	r	e'	|
+
+<< {
+	f8	g,	d'	c	g'	e	|%=
+} \\ {
+	f8	g,	d'	c4		e8	|%=
+} >>							|
+	f4		gs8	<a, a'>4	<f f'>8	|
+	<g g'>4		r8	q4		r8	|
+	<c,c'>4	c'32[(b	c   b]	c8)	r	r	|
 }
 
 pedal = {
