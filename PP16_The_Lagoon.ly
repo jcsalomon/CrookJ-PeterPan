@@ -149,6 +149,22 @@ dynamics = {
 	<>\f
 	s2.*7
 	s8*5		%…
+	\bar "||"
+
+	\tempo "Moderato." 4 = 112
+			s8	|
+\repeat volta 2 {
+	s2.*3
+	s4	s2\f		|
+	s2.*2
+} \alternative {
+	{
+	s2.*2
+	} {
+	s2.*2
+	}
+}
+	\bar "||"
 }
 
 note =
@@ -692,6 +708,40 @@ upper = \relative c' {
 	d)[	r	d](	b)[	r	b]	|
 	a	b	a	a	fs	d	|
 	<cs e>4._(^(		d8))	r	%…
+
+	<>^\note "“THE PIRATES APPROACH WITH TIGER LILY.”"
+
+						a'8	|
+\repeat volta 2 {
+	<fs a d>4	<cs a'>8 <d d'>4	<cs a'>8|
+	<d d'>4		<cs a'>8 <d d'>4	%…
+
+						cs'8	|
+	<d, b'>4	<d a'>8	<cs g'>4	<d fs>8	|
+	<a cs e>4	%…
+\change Staff = "lower"	\voiceOne
+			cs16 b	a4		%…
+
+\change Staff = "upper" \oneVoice		fs'8	|
+<< {
+	g4		b8	e,4		b'8	|%=
+} \\ {
+	cs,4		r8	cs4		r8	|%=
+} >>							|
+	<d a'>4		fs8	<d fs d'>4	%…
+
+						d'8	|
+} \alternative {
+	{
+	<e, a cs!>4	a8	<e gs b>4	e8	|
+	<cs a'>4.~		q4		%…
+
+						a'8	|
+	} {
+	<fs a>4		<e g>8	<d fs>4		<cs e>8	|
+	d4		r8	<d fs a d>4^>	r8	|
+	}
+}
 }
 
 lower = \relative c {
@@ -988,6 +1038,34 @@ lower = \relative c {
 	<g b d>4	r8	<b d>4		r8	|
 	a8	b	a	a	fs	d	|
 	<a\=1_( g'\=2(>4.	<d\=1) fs\=2)>8	r8 %…
+
+						a'8	|
+\repeat volta 2 {
+	<d,, d'>4	<a'a'>8	<d fs>4		<fs a>8	|
+	<b, fs' b>4	<a a'>8	<d fs>4		%…
+
+						r8	|
+	g4		fs8	e4		d8	|
+	a4		%…
+\voiceTwo		cs16 b	a4		%…
+
+\oneVoice					r8	|
+	<a e' a>4	r8	<a e' g>4	r8	|
+	<d fs>4		r8	<b fs' b>4	%…
+
+						r8	|
+} \alternative {
+	{
+	<e a>4		r8	<e b'>4		<e gs>8	|
+	<a, a'>4	<g!g'!>8<fs fs'>4	%…
+
+						<e e'>8	|
+	} {
+	<g g'>4.	<< {	a'4		g8	}
+			   {	a,4.			} >>	|
+	<d fs>4		r8	<d, d'>4->	r8	|
+	}
+}
 }
 
 devmark = " "	% "·" for debugging
@@ -1033,6 +1111,18 @@ pedal = {
 	\mark\devmark	% “King of the castle”
 	s2.*7	|
 	s8*5	%…
+
+	\mark\devmark	% “Pirates approach”
+		s8	|
+\repeat volta 2 {
+	s2.*6	|
+} \alternative {
+	{
+	s2.*2	%…
+	} {
+	s2.*2	|
+	}
+}		|
 }
 
 \score {
@@ -1089,13 +1179,13 @@ pedal = {
 			midiInstrument = #"acoustic grand"
 		}
 		<<
-			\new Staff = "upper" <<
-				\unfoldRepeats\upper
+			\new Staff = "upper" \unfoldRepeats <<
+				\upper
 				\dynamics
 				\pedal
 			>>
-			\new Staff = "lower" <<
-				\unfoldRepeats\lower
+			\new Staff = "lower" \unfoldRepeats <<
+				\lower
 				\dynamics
 				\pedal
 			>>
