@@ -26,6 +26,13 @@ dynamics = {
 	s2.			s4\p	s2		|
 	s2.			s2		s8\f s	|
 	\bar "||"
+
+	\tempo "Allegretto." 4 = 115
+	\time 3/4
+	s2.*3
+	\set Timing.measureLength = #(ly:make-moment 2 4)
+	s2 |
+	\bar "||"
 }
 
 note =
@@ -55,6 +62,9 @@ melody = \relative c' {
 	c8  c	c4	d	e2\fermata	c8  b	|
 	b8  a	c4.	    a8	a   g	c4.	    g8	|
 	fs4	r8  fs	g   a	g4	r4	r4	|
+
+	R2.*3
+	R2 |
 }
 
 words = \lyricmode {
@@ -124,7 +134,14 @@ upper = \relative c' {
 } >>							|
 
 	<f a>4	r	r	<c c'>	r	r	|
-	<c fs>	r	r	<b g'>	r	%…
+	<c fs>	r	r	<b g'>	r	<b' d g>8 q	|
+
+	<a c f>8-.^\note"she waggles her tail."
+	          <f a c>-. <c f a>-. <f a c>-. <a c f>-. <f a c>-.	|
+	<g c e>-. <e g c>-. <c e g>-. <e g c>-. <g c e>-. <e g c>-.	|
+	<g b d>-. <d g b>-. <b d g>-. <d g b>-. <g b d>-. <d g b>-.	|
+
+	<b' d g>4	<b, d g>	|
 }
 
 lower = \relative c {
@@ -176,6 +193,13 @@ lower = \relative c {
 } >>							|
 	<f a>4	r	r	<e g>	r	r	|
 	<d a'>	r	r	<g, g'>	r	r	|
+
+<< \repeat unfold 3 {
+	r4		g		g		|%=
+} \\ \repeat unfold 3 {
+	g,2.						|%=
+} >>							|||
+	<g g'>4		q		|
 }
 
 pedal = {
@@ -189,6 +213,8 @@ pedal = {
 	s1.*3	|||
 	s8\sustainOn	s8*10			s8\sustainOff	|
 	s1.*3	|||
+
+	s2.*4
 }
 
 \score {
