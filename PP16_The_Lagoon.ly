@@ -27,7 +27,7 @@ dynamics = {
 	s2.			s2		s8\f s	|
 	\bar "||"
 
-	\tempo "Allegretto." 4 = 115
+	\tempo "Allegretto." 4 = 116
 	\time 3/4
 	s2.*3
 	\set Timing.measureLength = #(ly:make-moment 2 4)
@@ -37,7 +37,7 @@ dynamics = {
 	\time 6/8
 	\set Timing.measureLength = #(ly:make-moment 2 8)
 					s8	%…
-	\tempo "Con gratia." 4 = 112
+	\tempo "Con gratia." 4 = 114
 						s8\p	|
 	\set Timing.measureLength = #(ly:make-moment 6 8)
 	<>-\markup "legato."
