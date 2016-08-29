@@ -9,12 +9,24 @@
 
 dynamics = {
 	\set Score.tempoHideNote = ##t
+	\tempo "Moderato e tranquillo." 4 = 108
+
+	\partial 4				s4\mf	|
+	s1.*2	||
+	s8\<	s8*4	s8\!	s2.			|
+	s1.	|
+
+	s1.*4	||||
+
+	s8\<	s8*3	s8\!	s8*2	s8\>	s8*3	s8\!	|
 }
 
 melody = {
 	\clef treble
 	\key a \minor
 	\time 6/4
+	\partial 4				s4	|
+	s1.*9
 }
 
 words = \lyricmode {
@@ -33,6 +45,9 @@ lower = {
 }
 
 pedal = {
+	\partial 4				s4	|
+	s1.*8	|||| ||||
+	s8\sustainOn	s8*10			s8\sustainOff	|
 }
 
 \score {
