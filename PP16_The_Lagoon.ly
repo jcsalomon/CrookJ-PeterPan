@@ -1685,30 +1685,61 @@ deleteStuff =
 		music)
 	)
 
-dynamicsPeterAndHook = \tag PeterAndHook {
-	\deleteStuff\dynamicsTigerLilyEscapes
+% See ‹http://lsr.di.unimi.it/LSR/Item?id=871›
 
-	\deleteStuff\dynamicsHookSwims
+#(define (remove-all-tags music)
+	(if (ly:music? music)
+		(let*
+			(	(es (ly:music-property music 'elements))
+				(e (ly:music-property music 'element))
+				(as (ly:music-property music 'articulations))
+				(tags (ly:music-property music 'tags))
+				)
+			(if (not (eq? tags '()))
+				(ly:music-set-property! music 'tags '())
+				)
+			(for-each remove-all-tags es)
+			(remove-all-tags e)
+			(for-each remove-all-tags as)
+			)
+		music)
+	)
+
+removeAllTags =
+#(define-music-function
+	(parser location music)
+	(ly:music?)
+	(_i "Delete all the tags in all elements of @var{music}")
+	(let
+		((new-music (ly:music-deep-copy music)))
+		(remove-all-tags new-music)
+		new-music)
+	)
+
+dynamicsPeterAndHook = \tag PeterAndHook {
+	\deleteStuff\removeAllTags\dynamicsTigerLilyEscapes
+
+	\deleteStuff\removeAllTags\dynamicsHookSwims
 }
 
 upperPeterAndHook = \tag PeterAndHook {
 	<>^\note "“THE WRESTLE BETWEEN PETER AND HOOK.”"
 
-	\deleteStuff\upperTigerLilyEscapes
+	\deleteStuff\removeAllTags\upperTigerLilyEscapes
 
-	\deleteStuff\upperHookSwims
+	\deleteStuff\removeAllTags\upperHookSwims
 }
 
 lowerPeterAndHook = \tag PeterAndHook {
-	\deleteStuff\lowerTigerLilyEscapes
+	\deleteStuff\removeAllTags\lowerTigerLilyEscapes
 
-	\deleteStuff\lowerHookSwims
+	\deleteStuff\removeAllTags\lowerHookSwims
 }
 
 pedalPeterAndHook = \tag PeterAndHook {
-	\deleteStuff\pedalTigerLilyEscapes
+	\deleteStuff\removeAllTags\pedalTigerLilyEscapes
 
-	\deleteStuff\pedalHookSwims
+	\deleteStuff\removeAllTags\pedalHookSwims
 }
 
 
