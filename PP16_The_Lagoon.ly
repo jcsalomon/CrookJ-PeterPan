@@ -21,8 +21,11 @@ dynamics = {
 
 	s8\<	s8*3	s8\!	s8*2	s8\>	s8*3	s8\!	|
 
-	s8\p	s8*11					|
-	s1.*7
+	<>\p
+	s1.*5
+	s1	\tempo 4 = 36	s4	\tempo 4 = 108	s4	|
+	s1.
+	s2.	\tempo 4 = 54	s2	\tempo 4 = 108	s4	|
 	s2.			s4\p	s2		|
 	s2.			s2		s8\f s	|
 	\bar "||"
@@ -131,7 +134,8 @@ dynamics = {
 	\time 6/8
 	s2.		|
 	s4.\>	s4.\!	|
-	s2.*14
+	s2.*13
+	\tempo 4 = 72	s2.	\tempo 4 = 96
 	\bar "||"
 }
 
@@ -156,14 +160,10 @@ melody = \relative c' {
 
 	b8. b16	b4	b	d	c	b8  c	|
 	a4.	    c8	b   a	gs4(	e'	gs,	|
-	fs	e'	fs,	e)	%…
-			\tempo 4 = 36	e'\fermata	\tempo 4 = 108
-						e,8 e	|
+	fs	e'	fs,	e)	e'\fermata e,8 e|
 
 	a4	a	c8  b	a[  gs]	a4	a8[ b]	|
-	c8  c	c4	d	%…
-		\tempo 4 = 54	e2\fermata	\tempo 4 = 108
-						c8  b	|
+	c8  c	c4	d	e2\fermata	c8  b	|
 	b8  a	c4.	    a8	a   g	c4.	    g8	|
 	fs4	r8  fs	g   a	g4	r4	r4	|
 
@@ -653,7 +653,7 @@ upper = \relative c' {
 	c!			b			|%=
 	b8	c4		e		ds8	|%=
 } >>							|||
-	\tempo 4 = 72 e2.\fermata \tempo 4 = 96		|
+	e2.\fermata					|
 }
 
 lower = \relative c {
