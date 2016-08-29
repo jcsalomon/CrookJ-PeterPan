@@ -64,6 +64,52 @@ dynamics = {
 	<>\p
 	s1*5
 	\bar "||"
+
+	\tempo "Allegro moderato." 4 = 120
+	\time 2/4
+	s8\f\>	s8	s8	s8	|
+	s8	s8	s8	s8\p	|
+	s2*7
+	s4		%…
+	\bar "||"
+
+			s8\mf	s8	|
+	s2*3
+	s8	s8\mf	s8	s8\p	|
+	s2*4
+	\bar "||"
+
+	s2*4
+	<>\mf
+	s2*4
+	\bar "||"
+
+	<>\ff
+	s2*3
+	s4.			%…
+	\bar "||"
+
+				s8	|
+	s2*7
+	s4.			%…
+	\bar "||"
+
+	<>\mf			s8	|
+	s2*3
+	\tempo 4 = 116
+	<>-\markup "rit."
+	s4.			s8\p	|
+	s2				|
+	s4.			%…
+	\tempo 4 = 120
+	<>-\markup "a tempo"
+				s8	|
+	s2*2
+	\bar "||"
+
+	s2*8
+	\bar "||"
+
 }
 
 note =
