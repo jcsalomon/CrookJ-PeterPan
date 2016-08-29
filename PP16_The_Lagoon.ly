@@ -1684,6 +1684,8 @@ deleteStuff =
 			  (music-is-of-type? event 'absolute-dynamic-event)
 			  (music-is-of-type? event 'crescendo-event)
 			  (music-is-of-type? event 'text-script-event)
+			  (music-is-of-type? event 'key-change-event)
+			  (music-is-of-type? event 'mark-event)
 			))
 		)
 		music)
