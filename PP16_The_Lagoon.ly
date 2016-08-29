@@ -51,6 +51,14 @@ dynamics = {
 	s2.*4
 	s4		s8\f	s4		s8\p	|
 	\bar "||"
+
+	\tempo "Piu vivo." 4 = 118
+	\time 3/4
+	<>\mf
+	s2.*7
+	s4\<	s4	s4\f	|
+	s2.*8
+	\bar "||"
 }
 
 note =
