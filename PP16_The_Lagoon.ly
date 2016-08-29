@@ -482,6 +482,90 @@ upper = \relative c' {
 	<a c ef fs>							|
 	<g b d f! g>4	r4		r2				|
 	R1*2								||
+
+	r8		<g c e>[		r		q]	|
+	r		q[			r	<g c e g>]	|
+
+	c'8		g		e		f16	g	|
+	a8[		f		d']		d16	c	|
+	b8[		a		g		f]		|
+	e8		e'16(	c)	<c e g>8	%…
+
+							g8\noBeam	|
+	c8		g		e		f16	g	|
+	a8[		f		d'		c]		|
+	b		a16	g	f8		d		|
+	c		e16(	g	<e g c>8)	%…
+
+							g16[	fs]	|
+	g8		d16	d	<d fs a>8	g16	a	|
+	<d g b>8	a16	g	<d g d'>8	%…
+						<< {	g16	fs	}
+						\\ {	ds8		} >> |
+	e16	fs	<c e>8[		<c e c'>	<c e>]		|
+	<c d>		a'16[(	d,]	d'8)		%…
+
+							d,8\noBeam	|
+	<d g>		r		<e a>		r		|
+	<f b>		r		<c g' c>	r		|
+	<d g d'>	<b e g>		<c e a>		<c d fs>	|
+	<b d g>4~			q8		%…
+
+							g'8		|
+	g[		e		c'8.			b16]	|
+	a8[		f		d8.			e16]	|
+	f8[		b		b		a]		|
+	g		e'16[(	c)]	g'8		%…
+
+							r8		|
+	<g,, c g'>	r		r		q		|
+	<a c a'>	r		r		q		|
+	<b f' g>	<b fs' g>	<b fs' a>	<b f' g>	|
+	<e g d'>	r		<d' f a d>	%…
+
+							r8		|
+	c16	e	g	e	<c c'>4->			|
+	c16	e	a	e	<c c'>4->			|
+	c'16	g	e	c	<b e>8		<b d>		|
+	c		r		<c e g c>->	%…
+
+							r8		|
+	c		g		e		f16	g	|
+	a8[		f		d']		d16	c	|
+	b8[		a		g		f]		|
+	e		e'16_(	c	<c e g>8)	%…
+
+							g8\noBeam	|
+	c		g		e		f16	g	|
+	a8[		f		d'		c]		|
+	b		a16	g	f8		d		|
+	c(		e16	g	<e g c>8)	%…
+
+							e16	fs	|
+	g8		d		<d fs a>	g16	a	|
+	<d, g b>8	a'16	g	<d g d'>8	%…
+						<< {	g16	fs	}
+						\\ {	ds8		} >> |
+	e16	fs	<c e>8[		<c e c'>	<c e>]		|
+	<c d>		a'16[(	d,]	d'8)		%…
+
+							d,8\noBeam	|
+	<d g>		r		q		r		|
+	<e a>		r		<c g' c>	r		|
+	<d g d'>	<b e g>		<c e a>		<c d fs>	|
+	<b d g>4~			q8		%…
+
+							g'8		|
+	g[		e		c'8.			b16]	|
+	a8[		f		d8.			e16]	|
+	f8[		b		b		a]		|
+	g		e'16[(	c)]	g'8		%…
+
+							r8		|
+	<g,, c g'>	r		r		q		|
+	<a c a'>	r		r		<a d a'>	|
+	<b f' g>	<b fs' g>	<b fs' a>	<b f' g>	|
+	<e g c>		r		<c' e g c>->	r		|
 }
 
 lower = \relative c {
@@ -688,7 +772,7 @@ lower = \relative c {
 	<e,, e'>	r		r		q		|
 	<f f'>		r		r		q		|
 	<g g'>		q		q		q		|
-	<c c'>		r		<c, c'>->	r		|
+	<c c'>		r		<c, c'>^>	r		|
 }
 
 pedal = {
