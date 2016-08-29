@@ -1708,15 +1708,47 @@ pedalPeterAndHook = {
 
 
 dynamicsCrocodile = {
+	\time 2/4
+
+	\grace s8
+	<>\ff
+	s2*7	|
+	\bar "||"
 }
 
-upperCrocodile = \relative c' {
+upperCrocodile = \relative c''' {
+	\key d \minor
+	<>^\note "“THE CROCODILE MAKES FOR HOOK.”"
+
+\repeat unfold 2 {
+	\acciaccatura gs8
+	<d f a>		r		<g, cs e>	r		|
+}									|
+	<a d a'>[	<g d' g>	<a d a'>	<g bf bf'>]	|
+
+\repeat unfold 2 {
+	<a d a'>	r		%…
+			\acciaccatura ds <g, cs e>	r		|
+}									|
+	<a d a'>	<bf d g>16  q	<a d f>8	<f bf d>16  q	|
+	<e bf' d>8	<g a cs>	<f a d>		r		|
 }
 
 lowerCrocodile = \relative c {
+\repeat unfold 2 {
+	<d a' d>8	r		<g cs ef>	r		|
+}									|
+	<f a d>[	<g bf d>	<f a d>		<ef g d'>]	|
+
+\repeat unfold 2 {
+	<d f a d>	r		<g cs ef>	r		|
+}									|
+	<f a d>8	<g bf d>16  q	<a d f>8	<bf d>16  q	|
+	<g bf d>8	<a ef'>		<d, a' d>	r		|
 }
 
 pedalCrocodile = {
+	s2*7	|
 }
 
 
