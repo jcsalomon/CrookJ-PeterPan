@@ -617,6 +617,43 @@ upper = \relative c' {
 \change Staff = "upper" \oneVoice
 
 	<>^\note "THE LEGEND “MAROONER’S ROCK.”"
+
+	b8[(	cs	ds	e	fs	g)]	|
+<< {	g4.->(			fs)			| } %=
+\\ {	c2.						| } >>
+	b8[(	cs	ds	e	fs	g)]	|
+<< {	b2.->						| } %=
+\\ {	e,4.(			ds)			| } >>
+
+
+<< {	b'8(	a	b	c4.)			| } %=
+\\ {	d,!4.			c			| } >>
+	<c'es>8( <b d>	<a c>	<g! b>4.)		|
+<< {	b8(	a	g	fs4.)			|   %=
+	e8(	fs	e	ds4.)			| } %=
+\\ {	b4.			c			|
+	cs			ds			| } >>
+
+	b8[(	cs	ds	e	fs	g)]	|
+<< {	g4.->(			fs)			| } %=
+\\ {	c2.						| } >>
+	b8[^(	cs	ds	e	fs	g]	|
+<< { \voiceOne
+	b2.)						|%=
+} \new Voice { \voiceTwo
+	e,4.(			ds)			|%=
+} >> \oneVoice						|
+
+<< {
+	b'8(	a	b	c4.)			|%=
+	a8(	g	a	b4.)			|%=
+	b8(	a	fs	g4		fs8)	|%=
+} \\ {
+	d!4.(			c)			|%=
+	c!			b			|%=
+	b8	c4		e		ds8	|%=
+} >>							|||
+	\tempo 4 = 72 e2.\fermata \tempo 4 = 96		|
 }
 
 lower = \relative c {
@@ -850,6 +887,48 @@ lower = \relative c {
 \voiceTwo <b ds>4			<a e'>				|
 	<b d fs>2							|
 \oneVoice
+
+<< {
+	g'8[(	a	fs	g	a	b)]	|%=
+	a2.						|%=
+	g8[(	a	fs	g	a	b)]	|%=
+	g4.(			fs)			|%=
+
+	gs4.			a			|%=
+	a			b			|%=
+	e,			e			|%=
+	g(			fs)			|%=
+
+	g8[(	a	fs	g	a	b)]	|%=
+	a2.						|%=
+	g8[(	a	fs	g	a	b)]	|%=
+	g4.(			fs)			|%=
+
+	gs4.			a			|%=
+	fs!			g			|%=
+	e			b'4		a8	|%=
+	g2.\fermata					|%=
+} \\ {
+	e2.~						|%=
+	e						|%=
+	e						|%=
+	b						|%=
+
+	e4.			a,			|%=
+	a			e'			|%=
+	g,			a			|%=
+	as(			b)			|%=
+
+	e2.						|%=
+	e						|%=
+	e						|%=
+	b						|%=
+
+	e4.			a,			|%=
+	d			g,			|%=
+	g8	a4		b4.			|%=
+	e2.						|%=
+} >>	|||| |||| |||| ||||
 }
 
 pedal = {
