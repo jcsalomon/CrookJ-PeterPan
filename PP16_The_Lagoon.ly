@@ -30,8 +30,12 @@ dynamicsMermaidLagoon = {
 
 	<>\p
 	s1.*5
+	% Extending 1- & 2-beat notes + 2-beat fermata:
+	% temporary tempo = current × time÷(time + fermata)
+	% = 108 × 1÷(1 + 2) = 108÷3 = 36
 	s1	\tempo 4 = 36	s4	\tempo 4 = 108	s4	|
 	s1.
+	% = 108 × 2÷(2 + 2) = 108÷2 = 54
 	s2.	\tempo 4 = 54	s2	\tempo 4 = 108	s4	|
 	s2.			s4\p	s2		|
 	s2.			s2		s8\f s	|
@@ -1422,15 +1426,75 @@ pedalHookClimbs = {
 
 
 dynamicsBirdAndNest = {
+	\time 3/4
+
+	<>\p
+	s2.*11	|
+	s2.\<	|
+	s2.\mf	|
+	s2.*2	|
+	% Current tempo  = 132bpm; extending 3-beat note + 2-beat fermata:
+	% temporary tempo = 132 × 3÷(3 + 2) = 132×3/5 = 79.2 ≈ 79
+	\tempo 4 = 79	s2.\ff		|	\tempo 4 = 132
+	\bar "||"
 }
 
-upperBirdAndNest = \relative c' {
+upperBirdAndNest = \relative c'' {
+	\key a \minor
+	<>^\note "“THE BIRD AND THE NEST.”"
+
+<< {
+	g2.\(	|	fs	|	f!	|	e\)	|%=
+
+	e'2.\(						|%=
+	d4		a		c		|%=
+	b		f		a		|%=
+	g2.\)						|%=
+
+	g2.\(	|	fs	|	f!	|	e\)	|%=
+} \\ {
+	r4	<g, c>	q	|	r	<a c>	q	|%=
+	r	<g b>	q	|	r	<g c>	q	|%=
+
+	r4 g'2	|	f2.	|	f	|	e	|%=
+
+	r4	<g, c>	q	|	r	<a c>	q	|%=
+	r	<g b>	q	|	r	<g c>	q	|%=
+} >>							|||| |||| ||||
+
+	e''2.\(						|
+	d4		a		c		|
+<< {	b8	g	a4\)		%…
+} \new Voice { \voiceTwo	f!2	%…
+} >>					b,4		|
+	c2.\fermata					|
 }
 
 lowerBirdAndNest = \relative c {
+	\key a \minor
+
+	e2.\(	|	ef	|	d	|	c\)	|
+
+<< {
+	r4	c'2		|	r4	d2		|%=
+	r4	b2		|	r4	c2		|%=
+} \\ {
+	e,2.	|	f	|	g	|	c,	|%=
+} >>								||||
+
+	e2.\(	|	ef	|	d	|	c\)	|
+
+	a4		<g' a cs>	q		|
+	d		<fs a d>	q		|
+<< {	g2				f!4		|%=
+} \\ {	g,2.						| } >>	|
+	<c e>2.\fermata					|
 }
 
 pedalBirdAndNest = {
+	s2.*12	|
+	s4\sustainOn	s4	s4\sustainOff	|
+	s2.*3	|
 }
 
 
