@@ -1797,15 +1797,74 @@ pedalBoysDepart = {
 
 
 dynamicsPeterAndWendy = {
+	% Current tempo  = 40bpm; extending 4-beat note + 4-beat fermata:
+	% temporary tempo = 40 × 4÷(4 + 4) = 40×4/8 = 20
+	\tempo 4 = 20
+	s1\ppp	|
+	\tempo "Largo." 4 = 40
+
+	s1*2	|
+	s8	s8\sf	s2.	|
+	s4\<	s2	s4\!	|
+	s1*2	|
+	s4	\tempo 4 = 39 s4-\markup "rit."
+			\tempo 4 = 38 s4
+				\tempo 4 = 37 s4	|
+	\tempo 4 = 36
+	s1	|
+	\tempo 4 = 18
+	s1	|
+	\bar "||"
 }
 
 upperPeterAndWendy = \relative c' {
+	\once \override Script.script-priority = 0
+	<>^\markup \small \italic "Silence."
+	d1_~\fermata							|
+
+	<>^\note "“PETER DRAGS WENDY ON TO ROCK.”"
+<< \new Voice { \voiceOne
+	d4\(		e		f		fs\)		|%=
+	g		gs\(		a		as		|%=
+	b8\)	%…
+} {\voiceTwo
+	d,2.						ef4		|%=
+	d4		<d f!>2.~					|%=
+	q8	%…
+}>> \oneVoice	r8	af''4->~	af8	b,\(	c	d	|||
+	d4->\)		c(		g'2)(				|
+
+	g4)		f->~		f8	b,(	c	d)	|
+	ef2->~				ef8	fs,(	a!	c)	|
+<< { \voiceOne
+	e!2.(						e4)		|%=
+	f\(		g		<c, f a>	<d f g b>	|%=
+} \new Voice { \voiceTwo
+	r4		g,		<g c>		q		|%=
+	<a c>		<g c e>	<< { f2 } \new Voice {\voiceFour f4 d } >> |%=
+} >> \oneVoice								||
+
+	<c' e g c>1\)\fermata						|
 }
 
 lowerPeterAndWendy = \relative c {
+	<d d,>1_\fermata						|
+
+	r2				r4		c'\(		|
+	b		bf		a		af		|
+	<g g,>8\) r	<g b f'>2.->					|
+	<g c ef>1							|
+
+	<af c f>1							|
+	<a! c fs>							|
+	<g c g'>4	<e c g>2.					|
+	g1								|
+
+	\acciaccatura	c,8	c'1\fermata				|
 }
 
 pedalPeterAndWendy = {
+	s1*10	|
 }
 
 
