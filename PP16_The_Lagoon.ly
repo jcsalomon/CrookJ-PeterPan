@@ -401,6 +401,10 @@ pedal = {
 	>>
 	\layout {
 		\context {
+			\Staff
+			\RemoveAllEmptyStaves
+		}
+		\context {
 			\PianoStaff
 			\accepts Dynamics
 		}
