@@ -1868,16 +1868,136 @@ pedalPeterAndWendy = {
 }
 
 
+dynamicsKiteArrives = {
+	\tempo "Agitato." 4 = 56
+	\time 2/4
+
+	<>\pp
+	s2*24	|
+	% Current tempo  = 56bpm; extending 2-beat note + 2-beat fermata:
+	% temporary tempo = 56 × 2÷(2 + 2) = 56×2/4 = 28
+	\tempo 4 = 28	s2	|	%\tempo 4 = 56
+	\bar "||"
+
+	\tempo "Più Lento." 4 = 44
+	\time 6/8
+
+	s2.*8	|
+	\bar "||"
+}
+
+upperKiteArrives = \relative c''' {
+	\key e \major
+	<>^\note "“THE KITE ARRIVES.”"
+
+	\repeat tremolo 8 { <gs b>32 e }				|
+
+	\voiceOne
+	\repeat unfold 4 {	\repeat tremolo 8 { <gs b>32 e }	| }
+
+	\repeat unfold 2 {	\repeat tremolo 8 { <gs cs>32 e }	| }
+	\repeat unfold 2 {	\repeat tremolo 8 { <gs c>32 e }	| }
+
+	\repeat unfold 4 {	\repeat tremolo 8 { <gs b>32 e }	| }
+
+	\repeat unfold 2 {	\repeat tremolo 8 { <gs cs>32 e }	| }
+	\repeat unfold 3 {	\repeat tremolo 8 { <a cs>32 fs }	| }
+	<fs a cs>4.					<fs a c>8	|
+
+	\oneVoice
+	\repeat unfold 5 {	\repeat tremolo 8 { <a b>32 fs }	| }
+
+	<b gs e b>2\fermata						|
+
+	\repeat unfold 2 {	\repeat tremolo 12 { <gs b>32 e }	| }
+	\repeat unfold 2 {	\repeat tremolo 12 { <a b>32 fs }	| }
+	\repeat unfold 2 {	\repeat tremolo 12 { <gs b>32 e }	| }
+	\repeat tremolo 12 { <as cs>32 e }				|
+	\repeat tremolo 12 { <a b>32 ds, }				|
+}
+
+lowerKiteArrives = \relative c' {
+	\key e \major
+
+	\change Staff = "upper"
+	\voiceTwo
+	s2								|
+
+	r4				r8		b\(		|
+	e16	fs	gs	b	gs	fs	e	fs	|
+	gs	a	b	e	b	a	gs	fs	|
+	e	fs	gs	b	gs	fs	e	ds\)	|
+
+	cs2~								|
+	cs								|
+	c~								|
+	c8		r8		r4				|
+
+	r4				r8		b\(		|
+	e16	fs	gs	b	gs	fs	e	fs	|
+	gs	a	b	e	b	a	gs	fs	|
+	e	fs	gs	b	gs	fs	e	ds\)	|
+
+	cs2~								|
+	cs8		r		r		cs\(		|
+	fs16	gs	a	b	cs8\)		r16	cs,\(	|
+	fs	gs	a	b	cs8\)		r16	cs,\(	|
+	fs16	gs	a	b	cs	fs	cs	b	|
+	a	gs	fs	a	cs8		c\)		|
+
+	\change Staff = "lower"
+	\oneVoice
+	r4				r8.			b,,16\(	|
+	fs'	gs	a	b	cs8\)		r16	cs,\(	|
+	fs	gs	a	b	cs8\)		r16	cs,\(	|
+	fs	gs	a	b	cs	fs	cs	b	|
+	a	gs	fs	a	b\)	r	r8		|
+
+	\acciaccatura e,,8 <e' gs b>2\fermata
+
+	b'4.\(			gs4		b8\)	|
+	e4.			e			|
+	e4\(		ds8	cs4		ds8\)	|
+	b2.						|
+
+	e4.\(			b4		gs8	|
+	fs4		e8	gs4\)		e'8\(	|
+	ds4		cs8	ds4		e8	|
+	fs2.\)						|
+}
+
+pedalKiteArrives = {
+	s2*25	|
+	s2.*8	|
+}
+
+
 dynamicsWendyFlies = {
+	\tempo "Allegro furioso." 4 = 144
+
+	<>\ff
+	s2.*4	|
+	\bar "||"
 }
 
 upperWendyFlies = \relative c' {
+	<>^\note "“WENDY FLIES OFF WITH THE KITE.”"
+
+	<e gs>4.		<e a>			|
+	<e as>			<e b'>			|
+	<a cs>4		ds8	e	fs	gs	|
+	<fs, b ds fs>2.					|
 }
 
 lowerWendyFlies = \relative c {
+	<e b'>4.		<fs b>			|
+	<fss cs'>		<gs b>			|
+	<a cs>			<fs, cs' a'>\arpeggio	|
+	<b b'>8	<b b,>	<cs cs,><ds ds,><e e,>	<fs fs,>|
 }
 
 pedalWendyFlies = {
+	s2.*4	|
 }
 
 
@@ -1955,6 +2075,7 @@ dynamics = {
 	\dynamicsCrocodile
 	\dynamicsBoysDepart
 	\dynamicsPeterAndWendy
+	\dynamicsKiteArrives
 	\dynamicsWendyFlies
 	\dynamicsPeterDespair
 	\dynamicsBigAdventure
@@ -2008,6 +2129,7 @@ upper = {
 	\upperCrocodile
 	\upperBoysDepart
 	\upperPeterAndWendy
+	\upperKiteArrives
 	\upperWendyFlies
 	\upperPeterDespair
 	\upperBigAdventure
@@ -2037,6 +2159,7 @@ lower = {
 	\lowerCrocodile
 	\lowerBoysDepart
 	\lowerPeterAndWendy
+	\lowerKiteArrives
 	\lowerWendyFlies
 	\lowerPeterDespair
 	\lowerBigAdventure
@@ -2064,6 +2187,7 @@ pedal = {
 	\pedalCrocodile
 	\pedalBoysDepart
 	\pedalPeterAndWendy
+	\pedalKiteArrives
 	\pedalWendyFlies
 	\pedalPeterDespair
 	\pedalBigAdventure
