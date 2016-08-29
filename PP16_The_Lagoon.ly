@@ -218,6 +218,39 @@ upper = \relative c' {
 	<b' d g>4	<b, d g>	|
 
 	s8
+
+					<>\(	<c g'>8	|
+	<c a'>4		<f b>8	<e c'>4		<c g'>8	|
+	<c a'>4		<f b>8	<e c'>4	\)	g'8	|
+
+	d4\(		e8	c4		d8\)	|
+	e,4		%…
+	\change Staff = "lower"	\voiceTwo	e,,32[(d e  d]	e4)
+	\change Staff = "upper" \oneVoice	<c''g'>8|
+
+	<c a'>4		<f b>8	<e c'>4		<c g'>8	|
+	<c a'>4		<f b>8	<e c'>4		<e a c>8|
+	<e g b>4	<e g>8	<ds fs b>4	q8	|
+	e4		e32[(ds	e   ds]	e4)	e8	|
+
+	<d f>4		<e g>8	<f a>4		<b, d>8	|
+	<c e>4		<d f>8	<e g>4		q8	|
+	q4		<f a>8	<g bf>4		<cs, e>8|
+	<f a>4.~		q4		q8	|
+
+	<fs a>4		<g b>8	<a c>4		<ds,fs>8|
+	<e g>4		<fs a>8	<g b>4		b8	|
+<< {
+	b4		c8	d4		c8	|%=
+} \\ {
+	<d, f>2.					|%=
+} >>							|
+	<d f b>4.~		q8	r	<c g'>	|
+
+	<c a'>4		<f b>8	<e c'>4		<c g'>8	|
+	<c a'>4		<d e b'>8<c e c'>4	<c d a'>8|
+	<c e g>4	r8	<b f' g>4	r8	|
+	<e g c>4	c32([b	c   b]	c8) r8	g'16(a)	|
 }
 
 lower = \relative c {
