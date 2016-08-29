@@ -1426,6 +1426,13 @@ dynamics = {
 	\dynamicsPeterSails
 }
 
+melodyDynamics = {
+	\dynamicsMermaidLagoon
+	\dynamicsMermaidsTail
+	\dynamicsBoysSwim
+	\dynamicsPeterAndMers
+}
+
 melody = {
 	\autoBeamOff
 	\clef treble
@@ -1573,7 +1580,7 @@ pedal = {
 		{
 			\new Voice = "melody" <<
 				\melody
-				\dynamics
+				\melodyDynamics
 			>>
 		}
 		\new Lyrics \lyricsto "melody" \words
