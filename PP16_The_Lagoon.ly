@@ -114,6 +114,18 @@ dynamics = {
 	s2*8
 	\bar "||"
 
+	\tempo "Piu moderato." 4 = 116
+	\time 3/4
+	<>\pp
+	s2.*6
+	\bar "||"
+
+	\time 2/4
+	s2*2
+	\tempo "Lento." 4 = 48
+	s4\<	s4\>	|
+	s2\!		|
+	\bar "||"
 }
 
 note =
@@ -572,6 +584,9 @@ upper = \relative c' {
 	<a c a'>	r		r		<a d a'>	|
 	<b f' g>	<b fs' g>	<b fs' a>	<b f' g>	|
 	<e g c>		r		<c' e g c>->	r		|
+
+	\key e \minor
+	<>^\note "SWIMMING THE LAKE."
 }
 
 lower = \relative c {
