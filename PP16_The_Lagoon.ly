@@ -1203,15 +1203,71 @@ pedalPiratesApproach = {
 
 
 dynamicsAbandonTigerLily = {
+	\time 4/4
+
+	<>\pp
+	s1*10	|
+	\bar "||"
+}
+
+upperAbandonTigerLilyRepeat =  \relative c' {
+\repeat unfold 2 {
+	d16 d	d   d	d8	<cs e>	<d f>[	<d g>]	<d a'>	r	|
+} \alternative {
+	{
+	d16 d	d   d	d8	f	e[	cs]	a	r	|
+	} {
+	<f' a>(	<e g>16 <d f>)
+			<f a>8(	<e g>16 <d f>)
+					q8[	<a e'>]	<f d'>	r	|
+	}
+}
 }
 
 upperAbandonTigerLily = \relative c' {
+	\key d \minor
+	<>^\note "“THEY PREPARE TO ABANDON TIGER LILY.”"
+
+	\upperAbandonTigerLilyRepeat
+
+	%\repeat unfold 2 {
+	<e a>8(	g16 a)	<f bs>8(c'16 bs)<e, a>8	e	a	r	|
+	%}
+	<e a>8	g16 a	<f bs>8	c'16 bs	<e, a>8	e	a	r	|
+
+	\upperAbandonTigerLilyRepeat
 }
 
-lowerAbandonTigerLily = \relative c {
+lowerAbandonTigerLilyRepeat = \relative c' {
+\repeat unfold 2 {
+<< {
+	a4.			8	4.		%…
+} \\ {
+	<d, f>4.			a8	d	e	%…
+} >>								r8	|
+} \alternative {
+	{
+	<d f a>	r	r	<f a>	e	cs	a	r	|
+	} {
+	<d f a>	r	q	r	<d f>	<a e'>	<d d,>	r	|
+	}
+}
+}
+
+lowerAbandonTigerLily = \relative c' {
+	\key d \minor
+
+	\lowerAbandonTigerLilyRepeat
+
+	\repeat unfold 2 {
+	<a cs>	r	<g d'>	r	<a cs>	e	a	r	|
+	}
+
+	\lowerAbandonTigerLilyRepeat
 }
 
 pedalAbandonTigerLily = {
+	s1*10	|
 }
 
 
