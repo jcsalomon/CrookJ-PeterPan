@@ -1202,6 +1202,201 @@ pedalPiratesApproach = {
 }
 
 
+dynamicsAbandonTigerLily = {
+}
+
+upperAbandonTigerLily = \relative c' {
+}
+
+lowerAbandonTigerLily = \relative c {
+}
+
+pedalAbandonTigerLily = {
+}
+
+
+dynamicsTigerLilyEscapes = {
+}
+
+upperTigerLilyEscapes = \relative c' {
+}
+
+lowerTigerLilyEscapes = \relative c {
+}
+
+pedalTigerLilyEscapes = {
+}
+
+
+dynamicsHookSwims = {
+}
+
+upperHookSwims = \relative c' {
+}
+
+lowerHookSwims = \relative c {
+}
+
+pedalHookSwims = {
+}
+
+
+dynamicsHookClimbs = {
+}
+
+upperHookClimbs = \relative c' {
+}
+
+lowerHookClimbs = \relative c {
+}
+
+pedalHookClimbs = {
+}
+
+
+dynamicsBirdAndNest = {
+}
+
+upperBirdAndNest = \relative c' {
+}
+
+lowerBirdAndNest = \relative c {
+}
+
+pedalBirdAndNest = {
+}
+
+
+dynamicsFightInWater = {
+}
+
+upperFightInWater = \relative c' {
+}
+
+lowerFightInWater = \relative c {
+}
+
+pedalFightInWater = {
+}
+
+
+dynamicsPeterAndHook = {
+}
+
+upperPeterAndHook = \relative c' {
+}
+
+lowerPeterAndHook = \relative c {
+}
+
+pedalPeterAndHook = {
+}
+
+
+dynamicsCrocodile = {
+}
+
+upperCrocodile = \relative c' {
+}
+
+lowerCrocodile = \relative c {
+}
+
+pedalCrocodile = {
+}
+
+
+dynamicsBoysDepart = {
+}
+
+upperBoysDepart = \relative c' {
+}
+
+lowerBoysDepart = \relative c {
+}
+
+pedalBoysDepart = {
+}
+
+
+dynamicsPeterAndWendy = {
+}
+
+upperPeterAndWendy = \relative c' {
+}
+
+lowerPeterAndWendy = \relative c {
+}
+
+pedalPeterAndWendy = {
+}
+
+
+dynamicsWendyFlies = {
+}
+
+upperWendyFlies = \relative c' {
+}
+
+lowerWendyFlies = \relative c {
+}
+
+pedalWendyFlies = {
+}
+
+
+dynamicsPeterDespair = {
+}
+
+upperPeterDespair = \relative c' {
+}
+
+lowerPeterDespair = \relative c {
+}
+
+pedalPeterDespair = {
+}
+
+
+dynamicsBigAdventure = {
+}
+
+upperBigAdventure = \relative c' {
+}
+
+lowerBigAdventure = \relative c {
+}
+
+pedalBigAdventure = {
+}
+
+
+dynamicsBirdHelps = {
+}
+
+upperBirdHelps = \relative c' {
+}
+
+lowerBirdHelps = \relative c {
+}
+
+pedalBirdHelps = {
+}
+
+
+dynamicsPeterSails = {
+}
+
+upperPeterSails = \relative c' {
+}
+
+lowerPeterSails = \relative c {
+}
+
+pedalPeterSails = {
+}
+
+
 dynamics = {
 	\set Score.tempoHideNote = ##t
 
@@ -1214,6 +1409,21 @@ dynamics = {
 	\dynamicsHighlandFling
 	\dynamicsKingOfTheCastle
 	\dynamicsPiratesApproach
+	\dynamicsAbandonTigerLily
+	\dynamicsTigerLilyEscapes
+	\dynamicsHookSwims
+	\dynamicsHookClimbs
+	\dynamicsBirdAndNest
+	\dynamicsFightInWater
+	\dynamicsPeterAndHook
+	\dynamicsCrocodile
+	\dynamicsBoysDepart
+	\dynamicsPeterAndWendy
+	\dynamicsWendyFlies
+	\dynamicsPeterDespair
+	\dynamicsBigAdventure
+	\dynamicsBirdHelps
+	\dynamicsPeterSails
 }
 
 melody = {
@@ -1245,6 +1455,21 @@ upper = {
 	\upperHighlandFling
 	\upperKingOfTheCastle
 	\upperPiratesApproach
+	\upperAbandonTigerLily
+	\upperTigerLilyEscapes
+	\upperHookSwims
+	\upperHookClimbs
+	\upperBirdAndNest
+	\upperFightInWater
+	\upperPeterAndHook
+	\upperCrocodile
+	\upperBoysDepart
+	\upperPeterAndWendy
+	\upperWendyFlies
+	\upperPeterDespair
+	\upperBigAdventure
+	\upperBirdHelps
+	\upperPeterSails
 }
 
 lower = {
@@ -1259,6 +1484,21 @@ lower = {
 	\lowerHighlandFling
 	\lowerKingOfTheCastle
 	\lowerPiratesApproach
+	\lowerAbandonTigerLily
+	\lowerTigerLilyEscapes
+	\lowerHookSwims
+	\lowerHookClimbs
+	\lowerBirdAndNest
+	\lowerFightInWater
+	\lowerPeterAndHook
+	\lowerCrocodile
+	\lowerBoysDepart
+	\lowerPeterAndWendy
+	\lowerWendyFlies
+	\lowerPeterDespair
+	\lowerBigAdventure
+	\lowerBirdHelps
+	\lowerPeterSails
 }
 
 pedal = {
@@ -1271,6 +1511,21 @@ pedal = {
 	\pedalHighlandFling
 	\pedalKingOfTheCastle
 	\pedalPiratesApproach
+	\pedalAbandonTigerLily
+	\pedalTigerLilyEscapes
+	\pedalHookSwims
+	\pedalHookClimbs
+	\pedalBirdAndNest
+	\pedalFightInWater
+	\pedalPeterAndHook
+	\pedalCrocodile
+	\pedalBoysDepart
+	\pedalPeterAndWendy
+	\pedalWendyFlies
+	\pedalPeterDespair
+	\pedalBigAdventure
+	\pedalBirdHelps
+	\pedalPeterSails
 }
 
 \score {
