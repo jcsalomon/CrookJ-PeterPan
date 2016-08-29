@@ -1272,15 +1272,65 @@ pedalAbandonTigerLily = {
 
 
 dynamicsTigerLilyEscapes = {
+	\tempo "Allegro." 4 = 132
+	\time 2/4
+
+	\bar ".|:"
+	<>\p-\markup "tremolo"
+\repeat volta 2 {
+	s2*7
+} \alternative {
+	{ s2 }
+	{ s2 }
+}
+	\bar "||"
 }
 
 upperTigerLilyEscapes = \relative c' {
+	\key g \minor
+	<>^\note "“TIGER LILY ESCAPES.”"
+
+\repeat volta 2 {
+	<bf d f>4.		<a c>8	|
+	<bf d f>4.		<a c>8	|
+	<bf d f>4	<f' bf>		|
+	<f c'>		<f d'>		|
+
+	<g c>4.			<g d'>8	|
+	<g ef'>4.		<g d'>8	|
+<< {	c[	g	a	bf]	|%=
+} \\ {	g2				| } >>	|
+} \alternative {
+{	<a c>4		<f a c f>	|	}
+{	<a c>		bf		|	}
+}
 }
 
 lowerTigerLilyEscapes = \relative c {
+	\key g \minor
+
+\repeat volta 2 {
+	<bf f'>4.		f'8	|
+	q4.			f8	|
+	q4		<d bf'>		|
+	<c a'>		<bf bf'>	|
+
+	<ef bf'>4.		<d b'>8	|
+	<c c'>4.		<d b'>8	|
+	<ef c'>4	<e c'>		|
+} \alternative {
+{	<f c'>4		<f f,>		|	}
+{	<f ef'!>	<bf d>		|	}
+}
 }
 
 pedalTigerLilyEscapes = {
+\repeat volta 2 {
+	s2*7
+} \alternative {
+	{ s2 }
+	{ s2 }
+}
 }
 
 
