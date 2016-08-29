@@ -2002,28 +2002,123 @@ pedalWendyFlies = {
 
 
 dynamicsPeterDespair = {
+	\tempo "Lento." 4 = 48
+
+	<>\ff
+	s2.*6	|
+	s8*4		%…
+	% Current tempo  = 48bpm; extending 1-beat note + 3-beat fermata:
+	% temporary tempo = 48 × 1÷(1 + 3) = 48÷4 = 12
+	\tempo 4 = 12	s8	\tempo 4 = 48	s8	|
+	\bar "||"
 }
 
-upperPeterDespair = \relative c' {
+upperPeterDespair = \relative c'' {
+	<>^\note "“THE DESPAIR OF PETER.”"
+
+	<g b e g>4.->		%…
+<< {				fs'4		e8	|%=
+	e4		d8	e4		fs8	|%=
+} \\ {				<g, b>4.		|%=
+	<fs b>2.					|%=
+} >>							||
+
+	<f a d f>4.->		%…
+<< {				e'4		d8	|%=
+	d4		c8	d4		e8	|%=
+	e4.			d4		a8	|%=
+} \\ {				<f a>4.			|%=
+	e4		s8	s4.			|%=
+	<f a>2.						|%=
+} \\
+  \\ {				s4.			|%=
+	a2				s4		|%=
+	s2.						|%=
+} >>							|||
+
+% NOTE: Why is this `<< e4 a2 >>` and not `<e a>2.`?
+% Probably an artifact of a reduced score.
+
+	<e a c>2.					|
+
+<< {	c'4.(			b8)	r\fermata r	|%=
+} \\ {	d,2.						|%=
+} \\
+  \\ {	f4		d8(	e4)		s8	|%=
+} >>							|
 }
 
 lowerPeterDespair = \relative c {
+	<e g b>8 q	q	q	q	q	|
+	<d fs b> q	q	q	q	q	|
+	<d f b>	q	q	q	q	q	|
+	<d fs b> q	q	q	q	q	|
+
+	<d f b>	q	q	q	q	q	|
+	<e a c>	q	q	q	q	q	|
+	<e gs>2.\fermata				|
 }
 
 pedalPeterDespair = {
+	s2.*7	|
 }
 
 
 dynamicsBigAdventure = {
+	<>\p
+	s2.*8	|
+	% Current tempo  = 48bpm; extending 6-beat note + 3-beat fermata:
+	% temporary tempo = 48 × 6÷(6 + 3) = 48×6/9 = 32
+	\tempo 4 = 32	s2.	|	% \tempo 4 = 48
+	\bar "||"
 }
 
-upperBigAdventure = \relative c' {
+upperBigAdventure = \relative c'' {
+	\key a \major
+	<>^\note "“TO DIE A BIG ADVENTURE.”"
+
+<< {
+	a4.\(			e'			|%=
+	cs			a\)			|%=
+	fs\(			d'			|%=
+	b			gs\)			|%=
+} \\ {
+	cs,2.\(						|%=
+	cs\)						|%=
+	d\(						|%=
+	d\)						|%=
+} >>							||||
+
+	<cs e a>4.\(		<a' cs e>		|
+	<cs e a>2.\)					|
+	<d fs a>4.\(		q			|
+	<fs b d>		<e b' d e>\)		|
+
+	<e a cs e>2.\fermata				|
 }
 
-lowerBigAdventure = \relative c {
+lowerBigAdventure = \relative c' {
+	\key a \major
+<< {
+	a2.\(						|%=
+	g\)						|%=
+	fs\(						|%=
+	f4.\)			e			|%=
+
+	a4.\(			e'			|%=
+	cs			a\)			|%=
+	fs\(			d'			|%=
+	b			fs\)			|%=
+} \\ {
+\repeat unfold 4 {
+	a,2.\(			|	a\)			|%=
+}
+} >>							|||| ||||
+	<a a'>2.
 }
 
 pedalBigAdventure = {
+	s2.*9	|
 }
 
 
