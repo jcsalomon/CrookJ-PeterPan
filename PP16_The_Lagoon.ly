@@ -33,6 +33,11 @@ dynamics = {
 	\set Timing.measureLength = #(ly:make-moment 2 4)
 	s2 |
 	\bar "||"
+
+	\time 6/8
+	\set Timing.measureLength = #(ly:make-moment 2 8)
+					s8	s8\p	|
+	\set Timing.measureLength = #(ly:make-moment 6 8)
 }
 
 note =
@@ -65,6 +70,8 @@ melody = \relative c' {
 
 	R2.*3
 	R2 |
+
+	s8
 }
 
 words = \lyricmode {
@@ -142,6 +149,8 @@ upper = \relative c' {
 	<g b d>-. <d g b>-. <b d g>-. <d g b>-. <g b d>-. <d g b>-.	|
 
 	<b' d g>4	<b, d g>	|
+
+	s8
 }
 
 lower = \relative c {
@@ -200,6 +209,8 @@ lower = \relative c {
 	g,2.						|%=
 } >>							|||
 	<g g'>4		q		|
+
+	s8
 }
 
 pedal = {
