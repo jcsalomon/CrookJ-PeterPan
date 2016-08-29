@@ -32,10 +32,38 @@ melody = {
 words = \lyricmode {
 }
 
-upper = {
+upper = \relative c' {
 	\clef treble
 	\key a \minor
 	\time 6/4
+
+	\partial 4				e4\(	|
+	e2.			d2\trill	c8  d	|
+	c2.			b2\trill\)	a8( b)	|
+
+	a-. b-. c-. <b d>-. <c e>-. <a fs'>-.
+				<b gs'>-. <c a'>-. <d b'>-.
+					<e c'>-. <fs d'>-. <a ds>-.	|
+<< {
+	<gs e'>1.					|%=
+} \\ {
+	r8  e   gs  b   e   gs  b   gs  e   b   gs! e	|%=
+} >>							|
+
+	<a c e>2.\(		%…
+<< {
+				d2\trill	c8  d	|%=
+} \\ {
+				<a c>2.			|%=
+} >>							|
+	c2.			b2\trill\)	a8  gs	|
+
+	a-. b-. c-. <b d>-. <c e>-. <a fs'>-.
+				<b gs'>-. <c a'>-. <d b'>-.
+					<e c'>-. <fs d'>-. <a ds>-.	|
+	<gs e'> d'! b  gs e  e'	<a,, c e a>4	r4  r4	|
+
+	r2		r4	\acciaccatura ds8 <a c e>2->	r4	|
 }
 
 lower = \relative c {
