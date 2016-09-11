@@ -2165,15 +2165,183 @@ pedalBigAdventure = \tag BigAdventure {
 
 
 dynamicsBirdHelps = \tag BirdHelps {
+	\tempo "Agitato." 4 = 60
+
+	<>\p
+	s2.*8	|
+	<>\f
+	s2.*7	|
+	s8\<	s4	s8\!	s4	|
+	s2.*3	|
+	s8	s8\<	s4.	s8\!	|
+	s2.*20
+	\bar "||"
 }
 
-upperBirdHelps = \tag BirdHelps \relative c' {
+LH = \markup \italic "L.H."
+
+upperBirdHelps = \tag BirdHelps \relative c'' {
+	\key d \minor
+	<>^\note "“THE BIRD COMES TO PETER’S ASSISTANCE.”"
+
+<< {
+	r8	d	e	<c f>	<d g>	<e a>	|
+	<f bf>	<g c>	<f bf>	<e a>	<d g>	<c f>	|
+	<g' bf>	<d g>	<g bf>	<e a>	<d g>	<c f>	|
+	<d g>	<e a>	<d g>	<c f>	<bf e>	<a d>	|
+
+	cs4		d8	e4		cs8	|
+	b4		cs8	d4		b8	|
+	cs4		d8	e4		cs8	|
+	b4		cs8	d4		b8	|
+} \\ {
+	r8	<f a>	<g bf>	a	bf	c	|
+	d	e	d	c	bf	a	|
+	d	bf	d	c	bf	a	|
+	bf	c	bf	a	g	f	|
+
+	g2.	|	f	|	g	|	a	|
+} >>
+
+	a8	<a cs>	<a cs e>q	<e a cs><a cs e>|
+	<cs e a><a cs e><cs e a><e a cs>4.		|
+	<a,cs>8	<a cs e><cs e a><cs e a><a cs e><cs e a>|
+	<e a cs><c e a>	<e a cs><a cs e>4.		|
+
+	\change Staff = "lower" \voiceOne
+	a,,4.->			%…
+	\change Staff = "upper" \oneVoice
+				f'~			|
+	f			e4		d8	|
+<< {	c2.~						|%=
+	c8	%…
+} \\ {	bf2.~						|%=
+	bf8	%…
+} >>		<e g c>	q	q	q	q	||
+
+<< {	c4.			a'->~			|%=
+	a			g4		f8	|%=
+} \\ {	s2.						|%=
+	<bf,! d>2.					|%=
+} >>							||
+	<bf c e>					|
+	q8	<e bf'c>q	q	q	q	|
+
+	<a d f>	<bf d g><a d f>	<g bf e><f a d>	<e g cs>|
+	<f a d>	<g bf e><f a d>	<e g c>	<d g bf><bf d g>|
+	<d f>	<d f a>	<f a d>	<a d f>	<d f a>	<f a d>	|
+	<d, f a><f a d>	<a d f>	<a d f>	<d f a>	<f a d>	|
+
+<<
+  {
+	<d' f>4.\(		<bf e>			|
+	<a d>			<g cs>\)		|
+	<a d>\(			<g cs>			|
+	<f bf>			<e a>\)			|
+
+	<f bf>\(		<e a>			|
+	<e g>			<d f>\)			|
+	<e g>\(			<d f>			|
+	<bf e>			<a d>\)			|
+
+	r4		d'8^\LH	bf4		r8	|
+	r4		cs8	a4		r8	|
+	r4		c!8	a4		r8	|
+	r4		b8	gs4		r8	|
+
+	r4		bf!8	g!4		r8	|
+	r4		b8	gs4		r8	|
+	r8	a	d,	r	a'	ds,	|
+	r8	a'(	e	a	e	a)	|
+  }
+  \\
+  {
+	a4.			g			|
+	f			e			|
+	f			e			|
+	d			cs			|
+
+	d			cs			|
+	bf			a			|
+	bf			a			|
+	g			f			|
+
+	<d f b>2.					|
+	<cs e cs'>					|
+	<c! ds a'>					|
+	<b d! b'>					|
+
+	<cs g' cs>					|
+	<d gs b>					|
+    <<
+      \new Voice {
+	a'						|
+      }
+      \\
+      {
+	<b, d>4.		<bs ds>			|
+      }
+    >>
+	<c e a>2.					|
+  }
+>>
 }
 
-lowerBirdHelps = \tag BirdHelps \relative c {
+lowerBirdHelps = \tag BirdHelps \relative c' {
+	\key d \minor
+
+	d2.->~	|	d	|	d->~	|	d	|
+<< {
+	e4		d8	cs4		e8	|%=
+	d4		cs8	b4		cs8	|%=
+	e4		d8	cs4		e8	|%=
+	f4		e8	d4		f8	|%=
+} \\ {
+	a,2.	|	a	|	a	|	a	|
+} >>
+	\slashedGrace a,8
+	<g' a cs e>4.->		cs4		b8	|
+	b4.			a4		r8	|
+	\slashedGrace a,8
+	<a' cs e g>4.		e'4		d8	|
+	d4.			cs			|
+
+	<d, f a>2.					|
+<<	{ bf'-> | }	\\	{ <g, f'> | }	>>	|
+	<c e>4		<d f>8	<e g>4		<d f>8	|
+	<c e>8	<bf' c>[ q]	q	q	q	|
+
+	\slashedGrace f,8	<f' a c>2.		|
+	<bf, f'>->					|
+	<c e>4		<d f>8	<e g>4		<d f>8	|
+	<c e>8	c'	c	c	c	c	|
+
+	d,4.->	e->	|	f->	g->	|
+	a2.->		|	a->		|
+
+	a->~	|	a	|
+\repeat unfold 3 {
+	a~	|	a	|
+}
+
+<< {
+	gs	|	g!	|
+	fs	|	f!	|
+	e	|	es	|
+	<a,fs'>	|	<a g'>	|
+} \\ {
+\repeat unfold 6 {	a 	| }
+	s	|	s	|
+} >>
 }
 
 pedalBirdHelps = \tag BirdHelps {
+	s2.*8	|
+	s8\sustainOn	s8*5	|
+	s8*5	s8\sustainOff	|
+	s8\sustainOn	s8*5	|
+	s8*5	s8\sustainOff	|
+	s2.*28	|
 }
 
 
