@@ -2346,15 +2346,106 @@ pedalBirdHelps = \tag BirdHelps {
 
 
 dynamicsPeterSails = \tag PeterSails {
+	\tempo "Alla marcia." 4 = 120
+
+	<>^\markup "Sves. ad lib."
+	<>\ff
+	s2.*12	|
+	<>\ff
+	s2.*2	|
+	<>-\markup "accelerando"
+	s2.*5	|
+
+	\tempo "Adagio" 4 = 76
+	s2.*2	|
+	\bar "|."
 }
 
 upperPeterSails = \tag PeterSails \relative c' {
+	\key d \major
+	<>^\note "“PETER SAILS AWAY IN THE NEST.”"
+
+	fs4.			e4		d8	|
+	a'4.			b4		cs8	|
+	d4.			fs			|
+	a,			a8	g	fs	|
+
+	b4.			b			|
+	g'4.~			g4		fs8	|
+	e4		<e, b'>8 <e a cs>4	<e gs d'>8 |
+  <<
+    {
+	e'2.						|
+    }
+    \\
+    {
+	<g, a>2.					|
+    }
+    \\
+    {
+	a4.			cs			|
+    }
+  >>
+
+	fs,4.			e4		d8	|
+	a'4.			b4		cs8	|
+	<fs, b d>4.		<e b' e>^>		|
+	<a d fs>->		<b d g>->		|
+
+	<a d fs>->		%…
+  <<
+    {
+				a4->		as8	|
+    }
+    \\
+    {
+				<d, fs>4.		|
+    }
+  >>
+	<d g b>4.->		<g a! cs e>->		|
+
+	<fs a d>8 <fs, a d> q	q	<a d fs>q	|
+	q	<d fs a>q	q	<fs a d>q	|
+	q	<a,d fs>q	q	<d fs a>q	|
+	q	<fs a d>q	q	<a d fs>q	|
+
+	\repeat tremolo 12 { q32 fs }			|
+	<d d'>4.->		q->			|
+	d2.\fermata					|
 }
 
 lowerPeterSails = \tag PeterSails \relative c {
+	\key d \major
+
+	<d fs a>8  q	q	q	q	q	|
+	<cs e a>   q	q	q	q	q	|
+	<b d fs b> q	q	q	q	q	|
+	<fs' a d>  q	q	q	q	q	|
+
+	<g b d>	q	q	<fs a b ds>4.		|
+	<e g b d>8 q	q	q4		<fs a b ds>8 |
+	<g b d>4	<gs,gs'>8<a a'>4		<b b'>8	|
+	<cs cs'>4.		<a a'>			|
+
+	<d fs a>8  q	q	q	q	q	|
+	<cs e a>  q	q	q	q	q	|
+	<b d fs>4.		<g g'>->		|
+	<fs fs'>->		<e e'>->		|
+
+	\repeat unfold 2 \repeat tremolo 12 { a32 a' }	||
+
+\repeat unfold 2{
+	d,,8	d'	d	d	a	a	|
+	a	fs	fs	fs	d	d	|
+}
+
+	\repeat tremolo 12 { d32 d' }			|
+	<d, d'>4.->		q->			|
+	q2._\fermata					|
 }
 
 pedalPeterSails = \tag PeterSails {
+	s2.*21	|
 }
 
 
