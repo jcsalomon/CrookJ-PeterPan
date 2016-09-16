@@ -21,3 +21,13 @@
 
 	tagline = ##f
 }
+
+% Thanks to Simon Albrecht on lilypond-user for this
+after =
+#(define-music-function (t e m) (ly:duration? ly:music? ly:music?)
+   #{
+     \context Bottom <<
+       #m
+       { \skip $t <> -\tweak extra-spacing-width #empty-interval $e }
+     >>
+   #})

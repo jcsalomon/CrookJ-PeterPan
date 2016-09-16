@@ -3,33 +3,23 @@
 \include "Peter_Pan.ily"
 
 \header {
-	title = "The Approach of the Indians"
-%	style = "Incidental"
+  title = "The Approach of the Indians"
+% style = "Incidental"
 }
 
 global = {
-	\time 4/4
+  \time 4/4
 }
 
 kluge = {
-	\bar ""
-	\set Timing.measureLength = #(ly:make-moment 1 32)
+  \bar ""
+  \set Timing.measureLength = #(ly:make-moment 1 32)
 	s32
-	\set Timing.measureLength = #(ly:make-moment 4 4)
+  \set Timing.measureLength = #(ly:make-moment 4 4)
 }
 
-% Thanks to Simon Albrecht on lilypond-user for this
-after =
-#(define-music-function (t e m) (ly:duration? ly:music? ly:music?)
-   #{
-     \context Bottom <<
-       #m
-       { \skip $t <> -\tweak extra-spacing-width #empty-interval $e }
-     >>
-   #})
-
 dynamicsIntro = {
-	\tempo "Allegro." 4 = 160
+  \tempo "Allegro." 4 = 160
 
 	s16\ff	s16*15	| \kluge |
 	s1		| \kluge |
@@ -38,23 +28,24 @@ dynamicsIntro = {
 }
 
 dynamicsMelody = {
-	\tempo "Andante." 4 = 96
+  \tempo "Andante." 4 = 96
+
 	s4\p	s4*3	|
 	s1*3		|||
 
-\repeat unfold 3 {
+  \repeat unfold 3 {
 	s1*4		||||
-}
+  }
 }
 
 dynamics = {
-	\set Score.tempoHideNote = ##t
+  \set Score.tempoHideNote = ##t
 
-	\dynamicsIntro
-	\bar "||"
+  \dynamicsIntro
+  \bar "||"
 
-	\dynamicsMelody
-	\bar "|."
+  \dynamicsMelody
+  \bar "|."
 }
 
 pedalIntro = {
@@ -65,37 +56,39 @@ pedalIntro = {
 }
 
 pedalMelody = {
-\repeat unfold 2 {
-\repeat unfold 2 {
+  \repeat unfold 2 {
+    \repeat unfold 2 {
 	s4\sustainOn	s8*5	s8\sustainOff	||
 	s4\sustainOn	s4	s2\sustainOff	||
-}	s1*4					||||
-}
+    }
+	s1*4					||||
+  }
 }
 
 pedal = {
-	\pedalIntro
-	\pedalMelody
+  \pedalIntro
+  \pedalMelody
 }
 
 upperIntro = \relative c''' {
-	\key d \minor
+  \key d \minor
 
 	<>( \repeat unfold 4 { a16 gs }
 			\after 4.. )	\repeat tremolo 4 { a gs }	| \kluge |
-\voiceOne
+  \voiceOne
 	<>( \repeat tremolo 4 { f d }
 			\after 4.. )	\repeat tremolo 4 { f d }	| \kluge |
 	<>( \repeat tremolo 4 { d b }
 			\after 4.. )	\repeat tremolo 4 { d b }	| \kluge |
 	<>( \repeat tremolo 4 { d b }
 			\after 4.. )	\repeat tremolo 4 { d b }	| \kluge |
-\oneVoice
+  \oneVoice
 }
 
 upperMelody = \relative c'' {
-	\key a \major
-\voiceOne
+  \key a \major
+
+  \voiceOne
 	cs4(		a8	cs	e4		cs8	e)	|
 	<a, cs fs>4--	q--		q2--				|
 	cs4(		a8	cs	e4		cs8	e)	|
@@ -103,9 +96,15 @@ upperMelody = \relative c'' {
 
 	fs'4(		e8	d	b4		cs8	d	|
 	cs4		b8	a	%…
-<< {					fs4		gs8	a	|%=
-} \new Voice { \voiceTwo		cs,2				|%=
-} >> \voiceOne								|
+  <<
+    {
+					fs4		gs8	a	|%=
+    }
+    \\
+    {
+					cs,2				|%=
+    }
+  >>									|
 	<e gs>4)	q8(	<cs fs>	<e gs>4		<d fs a>	|
 	<d fs>2				<d e>)				|
 
@@ -116,42 +115,52 @@ upperMelody = \relative c'' {
 
 	fs'4(		e8	d	b4		cs8	d	|
 	cs4		b8	a	%…
-<< {					fs4		gs8	a	|%=
-} \new Voice { \voiceTwo		cs,2				|%=
-} >> \voiceOne								|
+  <<
+    {
+					fs4		gs8	a	|%=
+    }
+    \\
+    {
+					cs,2				|%=
+    }
+  >>									|
 	<e gs>4)	q8(	<cs fs>	<e gs>4		<d fs a>)	|
-<< { \voiceOne
+  <<
+    {
 	fs4\(		e		a2\)				|%=
-} \new Voice { \voiceTwo
+    }
+    \\
+    {
 	d,2				cs				|%=
-} >>									|
+    }
+  >>									|
 }
 
 upper = {
-	\clef treble
-	\global
+  \clef treble
+  \global
 
-	\upperIntro
-	\upperMelody
+  \upperIntro
+  \upperMelody
 }
 
 lowerIntro = \relative c' {
-	\key d \minor
+  \key d \minor
 
 	<>( \repeat unfold 4 { a16 gs }
 			\after 4.. )	\repeat tremolo 4 { a gs }	| \kluge |
-\change Staff = "upper" \voiceTwo
+  \change Staff = "upper" \voiceTwo
 	<>( \repeat tremolo 4 { gs' b }
 			\after 4.. )	\repeat tremolo 4 { gs b }	| \kluge |
 	<>( \repeat tremolo 4 { f gs }
 			\after 4.. )	\repeat tremolo 4 { f gs }	| \kluge |
 	<>( \repeat tremolo 4 { f gs }
 			\after 4.. )	\repeat tremolo 4 { f gs }	| \kluge |
-\change Staff = "lower" \oneVoice
+  \change Staff = "lower" \oneVoice
 }
 
 lowerMelody = \relative c' {
-	\key a \major
+  \key a \major
 
 	<a cs e>1							|
 	<fs cs' fs>							|
@@ -160,13 +169,18 @@ lowerMelody = \relative c' {
 
 	<gs b d>1							|
 	<a cs>2				<a, fs'>			|
-\voiceOne
+  \voiceOne
 	<cs gs'>4(	q8	<fs a>	<cs gs'>4	<b a'>		|
-<< {
+  <<
+    {
 	a'4		b8	a	gs2)				|%=
-} \new Voice { \voiceTwo
+    }
+    \new Voice
+    {
+      \voiceTwo
 	e				e				|%=
-} >> \oneVoice								|
+    }
+  >> \oneVoice								|
 
 	<a cs e>1							|
 	<fs cs' fs>							|
@@ -175,63 +189,67 @@ lowerMelody = \relative c' {
 
 	<gs b d>1							|
 	<a cs>2				<a, fs'>			|
-\voiceOne
+  \voiceOne
 	<cs gs'>4	q8_(	<fs a>	<cs gs'>4	<b a'>)		|
-<< {
+  <<
+    {
 	a'4(		gs)		a2				|%=
-} \new Voice { \voiceTwo
+    }
+    \\
+    {
 	e				<a, e'>				|%=
-} >> \oneVoice								|
+    }
+  >>									|
 }
 
 lower = {
-	\clef bass
-	\global
+  \clef bass
+  \global
 
-	\lowerIntro
-	\lowerMelody
+  \lowerIntro
+  \lowerMelody
 }
 
 \score {
-	\new PianoStaff
-		\with {
-			instrumentName = #"Piano"
-		}
-	<<
-		\new Staff = "upper" \upper
-		\new Dynamics = "dynamics" \dynamics
-		\new Staff = "lower" \lower
-		\new Dynamics = "pedal" \pedal
-	>>
-	\layout {
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-		}
-	}
+  \new PianoStaff
+    \with {
+      instrumentName = #"Piano"
+    }
+  <<
+    \new Staff = "upper" \upper
+    \new Dynamics = "dynamics" \dynamics
+    \new Staff = "lower" \lower
+    \new Dynamics = "pedal" \pedal
+  >>
+  \layout {
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+    }
+  }
 }
 
 \score {
-	\new PianoStaff
-		\with {
-			midiInstrument = #"acoustic grand"
-		}
-	<<
-		\new Staff = "upper" <<
-			\unfoldRepeats\upper
-			\dynamics
-			\pedal
-		>>
-		\new Staff = "lower" <<
-			\unfoldRepeats\lower
-			\dynamics
-			\pedal
-		>>
-	>>
-	\midi {
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-		}
-	}
+  \new PianoStaff
+    \with {
+      midiInstrument = #"acoustic grand"
+    }
+  <<
+    \new Staff = "upper" <<
+      \unfoldRepeats\upper
+      \dynamics
+      \pedal
+    >>
+    \new Staff = "lower" <<
+      \unfoldRepeats\lower
+      \dynamics
+      \pedal
+    >>
+  >>
+  \midi {
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+    }
+  }
 }
