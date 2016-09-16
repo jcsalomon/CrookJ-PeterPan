@@ -22,6 +22,7 @@
 	tagline = ##f
 }
 
+
 % Thanks to Simon Albrecht on lilypond-user for this
 after =
 #(define-music-function (t e m) (ly:duration? ly:music? ly:music?)
@@ -31,3 +32,27 @@ after =
        { \skip $t <> -\tweak extra-spacing-width #empty-interval $e }
      >>
    #})
+
+
+% http://lsr.di.unimi.it/LSR/Item?id=792
+% see also http://lilypond.org/doc/v2.18/Documentation/notation/displaying-pitches
+
+% Append markup in the text property to the grob
+#(define (append-markup grob old-stencil)
+  (ly:stencil-combine-at-edge
+    old-stencil X RIGHT (ly:text-interface::print grob)))
+
+trebleToBass = {
+  \clef bass
+  % Fake staff clef appearance
+  \once \override Staff.Clef.glyph-name = #"clefs.G"
+  \once \override Staff.Clef.Y-offset = #-1
+  % Append change clef to the time signature
+  \once \override Staff.TimeSignature.text = \markup {
+    \hspace #1.2
+    \raise #1
+    \musicglyph #"clefs.F_change"
+  }
+  \once \override Staff.TimeSignature.stencil = #(lambda (grob)
+    (append-markup grob (ly:time-signature::print grob)))
+}
