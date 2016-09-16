@@ -56,3 +56,7 @@ trebleToBass = {
   \once \override Staff.TimeSignature.stencil = #(lambda (grob)
     (append-markup grob (ly:time-signature::print grob)))
 }
+
+
+RH = \markup \italic "R.H."
+LH = \markup \italic "L.H."
