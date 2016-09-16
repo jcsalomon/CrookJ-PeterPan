@@ -12,6 +12,8 @@ global = {
 	\time 4/4
 }
 
+\tagGroup #'(midi-only score-only)
+
 dynamics = {
 	\set Score.tempoHideNote = ##t
 	\tempo "Andante con espressione." 4 = 90
@@ -28,6 +30,29 @@ dynamics = {
 }
 
 pedal = {
+	s1*8	|
+
+  \repeat unfold 4 {
+	s8\sustainOn	s4	s8\sustainOff
+  }
+
+  <<
+    \tag #'score-only {
+	s8\sustainOn
+	<>^\markup \italic "simile."
+	s4.	s2	|
+	s1*5	|
+    }
+    \tag #'midi-only {
+      \repeat unfold 2 {
+        \repeat unfold 3 {
+	s8\sustainOn	s4	s8\sustainOff
+        }
+		s2	|
+      }
+	s1*2	|
+    }
+  >>
 }
 
 LH = \markup {\italic L.H.}
@@ -142,6 +167,7 @@ lower = \relative c {
 		\with {
 			instrumentName = #"Piano"
 		}
+	\keepWithTag #'score-only
 	<<
 		\new Staff = "upper" \upper
 		\new Dynamics = "dynamics" \dynamics
@@ -161,6 +187,7 @@ lower = \relative c {
 		\with {
 			midiInstrument = #"acoustic grand"
 		}
+	\keepWithTag #'midi-only
 	<<
 		\new Staff = "upper" <<
 			\upper
