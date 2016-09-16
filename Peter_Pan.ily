@@ -68,3 +68,5 @@ note =
     \mark \markup \smaller $text
   #}
   )
+
+\include "easy-custom-dynamics.ily"
