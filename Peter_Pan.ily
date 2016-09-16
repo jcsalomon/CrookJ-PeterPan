@@ -21,3 +21,13 @@
 
 	tagline = ##f
 }
+
+note =
+#(define-scheme-function
+  (text)
+  (string?)
+  #{
+    \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+    \mark \markup \smaller $text
+  #}
+  )

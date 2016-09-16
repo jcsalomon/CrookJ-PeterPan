@@ -97,6 +97,8 @@ upper = \relative c' {
 \new Voice = "melodyOne" {
 \autoBeamOff
 \voiceOne
+
+    \note "(Wendy)"
 							d8		|
 
 	d		b'		a		g		|
@@ -118,7 +120,10 @@ upper = \relative c' {
 	d4.						%…
 } \new Voice { \voiceOne
 	s8		<d fs a>[	<fs a d>]	%…
-} >> \voiceOne						d,		|
+} >> \voiceOne
+
+    \note "(Boys.)"
+							d,		|
 
 	c'!16	c8.			b8		fs		|
 	a8		g4				e8		|
