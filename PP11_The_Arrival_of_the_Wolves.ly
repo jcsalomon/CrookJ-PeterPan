@@ -3,208 +3,210 @@
 \include "Peter_Pan.ily"
 
 \header {
-	title = "The Arrival of the Wolves"
-%	style = "Incidental"
+  title = "The Arrival of the Wolves"
+% style = "Incidental"
 }
-
-%% http://lsr.di.unimi.it/LSR/Item?id=792
-%% see also http://lilypond.org/doc/v2.18/Documentation/notation/displaying-pitches
-
-% Append markup in the text property to the grob
-#(define (append-markup grob old-stencil)
-  (ly:stencil-combine-at-edge
-    old-stencil X RIGHT (ly:text-interface::print grob)))
-
-trebleToBass = {
-  \clef bass
-  % Fake staff clef appearance
-  \once \override Staff.Clef.glyph-name = #"clefs.G"
-  \once \override Staff.Clef.Y-offset = #-1
-  % Append change clef to the time signature
-  \once \override Staff.TimeSignature.text = \markup {
-    \hspace #1.2
-    \raise #1
-    \musicglyph #"clefs.F_change"
-  }
-  \once \override Staff.TimeSignature.stencil = #(lambda (grob)
-    (append-markup grob (ly:time-signature::print grob)))
-}
-
 
 global = {
-	\key e \minor
-	\time 2/4
+  \key e \minor
+  \time 2/4
 }
 
 \tagGroup #'(midi-only score-only)
 
 dynamics = {
-<< {
-	s4.\f			s8	|
-} {
-	\repeat volta 2 {
-	s2*16
-	}
-} >>
-	s2
-	\bar "|."
+	<>\f
+  \repeat volta 2 {
+	s2*16	|
+  }
+	s2	|
+
+  \bar "|."
 }
 
 upper = \relative c {
-	\clef treble
-	\global
+  \clef treble
+  \global
 
-\repeat volta 2 {
+  \repeat volta 2 {
+    \trebleToBass
 
-	\trebleToBass
-\repeat unfold 2 {
+    \repeat unfold 2 {
 	e4.						g8		|
-<< { \voiceOne
+      <<
+        {
 	b2								|%=
 	c16->(	b	a8)		c16->(	b	a8)		|%=
 	c16->(	b	a8)		c		a		|%=
-} \new Voice { \voiceTwo
+        }
+        \\
+        {
 	e2								|%=
 	fs4				fs				|%=
 	fs4				fs8		fs		|%=
-} >> \oneVoice								|||
-}									||||
+        }
+      >>								|||
+    }									||||
 
-	\clef treble
-<< { \voiceOne
+    \clef treble
+
+    <<
+      {
 	e'4				g16->(	fs	e8)		|%=
 	ds4				a'16->(	g	fs8)		|%=
 	e4				g16->(	fs	e8)		|%=
 	fs4				c'16->(	b	a8)		|%=
-} \new Voice { \voiceTwo
+      }
+      \\
+      {
 	b,4				b				|%=
 	b				ds				|%=
 	b				e				|%=
 	fs				a				|%=
-} >> \oneVoice								||||
+      }
+    >>									||||
 
-<< { \voiceOne
+    <<
+      {
 	b8[		e		d		c]		|%=
 	b[		%…
-	\once \override NoteColumn.force-hshift = -1
+        \once \override NoteColumn.force-hshift = -1
 			as		b		c]		|%=
-} \new Voice { \voiceTwo
-\autoBeamOff \crossStaff {
+      }
+      \\
+      {
+        \autoBeamOff
+	\crossStaff {
 	<e, g>		q		q		q		|%=
 	q		%…
-	\once \override NoteColumn.force-hshift = 0
+          \once \override NoteColumn.force-hshift = 0
 			q		q		q		|%=
-} \autoBeamOn
-} >> \oneVoice								||
+        }
+        \autoBeamOn
+      }
+    >>									||
 	<ef fs! a c>^>	r		q^>		r		|
 	<ds fs a b>^>	r		q^>		r		|
+  }
 
-}
-
-	\tag #'score-only {
+  \tag #'score-only {
 	<e e'>2\fermata							|
-	}
-	\tag #'midi-only {
+  }
+  \tag #'midi-only {
 	<e e'>1
-	}
+  }
 }
 
 lower = \relative c {
-	\clef bass
-	\global
+  \clef bass
+  \global
 
-\repeat volta 2 {
+  \repeat volta 2 {
 
-\repeat unfold 2 {
-<< { \voiceOne
+    \repeat unfold 2 {
+      <<
+        {
 	g4.						b8		|%=
 	g2								|%=
 	a16->(	b	c8)		a16->(	b	c8)		|%=
 	a16->(	b	c8)		a		c		|%=
-} \new Voice { \voiceTwo
+        }
+        \\
+        {
 	e,2(								|%=
 	e)								|%=
 	e4				e				|%=
 	e				e				|%=
-} >> \oneVoice								||||
-}									||||
+        }
+      >>								||||
+    }									||||
 
-<< { \voiceOne
+    <<
+      {
 	g'16->(	fs	e8)		g4				|%=
 	a16->(	g	fs8)		a4				|%=
 	b16->(	a	g8)		b4				|%=
 	c16->(	b	a8)		c4				|%=
-} \new Voice { \voiceTwo
+      }
+      \\
+      {
 	e,2								|%=
 	fs								|%=
 	g								|%=
 	a								|%=
-} >> \oneVoice								||||
+      }
+    >>									||||
 
 	\acciaccatura as8
 	b[		b		b		b]		|
 	b[		b		b		b]		|
-<< { \voiceOne
+    <<
+      {
 	c16->(	b	a8)		c16->(	b	a8)		|%=
 	b16->(	a	fs8)		b16->(	a	fs8)		|%=
-} \new Voice { \voiceTwo
+      }
+      \\
+      {
 	a,		r		a		r		|%=
 	b		r		b		r		|%=
-} >> \oneVoice								||
+      }
+    >>									||
+  }
 
-}
-
-<< {
+  <<
+    {
 	\repeat tremolo 4 { e,16 e' }					|
-} {
-	\once \override MultiMeasureRest #'transparent = ##t
+    }
+    {
+      \once \override MultiMeasureRest #'transparent = ##t
 	R2_\fermataMarkup
-} >>
-	\tag #'midi-only {
+    }
+  >>
+  \tag #'midi-only {
 	\repeat tremolo 4 { e,16 e' }
-	}
+  }
 }
 
 \score {
-	\new PianoStaff
-		\with {
-			instrumentName = #"Piano"
-		}
-	\keepWithTag #'score-only
-	<<
-		\new Staff = "upper" \upper
-		\new Dynamics = "dynamics" \dynamics
-		\new Staff = "lower" \lower
-	>>
-	\layout {
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-			\consists #Span_stem_engraver
-		}
-	}
+  \new PianoStaff
+    \with {
+      instrumentName = #"Piano"
+    }
+  \keepWithTag #'score-only
+  <<
+    \new Staff = "upper" \upper
+    \new Dynamics = "dynamics" \dynamics
+    \new Staff = "lower" \lower
+  >>
+  \layout {
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+      \consists #Span_stem_engraver
+    }
+  }
 }
 
 \score {
-	\new PianoStaff
-		\with {
-			midiInstrument = #"acoustic grand"
-		}
-	\keepWithTag #'midi-only
-	<<
-		\new Staff = "upper" <<
-			\unfoldRepeats\upper
-			\unfoldRepeats\dynamics
-		>>
-		\new Staff = "lower" <<
-			\unfoldRepeats\lower
-			\unfoldRepeats\dynamics
-		>>
-	>>
-	\midi {
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-		}
-	}
+  \new PianoStaff
+    \with {
+      midiInstrument = #"acoustic grand"
+    }
+  \keepWithTag #'midi-only
+  <<
+    \new Staff = "upper" <<
+      \unfoldRepeats\upper
+      \unfoldRepeats\dynamics
+    >>
+    \new Staff = "lower" <<
+      \unfoldRepeats\lower
+      \unfoldRepeats\dynamics
+    >>
+  >>
+  \midi {
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+    }
+  }
 }
