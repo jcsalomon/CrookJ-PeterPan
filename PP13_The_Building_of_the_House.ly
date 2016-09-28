@@ -696,6 +696,167 @@ lowerEliza = \relative c {
 }
 
 
+dynamicsPeterAndWolf = {
+  \pageBreak
+
+  \note "“THE WOLF ON THE PROWL.”"
+
+  \time 4/4
+
+  \repeat unfold 2 {
+	s8\<	s8*3	s2\!	|
+	s1	|
+  }
+	s1*2	|
+
+  \note "“PETER COMES TO RESCUE.”"
+
+	<>\mf-\markup "Trumpets."
+	s1*2	|
+	s8\<	s8*3	s2\!	|
+	s1	|
+  \repeat unfold 3 {
+	s8\<	s8*3	s2\!	|
+  }
+	s1
+
+  \note "“PETER MOUNTS GUARD.”"
+
+	s1*2
+
+  \bar "|."
+}
+
+upperPeterAndWolf = \relative c' {
+  \key d \major
+
+  <<
+    {
+	r8	fs\(	g	gs	a4		as		|
+	b8\)	r	e4->\(		d~		d8\)	r	|
+	r	fs,\(	g	gs	a4		as\)		|
+	b8\(	d	fs	e	d2\)				|
+    }
+    \\
+    {
+	<cs,\=1( d\=2(>1						|
+	<b\=1) d\=2)>8
+		r	g'2~				g8	r	|
+	<cs,\=1( d\=2(>1						|
+	<b\=1) d\=2)>8
+		r	g'4~		g2				|
+    }
+  >>
+	r8	<g b>-.	<g b e>-. <g b e g>-.	q4	<fs b ds fs>	|
+	r8	g-.	<g c>-.	<g c e>-.	q4	<g b d>		|
+  <<
+    {
+      \repeat unfold 2 {
+	<e c'>4		\tuplet 3/2 { <fs a>8 <e g> <fs a> }
+      }									|
+	<b, d b'>4	\tuplet 3/2 { g'8 a b }	a	r	r4	|
+	r8	fs\(	g	gs	a4		as\)		|
+	b8\(	d	fs	e	d2\)				|
+
+	r8	d\(	ef	e	f4		fs\)		|
+	s2				a4->(		g)		|
+    }
+    \\
+    {
+	c,,4		c		c		c		|
+	s		cs!
+      \tuplet 3/2 {
+					d8	16 16 8
+      }
+      \tuplet 3/2 {
+								8 8 8	|
+      }
+	<cs\=1( d\=2(>1							|
+	<b\=1) d\=2)>8
+		r	g'4~		g2				|
+
+	<af bf>1							|
+	<g g'>8	<g bf>	<g bf ef> <g bf g'>	g2			|
+    }
+  >>
+	r8	<fs! a><fs a d><fs a fs'>	<g b g'>4->(	<f b f'>)|
+	<g c e>8 <e g>	<e g c>	<g c e>	<fs as fs'>4->(	<e as e'>)	|
+	<fs b ds>8	<ds fs>		<ds fs b>	<fs b ds>
+	<b ds fs>	<ds,fs b>	<fs b ds>	<b ds fs>	|
+	<d! fs b>	<fs, b d>	<b d fs>	<d fs b>
+	<fs d'>		<a, d>		<a d fs>	<d fs a>	|
+}
+
+lowerPeterAndWolf = \relative c, {
+  \key d \major
+
+  <<
+    {
+      <<
+	r8	%…
+        \\ \\ \\
+	d8	%…
+      >>
+		d'\(	e	es	fs2\)				|
+	g8	r	<as\=1(cs\=2(>4	<b\=1) d\=2)>~	q8	r	|
+	d,4		e8	es	fs2				|
+	g8	r	<as\=1(cs\=2(>4	<b\=1) d\=2)>2			|
+    }
+    \\
+    {
+	d,1								|
+	g,8	r	g'2				d8	d	|
+	d1								|
+	s4		g2.						|
+    }
+ >>
+
+	\acciaccatura e,8 e''2.->	\acciaccatura b,8 ds'4		|
+	\acciaccatura c,8 e'2.		\acciaccatura g,,8 d''!4	|
+  <<
+    {
+	a1								|
+	<g, g,>4	a'8.	g16	fs8	r	r4		|
+	d,8	d'	e	es	fs2				|
+	g8	r	<as\=1(cs\=2(>4	<b\=1) d\=2)>2			|
+
+      <<
+	r8	%…
+        \\ \\ \\
+	bf,,	%…
+      >>
+		bf''8	c	cs	<bf d>4		q		|
+	ef		ef8	d	cs!2				|
+	d4		d8	c	b2				|
+	c4		c8	b	as2				|
+
+      \repeat unfold 3 {
+	b8	16 16	%…
+        \tuplet 3/2 {
+			b8 fs b	%…
+        }
+      }
+					<cs d>2				||
+    }
+    \\
+    {
+	a,4		d		a		d		|
+	s		b		cs8	r	r4		|
+	d1								|
+	g,8	r	g'2.						|
+
+	bf1								|
+	ef,2				<a,! e'>			|
+	<d, fs'!>\arpeggio		<g f'>\arpeggio			|
+	<c e>				<fs, c' e>\arpeggio		|
+
+	<b ds fs>1							|
+	<b d! fs>2			<a fs'>				|
+    }
+  >>
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -705,6 +866,8 @@ dynamics = {
   \dynamicsBuildTwo
 
   \dynamicsEliza
+
+  \dynamicsPeterAndWolf
 }
 
 upper = {
@@ -718,6 +881,8 @@ upper = {
   \upperBuildTwo
 
   \upperEliza
+
+  \upperPeterAndWolf
 }
 
 lower = {
@@ -729,6 +894,8 @@ lower = {
   \lowerBuildTwo
 
   \lowerEliza
+
+  \lowerPeterAndWolf
 }
 
 \score {
