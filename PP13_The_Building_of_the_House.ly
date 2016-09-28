@@ -7,8 +7,13 @@
   style = "Song"
 }
 
+% Note: The second part of this score, from “Eliza on the Prowl” and on,
+% has more than its share of oddities. I am unhappy with its current state,
+% but I don’t know enough to do a better job yet.
 
-dynamicsSongOne = {
+\tagGroup #'(BuildingHouse ElizaProwls PeterAndWolves)
+
+dynamicsSongOne = \tag BuildingHouse {
   \tempo "Allegretto." 4 = 120
   \time 2/4
 
@@ -26,7 +31,7 @@ dynamicsSongOne = {
   \bar "||"
 }
 
-wordsOne = \lyricmode {
+wordsOne = \tag BuildingHouse \lyricmode {
   I wish I had a darl -- ing house,
   The litt -- ’lest ev -- er seen,
   With fun -- ny lit -- tle red walls,
@@ -36,7 +41,7 @@ wordsOne = \lyricmode {
   And roof of mos -- sy green.
 }
 
-upperSongOne = \relative c' {
+upperSongOne = \tag BuildingHouse \relative c' {
   \key g \major
 
   \new Voice = "melodyOne" {
@@ -95,7 +100,7 @@ upperSongOne = \relative c' {
   }
 }
 
-lowerSongOne = \relative c {
+lowerSongOne = \tag BuildingHouse \relative c {
   \key g \major
 							r8		|
 
@@ -125,14 +130,14 @@ lowerSongOne = \relative c {
 }
 
 
-dynamicsBuildOne = {
+dynamicsBuildOne = \tag BuildingHouse {
 				s8\mf	|
 	s2*35
 
   \bar "||"
 }
 
-upperBuildOne = \relative c'' {
+upperBuildOne = \tag BuildingHouse \relative c'' {
 							<b d>8		|
 
 	<g b>[		<b d>		<b e>		<g b>]		|
@@ -209,7 +214,7 @@ upperBuildOne = \relative c'' {
 					b8		<c d>		|
 }
 
-lowerBuildOne = \relative c {
+lowerBuildOne = \tag BuildingHouse \relative c {
 							r8		|
 
 	g		<g' b d>	d,		q		|
@@ -267,7 +272,7 @@ lowerBuildOne = \relative c {
 }
 
 
-dynamicsSongTwo = {
+dynamicsSongTwo = \tag BuildingHouse {
   \tempo "Allegretto." 4 = 120
   \time 6/8
 
@@ -294,7 +299,7 @@ dynamicsSongTwo = {
 	s4		s8\f	%…
 }
 
-wordsTwo = \lyricmode {
+wordsTwo = \tag BuildingHouse \lyricmode {
   We’ve built the lit -- tle walls, and roof,
   And made a love -- ly door, __
   So tell us mo -- ther Wen -- dy,
@@ -311,7 +316,7 @@ wordsTwo = \lyricmode {
   ’Cos we’ve been made be -- fore.
 }
 
-upperSongTwo = \relative c' {
+upperSongTwo = \tag BuildingHouse \relative c' {
   \key c \major
   \time 6/8
 
@@ -419,7 +424,7 @@ upperSongTwo = \relative c' {
   }
 }
 
-lowerSongTwo = \relative c {
+lowerSongTwo = \tag BuildingHouse \relative c {
 						r8	|
 	c4		d8	e4		e8	|
 	f4		e8	f4		e8	|
@@ -473,7 +478,7 @@ lowerSongTwo = \relative c {
 }
 
 
-dynamicsBuildTwo = {
+dynamicsBuildTwo = \tag BuildingHouse {
 				s8	|
 	s2*8
 
@@ -495,7 +500,7 @@ dynamicsBuildTwo = {
   \bar "|."
 }
 
-upperBuildTwo = \relative c' {
+upperBuildTwo = \tag BuildingHouse \relative c' {
 					<b d>4->			|
 
 	<g b>8[		<b d>		<b e>		<g b>]		|
@@ -548,7 +553,7 @@ upperBuildTwo = \relative c' {
 	<g g,>2								|
 }
 
-lowerBuildTwo = \relative c' {
+lowerBuildTwo = \tag BuildingHouse \relative c' {
 					d,8		<g' b d>	|
 
 	g,		q		d		q		|
@@ -592,7 +597,7 @@ lowerBuildTwo = \relative c' {
 }
 
 
-dynamicsEliza = {
+dynamicsEliza = \tag ElizaProwls {
   \pageBreak
 
   \note "“ELIZA ON THE PROWL.”"
@@ -628,7 +633,7 @@ upperElizaRepeat = \relative c'' {
 					<c e a>4	r		|
 }
 
-upperEliza = \relative c' {
+upperEliza = \tag ElizaProwls \relative c' {
 	\grace s8
 
   \upperElizaRepeat
@@ -669,7 +674,7 @@ lowerElizaRepeat = \relative c {
 	<a, a'>2.					q4		|
 }
 
-lowerEliza = \relative c {
+lowerEliza = \tag ElizaProwls \relative c {
   \lowerElizaRepeat
 
 	<c, c'>4	r		<c' d fs a>	r		|
@@ -696,7 +701,7 @@ lowerEliza = \relative c {
 }
 
 
-dynamicsPeterAndWolf = {
+dynamicsPeterAndWolf = \tag PeterAndWolves {
   \pageBreak
 
   \note "“THE WOLF ON THE PROWL.”"
@@ -727,7 +732,7 @@ dynamicsPeterAndWolf = {
   \bar "|."
 }
 
-upperPeterAndWolf = \relative c' {
+upperPeterAndWolf = \tag PeterAndWolves \relative c' {
   \key d \major
 
   <<
@@ -787,7 +792,7 @@ upperPeterAndWolf = \relative c' {
 	<fs d'>		<a, d>		<a d fs>	<d fs a>	|
 }
 
-lowerPeterAndWolf = \relative c, {
+lowerPeterAndWolf = \tag PeterAndWolves \relative c, {
   \key d \major
 
   <<
@@ -903,6 +908,7 @@ lower = {
   \with {
     instrumentName = #"Piano"
   }
+% \keepWithTag #'BuildingHouse
   <<
     \new Lyrics = "words"
     \new Staff = "upper" \upper
@@ -926,6 +932,7 @@ lower = {
   \with {
     midiInstrument = #"acoustic grand"
   }
+% \keepWithTag #'BuildingHouse
   <<
     \new Lyrics = "words"
     \new Staff = "upper" <<
