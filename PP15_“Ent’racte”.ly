@@ -219,17 +219,78 @@ pedalAllegroFive = {
 
 
 dynamicsCantabileOne = {
-  %\tempo "Cantabile."
+  \tempo "Cantabile."  4 = 120
 
+	<>\p
+	s2*8	|
+
+	<>\mf\<
+	s2*2	|
+	<>\!
+	s2*2	|
+
+	<>\f
+	s2*3	|
+	s4.
+  \bar "||"
 }
 
-upperCantabileOne = {
+upperCantabileOne = \relative c' {
+	fs4\(				e8.			d16	|
+	a'4.						g8\)		|
+	fs\(		e		cs'8.			b16	|
+	b4->				a\)				|
+
+	a4\(				g8.			fs16	|
+	b4.						a8\)		|
+	g		fs		e		d		|
+	<d\=1_( fs\=2^(>4		<cs\=1) e\=2)>8	r		|
+
+	<fs fs'>4			<e e'>8.		<d d'>16|
+	<a' a'>4.					<g g'>8		|
+	<fs fs'>	<e e'>		<cs' cs'>8.		<b b'>16|
+	<b\=1_( b'\=2^(>4->		<a\=1) a'\=2)>			|
+
+	<a a'>4->			<g g'>8.		<fs fs'>16|
+	<b b'>4.					b,8		|
+	bs		cs		%…
+  << {
+					fs8.			e16	|
+  } \\ {
+					cs4				|
+  } >>
+	d4(				<d fs a d>8)	%…
 }
 
-lowerCantabileOne = {
+lowerCantabileOne = \relative c {
+  << {
+	r8		<fs a>		q4				|
+	r8		<g a cs>	q4				|
+	r8		<a cs>		q4				|
+	r8		<a d>		q4				|
+  } \\ {
+	d,2	|	e	|	g	|	fs	|
+  } >>
+
+	b,8	\noBeam	<fs' a b ds>	q4				|
+	e,8	\noBeam	<g' b e>	q4				|
+	g,8		<g' b>		g,		<g' bf>		|
+	a,		a'		a,		a'		|
+
+	<d, d,>8	<d fs a>	q		r		|
+	<e e,>		<g a cs>	q		r		|
+	<g g,>		<g a cs>	<g a cs e>	r		|
+	<fs fs,>	<fs a d>	q		r		|
+
+	<b, b,>8	<fs' a b ds>	q		r		|
+	<e e,>		<g b e>		q		r		|
+	a,,		<a' g'>		q4				|
+	<d fs>				<d d,>8		%…
 }
 
 pedalCantabileOne = {
+	s2*15	|
+	s4.
 }
 
 
