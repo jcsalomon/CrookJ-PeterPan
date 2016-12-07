@@ -137,6 +137,54 @@ pedalAllegroTwo = {
 }
 
 
+dynamicsAllegroThree = {
+	<>\f
+	s2*16	|
+}
+
+upperAllegroThree =  \relative c' {
+  \repeat unfold 2 {
+	e8		b'		b		c16	d	|
+	c8		a		a		b16	c	|
+	d	f	e	d	c	e	d	c	|
+	b	d	c	b	a	c	b	a	|
+
+	e8->		b'->		a->		b16	c	|
+	<gs d'>8	q		<a c>		d16	e	|
+	<f, d' f>8[	<e c' e>	<f a d>		<e a c>]	|
+	<d f b>		<c fs a>	<b e gs>	e		|
+  }
+}
+
+lowerAllegroThree = \relative c {
+  \repeat unfold 2 {
+	e,8		<e' gs d'>	q		r		|
+	e,		<e' a c>	q		r		|
+  <<
+    {
+	gs8		<d' e>		a		<c e>		|
+	e,		<gs e'>		%…
+    }
+    \\
+    {
+	gs4				a				|
+	e				%…
+    }
+  >>
+					a8		c		|
+
+	d16	f	e	d	c	e	d	c	|
+	b	d	c	b	a	c	b	a	|
+	gs8		a		<f f,>		<e e,>		|
+	<d d,>		<ds ds,>	<e e,>		e		|
+  }
+}
+
+pedalAllegroThree = {
+	s2*16	|
+}
+
+
 dynamicsCantabileOne = {
   %\tempo "Cantabile."
 
@@ -184,6 +232,7 @@ dynamics = {
 
   \dynamicsAllegroOne
   \dynamicsAllegroTwo
+  \dynamicsAllegroThree
   \dynamicsCantabileOne
   \dynamicsCantabileTwo
   \dynamicsCantabileThree
@@ -194,6 +243,7 @@ upper = {
 
   \upperAllegroOne
   \upperAllegroTwo
+  \upperAllegroThree
   \upperCantabileOne
   \upperCantabileTwo
   \upperCantabileThree
@@ -204,6 +254,7 @@ lower = {
 
   \lowerAllegroOne
   \lowerAllegroTwo
+  \lowerAllegroThree
   \lowerCantabileOne
   \lowerCantabileTwo
   \lowerCantabileThree
@@ -212,6 +263,7 @@ lower = {
 pedal = {
   \pedalAllegroOne
   \pedalAllegroTwo
+  \pedalAllegroThree
   \pedalCantabileOne
   \pedalCantabileTwo
   \pedalCantabileThree
