@@ -11,8 +11,6 @@
 
 
 dynamicsAllegroOne = {
-  \tempo "Allegro." 4 = 132
-
 	<>\f
 	s2*6	|
 	<>\f\<
@@ -28,7 +26,6 @@ dynamicsAllegroOne = {
 }
 
 upperAllegroOne = \relative c'' {
-  \key a \minor
 	<e e'>8	\noBeam	d16\(	cs	d	c	b	a\)	|
 	gs8	\noBeam	%…
 	\voiceOne	d''16\(	cs	d	c	b	a\)	|
@@ -43,8 +40,6 @@ upperAllegroOne = \relative c'' {
 }
 
 lowerAllegroOne = \relative c {
-  \key a \minor
-
 	<e e,>8		r		<f\=1_( b\=2( d\=3(>4->\sf	|
 	<e\=1) b'\=2) d\=3)>8	%…
   \change Staff = "upper"
@@ -190,7 +185,6 @@ dynamicsAllegroFive = {
 }
 
 upperAllegroFive = \relative c'' {
-  \key b \minor
 	g4\(		e		|
 	fs		d		|
 	fs\)		e8	d	|
@@ -198,7 +192,6 @@ upperAllegroFive = \relative c'' {
 }
 
 lowerAllegroFive = \relative c' {
-  \key b \minor
 	e4\(		a,		|
 	d		fs,		|
 	d'\)		a8	fs	|
@@ -211,8 +204,6 @@ pedalAllegroFive = {
 
 
 dynamicsCantabileOne = {
-  \tempo "Cantabile."  4 = 120
-
 	<>\p
 	s2*8	|
 
@@ -303,7 +294,6 @@ dynamicsCantabileTwo = {
 	s2		|
 	s4.	s8\f	|
 	s2*2		||
-
   \bar "||"
 }
 
@@ -381,12 +371,13 @@ dynamics = {
   \set Score.tempoHideNote = ##t
   \time 2/4
 
+  \tempo "Allegro." 4 = 132
   \dynamicsAllegroOne
   \keepWithTag #'atwo \dynamicsAllegroTwo
   \dynamicsAllegroThree
   \keepWithTag #'afour \dynamicsAllegroTwo
-  % \tempo "Allegro." 4 = 132
   \dynamicsAllegroFive
+  \tempo "Cantabile."  4 = 120
   \dynamicsCantabileOne
   % \partial 8
   \dynamicsCantabileTwo
@@ -396,10 +387,12 @@ dynamics = {
 upper = {
   \clef treble
 
+  \key a \minor
   \upperAllegroOne
   \keepWithTag #'atwo \upperAllegroTwo
   \upperAllegroThree
   \keepWithTag #'afour \upperAllegroTwo
+  \key b \minor
   \upperAllegroFive
   \upperCantabileOne
   \upperCantabileTwo
@@ -409,11 +402,13 @@ upper = {
 lower = {
   \clef bass
 
+  \key a \minor
   \lowerAllegroOne
   \keepWithTag #'atwo \lowerAllegroTwo
   \lowerAllegroThree
   \keepWithTag #'afour \lowerAllegroTwo
   \lowerAllegroFive
+  \key b \minor
   \lowerCantabileOne
   \lowerCantabileTwo
   \lowerCantabileThree
