@@ -400,7 +400,7 @@ lowerCantabileThree = \relative c {
 	<b, b,>		<fs' a b ds>	q		r		|
 	<e e,>		<fs a b ds>	<e e,>		<g b e>		|
 	g,		<g' b>		g,		<g' bf>		|
-	a,		<fs' a d>	a,		<e' a c>	|
+	a,		<fs' a d>	a,		<e' a cs>	|
 
 	<d d,>		<fs a d>	q		r		|
 	<e e,>		<g a cs>	q		r		|
@@ -433,6 +433,22 @@ pedalCantabileThree = {
 dynamicsCantabileFour = {
 	<>\f
 	s2*12	|
+
+	<>\f
+	s2*7	|
+	<>\cresc
+	s2	|	% cres:
+
+	s2*3	|||	% < _ _ ff
+	s2\ff	|
+
+	s2*2	||
+	s2\f	|
+	s2\ff	|
+
+	s2	|
+	% Fine.
+  \bar "|."
 }
 
 upperCantabileFour = \relative c' {
@@ -450,6 +466,28 @@ upperCantabileFour = \relative c' {
 	b8		a		e'4				|
 	<a e cs a>8.->		gs16	fs	e	d	cs	|
 	<b d gs>8	<b d fs>	q4->				|
+
+	<b ds fs b>8.->		a'16	gs	a	b	a	|
+	<cs, e a cs>8	<a cs>~		q16	cs	d!	e	|
+	gs	fs	d	b	gs	e	cs'	b	|
+	a8		e'16(	fs)	e8		e16(	fs)	|
+
+	e8\(		e,16	fs	gs	a	b	cs\)	|
+	a8		e'16(	fs)	e8		e16(	fs)	|
+	e8\(		e,16	fs	gs	a	b	cs\)	|
+	a	cs	e	b	a	cs	e	b	|
+
+  \repeat unfold 3 {
+	a	cs	e	b	a	cs	e	b	|||
+  }
+	a4				<a cs e a>->			|
+
+	q->				q->				|
+	q->				r				|
+	<cs e a cs>->			r				|
+	\repeat tremolo 8 { <cs e a>32 a }				|
+
+	<a cs a a>8->	r		r4				|
 }
 
 lowerCantabileFour = \relative c {
@@ -467,6 +505,28 @@ lowerCantabileFour = \relative c {
 	<cs, cs,>	<a' cs e>	q		r		|
 	<a, a,>		<a' cs e>	q		r		|
 	<d, d,>		<d fs b>	<fs b d>4->			|
+
+	<b, b,>8	<fs' a b ds>	q4				|
+	<e e,>8		<a cs e>	q4				|
+	<e e,>8[	<e gs d'>	q		q]		|
+	<a cs>		r		<as cs e>	q		|
+
+	<b d e>		r		<e, b' d>	q		|
+	<a cs>		r		<as cs e>	q		|
+	<b d e>		r		<e, b' d>	q		|
+	<a cs>		<e gs d'>	<a cs>		<e gs d'>	|
+
+  \repeat unfold 3 {
+	<a cs>		<e b' d>	<a cs>		<e b' d>	|||
+  }
+	<a cs>4				<a a,>->			|
+
+	<e e,>->			<cs cs,>->			|
+	<a a,>->			r				|
+	<a a'>->			r				|
+	\repeat tremolo 8 { a,32 a' }					|
+
+	<a a,>8->	r		r4				|
 }
 
 pedalCantabileFour = {
@@ -480,6 +540,7 @@ pedalCantabileFour = {
       }
     }
   >>
+	s2*17	|
 }
 
 
