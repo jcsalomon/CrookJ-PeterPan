@@ -69,15 +69,71 @@ pedalAllegroOne = {
 
 
 dynamicsAllegroTwo = {
+  \repeat unfold 3 {
+	<>\p
+	s2*2	|
+	<>\f
+	s2*2	|
+  }
+
+	s2*4	|
 }
 
-upperAllegroTwo = {
+upperAllegroTwo = \relative c' {
+	e8		a		a		b16	c	|
+	b8		a		e'4				|
+	<a e c a>8.->		g16	f	e	d	c	|
+	<b d g>8	<b d f>		q4->				|
+
+	e,8		b'		b		c16	d	|
+	c8		a		e'4				|
+	<b ds fs b>8.->		<c c'>16<b b'>	<a a'>	<gs gs'><a a'>	|
+	<b b'>8		e		<e e'>4				|
+
+	e,8		a		a		b16	c	|
+	b8		a		e'4				|
+	<a e cs a>8.->		gs16	a	e	f	g	|
+	<a, d f>8	<f a d>		q4->				|
+
+	a8		<f' a>16<e g>	<d f>	<c e>	<b d>8		|
+	e,8		<c' e>16<b d>	<a c>	b	a8		|
+	b16	c	d8		e	\noBeam	<d, e gs>->	|
+  <<
+    {
+	a'4				a8->		%…
+    }
+    \\
+    {
+	<c, e>8		<d f>		<c e>		%…
+    }
+  >>
+							r8		|
 }
 
-lowerAllegroTwo = {
+lowerAllegroTwo = \relative c {
+	a8		<a' c e>	q		r		|
+	c,		q		q		r		|
+	<a a,>		<a' c e>	q		r		|
+	d,		<f b d>		q		r		|
+
+	e,		<e' gs d'>	q		r		|
+	a,		<a' c>		<a c e>		r		|
+	<b, b,>		<fs' a b ds>	q		r		|
+	<e e,>		<gs b d>	q		r		|
+
+	a,		<a' c e>	q		r		|
+	c,		<a' e'>		q		r		|
+	<a, a,>		<g' a cs e>	q		r		|
+	<d d,>		<f a d>		q4->				|
+
+	d,8		q		q		r		|
+	e		<e' a c>	q		r		|
+	e,		<e' gs d'>	q	\noBeam	<e e,>->	|
+	<a a,>		<d, d,>		<a a,>->	r		|
 }
 
 pedalAllegroTwo = {
+	s2*16	|
 }
 
 
