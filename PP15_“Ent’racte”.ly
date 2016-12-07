@@ -430,6 +430,59 @@ pedalCantabileThree = {
 }
 
 
+dynamicsCantabileFour = {
+	<>\f
+	s2*12	|
+}
+
+upperCantabileFour = \relative c' {
+	e8		a		a		b16	cs	|
+	b8		a		e'4				|
+	<a e cs a>8.->		gs16	fs	e	d	cs	|
+	<b d gs>8	<b d fs>	q4				|
+
+	fs8		b		b		cs16	d	|
+	cs8		b		d		fs		|
+	<b gs d>8.		a16	gs	fs	e	d	|
+	<ds, bs'>8	<e cs'>		q4				|
+
+	e8		a		a		b16	cs	|
+	b8		a		e'4				|
+	<a e cs a>8.->		gs16	fs	e	d	cs	|
+	<b d gs>8	<b d fs>	q4->				|
+}
+
+lowerCantabileFour = \relative c {
+	<a a,>8		<a' cs e>	q		r		|
+	<cs, cs,>	<a' cs e>	q		r		|
+	<a, a,>		<a' cs e>	q		r		|
+	<d, d,>		<d fs b>	<fs b d>	r		|
+
+	b,		q		q		r		|
+	d		q		q		r		|
+	e,		<e' gs d'>	q		r		|
+	<a, a,>		<e' a cs>	q4				|
+
+	<a, a,>8	<a' cs e>	q		r		|
+	<cs, cs,>	<a' cs e>	q		r		|
+	<a, a,>		<a' cs e>	q		r		|
+	<d, d,>		<d fs b>	<fs b d>4->			|
+}
+
+pedalCantabileFour = {
+  <<
+    \tag #'score-only {
+	s2*12	|
+    }
+    \tag #'midi-only {
+      \repeat unfold 12 {
+	s4.\sustainOn	s8\sustainOff	|
+      }
+    }
+  >>
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
   \time 2/4
@@ -445,6 +498,7 @@ dynamics = {
   % \partial 8
   \dynamicsCantabileTwo
   \dynamicsCantabileThree
+  \dynamicsCantabileFour
 }
 
 upper = {
@@ -460,6 +514,8 @@ upper = {
   \upperCantabileOne
   \upperCantabileTwo
   \upperCantabileThree
+  \key a \major
+  \upperCantabileFour
 }
 
 lower = {
@@ -475,6 +531,8 @@ lower = {
   \lowerCantabileOne
   \lowerCantabileTwo
   \lowerCantabileThree
+  \key a \major
+  \lowerCantabileFour
 }
 
 pedal = {
@@ -486,6 +544,7 @@ pedal = {
   \pedalCantabileOne
   \pedalCantabileTwo
   \pedalCantabileThree
+  \pedalCantabileFour
 }
 
 
