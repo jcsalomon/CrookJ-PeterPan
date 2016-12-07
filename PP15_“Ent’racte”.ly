@@ -68,6 +68,8 @@ pedalAllegroOne = {
 }
 
 
+\tagGroup #'(atwo afour)
+
 dynamicsAllegroTwo = {
   \repeat unfold 3 {
 	<>\p
@@ -77,6 +79,7 @@ dynamicsAllegroTwo = {
   }
 
 	s2*4	|
+  \tag #'afour \bar "||"
 }
 
 upperAllegroTwo = \relative c' {
@@ -100,7 +103,8 @@ upperAllegroTwo = \relative c' {
 	b16	c	d8		e	\noBeam	<d, e gs>->	|
   <<
     {
-	a'4				a8->		%…
+	a'4				\tag #'atwo { a8-> }
+					\tag #'afour { a8 }	%…
     }
     \\
     {
@@ -129,7 +133,8 @@ lowerAllegroTwo = \relative c {
 	d,8		q		q		r		|
 	e		<e' a c>	q		r		|
 	e,		<e' gs d'>	q	\noBeam	<e e,>->	|
-	<a a,>		<d, d,>		<a a,>->	r		|
+	<a a,>		<d, d,>		\tag #'atwo { <a a,>-> }
+					\tag #'afour { <a a,> }	r	|
 }
 
 pedalAllegroTwo = {
@@ -231,8 +236,9 @@ dynamics = {
   \time 2/4
 
   \dynamicsAllegroOne
-  \dynamicsAllegroTwo
+  \keepWithTag #'atwo \dynamicsAllegroTwo
   \dynamicsAllegroThree
+  \keepWithTag #'afour \dynamicsAllegroTwo
   \dynamicsCantabileOne
   \dynamicsCantabileTwo
   \dynamicsCantabileThree
@@ -242,8 +248,9 @@ upper = {
   \clef treble
 
   \upperAllegroOne
-  \upperAllegroTwo
+  \keepWithTag #'atwo \upperAllegroTwo
   \upperAllegroThree
+  \keepWithTag #'afour \upperAllegroTwo
   \upperCantabileOne
   \upperCantabileTwo
   \upperCantabileThree
@@ -253,8 +260,9 @@ lower = {
   \clef bass
 
   \lowerAllegroOne
-  \lowerAllegroTwo
+  \keepWithTag #'atwo \lowerAllegroTwo
   \lowerAllegroThree
+  \keepWithTag #'afour \lowerAllegroTwo
   \lowerCantabileOne
   \lowerCantabileTwo
   \lowerCantabileThree
@@ -262,8 +270,9 @@ lower = {
 
 pedal = {
   \pedalAllegroOne
-  \pedalAllegroTwo
+  \keepWithTag #'atwo \pedalAllegroTwo
   \pedalAllegroThree
+  \keepWithTag #'afour \pedalAllegroTwo
   \pedalCantabileOne
   \pedalCantabileTwo
   \pedalCantabileThree
