@@ -190,6 +190,34 @@ pedalAllegroThree = {
 }
 
 
+dynamicsAllegroFive = {
+	<>\f
+	s2*3	|
+	s4	s4\f	|
+  \bar "||"
+}
+
+upperAllegroFive = \relative c'' {
+  \key b \minor
+	g4\(		e		|
+	fs		d		|
+	fs\)		e8	d	|
+	e	r	<a cs e a> r	|
+}
+
+lowerAllegroFive = \relative c' {
+  \key b \minor
+	e4\(		a,		|
+	d		fs,		|
+	d'\)		a8	fs	|
+	a	r	<a, a,>	r	|
+}
+
+pedalAllegroFive = {
+	s2*4
+}
+
+
 dynamicsCantabileOne = {
   %\tempo "Cantabile."
 
@@ -239,6 +267,7 @@ dynamics = {
   \keepWithTag #'atwo \dynamicsAllegroTwo
   \dynamicsAllegroThree
   \keepWithTag #'afour \dynamicsAllegroTwo
+  \dynamicsAllegroFive
   \dynamicsCantabileOne
   \dynamicsCantabileTwo
   \dynamicsCantabileThree
@@ -251,6 +280,7 @@ upper = {
   \keepWithTag #'atwo \upperAllegroTwo
   \upperAllegroThree
   \keepWithTag #'afour \upperAllegroTwo
+  \upperAllegroFive
   \upperCantabileOne
   \upperCantabileTwo
   \upperCantabileThree
@@ -263,6 +293,7 @@ lower = {
   \keepWithTag #'atwo \lowerAllegroTwo
   \lowerAllegroThree
   \keepWithTag #'afour \lowerAllegroTwo
+  \lowerAllegroFive
   \lowerCantabileOne
   \lowerCantabileTwo
   \lowerCantabileThree
@@ -273,6 +304,7 @@ pedal = {
   \keepWithTag #'atwo \pedalAllegroTwo
   \pedalAllegroThree
   \keepWithTag #'afour \pedalAllegroTwo
+  \pedalAllegroFive
   \pedalCantabileOne
   \pedalCantabileTwo
   \pedalCantabileThree
