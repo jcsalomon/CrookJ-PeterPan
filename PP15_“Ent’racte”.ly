@@ -2,6 +2,8 @@
 \language "english"
 \include "Peter_Pan.ily"
 
+\include "articulate.ly"
+
 \header {
   title = "“Ent’racte”"
 % style = "Incidental"
@@ -637,6 +639,7 @@ pedal = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
+    \articulate
     \unfoldRepeats
     <<
       \upper
@@ -644,6 +647,7 @@ pedal = {
       \pedal
     >>
     \new Staff = "lower"
+    \articulate
     \unfoldRepeats
     <<
       \lower
