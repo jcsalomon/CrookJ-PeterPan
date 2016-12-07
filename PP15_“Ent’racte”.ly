@@ -355,15 +355,78 @@ pedalCantabileTwo = {
 
 
 dynamicsCantabileThree = {
+	<>\ff
+	s2*16	|
+  \bar "||"
 }
 
-upperCantabileThree = {
+upperCantabileThree = \relative c' {
+	<fs fs'>4->			<g g'>8.		<e e'>16|
+	<a a'>4.->					<g g'>8		|
+	<fs fs'>	<e e'>		<cs' cs'>8.->		<b b'>16|
+	<b d fs b>4->			<a d fs a>->			|
+
+	<a a'>->			<g g'>8.		<fs fs'>16|
+	<b\=1_(ds\=2_(fs\=3(b\=4(>4	<b\=1)e\=2)g\=3)b\=4)>8	<a a'>	|
+	<g g'>[		<fs fs'>	<e e'>		<d d'>]		|
+	<fs a d fs>4->			<e a cs e>->			|
+
+	<fs fs'>4->			<g g'>8.		<e e'>16|
+	<a a'>4.->					<g g'>8		|
+	<fs fs'>	<e e'>		<cs' cs'>8.->		<b b'>16|
+  << {
+	<b b'>4->			<a a'>->			|
+  } \\ {
+	<d fs>2								|
+  } >>
+
+	<a a'>4->			<g g'>8.		<fs fs'>16|
+	<b\=1_(ds\=2_(fs\=3(b\=4(>4	<b\=1)e\=2)g\=3)b\=4)>8	b,\noBeam|
+	bs		cs		%…
+  << {
+					fs8.			e16	|
+  } \\ {
+					cs4				|
+  } >>
+	d8		r		<d fs a d>->		r	|
 }
 
-lowerCantabileThree = {
+lowerCantabileThree = \relative c {
+	<d d,>8		<fs a d>	q		r		|
+	<e e,>		<g a cs>	q		r		|
+	<a, a,>		<g' a cs>	q		r		|
+	<d d,>		<fs a d>	q		r		|
+
+	<b, b,>		<fs' a b ds>	q		r		|
+	<e e,>		<fs a b ds>	<e e,>		<g b e>		|
+	g,		<g' b>		g,		<g' bf>		|
+	a,		<fs' a d>	a,		<e' a c>	|
+
+	<d d,>		<fs a d>	q		r		|
+	<e e,>		<g a cs>	q		r		|
+	<a, a,>		<g' a cs>	q		r		|
+	<d d,>		<fs a d>	q		r		|
+
+	<b, b,>		<fs' a b ds>	q		r		|
+	<e e,>		<g b e>		q		r		|
+	<a, a,>		<a g'>		q4				|
+	<d fs>8		r		<d d,>		r		|
 }
 
 pedalCantabileThree = {
+	s4.\sustainOn	s8\sustainOff	|
+	s4.\sustainOn	s8\sustainOff	|
+  <<
+    \tag #'score-only {
+	s2^\markup \italic "simile."	|
+	s2*13	|
+    }
+    \tag #'midi-only {
+      \repeat unfold 14 {
+	s4.\sustainOn	s8\sustainOff	|
+      }
+    }
+  >>
 }
 
 
