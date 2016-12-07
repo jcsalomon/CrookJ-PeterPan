@@ -287,15 +287,80 @@ pedalCantabileOne = {
 
 
 dynamicsCantabileTwo = {
+		s8\ff	|
+
+	s2		|
+	s4.	s8\f	|
+	s2*2		||
+
+	<>\p
+	s2*3		|||
+	s4.	s8\ff	|
+
+	s2*4		||||
+
+	<>\p
+	s2		|
+	s4.	s8\f	|
+	s2*2		||
+
+  \bar "||"
 }
 
 upperCantabileTwo = {
+  \repeat unfold 2 \relative c' {
+							<as e' fs>8->	|
+
+	<d fs b>->	<d fs>16  q	<d b'>8		<fs cs'>	|
+	<b d>[		<cs e>		<d fs>		<cs e as>]	|
+	<d fs b>	<cs fs as>16  q	<b d fs b>8	<cs fs as>	|
+	<b fs' b>	<b e g>		<as cs fs>4->			|
+
+  \trip	 e'16\( fs e	d16.	cs32	fs8.			e16\)	|
+  }
+  \alternative {
+    \relative c'' {
+  \trip	 d16\( e d	cs16.	b32	fs'8.			d16\)	|
+  \trip	 cs16\( d cs	bs16.	cs32	d8.			cs16\)	|
+	b8		<e, g>[		<d fs>]		%…
+    }
+    \relative c'' {
+	\trip d16\( e d	cs16.	b32	fs'8\)	\noBeam	<a, b ds fs>->	|
+	<g b e g>[	<a b ds fs>	<g b e>		<e b' ds>]	|
+	<a d fs>4->			<a cs e>->			|
+    }
+  }
 }
 
 lowerCantabileTwo = {
+  \repeat unfold 2 \relative c, {
+							<fs fs'>8->	|
+
+	<b, b'>		r		r4				|
+	r4				r8		<fs' fs'>->	|
+	<b b'>		<fs fs'>16  q	<b b'>8		<cs cs'>	|
+	<d d'>		<e e'>		<fs fs'>4->			|
+	as,8		<fs' cs' e>	fs,		q		|
+
+	b		<fs' b d>	fs,		%…
+  }
+  \alternative {
+    \relative c {
+							<fs b d>8	|
+	cs		<fs as e'>	fs,		q		|
+	b		<b b'>->[	q->]		%…
+    }
+    \relative c {
+					<>\noBeam	<b b'>8->	|
+	<e, e'>[	<fs fs'>	<g g'>		<gs gs'>]	|
+	<a a'>		<fs' a d>	<a, a,>		<e' a cs>	|
+    }
+  }
 }
 
 pedalCantabileTwo = {
+		s8	|
+	s2*16		|
 }
 
 
@@ -320,8 +385,10 @@ dynamics = {
   \keepWithTag #'atwo \dynamicsAllegroTwo
   \dynamicsAllegroThree
   \keepWithTag #'afour \dynamicsAllegroTwo
+  % \tempo "Allegro." 4 = 132
   \dynamicsAllegroFive
   \dynamicsCantabileOne
+  % \partial 8
   \dynamicsCantabileTwo
   \dynamicsCantabileThree
 }

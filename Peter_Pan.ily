@@ -22,6 +22,7 @@
 	tagline = ##f
 }
 
+
 % Thanks to Simon Albrecht on lilypond-user for this
 after =
 #(define-music-function (t e m) (ly:duration? ly:music? ly:music?)
@@ -56,8 +57,18 @@ trebleToBass = {
     (append-markup grob (ly:time-signature::print grob)))
 }
 
+
+%% http://lsr.di.unimi.it/LSR/Item?id=328
+%% see also http://lilypond.org/doc/v2.18/Documentation/notation/writing-rhythms#tuplets
+
+trip = #(define-music-function (parser location m1 m2 m3)
+  (ly:music? ly:music? ly:music?)
+  #{ \tuplet 3/2 { $m1 $m2 $m3 } #})
+
+
 RH = \markup \italic "R.H."
 LH = \markup \italic "L.H."
+
 
 note =
 #(define-scheme-function
@@ -68,5 +79,6 @@ note =
     \mark \markup \smaller $text
   #}
   )
+
 
 \include "easy-custom-dynamics.ily"
