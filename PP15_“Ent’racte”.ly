@@ -101,16 +101,12 @@ upperAllegroTwo = \relative c' {
 	a8		<f' a>16<e g>	<d f>	<c e>	<b d>8		|
 	e,8		<c' e>16<b d>	<a c>	b	a8		|
 	b16	c	d8		e	\noBeam	<d, e gs>->	|
-  <<
-    {
+  << {
 	a'4				\tag #'atwo { a8-> }
 					\tag #'afour { a8 }	%…
-    }
-    \\
-    {
+  } \\ {
 	<c, e>8		<d f>		<c e>		%…
-    }
-  >>
+  } >>
 							r8		|
 }
 
@@ -165,17 +161,13 @@ lowerAllegroThree = \relative c {
   \repeat unfold 2 {
 	e,8		<e' gs d'>	q		r		|
 	e,		<e' a c>	q		r		|
-  <<
-    {
+  << {
 	gs8		<d' e>		a		<c e>		|
 	e,		<gs e'>		%…
-    }
-    \\
-    {
+  } \\ {
 	gs4				a				|
 	e				%…
-    }
-  >>
+  } >>
 					a8		c		|
 
 	d16	f	e	d	c	e	d	c	|
