@@ -98,24 +98,34 @@ for the above information.)
 
 There seems also to have been another release by The Gramophone Company
 of “selections”
-performed by the Mayfair Orchestra;
-under the direction of G[eorge] W. Byng
+performed by the Mayfair Orchestra
+under the direction of G[eorge] W. Byng;
 see [OCLC 78037569](https://www.worldcat.org/oclc/78037569)
 and [OCLC 82063754](https://www.worldcat.org/oclc/82063754)
 for all the information I’ve found about this recording.
 
-More recently in 1989
+More recently,
+for Christmas 1986
+Glyn Dearman produced for the BBC
+a [radio-play version of _Peter Pan_](http://genome.ch.bbc.co.uk/16029f18d878499a9b27b5f21ae8af8c),
+later in 1989
 (or 1992? online information is inconsistent)
-the BBC released an audio recording of Peter Pan,
+released as an audio recording:
 [OCLC 472769196](https://www.worldcat.org/oclc/472769196) or
 [OCLC 32502966](https://www.worldcat.org/oclc/32502966).
 This 2 cassette recording, released together with a book,
 [OCLC 655603058](https://www.worldcat.org/oclc/655603058),
-was subtitled, “The Original Play and Music”,
-music performed by the BBC Concert Orchestra
+was subtitled, “The Original Play and Music”.
+Alec McCowen narrated (as J.M. Barrie),
+with Robert Lang as Mr. Darling & Capt. Hook,
+Joanna David as Mrs. Darling,
+Lucinda Bateson as Wendy,
+and Graham McGrath as Peter Pan.
+John Crook’s music was performed by the BBC Concert Orchestra
 under the direction of Chris Walker.
-I’ve not heard this yet,
-but it’s likely the most complete recording ever.
+This is a fairly straight adaptation of the script to radio-play format,
+and the music is beautifully arranged
+though of course it’s abridged so the dialog can be clearly heard.
 
 Similar to the Sepia Records collection,
 Delos Music released [DE3201](https://delosmusic.com/recording/an-awfully-big-adventure-the-best-of-peter-pan/),
