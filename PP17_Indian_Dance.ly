@@ -6,6 +6,7 @@
 
 \header {
   title = "“Indian Dance”"
+  style = "Dance"
 }
 
 \tagGroup #'(midi-only score-only)

@@ -6,7 +6,7 @@
 
 \header {
   title = "The Hornpipe"
-% style = "Incidental"
+  style = "Dance"
 }
 
 \tagGroup #'(midi-only score-only)
