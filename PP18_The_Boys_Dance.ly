@@ -12,10 +12,16 @@
 \tagGroup #'(midi-only score-only)
 
 
-upperOne = {
+upperOne = \relative c' {
+  \repeat unfold 4 {
+	<a cs>4				q8		q		|
+  }
 }
 
-lowerOne = {
+lowerOne = \relative c {
+  \repeat unfold 4 {
+	<a e'>4				q8		q		|
+  }
 }
 
 
