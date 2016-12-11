@@ -2,7 +2,7 @@
 \language "english"
 \include "Peter_Pan.ily"
 
-% \include "articulate.ly"
+\include "articulate.ly"
 
 \header {
   title = "Act II Opening Music"
@@ -110,14 +110,14 @@ lower = \relative {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
@@ -125,4 +125,5 @@ lower = \relative {
     >>
   >>
   \midi {}
+  % \layout {}
 }
