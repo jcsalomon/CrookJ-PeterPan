@@ -28,12 +28,26 @@ lowerOne = \relative {
 
 
 dynamicsTwo = {
+	<>\f
+	s2*8	|
 }
 
-upperTwo = {
+upperTwo = \relative {
+	<a'' e c>8	a16	a	q	b	a	g	|
+	<e c a>8->	e16	e	q	f	e	d	|
+	<c a f>8->	c16	c	q	d	c	d	|
+	<e c a>8->	e16	e	q8		e		|
+
+	<a e c>8->	a16	a	q	b	a	g	|
+	<e c a>8->	e16	e	q	f	e	d	|
+	<c a f>8->	c16	c	q	d	c	d	|
+	<e c a>8->	e16	e	q8		q		|
 }
 
 lowerTwo = {
+  \repeat unfold 8 {
+	<a, e c'>4			q8		q		|
+  }
 }
 
 
@@ -78,7 +92,7 @@ dynamics = {
 upper = {
   \clef treble
 
-  \key c \major
+  \key a \minor
   \upperOne
 
   \upperTwo
@@ -91,7 +105,7 @@ upper = {
 lower = {
   \clef bass
 
-  \key c \major
+  \key a \minor
   \lowerOne
 
   \lowerTwo
