@@ -82,12 +82,46 @@ lowerTwo = {
 
 
 dynamicsThree = {
+	<>\pp
+	s2*16	|
 }
 
-upperThree = {
+upperThree = \relative {
+  \repeat unfold 2 {
+    \repeat unfold 2 {
+	<d'' f a>8	q		<d f gs>4\trill			|
+	<d f a>8	q		<d f gs>4\trill			|
+    }
+    \alternative {
+      {
+	<d f a>8	q		<bf! e g>4			|
+	<b d f>8	q		<cs e>4				|
+      }
+      {
+	<a f' a>8[	<a e' g>	<a d f>		<g bf e>]	|
+	<a d f>		<g cs e>	<f a d>4			|
+      }
+    }
+  }
 }
 
-lowerThree = {
+lowerThree = \relative {
+  \repeat unfold 2 {
+    \repeat unfold 2 {
+	<d f a>8	q		<d f gs b>4			|
+	<d f a>8	q		<d f gs b>4			|
+    }
+    \alternative {
+      {
+	<d f a>8	q		<d g bf!>4			|
+	<d gs b>8	q		<d gs a cs>4			|
+      }
+      {
+	<d f d'>8[	<e g cs>	<f a d>		<g bf e>]	|
+	<a d>		<a e'>		<d, a' d>4			|
+      }
+    }
+  }
 }
 
 
@@ -127,6 +161,7 @@ upper = {
 
   \upperTwo
 
+  \key d \minor
   \upperThree
 
   \upperFour
@@ -140,6 +175,7 @@ lower = {
 
   \lowerTwo
 
+  \key d \minor
   \lowerThree
 
   \lowerFour
