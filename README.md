@@ -81,7 +81,8 @@ and Gordon Harker as Captain Hook;
 the orchestra was conducted by Clifford Greenwood.
 This was released as His Master’s Voice #9119.
 
-Sepia Records [#1037](http://sepiarecords.com/sepia1037.html)
+Sepia Records [#1037](http://sepiarecords.com/sepia1037.html),
+“100 Years of Peter Pan”,
 includes both those recordings.
 
 There is also His Master’s Voice #2693,
@@ -115,6 +116,15 @@ music performed by the BBC Concert Orchestra
 under the direction of Chris Walker.
 I’ve not heard this yet,
 but it’s likely the most complete recording ever.
+
+Similar to the Sepia Records collection,
+Delos Music released [DE3201](https://delosmusic.com/recording/an-awfully-big-adventure-the-best-of-peter-pan/),
+“An Awfully Big Adventure: The Best of Peter Pan (1904–1996)”.
+Three tracks are of John Crook’s music,
+all of them new arrangements:
+“The Arrival of Wendy”,
+“The Song of the Pirates”,
+and “The Fight and Overthrow of the Pirates”.
 
 ## A Note on Copyright
 
