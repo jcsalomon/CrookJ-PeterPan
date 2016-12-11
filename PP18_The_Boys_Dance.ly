@@ -96,10 +96,42 @@ lowerThree = \relative c {
 }
 
 
-upperFour = {
+upperFour = \relative c'' {
+  \repeat unfold 2 {
+	a8		a16	c	e	a	e	c	|
+	e	a	e	c	e	a	e	c	|
+  }
+  \alternative {
+    {
+	<a e'>8		a16	c	f	a	f	c	|
+	e	d	c	d	b4				|
+    }
+    {
+	a8		a16	c	f	a	f	c	|
+      << {
+	e	d	c	b	a8		%…
+      } \\ {
+	gs4(				a8)		%…
+      } >>
+    }
+  }
+							r8		|
 }
 
-lowerFour = {
+lowerFour = \relative c {
+  \repeat unfold 2 {
+	<a c e a>4			q8		q		|
+	<a c e a>4			q8		q		|
+	<a c f a>4			q8		q		|
+  }
+  \alternative {
+    {
+	<a d f gs>4			q8		q		|
+    }
+    {
+	<a e'\=1( b'>4^(_(			<a'\=1) c>8))	r		|
+    }
+  }
 }
 
 
