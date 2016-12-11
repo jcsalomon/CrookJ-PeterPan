@@ -126,12 +126,43 @@ lowerThree = \relative {
 
 
 dynamicsFour = {
+	<>\ff
+	s2*7	|
+	s8*3	%…
+  % Don’t bother playing with the tempo to extend the fermata
+		s8	|
 }
 
-upperFour = {
+upperFour = \relative {
+  \repeat unfold 2 {
+	<a'' e c>8	a16	a	q	b	a	g	|
+	<e c a>8	e16	e	q	f	e	d	|
+	<c a f>8	c16	c	q	d	c	d	|
+  }
+  \alternative {
+    {
+	<e c a>8	e16	e	q8		e		|
+    }
+    {
+	a,8		<a c e a>16  q	q8		r\fermata	|
+    }
+  }
 }
 
 lowerFour = {
+  \repeat unfold 2 {
+	<a, e c'>4			q8		q		|
+	<a, e c'>4			q8		q		|
+	<a, f c'>4			q8		q		|
+  }
+  \alternative {
+    {
+	<a, e c'>4			q8		q		|
+    }
+    {
+	<a, e c'>8	<a, a>16  q	q8		r\fermata	|
+    }
+  }
 }
 
 
@@ -149,6 +180,7 @@ dynamics = {
   \dynamicsThree
   \bar "||"
 
+  \tempo "Presto." 4 = 128
   \dynamicsFour
   \bar "|."
 }
@@ -164,6 +196,7 @@ upper = {
   \key d \minor
   \upperThree
 
+  \key a \minor
   \upperFour
 }
 
@@ -178,6 +211,7 @@ lower = {
   \key d \minor
   \lowerThree
 
+  \key a \minor
   \lowerFour
 }
 
