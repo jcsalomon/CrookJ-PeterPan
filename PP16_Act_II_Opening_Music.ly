@@ -24,16 +24,67 @@ dynamics = {
   \bar "|."
 }
 
-upper = {
+upper = \relative {
   \clef treble
 
-  \key a \minor
+  \key e \phrygian
+
+	<e' e'>4->			q->				|
+	q->				q->				|
+  << {
+	e4				e				|
+	e				e				|
+  } \\ {
+	c16	a	b8		c16	a	b8		|
+	c16	a	b8		c16	a	b8		|
+  } >>
+
+	<e e'>4->			q->				|
+	q->				q->				|
+  << {
+	e4				e				|
+	e				e				|
+  } \\ {
+	d16	b	c8		d16	b	c8		|
+	d16	b	c8		d16	b	c8		|
+  } >>
+
+	<d' f>16-.
+		<c e>-.	<b d>-.	<a c>-.	<gs b>-.<a c>-.	<b d>8		|
+	<c e>16	<b d>	<a c>	<e b'>	<c a'>	<e b'>	<a c>8		|
+	<e b'>8		q16	q	q	<a c>	<e b'>	<a c>	|
+	<e b'>8		q16	q	q4				|
 }
 
-lower = {
+lower = \relative {
   \clef bass
 
-  \key a \minor
+  \key e \phrygian
+
+	<e e,>4->			q->				|
+	q->				q->				|
+  << {
+	a16	fs	gs8		a16	fs	gs8		|
+	a16	fs	gs8		a16	fs	gs8		|
+  } \\ {
+	e4				e				|
+	e				e				|
+  } >>
+
+	<e e,>4->			q->				|
+	q->				q->				|
+  << {
+	b16	gs	a8		b16	gs	a8		|
+	b16	gs	a8		b16	gs	a8		|
+  } \\ {
+	e4				e				|
+	e				e				|
+  } >>
+
+	\acciaccatura ds''8 <e e,>2					|
+	\acciaccatura ds8 <e e,>2					|
+	<e b'>8		q16	q	q	<a c>	<e b'>	<a c>	|
+	<e b'>8		q16	q	q4				|
 }
 
 
