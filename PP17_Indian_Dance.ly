@@ -12,12 +12,18 @@
 
 
 dynamicsOne = {
+	<>\ff
+	s2*2	|
 }
 
-upperOne = {
+upperOne = \relative {
+	<c' e>4->			q8		q		|
+	q4->				q8		q		|
 }
 
-lowerOne = {
+lowerOne = \relative {
+	<a, e' a>4->			q8		q		|
+	q4->				q8		q		|
 }
 
 
