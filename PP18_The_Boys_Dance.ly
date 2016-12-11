@@ -25,10 +25,50 @@ lowerOne = \relative c {
 }
 
 
-upperTwo = {
+upperTwo = \relative c'' {
+  \repeat unfold 2 {
+    << {
+	a8		a16	cs	e	fs	e	cs	|
+	fs	gs	fs	cs	fs	gs	fs	cs	|
+	a8		a16	cs	e	fs	e	cs	|
+    } \\ {
+	s4				a				|
+	a				a				|
+	s				a				|
+    } >>
+  }
+  \alternative {
+    {
+      << {
+	e'16	d	cs	d	b4				|
+      } \\ {
+	gs				gs				|
+      } >>
+    }
+    {
+      << {
+	e'16	d	b	cs	a4				|
+      } \\ {
+	gs				a				|
+      } >>
+    }
+  }
 }
 
-lowerTwo = {
+lowerTwo = \relative c {
+  \repeat unfold 2 {
+	<a cs e a>4			q8		q		|
+	<a cs fs a>4			q8		q		|
+	<a cs e a>4			q8		q		|
+  }
+  \alternative  {
+    {
+	<a d e b'>4			q8		q		|
+    }
+    {
+	<a d e b'>8	q		<a cs e a>4				|
+    }
+  }
 }
 
 
