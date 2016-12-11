@@ -72,10 +72,27 @@ lowerTwo = \relative c {
 }
 
 
-upperThree = {
+upperThree = \relative c''' {
+  \repeat unfold 2 {
+	a16	a,	gs'	a,	fs'	a,	e'	a,	|
+	fs'	gs	a	fs	e	cs	b	a	|
+    << {
+	b	cs	d	fs	e	cs	b	a	|
+	b	cs	d	e	cs	b	a8		|
+    } \\ {
+	gs4				a				|
+	gs				a8		%…
+    } >>
+  }
 }
 
-lowerThree = {
+lowerThree = \relative c {
+  \repeat unfold 2 {
+	<a cs e a>4			q8		q		|
+	<a d fs a>4			<a cs e a>8	q		|
+	<e' d'>4			<a cs>8		q		|
+	<e d'>4				<a cs>8		q		|
+  }
 }
 
 
