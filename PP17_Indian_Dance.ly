@@ -2,7 +2,7 @@
 \language "english"
 \include "Peter_Pan.ily"
 
-% \include "articulate.ly"
+\include "articulate.ly"
 
 \header {
   title = "“Indian Dance”"
@@ -238,14 +238,14 @@ lower = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
@@ -253,4 +253,5 @@ lower = {
     >>
   >>
   \midi {}
+  % \layout {}
 }
