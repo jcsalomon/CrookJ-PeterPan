@@ -2,7 +2,7 @@
 \language "english"
 \include "Peter_Pan.ily"
 
-% \include "articulate.ly"
+\include "articulate.ly"
 
 \header {
   title = "The Boys Dance"
@@ -66,7 +66,7 @@ lowerTwo = \relative c {
 	<a d e b'>4			q8		q		|
     }
     {
-	<a d e b'>8	q		<a cs e a>4				|
+	<a d e b'>8	q		<a cs e a>4			|
     }
   }
 }
@@ -129,7 +129,7 @@ lowerFour = \relative c {
 	<a d f gs>4			q8		q		|
     }
     {
-	<a e'\=1( b'>4^(_(			<a'\=1) c>8))	r		|
+	<a e'\=1( b'>4^(_(			<a'\=1) c>8))	r	|
     }
   }
 }
@@ -207,14 +207,14 @@ lower = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
