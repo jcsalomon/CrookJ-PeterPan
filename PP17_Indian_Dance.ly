@@ -33,6 +33,8 @@ dynamicsTwo = {
 
 	<>\f
 	s2*8	|
+
+	s2*8	|
 }
 
 upperTwo = \relative {
@@ -52,6 +54,16 @@ upperTwo = \relative {
 	<e d b>8	e16	e	q	f	e	d	|
 	<c a>	e	c	e	q	e	q	e	|
   }
+
+	<a e c>8->	q16	q	q	b	a	g	|
+	<e c a>8	e16	e	q	f	e	d	|
+	<c a f>8	c16	c	q	d	c	d	|
+	<e c a>8	e16	e	q8		e		|
+
+	<a e c>8	a16	a	q	b	a	g	|
+	<e c a>8	e16	e	q	f	e	d	|
+	<c a f>8	c16	c	c	d	c	b	|
+	<a e c>8	q16	q	q8		r		|
 }
 
 lowerTwo = {
@@ -62,6 +74,10 @@ lowerTwo = {
 	<a, e b>4			q8		q		|
 	<a, e c'>4			q8		q		|
   }
+  \repeat unfold 7 {
+	<a, e c'>4			q8		q		|
+  }
+	<a, a>8		q16	q	q8		r		|
 }
 
 
