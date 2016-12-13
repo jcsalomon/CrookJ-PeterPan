@@ -90,10 +90,59 @@ lowerTwo = \relative c' {
 }
 
 
-upperThree = {
+upperThree = \relative c'' {
+  \repeat unfold 2 {
+    \repeat unfold 3 {
+	d4		a8	a8.	g16	fs8	|
+    }
+	<cs e>4.~		q4		r8	|
+    << {
+	fs8.	a16	d8	a	e	g	|
+	fs8.	a16	d8	a	e	g	|
+    } \\ {
+	d4		r8	cs4		r8	|
+	d4		r8	cs4		r8	|
+    } >>
+  }
+  \alternative {
+    {
+      << {
+	fs8.	g16	a8	fs4		e8	|
+      } \\ {
+	d4.			cs4.			|
+      } >>
+	d8	fs	g	a	b	cs	|
+    }
+    {
+      << {
+	fs,8.	g16	a8	fs4->		e8	|
+      } \\ {
+	d4.			cs4.			|
+      } >>
+	d4		r8	<d fs a d>4	r8	|
+    }
+  }
 }
 
-lowerThree = {
+lowerThree = \relative c {
+  \repeat unfold 2 {
+    \repeat unfold 3 {
+	<d fs a>4	q8	q4		q8	|
+    }
+	<a e' a>4	q8	q4		r8	|
+
+    \repeat unfold 3 {
+	<d fs a>4	r8	<a e' a>4.		|
+    }
+  }
+  \alternative {
+    {
+	<d fs a>4	r8	r4		r8	|
+    }
+    {
+	<d fs a>4	r8	<d d,>4		r8	|
+    }
+  }
 }
 
 
@@ -124,7 +173,7 @@ upper = {
 
   \key a \major
   \upperTwo
-  
+
   \key d \major
   \upperThree
 }
@@ -137,7 +186,7 @@ lower = {
 
   \key a \major
   \lowerTwo
-  
+
   \key d \major
   \lowerThree
 }
