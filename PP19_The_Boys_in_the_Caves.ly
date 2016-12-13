@@ -61,10 +61,32 @@ lowerOne = \relative c {
 }
 
 
-upperTwo = {
+upperTwo = \relative c'' {
+  \repeat unfold 2 {
+	e8.	cs16	e8	fs8.	gs16	a8	|
+	e8.	cs16	e8	fs8.	gs16	a8	|
+	e8.	fs16	e8	cs8.	b16	a8	|
+  }
+  \alternative {
+    {
+	b8.	cs16	b8	gs8.	fs16	e8	|
+    }
+    {
+	b'8.	cs16	b8	a4		r8	|
+    }
+  }
 }
 
-lowerTwo = {
+lowerTwo = \relative c' {
+	<a cs e>4	q8	<a d fs>4	q8	|
+	<a cs e>4	q8	<a d fs>4	q8	|
+	<a cs e>4	q8	<fs cs' fs>4	q8	|
+	<fs a b ds>4	q8	<e gs b e>4	r8	|
+
+	<a cs e>4	q8	<fs a cs fs>4	q8	|
+	<a cs e>4	q8	<fs a cs fs>4	q8	|
+	<cs e a>4	q8	<fs a cs>4	q8	|
+	<e gs d'>4	q8	<a cs>4		r8	|
 }
 
 
