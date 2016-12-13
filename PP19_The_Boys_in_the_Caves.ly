@@ -2,7 +2,7 @@
 \language "english"
 \include "Peter_Pan.ily"
 
-% \include "articulate.ly"
+\include "articulate.ly"
 
 \header {
   title = "The Boys in the Caves"
@@ -17,7 +17,7 @@ upperOne = \relative c'' {
 	d4		a8	a8.	g16	fs8	|
 	d'4		a8	a8.	g16	fs8	|
 	d'4		a8	a8.	g16	fs8	|
-	<cs e>4.^(_(		q4))		r8	|
+	<cs e>4.~		q4		r8	|
 
     << {
 	fs8.	a16	d8	a	e	g	|
@@ -214,14 +214,14 @@ lower = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
