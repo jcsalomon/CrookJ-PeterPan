@@ -12,10 +12,52 @@
 \tagGroup #'(midi-only score-only)
 
 
-upperOne = {
+upperOne = \relative c'' {
+  \repeat unfold 2 {
+	d4		a8	a8.	g16	fs8	|
+	d'4		a8	a8.	g16	fs8	|
+	d'4		a8	a8.	g16	fs8	|
+	<cs e>4.^(_(		q4))		r8	|
+
+    << {
+	fs8.	a16	d8	a	e	g	|
+	fs8.	a16	d8	a	e	g	|
+	fs8.	g16	a8	fs4		e8	|
+    } \\ {
+	d4		r8	cs4		r8	|
+	d4		r8	cs4		r8	|
+	d4.			cs			|
+    } >>
+  }
+  \alternative {
+    {
+	d8	fs	g	a	b	cs	|
+    }
+    {
+	d,4		r8	<d fs a d>4	r8	|
+    }
+  }
 }
 
-lowerOne = {
+lowerOne = \relative c {
+  \repeat unfold 2 {
+	<d fs a>4	q8	q4		q8	|
+	<d fs a>4	q8	q4		q8	|
+	<d fs a>4	q8	q4		q8	|
+	<a e' a>4	q8	q4		r8	|
+
+	<d fs a>4	r8	<a e' a>4.		|
+	<d fs a>4	r8	<a e' a>4.		|
+	<d fs a>4	r8	<a e' a>4.		|
+  }
+  \alternative {
+    {
+	<d fs a>4	r8	r4		r8	|
+    }
+    {
+	<d fs a>4	r8	<d d,>4		r8	|
+    }
+  }
 }
 
 
