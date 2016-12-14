@@ -13,15 +13,67 @@
 
 
 dynamicsOne = {
+		s8\f	|
+	s2.*15		|
 }
 
-upperOne = {
+upperOne = \relative c'' {
+  \repeat unfold 2 {
+						g8	|
+    \repeat unfold 2 {
+	a	b	c	d	e	f	|
+	g4		e8	c4		b8	|
+    }
+    \alternative {
+      {
+	a4		a8	c4		a8	|
+	g4.~			g4		g8	|
+      }
+      {
+        << {
+	a8	b	c	d4		e8	|
+        } \\ {
+	f,4		f8	f4		f8	|
+        } >>
+      }
+    }
+  }
+  \alternative {
+    {
+	<e c'>4.~		q4		%…
+    }
+    {}
+  }
 }
 
-lowerOne = {
+lowerOne = \relative c {
+  \repeat unfold 2 {
+						r8	|
+    \repeat unfold 2 {
+	<f a c>4	q8	<d f g b>4	q8	|
+	<c e g c>4	q8	<e g c>4	q8	|
+    }
+    \alternative {
+      {
+	<f a c>4	q8	q4		q8	|
+	<c e g c>4	q8	q4		q8	|
+      }
+      {
+	<f a c>4	<d a'c>8<g b>4		q8	|
+      }
+    }
+  }
+  \alternative {
+    {
+	<c, g' c>4	q8	q4		%…
+    }
+    {}
+  }
 }
 
 pedalOne = {
+		s8	|
+	s2.*15		|
 }
 
 
@@ -30,6 +82,8 @@ dynamics = {
 
   \time 6/8
   \tempo "Allegro vivo." 4 = 140
+
+  \partial 8
   \dynamicsOne
   \bar "||"
 }
@@ -49,6 +103,7 @@ lower = {
 }
 
 pedal = {
+  \pedalOne
 }
 
 \score {
