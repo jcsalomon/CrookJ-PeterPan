@@ -53,10 +53,20 @@ lowerOne = \relative c' {
 }
 
 
-upperTwo = {
+upperTwo = \relative c'' {
+							d8		|
+	d,[		d'		d,		d']		|
+	d,[		d'		d,]		%…
+
+	\upperOne
 }
 
-lowerTwo = {
+lowerTwo = \relative c {
+							r8		|
+	<d fs a>	r		<g b>		r		|
+	<d fs a>[	<g b>		<d fs a>]	%…
+
+	\lowerOne
 }
 
 
