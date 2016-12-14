@@ -12,10 +12,44 @@
 \tagGroup #'(midi-only score-only)
 
 
-upperOne = {
+upperOne = \relative c' {
+							d8		|
+	<d g>		q		<fs a>		<g b>16	<a c>	|
+	<b d>8		<g b>		<d g>		<ds fs>		|
+  << {
+	e8		<e e'>		d'16	b	a	g	|
+	a	g	a	b	a8		d,		|
+  } \\ {
+	s4				d				|
+	e8		e		d		r		|
+  } >>
+
+	<d g>		q		<fs a>		<g b>16	<a c>	|
+	<b d>8		<g b>		<d g>		<ds fs>		|
+  << {
+	e8		e'		d16	b	a	g	|
+  } \\ {
+	e4				fs				|
+  } >>
+	g8		d		g,		%…
 }
 
-lowerOne = {
+lowerOne = \relative c' {
+  \repeat unfold 2 {
+							r8		|
+	<g b>8		q		<d d'>4				|
+	<g d'>8		q		<b, g'>		q		|
+  }
+  \alternative {
+    {
+	<c g'>8		q		<g d' b'>4\arpeggio		|
+	<c g' a>8	<cs g' a>	<d fs a>	%…
+    }
+    {
+	<c g'>4				<d c'>				|
+	<g b>8		d		g,		%…
+    }
+  }
 }
 
 
@@ -87,14 +121,14 @@ lower = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
