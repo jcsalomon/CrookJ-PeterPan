@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Pipe with the Ostrich"
 % style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -179,33 +180,30 @@ lower = \relative c {
     \new Dynamics = "dynamics" \dynamics
     \new Staff = "lower" \lower
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
   \new PianoStaff
-    \with {
-      midiInstrument = #"acoustic grand"
-    }
   <<
-    \new Staff = "upper" <<
-      \unfoldRepeats\upper
-      \unfoldRepeats\dynamics
+    \new Staff = "upper"
+      \with {
+        midiInstrument = #"pan flute"
+      }
+    \unfoldRepeats
+    <<
+      \upper
+      \dynamics
     >>
-    \new Staff = "lower" <<
-      \unfoldRepeats\lower
-      \unfoldRepeats\dynamics
+    \new Staff = "lower"
+      \with {
+        midiInstrument = #"acoustic grand"
+      }
+    \unfoldRepeats
+    <<
+      \lower
+      \dynamics
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }

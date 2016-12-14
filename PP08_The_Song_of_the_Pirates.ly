@@ -1,4 +1,4 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
@@ -235,16 +235,6 @@ lower = \relative c {
       \lyricsto "melody" \words
     }
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
+  \midi {}
 }

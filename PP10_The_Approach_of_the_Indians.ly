@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Approach of the Indians"
 % style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -221,12 +222,7 @@ lower = {
     \new Staff = "lower" \lower
     \new Dynamics = "pedal" \pedal
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -235,21 +231,20 @@ lower = {
       midiInstrument = #"acoustic grand"
     }
   <<
-    \new Staff = "upper" <<
-      \unfoldRepeats\upper
+    \new Staff = "upper"
+    \unfoldRepeats
+    <<
+      \upper
       \dynamics
       \pedal
     >>
-    \new Staff = "lower" <<
-      \unfoldRepeats\lower
+    \new Staff = "lower"
+    \unfoldRepeats
+    <<
+      \lower
       \dynamics
       \pedal
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }

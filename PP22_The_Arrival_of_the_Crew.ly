@@ -7,6 +7,7 @@
 \header {
   title = "The Arrival of the Crew"
 % style = "Incidental"
+  style = "Classical"
 }
 
 \tagGroup #'(midi-only score-only)

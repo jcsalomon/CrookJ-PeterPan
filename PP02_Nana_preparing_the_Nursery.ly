@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "“Nana” preparing the Nursery"
 % style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -377,12 +378,7 @@ lower = {
     \new Staff = "lower" \lower
     \new Dynamics = "pedal" \pedal
   >>
-  \layout {
-    \context {
-\PianoStaff
-\accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -392,20 +388,15 @@ lower = {
   }
   <<
     \new Staff = "upper" <<
-\upper
-\dynamics
-\pedal
+      \upper
+      \dynamics
+      \pedal
     >>
     \new Staff = "lower" <<
-\lower
-\dynamics
-\pedal
+      \lower
+      \dynamics
+      \pedal
     >>
   >>
-  \midi {
-    \context {
-\PianoStaff
-\accepts Dynamics
-    }
-  }
+  \midi {}
 }

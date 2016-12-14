@@ -6,6 +6,8 @@
 
 \header {
   title = "Act III Opening Music"
+% style = "Incidental"
+  style = "Classical"
 }
 
 \tagGroup #'(midi-only score-only)

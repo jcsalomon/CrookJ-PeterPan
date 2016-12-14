@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Arrival of the Crocodile"
 %  style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -150,7 +151,6 @@ lower = \relative c' {
   \layout {
     \context {
       \PianoStaff
-      \accepts Dynamics
       \consists #Span_stem_engraver
     }
   }
@@ -171,10 +171,5 @@ lower = \relative c' {
       \dynamics
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }

@@ -1,4 +1,4 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
@@ -7,6 +7,7 @@
 \header {
   title = "“Ent’racte”"
 % style = "Incidental"
+  style = "Classical"
 }
 
 \tagGroup #'(midi-only score-only)
@@ -623,12 +624,7 @@ pedal = {
     \new Staff = "lower" \lower
     \new Dynamics = "pedal" \pedal
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -655,11 +651,6 @@ pedal = {
       \pedal
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }
 

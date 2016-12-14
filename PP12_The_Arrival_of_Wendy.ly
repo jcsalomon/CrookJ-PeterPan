@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Arrival of Wendy"
 % style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -210,19 +211,14 @@ lower = \relative c {
     \with {
       instrumentName = #"Piano"
     }
-  keepWithTag #'score-only
+  \keepWithTag #'score-only
   <<
     \new Staff = "upper" \upper
     \new Dynamics = "dynamics" \dynamics
     \new Staff = "lower" \lower
     \new Dynamics = "pedal" \pedal
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -243,10 +239,5 @@ lower = \relative c {
       \pedal
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }

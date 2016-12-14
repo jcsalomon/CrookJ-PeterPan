@@ -1,4 +1,4 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
@@ -919,12 +919,7 @@ lower = {
       \lyricsto "melodyTwo" \wordsTwo
     }
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -935,12 +930,16 @@ lower = {
 % \keepWithTag #'BuildingHouse
   <<
     \new Lyrics = "words"
-    \new Staff = "upper" <<
+    \new Staff = "upper"
+    \unfoldRepeats
+    <<
       \upper
       \dynamics
     >>
-    \new Staff = "lower" <<
-      \unfoldRepeats \lower
+    \new Staff = "lower"
+    \unfoldRepeats
+    <<
+      \lower
       \dynamics
     >>
     \context Lyrics = "words" {
@@ -948,10 +947,5 @@ lower = {
       \lyricsto "melodyTwo" \wordsTwo
     }
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }

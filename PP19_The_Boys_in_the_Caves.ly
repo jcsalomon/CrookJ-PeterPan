@@ -7,6 +7,7 @@
 \header {
   title = "The Boys in the Caves"
 % style = "Incidental"
+  style = "Classical"
 }
 
 \tagGroup #'(midi-only score-only)

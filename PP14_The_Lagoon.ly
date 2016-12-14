@@ -1,11 +1,16 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Lagoon"
 % style = "Incidental"
+  style = "Classical"
 }
+
+% Note: This piece tickles several LilyPond bugs,
+% or else is flawed in how I’ve written it.
+% Needs a lot of re-work.
 
 \tagGroup #'(MermaidLagoon MermaidsTail BoysSwim PeterAndMers SwimmingLake
 	MaroonersRock HighlandFling KingOfTheCastle PiratesApproach AbandonTigerLily
@@ -2916,10 +2921,6 @@ pedal = {
 			\Staff
 			\RemoveAllEmptyStaves
 		}
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-		}
 	}
 }
 
@@ -2953,10 +2954,5 @@ pedal = {
 			>>
 		>>
 	>>
-	\midi {
-		\context {
-			\PianoStaff
-			\accepts Dynamics
-		}
-	}
+	\midi {}
 }

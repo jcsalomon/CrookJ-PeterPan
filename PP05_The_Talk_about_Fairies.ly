@@ -1,10 +1,11 @@
-\version "2.19.49"
+\version "2.19.52"
 \language "english"
 \include "Peter_Pan.ily"
 
 \header {
   title = "The Talk about Fairies"
 % style = "Incidental"
+  style = "Classical"
 }
 
 global = {
@@ -119,12 +120,7 @@ lower = {
     \new Dynamics = "dynamics" \dynamics
     \new Staff = "lower" \lower
   >>
-  \layout {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -142,10 +138,5 @@ lower = {
       \dynamics
     >>
   >>
-  \midi {
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \midi {}
 }
