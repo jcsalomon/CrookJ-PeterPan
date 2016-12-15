@@ -77,6 +77,44 @@ pedalOne = {
 }
 
 
+dynamicsTwo = {
+	<>\ff
+	s1*9	|
+}
+
+upperTwo = \relative c' {
+	<e g c>2~			q8.	e16	f8.	fs16	|
+
+	g8.	fs16	g8.	gs16	a4		b		|
+	c		d		e		f		|
+	g8.	fs16	g8.	gs16	a4		b		|
+	<c, e g c>2~			q8	r	r4		|
+
+	<b f' g>8 r	q	r	q	r	q	r	|
+	<c e g>	r	q	r	q	r	q	r	|
+	<b d g>	r	q	r	<b f' g> r	q	r	|
+	<c e g>4	<b f' g>->	<c e g c>->	r		|
+}
+
+lowerTwo = \relative c {
+	c4		<e g c>		<c c,>		<e g c>		|
+
+	<d d,>		<f g b>		<g, g,>		<f' g b>	|
+	<c c,>		<e g c>		<g, g,>		<e' g c>	|
+	<d d,>		<f g b>		<g, g,>		<f' g b>	|
+	<c c,>		<e g c>	<g, g,>8. <e e'>16 <f f'>8. <fs fs'>16	|
+
+	<g g'>8. <fs fs'>16 <g g'>8. <gs gs'>16	<a a'>4	<b b'>		|
+	<c c'>		<d d'>		<e e'>		<f f'>		|
+	<g g'>8. <fs fs'>16 <f f'>8. <e e'>16	<d d'>4	<g g'>		|
+	<c, c'>		<g g'>->	<c, c'>->	r		|
+}
+
+pedalTwo = {
+	s1*9	|
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -85,6 +123,10 @@ dynamics = {
 
   \partial 8
   \dynamicsOne
+
+  \time 4/4
+  \tempo "Piu moderato." 4 = 132
+  \dynamicsTwo
   \bar "||"
 }
 
@@ -93,6 +135,8 @@ upper = {
 
   \key c \major
   \upperOne
+
+  \upperTwo
 }
 
 lower = {
@@ -100,10 +144,13 @@ lower = {
 
   \key c \major
   \lowerOne
+
+  \lowerTwo
 }
 
 pedal = {
   \pedalOne
+  \pedalTwo
 }
 
 \score {
