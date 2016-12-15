@@ -154,6 +154,84 @@ pedalThree = {
 }
 
 
+dynamicsFour = {
+	<>\f
+				s4	|
+	s1*7				|
+	<>-\markup "rit."
+	s2.			%…
+
+	<>-\markup "a tempo."
+				s4	|
+	s1*7				|
+	s2.			%…
+}
+
+upperFour = \relative c''' {
+							g8.	fs16	|
+	a8.[	g16	ds8.	e16]	f!4		e		|
+	e2~				e8.[	d16	cs8.	d16]	|
+	e8.[	d16	as8.	b16]	e4		d		|
+	g,2~				g8.[	g16	fs8.	g16]	|
+
+	gs2~				gs8.[ <f!f'!>16 <e e'>8. <d d'>16] |
+	<c c'>2~			q8.[	<b b'>16<a a'>8.<g g'>16]|
+	<fs fs'>8.[ <g g'>16 <a a'>8. <b b'>16]
+					<c c'>8.[ <d d'>16 <e e'>8. <fs fs'>16]|
+  << {
+	g'2~				g4		%…
+  } \\ {
+	b,4		c		<d f,>		%…
+  } >>
+
+							g8.(	fs16)	|
+	a8.[	g16	ds8.	e16]	f!4		e		|
+	e2~				e8.[	d16	cs8.	d16]	|
+	e8.[	d16	as8.	b16]	e4		d		|
+	g,2~				g4		g		|
+
+	<f a>8	r	<d' f>	r	<c, f a>4.->		<c ds af'>8|
+	<c e g>	r	<c' e>	r	<c, e g>4	fs8.	g16	|
+	a8.[	fs16	a8.	c16]	<e, g c>4	<f g b>		|
+	<e g c>2~			q4		%…
+}
+
+lowerFour = \relative c, {
+							r4		|
+	c8	r	<g''c e>r	q	r	q	r	|
+	d,	r	<fs'c'd>r	q	r	q	r	|
+	g,	r	<f'!g b>r	q	r	q	r	|
+	c,	r	<e'g c>	r	q	r	q	r	|
+
+	<e gs>8.[ <fs a>16 <gs b>8. <fs a>16] <e gs>8 r	<e e,>	r	|
+	<a, c>8.[ <b d>16 <c e>8. <b d>16] <a c>8 r	<a a,>	r	|
+	d,8	r	<d' fs>	r	<d fs a>r	<d a' c>r	|
+	\slashedGrace g,8
+  << {
+	f''!2.						%…
+  } \\ {
+	<g, d'>4	<a d>		<b d>		%…
+  } >>
+
+							r4		|
+	c,,8	r	<g''c e>r	q	r	q	r	|
+	d,	r	<fs'c'd>r	q	r	q	r	|
+	g,	r	<f'!g b>r	q	r	q	r	|
+	<c c,>4		<c e g>		<c e g c>	g'		|
+
+	<f f,>8	r	<f a d>	r	<f f,>4.->		<fs fs,>8|
+	<g g,>	r	<g c e>	r	<g g,>4		r		|
+	<d d,>		<d a' c>	<g g,>		q		|
+	<c c,>->	<g g,>->	<c, c,>->	%…
+}
+
+pedalFour = {
+				s4	|
+	s1*15				|
+	s2.			%…
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -170,6 +248,10 @@ dynamics = {
 
   \dynamicsThree
   \bar "||"
+
+  % \partial 4
+  \dynamicsFour
+  \bar "|."
 }
 
 upper = {
@@ -181,6 +263,8 @@ upper = {
   \upperTwo
 
   \upperThree
+
+  \upperFour
 }
 
 lower = {
@@ -192,12 +276,15 @@ lower = {
   \lowerTwo
 
   \lowerThree
+
+  \lowerFour
 }
 
 pedal = {
   \pedalOne
   \pedalTwo
   \pedalThree
+  \pedalFour
 }
 
 \score {
