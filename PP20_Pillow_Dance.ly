@@ -115,6 +115,45 @@ pedalTwo = {
 }
 
 
+dynamicsThree = {
+  <>-\markup \upright "Boys whistle."
+	s1*5	|
+	s2.	%…
+}
+
+upperThree = \relative c' {
+	r4		<c e>8	r	<c f>	r	<c g'>	r	|
+	<f a>8.[e'16	<f, a d>8. c'16]b8.[	g16	f8.	d16]	|
+	c4    \voiceOne	<c' e>8	r	<c f>	r	<c g'>	r	|
+	<f a>8.[e'16	<f, a d>8. c'16]b8.[	g16	f8.	d16]	|
+
+  \oneVoice
+	c4		r		r2				|
+	r2				r4		%…
+}
+
+lowerThree = \relative c {
+	<c c,>4		q8	r	<d d,>	r	<e e,>	r	|
+	<f f,>	r	<f a d>	r	<g g,>	r	<f g b>	r	|
+	<c c,>4		%…
+  \change Staff = "upper"
+  \voiceTwo
+			c'8	r	d	r	e	r	|
+	f	r	<f a d>	r	<f g b>	r	%…
+  \change Staff = "lower"
+  \oneVoice
+							<g, b f'>8 r	|
+
+	<c, c,>4	<e g c>		<c c,>		<e g c>		|
+	<c c,>		<e g c>		q		%…
+}
+
+pedalThree = {
+	s1*5	|
+	s2.	%…
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -128,6 +167,9 @@ dynamics = {
   \tempo "Piu moderato." 4 = 132
   \dynamicsTwo
   \bar "||"
+
+  \dynamicsThree
+  \bar "||"
 }
 
 upper = {
@@ -137,6 +179,8 @@ upper = {
   \upperOne
 
   \upperTwo
+
+  \upperThree
 }
 
 lower = {
@@ -146,11 +190,14 @@ lower = {
   \lowerOne
 
   \lowerTwo
+
+  \lowerThree
 }
 
 pedal = {
   \pedalOne
   \pedalTwo
+  \pedalThree
 }
 
 \score {
