@@ -232,6 +232,90 @@ pedalFour = {
 }
 
 
+dynamicsFive = {
+	<>\f
+				s4	|
+	s1*7				|
+	<>-\markup "rit."
+	s1				|
+
+	<>\pp-\markup "a tempo."
+	s1*3				|
+	<>-\markup "accel."
+	s1				|
+
+	<>\f
+	s1*2				|
+	<>\ff
+	s1				|
+	s2.			%…
+}
+
+upperFive = \relative c' {
+							<c f a c>4	|
+	<b f' a b>	<c f a c>	<f c' f>	<c f a>		|
+	<d f g>		<d f g d'>2			<f g d'>4	|
+	<e g e'>	<e g d'>	<e g c>		<e g b>		|
+	<f a d>		<f a c>2			q4		|
+
+	<b, f' a b>	<c f a c>	<a' c f a>	<d, f a c>	|
+	<d f b>		<b' d g>2			<g b f'>4	|
+	<g c e>		<e g c>		<g b d>		<d g b>		|
+  << {
+	c'2.						<bf c>4		|
+  } \\ {
+	e,4		f		fs		g		|
+  } >>
+
+	<f a b>8r	<f a c>	r	<f c'f>	r	<c f a>	r	|
+	<d f g>	r	<f g d'>2			q4		|
+	<e g e'>8 r	<e g d'>r	<e g c>	r	<e g b>	r	|
+	<f a d>4	<f a c>2			q4		|
+
+	<b, f' a b>	<c f a c>	<c' d bf'!>	<a c d a'>	|
+	<g bf d g>	<f bf d f>	<e g bf e>	<d g bf d>	|
+	<c f a c>2->			<g' bf c e>->			|
+	<f a c f>4	r		%…
+  \ottava #1
+  \set Staff.ottavation = #"8"
+					<f' a c f>	%…
+  \ottava #0
+}
+
+lowerFive = \relative c, {
+							r4		|
+	<f f,>		<c' f a>	<a a,>		<c f>		|
+	<bf bf,>	<d g bf>	<g, g,>		<g' bf d>	|
+	<c, c,>		<e g d'>	<e g c>		<e g b>		|
+	<f, f,>		<f' a c>	q		q		|
+
+	f,		<c' f a>	d,		<d' f a c>	|
+	<g, g,>		<f' f bf>2			q4		|
+	<c c,>		<e g c>		<g, g,>		<f' g bf>	|
+  << {
+	<c c'>1								|
+  } \\ {
+	c4		d		ds		e		|
+  } >>
+
+	f,8	r	<c'f a>	r	a	r	q	r	|
+	bf	r	<f'g bf>r	g,	r	<g'bf d>r	|
+	c,	r	<e g d'>r	<e g c>	r	<e g b>	r	|
+	f,	r	<f'a c>	r	q	r	q	r	|
+
+	<f, f,>4	<c' f a>	<d d,>		<d fs c'>	|
+	<g, g,>		<g' bf d>	<bf, bf,>	<bf g'>		|
+	<c a'>2->			<c c,>				|
+	<f, f,>4	r		<f f'>		%…
+}
+
+pedalFive = {
+				s4	|
+	s1*15				|
+	s2.			%…
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -252,6 +336,10 @@ dynamics = {
   % \partial 4
   \dynamicsFour
   \bar "|."
+
+  % \partial 4
+  \dynamicsFive
+  \bar "|."
 }
 
 upper = {
@@ -265,6 +353,9 @@ upper = {
   \upperThree
 
   \upperFour
+
+  \key f \major
+  \upperFive
 }
 
 lower = {
@@ -278,6 +369,9 @@ lower = {
   \lowerThree
 
   \lowerFour
+
+  \key f \major
+  \lowerFive
 }
 
 pedal = {
@@ -285,6 +379,7 @@ pedal = {
   \pedalTwo
   \pedalThree
   \pedalFour
+  \pedalFive
 }
 
 \score {
