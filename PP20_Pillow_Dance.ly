@@ -71,11 +71,6 @@ lowerOne = \relative c {
   }
 }
 
-pedalOne = {
-		s8	|
-	s2.*15		|
-}
-
 
 dynamicsTwo = {
 	<>\ff
@@ -110,10 +105,6 @@ lowerTwo = \relative c {
 	<c, c'>		<g g'>->	<c, c'>->	r		|
 }
 
-pedalTwo = {
-	s1*9	|
-}
-
 
 dynamicsThree = {
   <>-\markup \upright "Boys whistle."
@@ -146,11 +137,6 @@ lowerThree = \relative c {
 
 	<c, c,>4	<e g c>		<c c,>		<e g c>		|
 	<c c,>		<e g c>		q		%…
-}
-
-pedalThree = {
-	s1*5	|
-	s2.	%…
 }
 
 
@@ -223,12 +209,6 @@ lowerFour = \relative c, {
 	<g g,>	r	<g c e>	r	<g g,>4		r		|
 	<d d,>		<d a' c>	<g g,>		q		|
 	<c c,>->	<g g,>->	<c, c,>->	%…
-}
-
-pedalFour = {
-				s4	|
-	s1*15				|
-	s2.			%…
 }
 
 
@@ -309,12 +289,6 @@ lowerFive = \relative c, {
 	<f, f,>4	r		<f f'>		%…
 }
 
-pedalFive = {
-				s4	|
-	s1*15				|
-	s2.			%…
-}
-
 
 dynamics = {
   \set Score.tempoHideNote = ##t
@@ -375,11 +349,11 @@ lower = {
 }
 
 pedal = {
-  \pedalOne
-  \pedalTwo
-  \pedalThree
-  \pedalFour
-  \pedalFive
+  #(skip-of-length dynamicsOne)
+  #(skip-of-length dynamicsTwo)
+  #(skip-of-length dynamicsThree)
+  #(skip-of-length dynamicsFour)
+  #(skip-of-length dynamicsFive)
 }
 
 \score {
