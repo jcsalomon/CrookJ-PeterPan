@@ -290,6 +290,28 @@ lowerFive = \relative c, {
 }
 
 
+dynamicsSix = \dynamicsFour
+
+upperSix = {
+  <<
+    \upperFour
+    \relative c'' {
+				s4	|
+	s1*15				|
+	s2		<e g c>4%…
+    }
+  >>
+}
+
+lowerSix = \lowerFour
+
+pedalSix = {
+				s4	|
+	s1*15				|
+	s2\sustainOn		s4\sustainOff 	%…
+}
+
+
 dynamics = {
   \set Score.tempoHideNote = ##t
 
@@ -314,6 +336,10 @@ dynamics = {
   % \partial 4
   \dynamicsFive
   \bar "|."
+
+  % \partial 4
+  \dynamicsSix
+  \bar "|."
 }
 
 upper = {
@@ -330,6 +356,9 @@ upper = {
 
   \key f \major
   \upperFive
+
+  \key c \major
+  \upperSix
 }
 
 lower = {
@@ -346,6 +375,9 @@ lower = {
 
   \key f \major
   \lowerFive
+
+  \key c \major
+  \lowerSix
 }
 
 pedal = {
@@ -354,6 +386,7 @@ pedal = {
   #(skip-of-length dynamicsThree)
   #(skip-of-length dynamicsFour)
   #(skip-of-length dynamicsFive)
+  \pedalSix
 }
 
 \score {
