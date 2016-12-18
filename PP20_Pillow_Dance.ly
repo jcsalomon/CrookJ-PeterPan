@@ -147,7 +147,7 @@ dynamicsFour = {
 	<>-\markup "rit."
 	s2.			%…
 
-	<>-\markup "a tempo."
+	<>-\markup "a tempo"
 				s4	|
 	s1*7				|
 	s2.			%…
@@ -219,7 +219,7 @@ dynamicsFive = {
 	<>-\markup "rit."
 	s1				|
 
-	<>\pp-\markup "a tempo."
+	<>\pp-\markup "a tempo"
 	s1*3				|
 	<>-\markup "accel."
 	s1				|
@@ -337,6 +337,7 @@ dynamics = {
   \dynamicsFive
   \bar "|."
 
+  \tempo 4 = 132
   % \partial 4
   \dynamicsSix
   \bar "|."
@@ -412,7 +413,7 @@ pedal = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
@@ -420,7 +421,7 @@ pedal = {
       \pedal
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
