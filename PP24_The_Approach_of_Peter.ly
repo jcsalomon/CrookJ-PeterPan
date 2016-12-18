@@ -23,23 +23,58 @@ dynamics = {
 
 		s8\pp	|
 	s2*7		|
-	s4.	s8\f	|
+	s4.	%…
+
+		s8\f	|
 	s2*4		|
 	s4.	%…
 
   \bar "|."
 }
 
-upper = {
+upper = \relative c'' {
   \clef treble
 
   \key a \minor
+
+  \repeat unfold 2 {
+							a16	b	|
+	c8		a		r		a		|
+	b		f'		r		f		|
+	e	[	d		c		b	]	|
+	c		a		r		%…
+  }
+
+							e'		|
+	<f a>-.	[	<e g>-.		<d f>-.		<c e>-.	]	|
+	<b d>	[	<a c>		<gs b>		<e a>	]	|
+	<f b>		<b f'>		r		q		|
+	<b e>		<e, gs>		r		<e gs>		|
+	<e a>		a,		r		%…
 }
 
-lower = {
+lower = \relative c' {
   \clef bass
 
   \key a \minor
+							r8		|
+	<a c e>		q		r		q		|
+	<a b d f>	q		r		q		|
+	<a b d e>[	q		q		q]		|
+	<a c e>		q		r4		%…
+
+									|
+	<a c e>8	q		r		q		|
+	<a b d f>	q		r		q		|
+	<a b d e>[	q		q		q]		|
+	<a c e>		q		r		%…
+
+							c,8		|
+	a	[	c		d		e	]	|
+	gs	[	a		b		c	]	|
+	d		<d f>		r		q		|
+	e		<d e,>		r		q		|
+	<a c>		a,		r		%…
 }
 
 
