@@ -17,23 +17,44 @@ dynamics = {
   \set Score.tempoHideNote = ##t
 
   \time 2/4
-  \tempo 4 = 120
+  \tempo 4 = 90
 
 	<>\p
 	s2*16		|
   \bar "|."
 }
 
-upper = {
+upper = \relative c' {
   \clef treble
 
-  \key d \major
+  \key a \major
+  \repeat unfold 2 {
+	e8[	b'	gs	fs]	|
+	e	ds	e4		|
+	e8[	e'	c	b]	|
+	a	gs	a4		|
+
+	c8[	b	a	gs]	|
+	a[	b	c	a]	|
+	e'8->	r	r4		|
+	e,8->	r	r4		|
+  }
 }
 
-lower = {
+lower = \relative c {
   \clef bass
 
-  \key d \major
+  \key a \major
+  \repeat unfold 2 {
+    \repeat unfold 2
+	\repeat tremolo 4 { <e g>16 d' }	|
+    \repeat unfold 2
+	\repeat tremolo 4 { <e, a>16 c' }	|
+    \repeat unfold 2
+	\repeat tremolo 4 { <e, a>16 ds' }	|
+    \repeat unfold 2
+	\repeat tremolo 4 { <e, g>16 b' }	|
+  }
 }
 
 
