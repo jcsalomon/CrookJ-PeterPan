@@ -26,16 +26,45 @@ dynamics = {
   \bar "|."
 }
 
-upper = {
+upper = \relative c'' {
   \clef treble
 
   \key d \major
+  \repeat unfold 2 {
+							a8		|
+	g16	fs	e	d	<d fs>8		<e a>		|
+	<d fs d'>[	<cs fs cs'>	<d g b>		<a d a'>]	|
+	<a cs g'>[	<a d fs>	<b e>		<b d>	]	|
+  }
+  \alternative {
+    {
+	<a cs>	[	<gs e'>		<a a'>	]	%…
+    }
+    {
+	<a d>	[	<a cs>		<a d>	]	%…
+    }
+  }
 }
 
-lower = {
+lower = \relative c' {
   \clef bass
 
   \key d \major
+  \repeat unfold 2 {
+							a8		|
+	g16	fs	e	d	<d a'>8		<cs a'>		|
+	<b b'>	[	<a a'>		<g g'>		<fs fs'>]	|
+  }
+  \alternative {
+    {
+	<e e'>	[	<d d'>		<g g'>		<gs gs'>]	|
+	<a e'>	[	<b e>		<cs e>	]	%…
+    }
+    {
+	<cs, cs'>[	<d d'>		<g g'>		<gs gs'>]	|
+	<a fs'>	[	<a g'!>		<d fs>	]	%…
+    }
+  }
 }
 
 
