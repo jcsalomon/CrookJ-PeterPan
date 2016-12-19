@@ -2,7 +2,7 @@
 \language "english"
 \include "Peter_Pan.ily"
 
-% \include "articulate.ly"
+\include "articulate.ly"
 
 \header {
   title = "The Abduction of Wendy"
@@ -33,77 +33,109 @@ dynamics = {
 		s8\mf	|
 	s2*7		|
 	s4.	%…
-      \bar ""
+      \bar "|."
       \mark \markup \italic "D.C."
     }
     {}
   }
-		s8	|
-  \bar "|."
 }
 
-upper = {
+upper = \relative c' {
   \clef treble
 
   \key a \major
   \repeat volta 2 {
-		r8	|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r4.	%…
+    \repeat unfold 2 {
+							e8		|
+	<e a>		q		%…
+    << {
+					b'		cs16	d	|
+    } \\ {
+					gs,4				|
+    } >>
+	<a e'>				<gs d'>				|
+	<e a cs>8	d'16	cs	<e, gs b>8	cs'16	b	|
+    }
+    \alternative {
+      {
+	<e, a>8	[	<d fs>		<cs e>	]	%…
+      }
+      {
+	a'8	[	e		a	]	%…
+      }
+    }
   }
   \alternative {
     {
-		r8	|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r4.	%…
+      \key d \major
+      \repeat unfold 2 {
+							a8		|
+	<fs a d>8[	<fs a d>	<a d fs>	<fs a d>]	|
+	<cs fs a>[	<a d fs>	<fs a d>	<a d fs>]	|
+	<a d fs a>	g'16	fs	<g, cs e>8	fs'16	e	|
+      }
+      \alternative {
+        {
+	<fs, d'>8[	<g b>		<fs a>	]	%…
+        }
+        {
+	d'8		r		<d fs a d>->	%…
+        }
+      }
     }
     {}
   }
-		r8	|
 }
 
-lower = {
+lower = \relative c' {
   \clef bass
 
   \key a \major
   \repeat volta 2 {
-		r8	|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r4.	%…
+    \repeat unfold 2 {
+							r8		|
+	<a cs>		q		<e b'>4				|
+	<a cs>				<e b'>				|
+	<a cs>				<e b'>				|
+    }
+    \alternative {
+      {
+	<a cs>8		<a d>		<a cs>		%…
+      }
+      {
+	<a cs>8		e		a		%…
+      }
+    }
   }
   \alternative {
     {
+      \key d \major
+      <<
+        {
+          \repeat unfold 2 {
+							s8		|
+            \repeat unfold 3 {
+	d,,	[	d'		d,		d'	]	|
+            }
+          }
+          \alternative {
+            {
+	d,	[	d'		d,	]	%…
+            }
+            {
+	<d d'>		r		q->		%…
+            }
+          }
+        }
+        {
 		r8	|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r2		|
-	r4.	%…
+	s2*3		|
+	s4.	d'8	|
+        }
+      >>
     }
     {}
   }
-		r8	|
 }
 
 
@@ -129,14 +161,14 @@ lower = {
   \keepWithTag #'midi-only
   <<
     \new Staff = "upper"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \upper
       \dynamics
     >>
     \new Staff = "lower"
-    % \articulate
+    \articulate
     \unfoldRepeats
     <<
       \lower
