@@ -83,7 +83,7 @@ upper = \relative {
 
   \resetRelativeOctave c''
 
-  \repeat unfold 2 {
+  \repeat unfold 4 {
 	<a cs e a>4	<e b' e>	<e a cs>	%…
     << {
 							b'8.	a16	|
@@ -93,6 +93,8 @@ upper = \relative {
 	<e a cs>	<e gs b e>	<a cs e a>	r		|
   }
   \alternative {
+    \upperRepeatA
+    \upperRepeatB
     \upperRepeatA
     \upperRepeatB
   }
@@ -130,11 +132,13 @@ lower = \relative {
 
   \resetRelativeOctave c
 
-  \repeat unfold 2 {
+  \repeat unfold 4 {
 	<a cs e>4	<b e gs>	<cs e a>	<d fs b>	|
 	<cs e a>	<b e gs>	<a cs e a>	r		|
   }
   \alternative {
+    \lowerRepeatA
+    \lowerRepeatB
     \lowerRepeatA
     \lowerRepeatB
   }
