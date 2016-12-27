@@ -71,6 +71,23 @@ upper = \relative {
 					<gs b e>	r		|
     }
   }
+
+	<a e'>		<fs fs'>	<fs d'>		<e e'>		|
+	<e cs'>		%…
+  << {
+			b'8.	a16	%…
+  } \\ {
+			fs4	%…
+  } >>
+					<e b'>		e		|
+	<a e'>		<a fs'>		<gs b>		<g e'>		|
+	<fs a>		%…
+  << {
+			d'8.	cs16	%…
+  } \\ {
+			f,4	%…
+  } >>
+					<e b'>		e		|
 }
 
 lower = \relative {
@@ -94,6 +111,17 @@ lower = \relative {
 	<a a'>		<b fs' ds'>\arpeggio	<e e'>	r		|
     }
   }
+
+  \resetRelativeOctave c'
+
+	<cs e>		<as cs>		<b d>		<gs b>		|
+	<a cs>		<ds, b'>	<e gs>		e		|
+  << {
+	e1								|
+  } \\ {
+	<cs' e>4	<bs ds>		<b d>		<as cs>		|
+  } >>
+	<e a! d>	<e a d>		<e gs d'>	e		|
 }
 
 
