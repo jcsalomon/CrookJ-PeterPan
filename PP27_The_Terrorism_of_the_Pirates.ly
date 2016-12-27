@@ -29,7 +29,7 @@ upper = \relative c' {
 
   \key a \major
   \repeat unfold 2 {
-	e8[	b'	gs	fs]	|
+	e8[	b'	g	fs]	|
 	e	ds	e4		|
 	e8[	e'	c	b]	|
 	a	gs	a4		|
