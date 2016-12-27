@@ -33,16 +33,67 @@ dynamics = {
   \bar "|."
 }
 
-upper = {
+upper = \relative {
   \clef treble
 
   \key a \major
+
+  \resetRelativeOctave c''
+
+  \repeat unfold 2 {
+	<a cs e a>4	<e b' e>	<e a cs>	%…
+    << {
+							b'8.	a16	|
+    } \\ {
+							<d, fs>4	|
+    } >>
+	<e a cs>	<e gs b e>	<a cs e a>	r		|
+  }
+  \alternative {
+    {
+	<a cs e a>	<b e gs>	<gs ds' fs>	<gs cs e>	|
+	<a ds gs>	%…
+      << {
+			fs'8.	e16	%…
+      } \\ {
+			<a, b>4	%…
+      } >>
+					<gs b e>	r		|
+    }
+    {
+	<b fs' a>	<b e gs>	<a b ds gs>	<e gs e'>	|
+	<a cs gs'>	%…
+      << {
+			fs'8.	b,16	%…
+      } \\ {
+			<a b>4	%…
+      } >>
+					<gs b e>	r		|
+    }
+  }
 }
 
-lower = {
+lower = \relative {
   \clef bass
 
   \key a \major
+
+  \resetRelativeOctave c
+
+  \repeat unfold 2 {
+	<a cs e>4	<b e gs>	<cs e a>	<d fs b>	|
+	<cs e a>	<b e gs>	<a cs e a>	r		|
+  }
+  \alternative {
+    {
+	<a cs e a>	<b e gs>	<bs fs' gs>	<cs e gs>	|
+	<b fs' b>	<b fs' ds'>\arpeggio	<e b' e>	r	|
+    }
+    {
+	<ds ds'>	<e e'>		<b b'>		<cs cs'>	|
+	<a a'>		<b fs' ds'>\arpeggio	<e e'>	r		|
+    }
+  }
 }
 
 
