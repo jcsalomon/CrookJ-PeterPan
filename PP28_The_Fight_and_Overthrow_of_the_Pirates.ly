@@ -76,6 +76,18 @@ upperRepeatB = \relative {
 					<e b'>		e		|
 }
 
+upperRepeatC = \relative {
+  \resetRelativeOctave c''
+
+	<a cs e a>4	<e a cs e>	%…
+  << {
+					cs'		b8.	a16	|
+  } \\ {
+					<d, fs>2			|
+  } >>
+	<cs e a>4	<d e gs>	<cs e a>2\fermata		|
+}
+
 upper = \relative {
   \clef treble
 
@@ -83,7 +95,7 @@ upper = \relative {
 
   \resetRelativeOctave c''
 
-  \repeat unfold 4 {
+  \repeat unfold 6 {
 	<a cs e a>4	<e b' e>	<e a cs>	%…
     << {
 							b'8.	a16	|
@@ -97,6 +109,8 @@ upper = \relative {
     \upperRepeatB
     \upperRepeatA
     \upperRepeatB
+    \upperRepeatA
+    \upperRepeatC
   }
 }
 
@@ -125,6 +139,13 @@ lowerRepeatB = \relative {
 	<e a! d>	<e a d>		<e gs d'>	e		|
 }
 
+lowerRepeatC = \relative {
+  \resetRelativeOctave c,
+
+	<cs cs'>2			<d d'>				|
+	<e e'>4		q		<a a'>2\fermata			|
+}
+
 lower = \relative {
   \clef bass
 
@@ -132,7 +153,7 @@ lower = \relative {
 
   \resetRelativeOctave c
 
-  \repeat unfold 4 {
+  \repeat unfold 6 {
 	<a cs e>4	<b e gs>	<cs e a>	<d fs b>	|
 	<cs e a>	<b e gs>	<a cs e a>	r		|
   }
@@ -141,6 +162,8 @@ lower = \relative {
     \lowerRepeatB
     \lowerRepeatA
     \lowerRepeatB
+    \lowerRepeatA
+    \lowerRepeatC
   }
 }
 
