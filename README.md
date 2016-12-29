@@ -5,9 +5,10 @@ May his dreams be always bright.
 
 ## About this Project
 
-This is a combination of two published versions of the score,
-both with the title
+This is a re-release of the incidental music
+originally published under the title
 _The Music to J.M. Barrie’s Successful Play “Peter Pan.” or, The Boy who wouldn’t Grow Up._
+I know of two published versions of the score.
 The first can be found on the U.R. Research site
 at <http://hdl.handle.net/1802/24425>,
 and is a scan of the 1905 W. Paxton & Co. printing,
@@ -17,11 +18,12 @@ The second can be found on Google Books
 at <https://books.google.com/books?id=J-wQAAAAYAAJ>,
 and is a scan of the Price & Reynolds / Jos. W. Stern & Co. printing,
 [OCLC 903862906](https://www.worldcat.org/oclc/903862906),
-from the Harvard College Music Library collection.
-This edition has only 40 pages of music,
-but it contains the incidental music to the deleted scene
+from the Harvard College Music Library collection,
+with only 40 pages of music.
+The incidental music to the deleted scene
 “The arrival of the beautiful mothers”,
-not included in the longer version.
+as found in the 40-page editions,
+has in the longer version been renamed “Ent’racte” (_sic_).
 
 (There’s also [OCLC 221973102](https://www.worldcat.org/oclc/221973102),
 70 pages long and publisher listed as Price & Reynolds.

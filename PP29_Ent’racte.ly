@@ -6,6 +6,7 @@
 
 \header {
   title = "Ent’racte"
+  subtitle = "(The Arrival of the Beautiful Mothers)"
 % style = "Incidental"
   style = "Classical"
 }
